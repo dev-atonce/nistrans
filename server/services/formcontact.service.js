@@ -1,0 +1,153 @@
+const FormContact = require("../models/FormContact");
+const config = require("../configs/app");
+const nodemailer = require('nodemailer');
+const Mailgen = require('mailgen');
+const { ErrorBadRequest, ErrorNotFound } = require("../configs/errorMethods");
+
+const configMail = {
+    host: config.mailHost,
+    port: config.mailPort,
+    secure: true, // upgrade later with STARTTLS
+    auth: {
+        user: config.mailUser,
+        pass: config.mailPass,
+    },
+};
+
+const mailMessage = (mailTo, subject, template) => {
+    let messageMail = {
+        from: `"Website INQUIRY" <${config.mailDefault}>`,
+        to: mailTo,
+        subject: subject,
+        html: template,
+    }
+    return messageMail;
+}
+
+let MailGenerator = new Mailgen({
+    theme: 'salted',
+    product: {
+        name: 'YMC Translation Center Recruitment Co., Ltd.',
+        link: 'https://mailgen.js/'// URL Website
+    }
+});
+
+const methods = {
+    async storeContact(data) {
+        try {
+            const obj = new FormContact(data);
+            const inserted = await obj.save();
+            return inserted;
+        } catch (error) {
+            return Promise.reject(ErrorBadRequest(error.message));
+        }
+    },
+
+    async sendEmail(req) {
+        let response = {
+            body: {
+                intro: 'You Have Inquiry From Website !',
+                table: [
+                    {
+                        // Optionally, add a title to each table.
+                        title: req.body.subject,
+                        data: [
+                            {
+                                '#': 'Name',
+                                detail: req.body.title,
+                            },
+                            {
+                                '#': 'Name',
+                                detail: req.body.company_name,
+                            },
+                            {
+                                '#': 'Name',
+                                detail: req.body.contact_name,
+                            },
+                            {
+                                '#': 'Email',
+                                detail: req.body.email,
+                            },
+                            {
+                                '#': 'Telephone',
+                                detail: req.body.phone,
+                            },
+                            {
+                                '#': 'Details',
+                                detail: req.body.detail,
+                            },
+                        ],
+                        columns: {
+                            // Optionally, customize the column widths
+                            customWidth: {
+                                '#': '25%',
+                                detail: '75%'
+                            },
+                            // Optionally, change column text alignment
+                            customAlignment: {
+                                detail: 'left'
+                            }
+                        }
+                    },
+                ]
+            }
+        };
+
+        let mail = MailGenerator.generate(response);
+
+        return new Promise((resolve, reject) => {
+            const mailTo = config.mailTo;
+            let transporter = nodemailer.createTransport(configMail);
+            transporter.sendMail(mailMessage(mailTo, "Inquiry Website", mail), async (error, info) => {
+                if (error) {
+                    reject(ErrorBadRequest(error.message));
+                }
+                else {
+                    await methods.storeContact(req.body);
+                    resolve(info.envelope);
+                }
+            });
+        });
+    },
+
+    async findAll(req) {
+        const limit = +(config.pageLimit);
+        const offset = +(limit * ((req.query.page || 1) - 1));
+        try {
+            const rows = await FormContact.find().sort({ sort: "asc" })
+                .limit(limit)
+                .skip(offset);
+            const count = await FormContact.countDocuments();
+            return {
+                total: count,
+                lastPage: Math.ceil(count / limit),
+                currPage: +req.query.page || 1,
+                rows: rows,
+            };
+        } catch (error) {
+            return Promise.reject(ErrorBadRequest(error.message));
+        }
+    },
+
+    async findById(id) {
+        try {
+            const obj = await FormContact.findById(id);
+            if (!obj) return Promise.reject(ErrorNotFound("id: not found"));
+            return obj;
+        } catch (error) {
+            return Promise.reject(ErrorBadRequest(error.message));
+        }
+    },
+
+    async delete(id) {
+        try {
+            const obj = await FormContact.findOneAndDelete({ _id: id }).exec();
+            if (!obj) return Promise.reject(ErrorNotFound("id: not found"));
+            return { msg: "deleted success" };
+        } catch (error) {
+            return Promise.reject(ErrorBadRequest(error.message));
+        }
+    },
+};
+
+module.exports = { ...methods };

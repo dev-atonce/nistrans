@@ -1,0 +1,7 @@
+[
+  { "title": "HOME", "href": "/" },
+  { "title": "ABOUT", "href": "/about-us" },
+  { "title": "SERVICE", "href": "/service" },
+  { "title": "BLOG", "href": "/news-activity" },
+  { "title": "CONTACT", "href": "/contact" }
+]
