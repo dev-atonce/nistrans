@@ -10,13 +10,7 @@ interface BlogCardProps {
 const BlogCard = ({ data }: BlogCardProps) => {
   return data?.map((item: any, key: number) => {
     return (
-      <Col
-        xs={24}
-        sm={12}
-        md={12}
-        lg={6}
-        key={key}
-      >
+      <Col xs={24} sm={12} md={12} lg={8} key={key}>
         <Link
           // @ts-ignore
           href={`/news-activity/${item?.slug}`}
@@ -36,12 +30,10 @@ const BlogCard = ({ data }: BlogCardProps) => {
             }
           >
             <div>
-              <span
-                className="line-clamp-2 text-base  text-slate-800 my-4"
-              >
+              <span className="line-clamp-2 text-base  text-slate-800 my-4">
                 {item?.blog_title}
               </span>
-              <Divider className="mt-3 mb-2" />
+              {/* <Divider className="mt-3 mb-2" /> */}
               <p className="line-clamp-3 h-11 text-slate-600 ">
                 {item?.blog_description}
               </p>

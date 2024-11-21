@@ -9,7 +9,7 @@ export default function NavBar() {
   return (
     <div className="nav-menu h-full flex items-center " id="scrollable-content">
       {menuItem.map((item: any, key: number) => {
-        if (item.subMenu)
+        if (item?.subMenu)
           return (
             <NavDropDown
               key={key}

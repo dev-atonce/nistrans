@@ -6,7 +6,7 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
       <div className="relative  lg:block hidden">
         <Image
           className="w-full shadow-sm"
-          src="/img/cover_ymc.jpg"
+          src="/img/cover_img.png"
           width={2000}
           height={500}
           quality={80}
@@ -18,15 +18,21 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
             className="absolute top-[15%] hidden xl:block"
             style={{ textShadow: "1px 1px #2F2F2F" }}
           >
-            <p className="text-red-600  text-3xl py-4">
-              ศูนย์รวมงานบริษัทญี่ปุ่น
+            <p className="text-white  text-3xl py-2">
+              Reaching and Delivering to the World{" "}
             </p>
-            <p className="text-white text-3xl">
-              ล่ามภาษาญี่ปุ่น งานที่ใช้ภาษาญี่ปุ่น และตำแหน่งอื่นๆ
+            <p className="text-white text-2xl py-2">
+              A pioneer in international multimodal logistics
+            </p>
+            <p className="text-white text-base w-[70%]">
+              SIAM NISTRANS (Thai Nissin) is committed to extending its business
+              overseas, and providing innovative strategies in order to meet
+              different business needs and be a real Global Logistics Service
+              Provider.
             </p>
           </div>
         </div>
-        <div className="bg-slate-500/20 absolute bottom-0 w-full">
+        <div className="bg-slate-500/20 w-full">
           <div className=" hidden md:block container mx-auto">
             <Breadcrumb pageName={pageName} prevPage={prevPage} />
           </div>

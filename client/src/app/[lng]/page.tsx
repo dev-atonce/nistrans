@@ -2,9 +2,20 @@ import CoverSwiper from "@/components/website/layout/CoverSwiper";
 import JobList from "@/components/website/layout/JobList";
 import Blog from "@/components/website/layout/Blog";
 
+import ServiceSection from "@/components/website/layout/ServiceSection";
+import AboutSection from "@/components/website/layout/AboutSection";
+import HomeMoving from "@/components/website/layout/HomeMoving";
+import WarehouseManagement from "@/components/website/layout/WarehouseManagement";
+import HacoLab from "@/components/website/layout/HacoLab";
+import LatestNews from "@/components/website/layout/LatestNews";
+
+interface Props {
+  params: { lng: string };
+}
+
 const fetchBlog = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog/limit/4`,
+    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog/limit/3`,
     {
       cache: "no-store",
     }
@@ -24,7 +35,8 @@ const fetchBanner = async () => {
   return data;
 };
 
-export default async function Home() {
+export default async function Home({ params }: Props) {
+  const lang = params.lng;
   const blogs = await fetchBlog();
   const banner = await fetchBanner();
 
@@ -33,12 +45,15 @@ export default async function Home() {
       {/* Banner */}
       <CoverSwiper banner={banner} />
 
-      {/* Job List */}
-      <JobList />
-
+      <ServiceSection />
+      <AboutSection />
+      <HomeMoving />
+      <WarehouseManagement />
+      <HacoLab />
+      <LatestNews />
       {/* Blog */}
       <div className="container mx-auto">
-        <Blog home={true} limit={4} blogs={blogs} />
+        <Blog home={true} limit={3} blogs={blogs} />
       </div>
     </>
   );

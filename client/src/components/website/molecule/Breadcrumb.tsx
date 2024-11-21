@@ -6,7 +6,7 @@ interface BreadcrumbProps {
 }
 const Breadcrumb = ({ pageName, prevPage }: any) => {
   return (
-    <div className="py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-black">
       <nav>
         <ol className="flex items-center gap-2">
           {prevPage.length &&
@@ -27,7 +27,7 @@ const Breadcrumb = ({ pageName, prevPage }: any) => {
             ``
           )}
 
-          <li className=" text-white">{pageName}</li>
+          <li className=" ">{pageName}</li>
         </ol>
       </nav>
     </div>

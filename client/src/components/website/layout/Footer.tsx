@@ -39,6 +39,7 @@
 import { useContext } from "react";
 import { Logo } from "@/components/website/atom/logo/Logo";
 import { PageSettingContext } from "@/contexts/PageSettingContext";
+
 import Link from "next/link";
 
 import { FaPhone } from "react-icons/fa6";
@@ -56,113 +57,36 @@ export default function Footer({ logo, contact }: any) {
   const currentYear = currentDate.getFullYear();
 
   return (
-    <div className="text-white bg-[#ED1F23] ">
+    <div className="text-black bg-slate-200 ">
       <div className="">
         <div className="container mx-auto pt-4   ">
-          <div className=" border-b border-white/60 py-5 flex items-center justify-between">
-            <div className="flex items-center gap-4">
+          <div className=" py-5 flex items-center justify-between">
+            <div className="flex items-start gap-4 flex-col">
               <Logo img={logo} />
-              <div>
-                <p className="text-2xl">
-                  YMC Recruitment Translation Center Co., Ltd.
-                </p>
-                <p>บริษัท จัดหางาน วาย เอ็ม ซี ทรานสเลชั่น เซนเตอร์ จำกัด</p>
-              </div>
-            </div>
-            <div className="hidden lg:flex">
-              {menuItem.map((item: any, key: number) => {
-                return (
-                  <Link
-                    key={key}
-                    href={item?.href}
-                    className={`menu-item px-4 py-3 nav-button hover:text-white hover:bg-red-700`}
-                  >
-                    {item?.title}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container mx-auto pt-4">
-        <div className="flex justify-start  flex-col lg:flex-row lg:justify-between lg:gap-20 mb-4 ">
-          <div className="flex flex-col items-start lg:items-start lg:basis-1/2  mb-2">
-            <div className="flex-col flex items-start gap-3 pb-6  ">
               <span className="text-base ">{contact?.addressTH}</span>
+              <div className="flex items-center gap-4">
+                <FaPhone size={20} />
+
+                <span>โทรศัพท์ {contact?.telephone}</span>
+              </div>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="flex items-center gap-1">
-                <div className="w-2 bg-slate-300 h-4"></div> Social
-              </label>
-              <div className="flex items-center gap-6">
-                <a href={contact?.facebook}>
-                  <Image
-                    src="/img/fbLogo.png"
-                    alt="soccial"
-                    width={25}
-                    height={25}
-                  />
-                </a>
-                <a href={contact?.line}>
-                  <Image
-                    src="/img/lineLogo.png"
-                    alt="social"
-                    width={25}
-                    height={25}
-                  />
-                </a>
-                <a href={contact?.instagram}>
-                  <Image
-                    src="/img/igLogo.png"
-                    alt="social"
-                    width={25}
-                    height={25}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex lg:basis-1/2 sm:flex-row flex-col items-start ">
-            <div className="xl:basis-3/4 w-full sm:basis-3/5 hidden sm:block">
-              <div className="flex flex-col gap-2 mb-3">
-                <label className="flex items-center gap-1">
-                  <div className="w-2 bg-slate-300 h-4"></div>
-                  Contact
-                </label>
-                <div className="flex flex-col gap-4">
-                  <div className="flex items-start gap-4">
-                    <FaPhone size={20} />
-                    <div className="flex flex-col">
-                      <span>{contact?.telephone}</span>
-                      <span>{contact?.telephone2}</span>
-                      <span>{contact?.telephone3}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <MdEmail size={20} />
-                    <div className="flex flex-col">
-                      <span>{contact?.email}</span>
-                      <span>{contact?.email2}</span>
-                      <span>{contact?.email3}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <label>Certificate</label>
+              <Image
+                src="/img/footerCertificate.png"
+                width={300}
+                height={300}
+                alt="cert"
+              />
             </div>
           </div>
         </div>
-        <div className="flex justify-start  flex-col lg:flex-row lg:justify-between lg:gap-20  "></div>
       </div>
-      <div className="">
-        <div className="container mx-auto py-4  flex items-center justify-center  text-xs">
+
+      <div className="bg-blue-950 text-white">
+        <div className="container mx-auto py-4  flex justify-start  text-xs">
           <div>
-            <span className="">
-              ©Copyright {currentYear} YMC Translation Co., Ltd. - All Rights
-              Reserved.
-            </span>
+            <span className="">©Siam Nistrans Co., Ltd.</span>
           </div>
         </div>
       </div>
