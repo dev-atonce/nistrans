@@ -3,7 +3,7 @@ import NavDropDown from "@/components/website/molecule/menu/NavDropDown";
 import menuItem from "@/assets/menuItem.json";
 import { usePathname } from "next/navigation";
 
-export default function NavBar() {
+export default function NavBar({ lang }: any) {
   const pathname = usePathname();
 
   return (
@@ -16,13 +16,14 @@ export default function NavBar() {
               title={item.title}
               dropdownItems={item.subMenu}
               sectionKey={key}
+              lang={lang}
             />
           );
         else
           return (
             <Link
               key={key}
-              href={item.href}
+              href={`/${lang + item.href}`}
               className={`${
                 pathname == item?.href.toLowerCase()
                   ? "text-[#F67F18]"

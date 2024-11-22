@@ -6,7 +6,9 @@
     "subMenu": [
       { "href": "/about-us/company-profile", "title": "Company Profile" },
       { "href": "/about-us/company-history", "title": "Company History" },
-      { "href": "/about-us/company-policy", "title": "Company Policy" }
+      { "href": "/about-us/company-policy", "title": "Company Policy" },
+      { "href": "/about-us/branches", "title": "Domestic Branches" },
+      { "href": "/about-us/nissin-group", "title": "Nissin Group" }
     ]
   },
   {

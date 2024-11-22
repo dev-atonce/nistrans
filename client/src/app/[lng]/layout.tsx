@@ -59,13 +59,16 @@ const fetchContact = async () => {
 };
 export default async function RootLayout({
   children,
+  // @ts-ignore
+  params,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const contact = await fetchContact();
+  const lang = params?.lng;
 
   return (
-    <html lang="en">
+    <html lang={lang}>
       <ConfigProvider
         theme={{
           token: {
@@ -83,7 +86,7 @@ export default async function RootLayout({
       >
         <PageSettingProvider>
           <body className={kanit.className}>
-            <Header contact={contact} />
+            <Header contact={contact} lang={lang} />
             {children}
             <Footer contact={contact} />
           </body>

@@ -62,11 +62,11 @@ export default function Contactform({}) {
           <div className=""></div>
         </div>
 
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("contactName", { required: true, maxLength: 100 })}
             type="text"
-            placeholder={"ชื่อ - สกุล"}
+            placeholder={"ชื่อผู้ติดต่อ"}
             className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
           {errors?.contactName?.type === "required" && (
@@ -75,15 +75,23 @@ export default function Contactform({}) {
         </div>
         <div className="col-span-2 md:col-span-1">
           <input
-            {...register("telephone", { pattern: /[\d+]/g, required: true })}
+            {...register("companyName", { required: true, maxLength: 100 })}
             type="text"
-            placeholder={"เบอร์โทรศัพท์"}
+            placeholder={"ชื่อบริษัท"}
             className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
-          {errors?.telephone?.type === "pattern" && (
-            <p className="text-xs text-red text-end">ตัวเลขเท่านั้น</p>
+          {errors?.companyName?.type === "required" && (
+            <p className="text-xs text-red text-end">กรุณกรอกข้อมูล.</p>
           )}
-          {errors?.telephone?.type === "required" && (
+        </div>
+        <div className="col-span-2 md:col-span-1">
+          <input
+            {...register("department", { required: true, maxLength: 100 })}
+            type="text"
+            placeholder={"หน่วยงานในสังกัด"}
+            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+          />
+          {errors?.department?.type === "required" && (
             <p className="text-xs text-red text-end">กรุณกรอกข้อมูล.</p>
           )}
         </div>
@@ -98,6 +106,73 @@ export default function Contactform({}) {
           {errors?.email?.type === "required" && (
             <p className="text-xs text-red text-end">กรุณกรอกข้อมูล.</p>
           )}
+        </div>
+        <div className="col-span-2 md:col-span-2">
+          <input
+            {...register("telephone", { pattern: /[\d+]/g, required: true })}
+            type="text"
+            placeholder={"เบอร์โทรศัพท์"}
+            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+          />
+          {errors?.telephone?.type === "pattern" && (
+            <p className="text-xs text-red text-end">ตัวเลขเท่านั้น</p>
+          )}
+          {errors?.telephone?.type === "required" && (
+            <p className="text-xs text-red text-end">กรุณกรอกข้อมูล.</p>
+          )}
+        </div>
+        <div className="col-span-2 md:col-span-2 grid grid-cols-4">
+          <div>หัวข้อสอบถาม</div>
+          <div>
+            <div className="flex items-center gap-2">
+              <input
+                {...register("telephone", {
+                  pattern: /[\d+]/g,
+                  required: true,
+                })}
+                type="checkbox"
+                placeholder={"เบอร์โทรศัพท์"}
+                className=""
+              />
+              {errors?.telephone?.type === "pattern" && (
+                <p className="text-xs text-red text-end">ตัวเลขเท่านั้น</p>
+              )}
+              {errors?.telephone?.type === "required" && (
+                <p className="text-xs text-red text-end">กรุณกรอกข้อมูล.</p>
+              )}
+              <label htmlFor="" className="text-base">
+                การขนส่ง
+              </label>
+            </div>
+          </div>
+          <div>
+            <input
+              {...register("telephone", { pattern: /[\d+]/g, required: true })}
+              type="checkbox"
+              placeholder={"เบอร์โทรศัพท์"}
+              className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            />
+            {errors?.telephone?.type === "pattern" && (
+              <p className="text-xs text-red text-end">ตัวเลขเท่านั้น</p>
+            )}
+            {errors?.telephone?.type === "required" && (
+              <p className="text-xs text-red text-end">กรุณกรอกข้อมูล.</p>
+            )}
+          </div>
+          <div>
+            <input
+              {...register("telephone", { pattern: /[\d+]/g, required: true })}
+              type="checkbox"
+              placeholder={"เบอร์โทรศัพท์"}
+              className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            />
+            {errors?.telephone?.type === "pattern" && (
+              <p className="text-xs text-red text-end">ตัวเลขเท่านั้น</p>
+            )}
+            {errors?.telephone?.type === "required" && (
+              <p className="text-xs text-red text-end">กรุณกรอกข้อมูล.</p>
+            )}
+          </div>
         </div>
 
         <div className="col-span-2">
@@ -114,7 +189,7 @@ export default function Contactform({}) {
         <div className="flex justify-start gap-4 col-span-2 ">
           <button
             type="submit"
-            className="uppercase px-12 font-bold py-2 bg-[#E00A0A] rounded-xl  text-white "
+            className="uppercase px-12 hover:text-white border py-2 bg-white text-orange-600 rounded-xl  border-orange-600 hover:bg-orange-600 transition-all "
           >
             ส่ง
           </button>

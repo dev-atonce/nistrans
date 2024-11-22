@@ -43,165 +43,344 @@ export default async function AboutPage() {
   return (
     <>
       <Cover
-        pageName="แนวทางปฏิบัติของบริษัท"
-        engName="Company Policy"
+        pageName="สาขาในประเทศ"
+        engName="Domestic Branches"
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container mx-auto pb-10 text-black">
-        <div className="corBehBox">
-          <div className="pageTitle1">แนวทางปฏิบัติของบริษัท</div>
+        <div className="branchesDomestic">
+          <div className="row branchesRow" style={{ marginBottom: "75px" }}>
+            <div className="col-xs-6">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/001.jpg"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+            <div className="col-xs-6">
+              <div className="branchesTitle">
+                สำนักงานใหญ่ / สำนักงานกรุงเทพฯ
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.co.th/maps/place/Siam+Nistrans+Co.,LTD./@13.7325611,100.557839,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29f1b877bf42f:0xf788e6b9b53e4b3e!8m2!3d13.7325611!4d100.5600277?hl=en"
+                ></a>
+              </div>
+              <div className="branchesText">
+                ชั้น 15 เลขที่ 191/66, 68-69 CTI TOWER ถนนรัชดาภิเษก
+                <br />
+                เขตคลองเตย กรุงเทพมหานคร 10110 ประเทศไทย
+              </div>
+              <div style={{ height: "30px" }}></div>
+              <div className="branchesTitle">
+                แผนกขนย้าย
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/place/คลังสินค้าโชติธนวัฒน์+1/@13.6713977,100.6186394,20.19z/data=!4m9!1m2!2m1!1sChodthanawat++Warehouse!3m5!1s0x30e2a0082faa14bd:0xc39c2eaf6b3b73a9!8m2!3d13.6715341!4d100.6187112!15sChdDaG9kdGhhbmF3YXQgIFdhcmVob3VzZVoYIhZjaG9kdGhhbmF3YXQgd2FyZWhvdXNlkgEJd2FyZWhvdXNl4AEA"
+                ></a>
+              </div>
+              <div className="branchesText">
+                คลังสินค้าโชติธนวัฒน์ 1 ยูนิต 6.2
+                <br />
+                เลขที่ 295 ถนนเทพรัตน กม.1 แขวงบางนาเหนือ เขตบางนา กรุงเทพมหานคร
+                10260
+                <br />
+                โทรศัพท์: (+66)-2-261-1080 Ext. 281
+              </div>
+            </div>
+          </div>
 
-          <div className="corBehText">
-            Nissin Group (กลุ่มบริษัทเครือนิชชิน)
-            กำหนดแนวทางปฏิบัติของบริษัทขึ้น
-            เพื่อเป็นภารกิจในการมีส่วนร่วมพัฒนาสังคม
-            อย่างยั่งยืนในฐานะพลเมืองภาคองค์กรที่ดี
-            รักษาจริยธรรมที่ดีอย่างแข็งขัน
-            และดำเนินกิจกรรมทางธุรกิจทั่วโลกอย่างอิสระและเป็นธรรม
-            {/** List of behavioral principles */}
-            <div className="corBehList">
-              <div className="corBehTitle">
-                1. เรามุ่งมั่นที่จะเป็นบริษัทที่ได้รับความไว้วางใจจากลูกค้า
-                และมอบความพึงพอใจให้แก่ลูกค้า
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/002.jpg"
+                  alt="Domestic Branches"
+                />
               </div>
-              <ul>
-                <li>
-                  เข้าใจการเปลี่ยนแปลงในโลกและให้บริการที่เป็นประโยชน์ต่อสังคม
-                  ด้วยจิตวิญญาณของปรัชญาองค์กรที่ว่า
-                  <br />
-                  “ทุกวันเป็นวันใหม่”
-                </li>
-                <li>
-                  สร้างความเป็นอยู่ที่สะดวกสบายผ่านโลจิสติกส์ระดับสากล
-                  และมีส่วนร่วมในการเติบโตทางเศรษฐกิจที่ยั่งยืน
-                </li>
-                <li>
-                  คุ้มครองและจัดการข้อมูลส่วนบุคคลและข้อมูลลูกค้าอย่างจริงจัง
-                </li>
-              </ul>
             </div>
-            <div className="corBehList">
-              <div className="corBehTitle">
-                2. เราดำเนินกิจกรรมทางธุรกิจอย่างเป็นธรรมและมีความรับผิดชอบ
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                สำนักงานสนามบิน (สนามบินสุวรรณภูมิ)
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd,+Suvarnabhumi+Airport/@13.7109874,100.7523463,15z/data=!4m2!3m1!1s0x0:0x83d35695a6942a37?sa=X&hl=en&ved=2ahUKEwjshNHc2LT7AhVgSmwGHY1JAUcQ_BJ6BAhOECE"
+                ></a>
               </div>
-              <ul>
-                <li>
-                  ปฏิบัติตามกฎระหว่างประเทศและกฎหมายของแต่ละท้องถิ่น
-                  และดำเนินธุรกิจอย่างถูกต้องและเหมาะสม
-                </li>
-                <li>
-                  รักษาความสัมพันธ์ที่มั่นคงและถูกต้องกับฝ่ายการเมืองและฝ่ายบริหาร
-                </li>
-                <li>
-                  ดำเนินการอย่างเด็ดขาดต่อกองกำลังต่อต้านสังคมตลอดจนกลุ่มต่าง ๆ
-                  ที่คุกคามความปลอดภัยและความสงบเรียบร้อยของประชาสังคม
-                </li>
-              </ul>
-            </div>
-            <div className="corBehList">
-              <div className="corBehTitle">
-                3. เราเปิดเผยข้อมูลอย่างจริงจังและเป็นธรรม
+              <div className="branchesText">
+                ห้องเลขที่ 13-15 อาคาร AO4เขตปลอดอากรท่าอากาศยานสุวรรณภูมิ 999
+                หมู่ที่ 7
+                <br />
+                แขวงราชาเทวะ เขตบางพลี จังหวัดสมุทรปราการ 10540 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-2-134-7001~8 / โทรสาร: (+66)-2-134-6766~9
               </div>
-              <ul>
-                <li>
-                  มุ่งมั่นที่จะเป็นบริษัทที่ได้รับความไว้วางใจ
-                  ผ่านการเปิดเผยข้อมูลอย่างเหมาะสมในเวลาที่เหมาะสม
-                </li>
-                <li>
-                  เสริมสร้างความเข้าใจซึ่งกันและกันผ่านการหารืออย่างสร้างสรรค์กับผู้มีส่วนได้ส่วนเสีย
-                  เช่น ลูกค้า คู่ค้า ผู้ถือหุ้น พนักงาน ฯลฯ
-                </li>
-              </ul>
             </div>
-            <div className="corBehList">
-              <div className="corBehTitle">
-                4. เราดำเนินธุรกิจโดยเคารพสิทธิมนุษยชน
+          </div>
+
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/003.jpg"
+                  alt="Domestic Branches"
+                />
               </div>
-              <ul>
-                <li>
-                  เคารพสิทธิมนุษยชนของทุกคน
-                  และกำจัดการทำงานที่ผิดกฎหมายทุกรูปแบบ
-                </li>
-                <li>
-                  ยอมรับรสนิยมของกันและกัน
-                  และสร้างสภาพแวดล้อมที่บุคลากรที่หลากหลายสามารถทำงานร่วมกันได้
-                </li>
-                <li>
-                  มุ่งมั่นที่จะเป็นบริษัทที่ทุกคนสามารถเติบโตได้ ทำงานอย่างสดใส
-                  และสัมผัสได้ถึงคุณค่าของการทำงาน
-                </li>
-              </ul>
             </div>
-            <div className="corBehList">
-              <div className="corBehTitle">
-                5. เราพยายามสร้างสิ่งแวดล้อมโลกที่มีเสถียรภาพ
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าอยุธยา
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+AYUTTHAYA+BRANCH/@14.35241,100.6730992,15z/data=!4m2!3m1!1s0x0:0xf9136097bf538c1?sa=X&hl=en&ved=2ahUKEwiQ9uHj2LT7AhVbTmwGHSTCCqYQ_BJ6BAhiECE"
+                ></a>
               </div>
-              <ul>
-                <li>
-                  ส่งเสริมธุรกิจโลจิสติกส์ที่ใส่ใจสิ่งแวดล้อม
-                  และให้เข้ากับสิ่งแวดล้อมโลก
-                </li>
-              </ul>
-            </div>
-            <div className="corBehList">
-              <div className="corBehTitle">
-                6. เราปฏิบัติหน้าที่ในฐานะพลเมืองภาคองค์กรที่ดี
+              <div className="branchesText">
+                เลขที่ 45-46 หมู่ที่ 2 ตำบลอุทัย อำเภออุทัย
+                จังหวัดพระนครศรีอยุธยา 13210 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-35-246-511~20 / โทรสาร:(+66)-35-246-510
               </div>
-              <ul>
-                <li>
-                  มุ่งทำกิจกรรมทางธุรกิจและกิจกรรมเพื่อสังคมให้ประสบความสำเร็จทั้งสองทาง
-                  สนับสนุนการสร้างสังคมให้เติบโตอย่างสมบูรณ์
-                </li>
-                <li>
-                  เคารพวัฒนธรรมและประเพณีของแต่ละประเทศ
-                  และมีส่วนร่วมในการพัฒนาภูมิภาคและการแก้ไขปัญหาสังคม
-                </li>
-              </ul>
             </div>
-            <div className="corBehList">
-              <div className="corBehTitle">
-                7. เราจัดการวิกฤตเชิงองค์กร
-                เพื่อเตรียมพร้อมสำหรับความเสี่ยงที่หลากหลาย
+          </div>
+
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/004.jpg"
+                  alt="Domestic Branches"
+                />
               </div>
-              <ul>
-                <li>
-                  พยายามลดความเสี่ยงที่จะเป็นอุปสรรคต่อการดำเนินธุรกิจอย่างต่อเนื่อง
-                  ภายใต้การบริหารความเสี่ยงอย่างถูกต้องและเหมาะสม
-                </li>
-                <li>
-                  พัฒนาความสามารถในการรับมือวิกฤตด้วยการฝึกอบรมที่ต่อเนื่อง
-                </li>
-              </ul>
             </div>
-            <div className="corBehList">
-              <div className="corBehTitle">
-                8.
-                เราส่งเสริมให้ใช้แนวทางปฏิบัตินี้เป็นพื้นฐานการดำเนินกิจกรรมในทุก
-                ๆ วันอย่างจริงจัง
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าบางปะกง
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://goo.gl/maps/23DrWjtBhYHbnWVs6"
+                ></a>
               </div>
-              <ul>
-                <li>
-                  ผู้บริหารระดับสูงปฏิบัติตามแนวทางปฏิบัตินี้เป็นตัวอย่าง
-                  และแจ้งภายในบริษัทและบริษัทในกลุ่มให้ทราบอย่างทั่วถึง
-                </li>
-                <li>
-                  ส่งเสริมการดำเนินการตามเจตนารมณ์ของแนวทางปฏิบัตินี้ภายใต้ระบบของห่วงโซ่อุปทาน
-                </li>
-                <li>
-                  สร้างระบบกำกับดูแลที่มีประสิทธิภาพซึ่งจำเป็นต่อการนำเจตนารมณ์ของแนวทางปฏิบัตินี้ไปปฏิบัติจริง
-                </li>
-              </ul>
+              <div className="branchesText">
+                เลขที่ 100/2 หมู่ที่ 6 ถนนบางนา-ตราด กม.41 แขวงบางวัว
+                <br />
+                เขตบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-38-538-140~3 / โทรสาร: (+66)-38-538-144
+              </div>
             </div>
-            หากเกิดการกระทำผิดแนวทางปฏิบัตินี้ เราจะช่วยกันหาสาเหตุ
-            หามาตราการแนวทางมาใช้เพื่อป้องกันไม่ให้เกิดปัญหากลับขึ้นอีกต่อไป
-            <div className="corBehText2">
-              จัดทำเมื่อวันที่ 16 ธันวาคม 2002
-              <br />
-              แก้ไขเมื่อวันที่ 15 กุมภาพันธ์ 2006
-              <br />
-              แก้ไขเมื่อวันที่ 18 มิถุนายน 2018
-              <br />
-              Nissin Corporation (กลุ่มบริษัทเครือนิชชิน)
+          </div>
+
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/005.jpg"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าบางปะกง K38
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+BPK38+Warehouse/@13.5651798,100.9345016,15z/data=!4m2!3m1!1s0x0:0xcd281da9cab68969?sa=X&hl=en&ved=2ahUKEwiqn7vo2LT7AhWTSGwGHU7PBK8Q_BJ6BAhUECE"
+                ></a>
+              </div>
+              <div className="branchesText">
+                เลขที่ 68/8 หมู่ที่ 5 ถนนบางนา-ตราด กม.38 ตำบลบางสมัคร
+                <br />
+                อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-38-539-980~1 / โทรสาร:(+66)-38-539-982
+              </div>
+            </div>
+          </div>
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/005.jpg"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าบางปะกง K38
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+BPK38+Warehouse/@13.5651798,100.9345016,15z/data=!4m2!3m1!1s0x0:0xcd281da9cab68969?sa=X&hl=en&ved=2ahUKEwiqn7vo2LT7AhWTSGwGHU7PBK8Q_BJ6BAhUECE"
+                ></a>
+              </div>
+              <div className="branchesText">
+                เลขที่ 68/8 หมู่ที่ 5 ถนนบางนา-ตราด กม.38 ตำบลบางสมัคร
+                <br />
+                อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-38-539-980~1 / โทรสาร:(+66)-38-539-982
+              </div>
+            </div>
+          </div>
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/005.jpg"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าบางปะกง K38
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+BPK38+Warehouse/@13.5651798,100.9345016,15z/data=!4m2!3m1!1s0x0:0xcd281da9cab68969?sa=X&hl=en&ved=2ahUKEwiqn7vo2LT7AhWTSGwGHU7PBK8Q_BJ6BAhUECE"
+                ></a>
+              </div>
+              <div className="branchesText">
+                เลขที่ 68/8 หมู่ที่ 5 ถนนบางนา-ตราด กม.38 ตำบลบางสมัคร
+                <br />
+                อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-38-539-980~1 / โทรสาร:(+66)-38-539-982
+              </div>
+            </div>
+          </div>
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/006.jpg"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าแหลมฉบัง
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  href="https://www.google.co.th/maps/place/Siam+Nistrans+Co.,LTD.+(Branch+5)/@13.1242826,100.9806238,17z/data=!3m1!4b1!4m5!3m4!1s0x3102c80041147bab:0xab586e27f921ce73!8m2!3d13.1242826!4d100.9823652?hl=en"
+                ></a>
+              </div>
+
+              <div className="branchesText">
+                เลขที่ 2/10 หมู่ที่ 1 ตำบลหนองขาม อำเภอศรีราชา จังหวัดชลบุรี
+                20110 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-38-481-634 / โทรสาร: (+66)-38-482-734
+              </div>
+            </div>
+          </div>
+
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/007.jpg?v=1"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าปราจีนบุรี (โรจนะ)
+                <a
+                  className="branchesVideo fancybox-mp4"
+                  data-type="iframe"
+                  title=""
+                  href="../top_video.mp4"
+                ></a>
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+(Prachinburi+Branch)/@13.8418361,101.5166113,15z/data=!4m5!3m4!1s0x311cfbe140032eff:0xbf67690823fe6336!8m2!3d13.8399378!4d101.5227106?hl=jp&shorturl=1"
+                ></a>
+              </div>
+
+              <div className="branchesText">
+                เลขที่ 288 หมู่ที่ 13 ตำบลหัวหว้า อำเภอศรีมหาโพธิ
+                จังหวัดปราจีนบุรี 25140 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-37-210-151
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/009.jpg"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าปราจีนบุรี (304)
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  href="https://www.google.co.th/maps/place/Siam+Nistrans+Co.,+Ltd.+PRACHINBURI+BRANCH/@13.8438312,101.5527666,17z/data=!3m1!4b1!4m5!3m4!1s0x311cf03c12ecf39f:0xe4210a62a970ee70!8m2!3d13.8438312!4d101.5549553?hl=en"
+                ></a>
+              </div>
+
+              <div className="branchesText">
+                เลขที่ 82 หมู่ที่ 9 ตำบลหนองโพรง อำเภอศรีมหาโพธิ
+                จังหวัดปราจีนบุรี 25140 ประเทศไทย
+              </div>
+            </div>
+          </div> */}
+          <div className="row branchesRow">
+            <div className="col-xs-4">
+              <div className="branchesPic">
+                <img
+                  src="../images/domestic-branches/008.jpg"
+                  alt="Domestic Branches"
+                />
+              </div>
+            </div>
+
+            <div className="col-xs-8">
+              <div className="branchesTitle">
+                คลังสินค้าเชียงใหม่
+                <a
+                  className="branchesMap"
+                  target="_blank"
+                  href="https://goo.gl/maps/tQcM8Uax6FinKGyGA"
+                ></a>
+              </div>
+
+              <div className="branchesText">
+                เลขที่ 177 หมู่ที่ 13 ตำบลมะเขือแจ้ อำเภอเมืองลำพูน จังหวัดลำพูน
+                51000 ประเทศไทย
+                <br />
+                โทรศัพท์: (+66)-53-096-302~4 / โทรสาร: (+66)-53-093-305
+              </div>
             </div>
           </div>
         </div>
