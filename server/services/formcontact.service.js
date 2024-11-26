@@ -27,7 +27,7 @@ const mailMessage = (mailTo, subject, template) => {
 let MailGenerator = new Mailgen({
     theme: 'salted',
     product: {
-        name: 'YMC Translation Center Recruitment Co., Ltd.',
+        name: 'Siam Nistrans Co.,Ltd.',
         link: 'https://mailgen.js/'// URL Website
     }
 });
@@ -57,12 +57,12 @@ const methods = {
                                 detail: req.body.title,
                             },
                             {
-                                '#': 'Name',
+                                '#': 'Company',
                                 detail: req.body.company_name,
                             },
                             {
-                                '#': 'Name',
-                                detail: req.body.contact_name,
+                                '#': 'Department',
+                                detail: req.body.department,
                             },
                             {
                                 '#': 'Email',
@@ -71,6 +71,10 @@ const methods = {
                             {
                                 '#': 'Telephone',
                                 detail: req.body.phone,
+                            },
+                            {
+                                '#': 'Subject',
+                                detail: req.body.subject,
                             },
                             {
                                 '#': 'Details',

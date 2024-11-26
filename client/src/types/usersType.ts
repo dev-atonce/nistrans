@@ -38,8 +38,8 @@ export interface UsersState {
   lastPage: number;
   currPage: number;
 
-  initializeAuth: () => void;
-  login: (email: string, password: string) => Promise<void>;
+  initializeAuth: () => Promise<boolean>;
+  login: (email: string, password: string) => Promise<boolean>;
   logout: () => Promise<void>;
   fetchUsers: (page: number) => Promise<void>;
   fetchUserById: (id: string) => Promise<void>;

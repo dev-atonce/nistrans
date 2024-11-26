@@ -20,16 +20,35 @@ export const useUsersStore = create<UsersState>((set) => ({
   lastPage: 0,
   currPage: 1,
 
-  initializeAuth: () => {
-    const token = localStorage.getItem("token");
-    const userData = JSON.parse(localStorage.getItem("user") || "{}");
+  initializeAuth: async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const userData = JSON.parse(localStorage.getItem("user") || "{}");
 
-    set({
-      token: token,
-      role: userData?.role || "",
-      user: userData?.username || "",
-      id: userData?.id || "",
-    });
+      await axios.get<any>(`${API_URL}/check/auth`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      set({
+        token: token,
+        role: userData?.role || "",
+        user: userData?.username || "",
+        id: userData?.id || "",
+      });
+
+      return true;
+    } catch (error: any) {
+      set({ error: error.message, isLoading: false });
+      notification.error({
+        message: "Fail!",
+        description: error.message,
+      });
+      return false;
+    }
   },
 
   login: async (email, password) => {
@@ -50,19 +69,25 @@ export const useUsersStore = create<UsersState>((set) => ({
         message: "Success!",
         description: "Login successfully!",
       });
+      return true;
     } catch (error: any) {
       set({ error: error.message, isLoading: false });
       notification.error({
         message: "Fail!",
         description: error.message,
       });
+      return false;
     }
   },
 
   logout: async () => {
-    localStorage.removeItem("token"); // Use the correct key
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     set({
       token: null,
+      role: "",
+      user: "",
+      id: "",
     });
   },
 

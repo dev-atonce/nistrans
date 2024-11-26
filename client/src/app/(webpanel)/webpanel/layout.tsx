@@ -19,15 +19,30 @@ export default function RootLayout({
   const { initializeAuth } = useUsersStore();
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
-    const Localtoken = localStorage.getItem("token");
-    setToken(Localtoken);
-    if (!Localtoken) {
-      router.push("/webpanel/auth/signin");
-    } else {
-      initializeAuth();
-    }
-  }, [token, router, initializeAuth]);
+    const checkAuthentication = async () => {
+      setLoading(true); // Start loading
+
+      const Localtoken = localStorage.getItem("token");
+      setToken(Localtoken);
+
+      if (!Localtoken) {
+        router.push("/webpanel/auth/signin");
+        setLoading(false);
+        return;
+      }
+
+      const checkAuth = await initializeAuth(); // Wait for the promise to resolve
+
+      if (!checkAuth) {
+        router.push("/webpanel/auth/signin");
+      }
+
+      setLoading(false); // Stop loading
+    };
+
+    checkAuthentication(); // Call the async function inside useEffect
+  }, [router, initializeAuth]);
+
 
   return (
     <html lang="en">
