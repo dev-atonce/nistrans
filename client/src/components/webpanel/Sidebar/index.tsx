@@ -15,33 +15,6 @@ interface SidebarProps {
 
 const menuGroups = [
   {
-    name: "RECRUITMENT",
-    menuItems: [
-      {
-        icon: "",
-        label: "Job Post",
-        route: "/webpanel/jobpost",
-        // children: [{ label: "eCommerce", route: "/" }],
-      },
-      {
-        icon: "",
-        label: "Job Application",
-        route: "/webpanel/jobapply",
-      },
-      {
-        icon: "",
-        label: "Resume Store",
-        route: "/webpanel/jobinformation",
-      },
-
-      {
-        icon: "",
-        label: "Corporate Contact",
-        route: "/webpanel/jobcorporate",
-      },
-    ],
-  },
-  {
     name: "GENERAL",
     menuItems: [
       {
@@ -51,23 +24,18 @@ const menuGroups = [
       },
       {
         icon: "",
-        label: "About Us",
-        route: "/webpanel/about-us",
-      },
-      {
-        icon: "",
         label: "Banner",
         route: "/webpanel/banner",
       },
       {
         icon: "",
-        label: "Service",
-        route: "/webpanel/jobservice",
-      },
-      {
-        icon: "",
-        label: "Blog",
-        route: "/webpanel/blog",
+        label: "News & Activity",
+        route: "",
+        children: [
+          { label: "Blog", route: "/webpanel/blog" },
+          { label: "News", route: "/webpanel/news" },
+          { label: "Recruitment", route: "/webpanel/recruitment" }
+        ],
       },
       {
         icon: "",
