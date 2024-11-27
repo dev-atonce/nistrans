@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Province from "@/assets/province.json";
 
 interface SelectProvinceProps {
-  itemState: string;
+  itemState: string | undefined;
   setItemState: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
@@ -17,12 +17,12 @@ const SelectProvince = ({ itemState, setItemState }: SelectProvinceProps) => {
   return (
     <div className="">
       <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-        Province
+        Location
       </label>
 
       <div className="relative z-20 bg-transparent dark:bg-form-input">
         <select
-          name="province"
+          name="location"
           value={itemState}
           onChange={(event) => {
             setItemState(event);
@@ -32,7 +32,7 @@ const SelectProvince = ({ itemState, setItemState }: SelectProvinceProps) => {
             }`}
         >
           <option value="" disabled className="text-body dark:text-bodydark">
-            Select Province
+            Select Location
           </option>
           {Province.map((item, index) => (
             <option

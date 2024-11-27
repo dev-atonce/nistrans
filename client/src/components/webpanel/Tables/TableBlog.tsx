@@ -23,7 +23,7 @@ const TableBlog = () => {
   const [pageState, setPageState] = useState(1);
 
   useEffect(() => {
-    fetchItems(pageState);
+    fetchItems(pageState, 'blog');
   }, [pageState]);
 
   return (

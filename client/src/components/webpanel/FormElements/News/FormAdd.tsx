@@ -2,19 +2,16 @@
 
 import { BlogProps } from "@/types/blogType";
 import { useBlogStore } from "@/store/blogStore";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import FormBlog from "./FormBlog";
+import FormBlog from "./FormNews";
 
 const FormAdd = () => {
   const router = useRouter();
   const { createItem } = useBlogStore();
-  const [blogState, setBlogState] = useState<
-    Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">
-  >({
-    blog_image: "",
+  const [blogState, setBlogState] = useState<Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">>({
+    attachment: "",
     blog_title: "",
-    blog_description: "",
     blog_detail: "",
     slug: "",
   });
@@ -24,10 +21,10 @@ const FormAdd = () => {
   ) => {
     // @ts-ignore
     const { name, value, files } = event.target;
-    if (name === "blog_image" && files && files[0]) {
+    if (name === "attachment" && files && files[0]) {
       setBlogState((prevState) => ({
         ...prevState,
-        blog_image: files[0],
+        attachment: files[0],
       }));
     } else {
       setBlogState((prevState) => ({
@@ -45,12 +42,15 @@ const FormAdd = () => {
   };
 
   const handleSubmit = async () => {
-    await createItem(blogState, 'blog');
-    router.push("/webpanel/blog");
+    const isSuccess = await createItem(blogState, 'news');
+    if (isSuccess) {
+      router.push("/webpanel/news");
+    }
   };
 
   return (
     <FormBlog
+      pageattach={false}
       itemState={blogState}
       setItemState={handleChange}
       handleSubmit={handleSubmit}

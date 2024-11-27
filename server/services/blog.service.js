@@ -15,31 +15,7 @@ const methods = {
 
   async find(req) {
     try {
-      const limit = +config.pageLimit;
-      const offset = +(limit * ((req.query.page || 1) - 1));
-      const _q = methods.scopeSearch(req);
-      _q.query.status = true;
-
-      const rows = await Blog.find(_q.query)
-        .sort({ createdAt: "desc" })
-        .limit(limit)
-        .skip(offset);
-      const count = await Blog.countDocuments(_q.query);
-
-      return {
-        total: count,
-        lastPage: Math.ceil(count / limit),
-        currPage: +req.query.page || 1,
-        rows: rows,
-      };
-    } catch (error) {
-      return Promise.reject(ErrorBadRequest(error.message));
-    }
-  },
-
-  async findHome(req) {
-    try {
-      const limit = req?.params?.limit;
+      const limit = req.query.limit|| +config.pageLimit;
       const offset = +(limit * ((req.query.page || 1) - 1));
       const _q = methods.scopeSearch(req);
       _q.query.status = true;
@@ -66,6 +42,7 @@ const methods = {
       const limit = +config.pageLimit;
       const offset = +(limit * ((req.query.page || 1) - 1));
       const _q = methods.scopeSearch(req);
+      _q.query.type = req.query.type;
 
       const rows = await Blog.find(_q.query)
         .sort({ createdAt: "desc" })
@@ -106,14 +83,17 @@ const methods = {
 
   async insert(req, res) {
     return new Promise((resolve, reject) => {
-      const uploader = createUploader("./public/image/blog");
-      uploader.single("blog_image")(req, res, async (err) => {
+      createUploader("./public/blog/").fields([
+        { name: "blog_image", maxCount: 1 },
+        { name: "attachment", maxCount: 1 },
+      ])(req, res, async (err) => {
         if (err) {
           return reject(ErrorBadRequest(err));
         } else {
           try {
             const data = req.body;
-            data.blog_image = req.file?.path;
+            data.blog_image = req.files?.blog_image?.[0]?.path || null;
+            data.attachment = req.files?.attachment?.[0]?.path || null;
             const obj = new Blog(data);
             const inserted = await obj.save();
             resolve(inserted);
@@ -121,41 +101,53 @@ const methods = {
             reject(ErrorBadRequest(error.message));
           }
         }
-      });
+      })
     });
   },
 
   async update(req, res) {
     return new Promise((resolve, reject) => {
-      const uploader = createUploader("./public/image/blog");
-      uploader.single("blog_image")(req, res, async (err) => {
+      createUploader("./public/blog/").fields([
+        { name: "blog_image", maxCount: 1 },
+        { name: "attachment", maxCount: 1 },
+      ])(req, res, async (err) => {
         if (err) {
           return reject(ErrorBadRequest(err));
-        } else {
-          try {
-            const data = req.body;
-            const obj = await Blog.findById(req.params.id);
-            if (!obj) return reject(ErrorNotFound("id: not found"));
-            if (req.file) {
-              if (obj?.blog_image) {
+        }
+        try {
+          const data = req.body;
+          const obj = await Blog.findById(req.params.id);
+          if (!obj) return reject(ErrorNotFound("id: not found"));
+
+          const handleFileUpdate = async (fieldName) => {
+            if (req.files[fieldName]) {
+              if (obj[fieldName]) {
                 try {
-                  await fs.unlink(obj.blog_image);
+                  await fs.unlink(obj[fieldName]);
                 } catch (error) {
                   if (error.code !== "ENOENT") {
                     throw error;
                   }
                 }
               }
-              data.blog_image = req.file?.path;
+              data[fieldName] = req.files[fieldName][0]?.path || null;
             }
-            await Blog.updateOne({ _id: req.params.id }, data, {
-              runValidators: true,
-              new: true,
-            });
-            resolve(Object.assign(obj, data));
-          } catch (error) {
-            reject(ErrorBadRequest(error.message));
-          }
+          };
+
+          const fieldsToUpdate = [
+            "blog_image",
+            "attachment",
+          ];
+
+          await Promise.all(fieldsToUpdate.map(field => handleFileUpdate(field)));
+          await Blog.updateOne({ _id: req.params.id }, data, {
+            runValidators: true,
+            new: true,
+          });
+
+          resolve(Object.assign(obj, data));
+        } catch (error) {
+          reject(ErrorBadRequest(error.message));
         }
       });
     });
@@ -165,20 +157,30 @@ const methods = {
     try {
       const obj = await Blog.findOneAndDelete({ _id: id }).exec();
       if (!obj) return Promise.reject(ErrorNotFound("id: not found"));
-      if (obj?.blog_image) {
-        try {
-          await fs.unlink(obj.blog_image);
-        } catch (error) {
-          if (error.code !== "ENOENT") {
-            throw error;
+
+      const deleteFile = async (filePath) => {
+        if (filePath) {
+          try {
+            await fs.unlink(filePath);
+          } catch (error) {
+            if (error.code !== "ENOENT") {
+              throw error;
+            }
           }
         }
-      }
+      };
+
+      const filesToDelete = [
+        obj?.blog_image,
+        obj?.attachment,
+      ];
+
+      await Promise.all(filesToDelete.map(path => deleteFile(path)));
       return { msg: "deleted success" };
     } catch (error) {
       return Promise.reject(ErrorBadRequest(error.message));
     }
-  },
+  }
 };
 
 module.exports = { ...methods };

@@ -15,11 +15,11 @@ export const useBlogStore = create<BlogState>((set) => ({
   lastPage: 0,
   currPage: 1,
 
-  fetchItems: async (page) => {
+  fetchItems: async (page, type) => {
     set({ isLoading: true, error: null });
     try {
       const response = await axios.get<ApiResponse>(
-        `${API_URL}/all?page=${page}`,
+        `${API_URL}/all?type=${type}&page=${page}`,
         {
           headers: {
             authorization: `Bearer ${useUsersStore.getState().token}`,
@@ -61,7 +61,7 @@ export const useBlogStore = create<BlogState>((set) => ({
     }
   },
 
-  createItem: async (newItem) => {
+  createItem: async (newItem, type) => {
     const formData = new FormData();
     formData.append("blog_title", newItem.blog_title);
     // @ts-ignore
@@ -69,8 +69,17 @@ export const useBlogStore = create<BlogState>((set) => ({
     if (newItem.blog_image) {
       formData.append("blog_image", newItem.blog_image);
     }
-    formData.append("blog_description", newItem.blog_description);
+    if (newItem.attachment) {
+      formData.append("attachment", newItem.attachment);
+    }
+    if (newItem.blog_description) {
+      formData.append("blog_description", newItem.blog_description);
+    }
+    if (newItem.location) {
+      formData.append("location", newItem.location);
+    }
     formData.append("blog_detail", newItem.blog_detail);
+    formData.append("type", type);
     set({ isLoading: true, error: null });
     try {
       const response = await axios.post<BlogProps>(API_URL, formData, {
@@ -87,12 +96,14 @@ export const useBlogStore = create<BlogState>((set) => ({
         message: "Success !",
         description: "The Item was created successfully!",
       });
+      return true;
     } catch (error: any) {
       set({ error: error.message, isLoading: false });
       notification.error({
         message: "Fail !",
         description: error.message,
       });
+      return false;
     }
   },
 
@@ -104,7 +115,15 @@ export const useBlogStore = create<BlogState>((set) => ({
     if (updatedItem.blog_image) {
       formData.append("blog_image", updatedItem.blog_image);
     }
-    formData.append("blog_description", updatedItem.blog_description);
+    if (updatedItem.attachment) {
+      formData.append("attachment", updatedItem.attachment);
+    }
+    if (updatedItem.blog_description) {
+      formData.append("blog_description", updatedItem.blog_description);
+    }
+    if (updatedItem.location) {
+      formData.append("location", updatedItem.location);
+    }
     formData.append("blog_detail", updatedItem.blog_detail);
     set({ isLoading: true, error: null });
     try {
@@ -127,23 +146,28 @@ export const useBlogStore = create<BlogState>((set) => ({
         message: "Success !",
         description: "The Item was updated successfully!",
       });
+      return true;
     } catch (error: any) {
       set({ error: error.message, isLoading: false });
       notification.error({
         message: "Fail !",
         description: error.message,
       });
+      return false;
     }
   },
 
   onChangeStatus: async (id, status) => {
     set({ isLoading: true, error: null });
+    const formData = new FormData();
+    formData.append("status", String(status));
     try {
       const response = await axios.put<BlogProps>(
         `${API_URL}/${id}`,
-        { status },
+        formData,
         {
           headers: {
+            "Content-Type": "multipart/form-data",
             authorization: `Bearer ${useUsersStore.getState().token}`,
           },
         }

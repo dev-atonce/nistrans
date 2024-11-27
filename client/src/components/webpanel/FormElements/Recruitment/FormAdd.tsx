@@ -2,9 +2,9 @@
 
 import { BlogProps } from "@/types/blogType";
 import { useBlogStore } from "@/store/blogStore";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import FormBlog from "./FormBlog";
+import FormRecruitment from "./FormRecruitment";
 
 const FormAdd = () => {
   const router = useRouter();
@@ -12,10 +12,9 @@ const FormAdd = () => {
   const [blogState, setBlogState] = useState<
     Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">
   >({
-    blog_image: "",
     blog_title: "",
-    blog_description: "",
     blog_detail: "",
+    location: "",
     slug: "",
   });
 
@@ -45,12 +44,12 @@ const FormAdd = () => {
   };
 
   const handleSubmit = async () => {
-    await createItem(blogState, 'blog');
-    router.push("/webpanel/blog");
+    await createItem(blogState, 'recruitment');
+    router.push("/webpanel/recruitment");
   };
 
   return (
-    <FormBlog
+    <FormRecruitment
       itemState={blogState}
       setItemState={handleChange}
       handleSubmit={handleSubmit}
