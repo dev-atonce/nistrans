@@ -19,6 +19,7 @@ const methods = {
       const offset = +(limit * ((req.query.page || 1) - 1));
       const _q = methods.scopeSearch(req);
       _q.query.status = true;
+      _q.query.type = req.query.type;
 
       const rows = await Blog.find(_q.query)
         .sort({ createdAt: "desc" })
