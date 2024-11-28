@@ -1,15 +1,11 @@
-import {
-  ContactProps,
-  ApiResponse,
-  ContactState,
-} from "./../types/contactType";
+import { ContactProps, ApiResponse, ContactState } from "./../types/contactType";
 import { create } from "zustand";
 import axios from "axios";
 import { notification } from "antd";
 import { useUsersStore } from "./usersStore";
 
 const API_URL = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/contactinfo`;
-// @ts-ignore
+
 export const useContactStore = create<ContactState>((set) => {
   return {
     items: [],
@@ -24,7 +20,6 @@ export const useContactStore = create<ContactState>((set) => {
       try {
         const response = await axios.get<ApiResponse>(
           `${API_URL}/`,
-          //   `${API_URL}?page=${page}`,
           {
             headers: {
               authorization: `Bearer ${useUsersStore.getState().token}`,

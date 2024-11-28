@@ -3,7 +3,7 @@ const controllers = require("../../controllers/logo.controller");
 const auth = require("../auth");
 const validator = require("../../validators");
 
-router.get("/all/", auth.required, controllers.onGetAll);
+router.get("/all/", controllers.onGetAll);
 
 router.put("/:type", [auth.required], controllers.onUpdate);
 

@@ -31,7 +31,6 @@ export interface ContactState {
   lastPage: number;
   currPage: number;
 
-  fetchItems: (page: number) => Promise<void>;
-  fetchItemById: (id: string) => Promise<void>;
-  updateItem: (updatedItem: ContactState) => Promise<void>;
+  fetchItems: () => Promise<void>;
+  updateItem: (updatedItem: ContactProps) => Promise<void>;
 }

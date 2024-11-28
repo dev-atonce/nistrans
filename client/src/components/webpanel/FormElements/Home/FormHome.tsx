@@ -1,19 +1,18 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { useUsersStore } from "@/store/usersStore";
 import { useAboutStore } from "@/store/aboutStore";
 import { useContactStore } from "@/store/contactStore";
+import { ContactProps } from "@/types/contactType";
 import ImagePreview from "../../Input/ImagePreview";
 
 const FormHome = () => {
   const { updateItem } = useContactStore();
-  // @ts-ignore
   const { updateLogo } = useAboutStore();
   const [logoState, setLogoState] = useState({ header: "", footer: "" });
-  const [selectedHeader, setSelectedHeader] = useState<any>("");
-  const [selectedFooter, setSelectedFooter] = useState<any>("");
-  const [contactState, setContactState] = useState<any>({});
+  const [selectedHeader, setSelectedHeader] = useState<File | undefined | Blob>();
+  const [selectedFooter, setSelectedFooter] = useState<File | undefined | Blob>();
+  const [contactState, setContactState] = useState<Partial<ContactProps>>({});
 
   const onFetch = async () => {
     const data = await fetch(
@@ -47,42 +46,28 @@ const FormHome = () => {
 
     setContactState(contact);
   };
-  
-  const handleLogoChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    // @ts-ignore
-    const { name, value, files } = event.target;
+
+  const handleLogoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, files } = event.target;
     if (files && files[0]) {
       setLogoState((prevState) => ({
         ...prevState,
-        blog_image: files[0],
+        [name]: files[0],
       }));
     }
   };
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    // @ts-ignore
-    const { name, value, files } = event.target;
-    if (name === "image" && files && files[0]) {
-      setContactState((prevState: any) => ({
-        ...prevState,
-        image: files[0],
-      }));
-    } else {
-      setContactState((prevState: any) => ({
-        ...prevState,
-        [name]: value,
-      }));
-    }
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setContactState((prevState: any) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   const handleSubmitLogo = async () => {
-    await updateLogo(logoState?.header);
-    await updateLogo(logoState?.footer);
-    // router.push("/webpanel/blog");
+    await updateLogo(logoState?.header, "header");
+    await updateLogo(logoState?.footer, "footer");
   };
 
   const handleSubmitContact = async () => {
@@ -152,7 +137,6 @@ const FormHome = () => {
                 className="w-full cursor-pointer rounded-lg border-[1.5px] border-stroke bg-transparent outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-stroke file:bg-whiter file:px-5 file:py-3 file:hover:bg-primary file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:file:border-form-strokedark dark:file:bg-white/30 dark:file:text-white dark:focus:border-primary"
               />
             </div>
-
             <div className="col-span-2">
               <button
                 onClick={handleSubmitLogo}
@@ -177,9 +161,9 @@ const FormHome = () => {
           <input
             type="text"
             name="email"
-            value={contactState?.email}
+            value={contactState?.email || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -190,9 +174,9 @@ const FormHome = () => {
           <input
             type="text"
             name="email2"
-            value={contactState?.email2}
+            value={contactState?.email2 || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -203,9 +187,9 @@ const FormHome = () => {
           <input
             type="text"
             name="email3"
-            value={contactState?.email3}
+            value={contactState?.email3 || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -216,9 +200,9 @@ const FormHome = () => {
           <input
             type="text"
             name="telephone"
-            value={contactState?.telephone}
+            value={contactState?.telephone || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -229,22 +213,22 @@ const FormHome = () => {
           <input
             type="text"
             name="telephone2"
-            value={contactState?.telephone2}
+            value={contactState?.telephone2 || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-4">
           <label className="mb-3 block text-sm font-medium text-black dark:text-white">
             Contact 3 (Phone)
           </label>
           <input
             type="text"
             name="telephone3"
-            value={contactState?.telephone3}
+            value={contactState?.telephone3 || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -255,9 +239,9 @@ const FormHome = () => {
           <input
             type="text"
             name="facebook"
-            value={contactState?.facebook}
+            value={contactState?.facebook || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -268,9 +252,9 @@ const FormHome = () => {
           <input
             type="text"
             name="line"
-            value={contactState?.line}
+            value={contactState?.line || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -281,9 +265,9 @@ const FormHome = () => {
           <input
             type="text"
             name="instagram"
-            value={contactState?.instagram}
+            value={contactState?.instagram || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -294,9 +278,9 @@ const FormHome = () => {
           <input
             type="text"
             name="tiktok"
-            value={contactState?.tiktok}
+            value={contactState?.tiktok || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Title"
+            placeholder="Enter your data"
             className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -306,12 +290,10 @@ const FormHome = () => {
           </label>
           <textarea
             rows={7}
-            type="text"
             name="addressTH"
-            value={contactState?.addressTH}
-            // @ts-ignore
+            value={contactState?.addressTH || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Description"
+            placeholder="Enter your data"
             className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>
@@ -321,12 +303,10 @@ const FormHome = () => {
           </label>
           <textarea
             rows={7}
-            type="text"
             name="gMap"
-            value={contactState?.gMap}
-            // @ts-ignore
+            value={contactState?.gMap || ""}
             onChange={handleChange}
-            placeholder="Enter Seo Keyword"
+            placeholder="Enter your data"
             className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
         </div>

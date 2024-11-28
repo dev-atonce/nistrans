@@ -1,41 +1,45 @@
-import { useState } from "react";
 import Image from "next/image";
 
 interface ImagePreviewProps {
   itemState: any;
   keyProp: string;
-  selectedImage: Blob;
+  selectedImage: Blob | undefined;
   height: number;
 }
+
 export default function ImagePreview({
   itemState,
   keyProp,
   selectedImage,
   height,
 }: ImagePreviewProps) {
+  const imageUrl = itemState?.[keyProp]
+    ? `${process.env.NEXT_PUBLIC_BASE_URL}${itemState[keyProp]}`
+    : null;
+
   return (
-    <div className="bg-slate-300 rounded-xl flex justify-center items-center ">
+    <div className="bg-slate-300 rounded-xl flex justify-center items-center">
       {selectedImage ? (
         <Image
           src={URL.createObjectURL(selectedImage)}
           alt="preview"
           width={800}
           height={400}
-          className="h-full  object-contain"
+          className="h-full object-contain"
           style={{ maxHeight: `${height}px` }}
         />
-      ) : itemState[keyProp] ? (
+      ) : imageUrl ? (
         <Image
           alt="preview"
           width={800}
           height={400}
-          src={`${process.env.NEXT_PUBLIC_BASE_URL}${itemState[keyProp]}`}
-          className="h-full  object-contain "
+          src={imageUrl}
+          className="h-full object-contain"
           style={{ maxHeight: `${height}px` }}
         />
       ) : (
         <div
-          className="  text-4xl font-semibold flex items-center justify-center"
+          className="text-4xl font-semibold flex items-center justify-center"
           style={{ height: `${height}px` }}
         >
           No Image

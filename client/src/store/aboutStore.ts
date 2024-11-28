@@ -1,4 +1,4 @@
-import { AboutProps, AboutState } from "./../types/aboutType";
+import { AboutProps, AboutState, logoProps } from "./../types/aboutType";
 import { create } from "zustand";
 import axios from "axios";
 import { notification } from "antd";
@@ -24,7 +24,6 @@ export const useAboutStore = create<AboutState>((set) => {
             authorization: `Bearer ${useUsersStore.getState().token}`,
           },
         });
-
         set((state) => ({
           ...state,
           items: [response.data],
@@ -39,25 +38,19 @@ export const useAboutStore = create<AboutState>((set) => {
       }
     },
 
-    updateLogo: async (updatedItem: any) => {
-      const formData = new FormData();
-      formData.append("type", updatedItem.type);
-
-      if (updatedItem.image) {
-        formData.append("image", updatedItem.blog_image);
-      }
-
+    updateLogo: async (updatedItem, type) => {
       set({ isLoading: true, error: null });
+      const formData = new FormData();
+      formData.append("type", type);
+      if (updatedItem) {
+        formData.append("image", updatedItem);
+      }
       try {
-        const response = await axios.put<any>(`${API_URL}/`, formData, {
+        await axios.put<logoProps>(`${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/logo/${type}`, formData, {
           headers: {
             authorization: `Bearer ${useUsersStore.getState().token}`,
           },
         });
-        set((state) => ({
-          ...state,
-          isLoading: false,
-        }));
         notification.success({
           message: "Success !",
           description: "The Item was updated successfully!",

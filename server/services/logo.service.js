@@ -1,9 +1,6 @@
 const Logo = require("../models/Logo.js");
-const config = require("../configs/app");
 const fs = require("fs/promises");
-const multer = require("multer");
 const { createUploader } = require("../helpers/uploader.helper.js");
-
 const { ErrorBadRequest, ErrorNotFound } = require("../configs/errorMethods");
 
 const methods = {
@@ -24,26 +21,26 @@ const methods = {
           return reject(ErrorBadRequest(err));
         } else {
           try {
-            const data = req.body;
-            const obj = await Logo.findById(req.params.id);
-            if (!obj) return reject(ErrorNotFound("id: not found"));
-            if (req.file) {
-              if (obj?.image) {
-                try {
-                  await fs.unlink(obj.image);
-                } catch (error) {
-                  if (error.code !== "ENOENT") {
-                    throw error;
-                  }
-                }
+            const data = {};
+            const obj = await Logo.findOne({ type: req.params.type });
+            if (!obj) {
+              data.type = req.params.type;
+              if (req.file) {
+                data.image = req.file.path;
               }
-              data.image = req.file?.path;
+              const obj = new Logo(data);
+              const inserted = await obj.save();
+              resolve(inserted);
+            } else {
+              if (req.file) {
+                data.image = req.file?.path;
+              }
+              const newPic = await Logo.findOneAndUpdate({ type: req.params.type }, data, {
+                runValidators: true,
+                new: true,
+              });
+              resolve(newPic);
             }
-            await Logo.updateOne({ _id: req.params.id }, data, {
-              runValidators: true,
-              new: true,
-            });
-            resolve(Object.assign(obj, data));
           } catch (error) {
             reject(ErrorBadRequest(error.message));
           }
