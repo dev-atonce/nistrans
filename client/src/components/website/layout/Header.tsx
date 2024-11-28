@@ -8,6 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Script from "next/script";
 import { hasCookie, setCookie } from "cookies-next";
 import { IoPersonSharp } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Header({ logo, contact, lang }: any) {
   const [currentLanguage, setCurrentLanguage] = useState<string>("th");
@@ -56,10 +57,13 @@ export default function Header({ logo, contact, lang }: any) {
           <div className="flex justify-between h-full items-center gap-30 ">
             <div className="flex items-center gap-10 ">
               <NavBar lang={lang} />
-              <div className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 ">
+              <Link
+                href={`/${lang}/recruitment`}
+                className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 "
+              >
                 <IoPersonSharp />
                 <span>สมัครงาน</span>
-              </div>
+              </Link>
             </div>
             <div className="text-black notranslate flex gap-1">change Lang</div>
           </div>

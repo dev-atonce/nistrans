@@ -161,17 +161,18 @@ export default async function AboutPage() {
                 </span>
               </li>
             </ul>
-
-            <img
-              src="../images/company-info/001.jpg"
-              className="comInfoRow1Pic1"
-              alt="Company Profile"
-            />
-            <img
-              src="../images/company-info/002.jpg"
-              className="comInfoRow1Pic2"
-              alt="Company Profile"
-            />
+            <div className="flex gap-2">
+              <img
+                src="/img/about/001.jpg"
+                className="hidden md:block"
+                alt="Company Profile"
+              />
+              <img
+                src="/img/about/002.jpg"
+                className="hidden md:block"
+                alt="Company Profile"
+              />
+            </div>
           </div>
 
           <a
@@ -208,31 +209,31 @@ export default async function AboutPage() {
 
           <div className="container">
             <div className="picRow1">
-              <div className="row">
-                <div className="col-xs-3">
+              <div className="grid grid-cols-12 gap-4">
+                <div className="col-span-12 md:col-span-3 ">
                   <img
-                    src="../images/company-info/003.jpg"
+                    src="/img/about/003.jpg"
                     className="img-responsive"
                     alt="Company Profile"
                   />
                 </div>
-                <div className="col-xs-3">
+                <div className="col-span-12 md:col-span-3 ">
                   <img
-                    src="../images/company-info/004.jpg"
+                    src="/img/about/004.jpg"
                     className="img-responsive"
                     alt="Company Profile"
                   />
                 </div>
-                <div className="col-xs-3">
+                <div className="col-span-12 md:col-span-3 ">
                   <img
-                    src="../images/company-info/005.jpg"
+                    src="/img/about/005.jpg"
                     className="img-responsive"
                     alt="Company Profile"
                   />
                 </div>
-                <div className="col-xs-3">
+                <div className="col-span-12 md:col-span-3 ">
                   <img
-                    src="../images/company-info/006.jpg"
+                    src="/img/about/006.jpg"
                     className="img-responsive"
                     alt="Company Profile"
                   />

@@ -1,7 +1,8 @@
 import Cover from "@/components/website/layout/Cover";
 import ServiceSection from "@/components/website/layout/ServiceSection";
 
-export default function ServicePage() {
+export default function ServicePage({ params: { lng } }: any) {
+  const lang = lng;
   return (
     <>
       <Cover
@@ -10,7 +11,7 @@ export default function ServicePage() {
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container mx-auto ">
-        <ServiceSection />
+        <ServiceSection page={true} lang={lang} />
       </div>
     </>
   );

@@ -5,7 +5,7 @@ export default function ProductCard({ item }: any) {
     <Link
       href={`/service/${item?.id}`}
       //   href={`/${lang?.toLowerCase()}/service/${item?.id}`}
-      className="group   pb-4 transition-all duration-500 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 rounded-lg overflow-hidden"
+      className="group   pb-4 transition-all duration-500 col-span-12 md:col-span-6  xl:col-span-3 rounded-lg overflow-hidden"
     >
       <Image
         src={"/img/banner1.png"}

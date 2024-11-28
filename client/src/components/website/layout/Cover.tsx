@@ -40,9 +40,9 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
       </div>
       {!noHeading && (
         <div className="container mx-auto mt-4 ">
-          <div className="pb-4 border-b mb-4">
-            <span className="text-red-600">{engName}</span>
+          <div className="py-4 flex flex-col gap-3 ">
             <h1 className="text-black text-2xl ">{pageName}</h1>
+            <div className="h-1 w-20 bg-orange-400"></div>
           </div>
         </div>
       )}

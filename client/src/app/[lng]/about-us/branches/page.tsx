@@ -49,16 +49,16 @@ export default async function AboutPage() {
       />
       <div className="container mx-auto pb-10 text-black">
         <div className="branchesDomestic">
-          <div className="row branchesRow" style={{ marginBottom: "75px" }}>
-            <div className="col-xs-6">
+          <div
+            className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow"
+            style={{ marginBottom: "75px" }}
+          >
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/001.jpg"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/007.jpg" alt="Domestic Branches" />
               </div>
             </div>
-            <div className="col-xs-6">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 สำนักงานใหญ่ / สำนักงานกรุงเทพฯ
                 <a
@@ -94,16 +94,13 @@ export default async function AboutPage() {
             </div>
           </div>
 
-          <div className="row branchesRow">
-            <div className="col-xs-4">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/002.jpg"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/008.jpg" alt="Domestic Branches" />
               </div>
             </div>
-            <div className="col-xs-8">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 สำนักงานสนามบิน (สนามบินสุวรรณภูมิ)
                 <a
@@ -124,16 +121,13 @@ export default async function AboutPage() {
             </div>
           </div>
 
-          <div className="row branchesRow">
-            <div className="col-xs-4">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/003.jpg"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/009.jpg" alt="Domestic Branches" />
               </div>
             </div>
-            <div className="col-xs-8">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 คลังสินค้าอยุธยา
                 <a
@@ -152,16 +146,13 @@ export default async function AboutPage() {
             </div>
           </div>
 
-          <div className="row branchesRow">
-            <div className="col-xs-4">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/004.jpg"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/010.jpg" alt="Domestic Branches" />
               </div>
             </div>
-            <div className="col-xs-8">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 คลังสินค้าบางปะกง
                 <a
@@ -181,16 +172,13 @@ export default async function AboutPage() {
             </div>
           </div>
 
-          <div className="row branchesRow">
-            <div className="col-xs-4">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/005.jpg"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/011.jpg" alt="Domestic Branches" />
               </div>
             </div>
-            <div className="col-xs-8">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 คลังสินค้าบางปะกง K38
                 <a
@@ -209,73 +197,14 @@ export default async function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="row branchesRow">
-            <div className="col-xs-4">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/005.jpg"
-                  alt="Domestic Branches"
-                />
-              </div>
-            </div>
-            <div className="col-xs-8">
-              <div className="branchesTitle">
-                คลังสินค้าบางปะกง K38
-                <a
-                  className="branchesMap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+BPK38+Warehouse/@13.5651798,100.9345016,15z/data=!4m2!3m1!1s0x0:0xcd281da9cab68969?sa=X&hl=en&ved=2ahUKEwiqn7vo2LT7AhWTSGwGHU7PBK8Q_BJ6BAhUECE"
-                ></a>
-              </div>
-              <div className="branchesText">
-                เลขที่ 68/8 หมู่ที่ 5 ถนนบางนา-ตราด กม.38 ตำบลบางสมัคร
-                <br />
-                อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
-                <br />
-                โทรศัพท์: (+66)-38-539-980~1 / โทรสาร:(+66)-38-539-982
-              </div>
-            </div>
-          </div>
-          <div className="row branchesRow">
-            <div className="col-xs-4">
-              <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/005.jpg"
-                  alt="Domestic Branches"
-                />
-              </div>
-            </div>
-            <div className="col-xs-8">
-              <div className="branchesTitle">
-                คลังสินค้าบางปะกง K38
-                <a
-                  className="branchesMap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+BPK38+Warehouse/@13.5651798,100.9345016,15z/data=!4m2!3m1!1s0x0:0xcd281da9cab68969?sa=X&hl=en&ved=2ahUKEwiqn7vo2LT7AhWTSGwGHU7PBK8Q_BJ6BAhUECE"
-                ></a>
-              </div>
-              <div className="branchesText">
-                เลขที่ 68/8 หมู่ที่ 5 ถนนบางนา-ตราด กม.38 ตำบลบางสมัคร
-                <br />
-                อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
-                <br />
-                โทรศัพท์: (+66)-38-539-980~1 / โทรสาร:(+66)-38-539-982
-              </div>
-            </div>
-          </div>
-          <div className="row branchesRow">
-            <div className="col-xs-4">
-              <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/006.jpg"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/012.jpg" alt="Domestic Branches" />
               </div>
             </div>
 
-            <div className="col-xs-8">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 คลังสินค้าแหลมฉบัง
                 <a
@@ -294,17 +223,14 @@ export default async function AboutPage() {
             </div>
           </div>
 
-          <div className="row branchesRow">
-            <div className="col-xs-4">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/007.jpg?v=1"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/013.jpg" alt="Domestic Branches" />
               </div>
             </div>
 
-            <div className="col-xs-8">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 คลังสินค้าปราจีนบุรี (โรจนะ)
                 <a
@@ -355,17 +281,14 @@ export default async function AboutPage() {
               </div>
             </div>
           </div> */}
-          <div className="row branchesRow">
-            <div className="col-xs-4">
+          <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+            <div className="col-span-6">
               <div className="branchesPic">
-                <img
-                  src="../images/domestic-branches/008.jpg"
-                  alt="Domestic Branches"
-                />
+                <img src="/img/about/014.jpg" alt="Domestic Branches" />
               </div>
             </div>
 
-            <div className="col-xs-8">
+            <div className="col-span-6">
               <div className="branchesTitle">
                 คลังสินค้าเชียงใหม่
                 <a
