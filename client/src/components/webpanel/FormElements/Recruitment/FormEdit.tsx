@@ -58,7 +58,7 @@ const FormEdit = ({ id }: FormEditProps) => {
 
   const handleSubmit = async () => {
     await updateItem(id, blogState);
-    router.push("/webpanel/blog");
+    router.push("/webpanel/recruitment");
   };
 
   return (
