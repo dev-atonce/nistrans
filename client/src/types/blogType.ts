@@ -1,9 +1,15 @@
 export interface BlogProps {
   id: string;
   blog_image?: string;
-  blog_title: string;
-  blog_description?: string;
-  blog_detail: string;
+  blog_title_th: string;
+  blog_title_en: string;
+  blog_title_jp: string;
+  blog_description_th?: string;
+  blog_description_en?: string;
+  blog_description_jp?: string;
+  blog_detail_th: string;
+  blog_detail_en: string;
+  blog_detail_jp: string;
   type?: string;
   attachment?: string;
   location?: string;

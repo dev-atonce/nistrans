@@ -13,14 +13,20 @@ const FormAdd = () => {
     Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">
   >({
     blog_image: "",
-    blog_title: "",
-    blog_description: "",
-    blog_detail: "",
+    blog_title_th: "",
+    blog_title_en: "",
+    blog_title_jp: "",
+    blog_description_th: "",
+    blog_description_en: "",
+    blog_description_jp: "",
+    blog_detail_th: "",
+    blog_detail_en: "",
+    blog_detail_jp: "",
     slug: "",
   });
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement| HTMLTextAreaElement>
   ) => {
     // @ts-ignore
     const { name, value, files } = event.target;
@@ -37,10 +43,10 @@ const FormAdd = () => {
     }
   };
 
-  const handleEditorChange = (value: string) => {
+  const handleEditorChange = (value: string, language: string) => {
     setBlogState((prevState) => ({
       ...prevState,
-      blog_detail: value,
+      [`blog_detail_${language}`]: value,
     }));
   };
 

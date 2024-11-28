@@ -63,7 +63,9 @@ export const useBlogStore = create<BlogState>((set) => ({
 
   createItem: async (newItem, type) => {
     const formData = new FormData();
-    formData.append("blog_title", newItem.blog_title);
+    formData.append("blog_title_th", newItem.blog_title_th);
+    formData.append("blog_title_en", newItem.blog_title_en);
+    formData.append("blog_title_jp", newItem.blog_title_jp);
     // @ts-ignore
     formData.append("slug", newItem.slug);
     if (newItem.blog_image) {
@@ -72,13 +74,21 @@ export const useBlogStore = create<BlogState>((set) => ({
     if (newItem.attachment) {
       formData.append("attachment", newItem.attachment);
     }
-    if (newItem.blog_description) {
-      formData.append("blog_description", newItem.blog_description);
+    if (newItem.blog_description_th) {
+      formData.append("blog_description_th", newItem.blog_description_th);
+    }
+    if (newItem.blog_description_en) {
+      formData.append("blog_description_en", newItem.blog_description_en);
+    }
+    if (newItem.blog_description_jp) {
+      formData.append("blog_description_jp", newItem.blog_description_jp);
     }
     if (newItem.location) {
       formData.append("location", newItem.location);
     }
-    formData.append("blog_detail", newItem.blog_detail);
+    formData.append("blog_detail_th", newItem.blog_detail_th);
+    formData.append("blog_detail_en", newItem.blog_detail_en);
+    formData.append("blog_detail_jp", newItem.blog_detail_jp);
     formData.append("type", type);
     set({ isLoading: true, error: null });
     try {
@@ -109,7 +119,9 @@ export const useBlogStore = create<BlogState>((set) => ({
 
   updateItem: async (id, updatedItem) => {
     const formData = new FormData();
-    formData.append("blog_title", updatedItem.blog_title);
+    formData.append("blog_title_th", updatedItem.blog_title_th);
+    formData.append("blog_title_en", updatedItem.blog_title_en);
+    formData.append("blog_title_jp", updatedItem.blog_title_jp);
     // @ts-ignore
     formData.append("slug", updatedItem.slug);
     if (updatedItem.blog_image) {
@@ -118,13 +130,21 @@ export const useBlogStore = create<BlogState>((set) => ({
     if (updatedItem.attachment) {
       formData.append("attachment", updatedItem.attachment);
     }
-    if (updatedItem.blog_description) {
-      formData.append("blog_description", updatedItem.blog_description);
+    if (updatedItem.blog_description_th) {
+      formData.append("blog_description_th", updatedItem.blog_description_th);
+    }
+    if (updatedItem.blog_description_en) {
+      formData.append("blog_description_en", updatedItem.blog_description_en);
+    }
+    if (updatedItem.blog_description_jp) {
+      formData.append("blog_description_jp", updatedItem.blog_description_jp);
     }
     if (updatedItem.location) {
       formData.append("location", updatedItem.location);
     }
-    formData.append("blog_detail", updatedItem.blog_detail);
+    formData.append("blog_detail_th", updatedItem.blog_detail_th);
+    formData.append("blog_detail_en", updatedItem.blog_detail_en);
+    formData.append("blog_detail_jp", updatedItem.blog_detail_jp);
     set({ isLoading: true, error: null });
     try {
       const response = await axios.put<BlogProps>(

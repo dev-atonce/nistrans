@@ -71,7 +71,7 @@ const TableBlog = () => {
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <div>
                     <strong>
-                      <small>{item?.blog_title}</small>
+                      <small>{item?.blog_title_th}</small>
                     </strong>
                   </div>
                 </td>
