@@ -1,3 +1,4 @@
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -9,7 +10,8 @@ import {
 import menuItem from "@/assets/menuItem.json";
 import { RiCloseLargeLine } from "react-icons/ri";
 
-export default function SideBar({ sideBar, language, contact }: any) {
+export default function SideBar({ sideBar, language, contact, lng }: any) {
+  const pathname = usePathname();
   return (
     <div className="flex">
       <div
@@ -20,6 +22,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
           <button
             className="w-full flex justify-end"
             onClick={() => sideBar?.closeSideBar()}
+            title="Close"
           >
             <RiCloseLargeLine size={40} color={"#ED2022"} />
           </button>
@@ -44,7 +47,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
                   {item?.subMenu.map((sub, i) => (
                     <li key={index + i}>
                       <Link
-                        href={sub.href}
+                        href={`/${lng}${sub.href}`}
                         title={sub.title}
                         onClick={sideBar.closeSideBar}
                         className="submenu-item"
@@ -93,11 +96,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
             >
               <FaLine fontSize="1.2em" color="white" />
             </a>
-            <a
-              href={contact?.instagram}
-              target="_blank"
-              className="rounded-full p-2 bg-red ml-1"
-            >
+            <a href={contact?.instagram} target="_blank" className="rounded-full p-2 bg-red ml-1">
               <FaInstagram
                 fontSize="1.2em"
                 color="white"
@@ -106,7 +105,12 @@ export default function SideBar({ sideBar, language, contact }: any) {
             </a>
           </div>
           <div className="text-black notranslate flex gap-1">
-            <button onClick={(e: any) => language?.switchLanguage("th")}>
+            {language.languages.map((ld:any,i:number)=>(
+              <a key={`l_s_${i}`} href={pathname.replace(`/${language.currentLanguage}`, `/${ld.value}`)} >
+                <Image src={`/img/${ld.value=='en'?'uk':ld.value}_flag.png`} alt="th" width={25} height={25} />
+              </a>
+            ))}
+            {/* <button onClick={(e: any) => language?.switchLanguage("th")}>
               <Image src="/img/th_flag.png" alt="th" width={25} height={25} />
             </button>
             <button onClick={(e: any) => language?.switchLanguage("en")}>
@@ -116,7 +120,7 @@ export default function SideBar({ sideBar, language, contact }: any) {
             <button onClick={(e: any) => language?.switchLanguage("ja")}>
               {" "}
               <Image src="/img/jp_flag.png" alt="th" width={26} height={26} />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

@@ -6,8 +6,15 @@ import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
 import { Kanit, Roboto } from "next/font/google";
 import { ConfigProvider } from "antd";
+import "./../../css/all.scss"
 
 import Favicon from "../icon.ico";
+import { dir } from "i18next";
+import { languages } from "../i18n/settings";
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
 
 const kanit = Kanit({
   subsets: ["latin"],
@@ -35,7 +42,7 @@ export async function generateMetadata(
   );
 
   return {
-    metadataBase: new URL("https://ymctranslation.com"),
+    metadataBase: new URL("https://siam-nistrans.com"),
     title: response[`seoTitle${lng}`],
     description: response[`seoDescription${lng}`],
     keywords: response[`seoKeyword${lng}`],
@@ -59,16 +66,14 @@ const fetchContact = async () => {
 };
 export default async function RootLayout({
   children,
-  // @ts-ignore
-  params,
+  params: { lng },
 }: Readonly<{
   children: React.ReactNode;
+  params: { lng: string };
 }>) {
   const contact = await fetchContact();
-  const lang = params?.lng;
-
   return (
-    <html lang={lang}>
+    <html lang={lng} dir={dir(lng)}>
       <ConfigProvider
         theme={{
           token: {
@@ -86,9 +91,9 @@ export default async function RootLayout({
       >
         <PageSettingProvider>
           <body className={kanit.className}>
-            <Header contact={contact} lang={lang} />
+            <Header contact={contact} lng={lng}/>
             {children}
-            <Footer contact={contact} />
+            <Footer contact={contact} lng={lng}/>
           </body>
         </PageSettingProvider>
       </ConfigProvider>

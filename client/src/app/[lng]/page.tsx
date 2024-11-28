@@ -35,18 +35,21 @@ const fetchBanner = async () => {
   return data;
 };
 
+// const lng = params.lng?.toUpperCase();
+
 export default async function Home({ params }: Props) {
-  const lang = params.lng;
+  const lng = params.lng;
   const blogs = await fetchBlog();
   const banner = await fetchBanner();
+  console.log(lng)
 
   return (
     <>
       {/* Banner */}
-      <CoverSwiper banner={banner} />
+      <CoverSwiper banner={banner} lng={lng}/>
 
-      <ServiceSection />
-      <AboutSection />
+      <ServiceSection lng={lng}/>
+      <AboutSection lng={lng}/>
       <HomeMoving />
       <WarehouseManagement />
       <HacoLab />

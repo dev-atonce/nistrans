@@ -9,7 +9,7 @@ export default function Packing() {
         engName="Service"
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black py-10">
+      <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">งานพิธีการศุลกากร</h1>
         <div className="py-10">
           <div className="branchesTopic text-center">
@@ -34,7 +34,7 @@ export default function Packing() {
           </div>
 
           <img
-            src="../images/th/scm-solutions/015.jpg"
+            src="/img/service/scm-solutions/015.jpg"
             className="img-responsive img-center"
             alt="SCM Solutions"
           />
@@ -54,12 +54,12 @@ export default function Packing() {
 
           <a
             className="fancyBox"
-            href="../images/th/scm-solutions/014-zoom.jpg"
+            href="/img/service/scm-solutions/014-zoom.jpg"
             rel="groupimg"
             title=""
           >
             <img
-              src="../images/th/scm-solutions/014.jpg"
+              src="/img/service/scm-solutions/014-zoom.jpg"
               className="img-responsive"
               style={{ margin: "50px auto 25px auto" }}
               alt="SCM Solutions"
@@ -99,7 +99,7 @@ export default function Packing() {
           </div>
 
           <img
-            src="../images/scm-solutions/013.jpg"
+            src="/img/service/scm-solutions/013.jpg"
             className="img-responsive img-center"
             alt="SCM Solutions"
           />
@@ -148,11 +148,11 @@ export default function Packing() {
           </ul>
 
           <div className="picRow1">
-            <div className="row">
+            <div className="grid grid-cols-12 gap-4">
               {["010", "016", "011", "012"].map((image, index) => (
-                <div className="col-xs-3" key={index}>
+                <div className="col-span-12 md:col-span-4 xl:col-span-3" key={index}>
                   <img
-                    src={`../images/scm-solutions/${image}.jpg`}
+                    src={`/img/service/scm-solutions/${image}.jpg`}
                     className="img-responsive"
                     alt="SCM Solutions"
                   />

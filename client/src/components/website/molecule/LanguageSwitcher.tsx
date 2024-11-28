@@ -1,3 +1,4 @@
+import { usePathname } from "next/navigation";
 import { FaGlobe, FaChevronDown } from "react-icons/fa";
 
 export default function LanguageSwitcher({
@@ -8,41 +9,42 @@ export default function LanguageSwitcher({
 }: any) {
   const thisId = id ? `languageSwitcher${id}` : `languageSwitcher`;
   const rounded = round ? `${round}` : `rounded-lg`;
+  const pathname = usePathname();
+
 
   return (
-    <div className="relative inline-block notranslate px-4" id={thisId}>
-      <button
-        type="button"
+    <div className="hidden xl:inline-block notranslate px-4" id={thisId}>
+      <div
         title="Language"
-        className={`px-3 py-2 bg-slate-300 hover:bg-slate-400 focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all duration-300 font-medium ${rounded} text-sm flex justify-between items-center w-25`}
-        onClick={() => {
-          language.toggleLanguage();
-          language.setOpenID(thisId);
-        }}
+        className={`cursor-pointer relative px-3 py-2 bg-slate-100 hover:bg-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all duration-300 font-medium ${rounded} text-sm flex justify-between items-center w-20`}
+        // onClick={() => {
+        //   language.toggleLanguage();
+        //   language.setOpenID(thisId);
+        // }}
+        onMouseEnter={language.toggleHover}
+        onMouseLeave={language.toggleHover}
       >
-        <span className="flex items-center font-bold text-white">
+        <span className="flex items-center font-bold text-slate-500">
           <FaGlobe className="mr-1 font-bold" />{" "}
           {language.currentLanguage.toUpperCase()}
         </span>
-        <FaChevronDown color={"white"} />
-      </button>
-      <div
-        className={`absolute ${
-          language.openLang && language.openID == thisId ? `block` : `hidden`
-        } mt-1 w-25 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-20`}
-        style={position == "top" ? { top: "-78px" } : {}}
-      >
-        <ul>
-          {language.languages?.map((ld: any, i: number) => (
-            <li
-              key={`l_s_${i}`}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-              onClick={(e) => language.switchLanguage(e)}
-            >
-              {ld.value.toUpperCase()}
-            </li>
-          ))}
-        </ul>
+        <FaChevronDown color={"gray"} />
+        <div
+          className={`absolute ${
+            language.hovered == true ? `block` : `hidden`
+          } mt-1 w-20 rounded-lg shadow-lg bg-white top-8 left-0 ring-black ring-opacity-5 z-20 overflow-hidden`}
+          style={position == "top" ? { top: "-78px" } : {}}
+        >
+          <ul>
+            {language.languages?.map((ld: any, i: number) => (
+              <li key={`l_s_${i}`} className="text-sm text-slate-700 hover:bg-slate-200 cursor-pointer">
+                <a href={pathname.replace(`/${language.currentLanguage}`, `/${ld.value}`)} className="w-full block px-4 py-2">
+                  {ld.value.toUpperCase()}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
