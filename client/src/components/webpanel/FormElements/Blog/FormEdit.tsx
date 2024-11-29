@@ -56,7 +56,7 @@ const FormEdit = ({ id }: FormEditProps) => {
   }, [items]);
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     // @ts-ignore
     const { name, value, files } = event.target;
@@ -73,10 +73,10 @@ const FormEdit = ({ id }: FormEditProps) => {
     }
   };
 
-  const handleEditorChange = (value: string) => {
+  const handleEditorChange = (value: string, language: string) => {
     setBlogState((prevState) => ({
       ...prevState,
-      blog_detail: value,
+      [`blog_detail_${language}`]: value,
     }));
   };
 

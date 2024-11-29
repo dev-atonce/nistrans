@@ -15,8 +15,12 @@ const FormEdit = ({ id }: FormEditProps) => {
   const { items, fetchItemById, updateItem } = useBlogStore();
   const [blogState, setBlogState] = useState<Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">>({
     attachment: "",
-    blog_title: "",
-    blog_detail: "",
+    blog_title_th: "",
+    blog_title_en: "",
+    blog_title_jp: "",
+    blog_detail_th: "",
+    blog_detail_en: "",
+    blog_detail_jp: "",
     slug: "",
   });
 
@@ -31,8 +35,12 @@ const FormEdit = ({ id }: FormEditProps) => {
   useEffect(() => {
     if (items.length > 0) {
       setBlogState({
-        blog_title: items[0].blog_title,
-        blog_detail: items[0].blog_detail,
+        blog_title_th: items[0].blog_title_th,
+        blog_title_en: items[0].blog_title_en,
+        blog_title_jp: items[0].blog_title_jp,
+        blog_detail_th: items[0].blog_detail_th,
+        blog_detail_en: items[0].blog_detail_en,
+        blog_detail_jp: items[0].blog_detail_jp,
         slug: items[0].slug,
         attachment: items[0].attachment,
       });
@@ -57,10 +65,10 @@ const FormEdit = ({ id }: FormEditProps) => {
     }
   };
 
-  const handleEditorChange = (value: string) => {
+  const handleEditorChange = (value: string, language: string) => {
     setBlogState((prevState) => ({
       ...prevState,
-      blog_detail: value,
+      [`blog_detail_${language}`]: value,
     }));
   };
 
@@ -73,7 +81,6 @@ const FormEdit = ({ id }: FormEditProps) => {
 
   return (
     <FormNews
-      pageattach={true}
       itemState={blogState}
       setItemState={handleChange}
       handleSubmit={handleSubmit}
