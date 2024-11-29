@@ -14,8 +14,12 @@ const FormEdit = ({ id }: FormEditProps) => {
   const router = useRouter();
   const { items, fetchItemById, updateItem } = useBlogStore();
   const [blogState, setBlogState] = useState<Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">>({
-    blog_title: "",
-    blog_detail: "",
+    blog_title_th: "",
+    blog_title_en: "",
+    blog_title_jp: "",
+    blog_detail_th: "",
+    blog_detail_en: "",
+    blog_detail_jp: "",
     location: "",
     slug: "",
   });
@@ -31,9 +35,13 @@ const FormEdit = ({ id }: FormEditProps) => {
   useEffect(() => {
     if (items.length > 0) {
       setBlogState({
-        blog_title: items[0].blog_title,
+        blog_title_th: items[0].blog_title_th,
+        blog_title_en: items[0].blog_title_en,
+        blog_title_jp: items[0].blog_title_jp,
+        blog_detail_th: items[0].blog_detail_th,
+        blog_detail_en: items[0].blog_detail_en,
+        blog_detail_jp: items[0].blog_detail_jp,
         location: items[0].location,
-        blog_detail: items[0].blog_detail,
         slug: items[0].slug,
       });
     }
@@ -49,10 +57,10 @@ const FormEdit = ({ id }: FormEditProps) => {
     }));
   };
 
-  const handleEditorChange = (value: string) => {
+  const handleEditorChange = (value: string, language: string) => {
     setBlogState((prevState) => ({
       ...prevState,
-      blog_detail: value,
+      [`blog_detail_${language}`]: value,
     }));
   };
 
