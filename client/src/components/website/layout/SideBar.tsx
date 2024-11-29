@@ -1,16 +1,11 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaPlus,
-  FaFacebookF,
-  FaLine,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import menuItem from "@/assets/menuItem.json";
 import { RiCloseLargeLine } from "react-icons/ri";
 
-export default function SideBar({ sideBar, language, contact, lng }: any) {
+export default function SideBar({ sideBar, language, lng }: any) {
   const pathname = usePathname();
   return (
     <div className="flex">
@@ -81,33 +76,10 @@ export default function SideBar({ sideBar, language, contact, lng }: any) {
                 </button>
             </div> */}
         <div className="flex items-center justify-between w-full">
-          <div className="flex social-icon">
-            <a
-              href={contact?.facebook}
-              target="_blank"
-              className="rounded-full p-2 bg-blue-600"
-            >
-              <FaFacebookF fontSize="1.2em" color="white" />
-            </a>
-            <a
-              href={contact?.line}
-              target="_blank"
-              className="rounded-full p-2 bg-green-500 ml-1"
-            >
-              <FaLine fontSize="1.2em" color="white" />
-            </a>
-            <a href={contact?.instagram} target="_blank" className="rounded-full p-2 bg-red ml-1">
-              <FaInstagram
-                fontSize="1.2em"
-                color="white"
-                className="bg-red-500"
-              />
-            </a>
-          </div>
           <div className="text-black notranslate flex gap-1">
-            {language.languages.map((ld:any,i:number)=>(
+            {language.languages.map((ld: any, i: number) => (
               <a key={`l_s_${i}`} href={pathname.replace(`/${language.currentLanguage}`, `/${ld.value}`)} >
-                <Image src={`/img/${ld.value=='en'?'uk':ld.value}_flag.png`} alt="th" width={25} height={25} />
+                <Image src={`/img/${ld.value == 'en' ? 'uk' : ld.value}_flag.png`} alt="th" width={25} height={25} />
               </a>
             ))}
             {/* <button onClick={(e: any) => language?.switchLanguage("th")}>
