@@ -52,49 +52,57 @@ const TableNews = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {items.map((item, key) => (
-                            <tr key={key}>
-                                <td className="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
-                                    {(pageState - 1) * Number(process.env.NEXT_PUBLIC_PERPAGE) +
-                                        (key + 1)}
-                                </td>
-                                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                    <div className="flex justify-between">
-                                        <strong>
-                                            <small>{item?.blog_title}</small>
-                                        </strong>
-                                        {item?.attachment ? (
-                                            <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}${item.attachment}`}><FaFilePdf className="text-red-500" size={20} /></Link>
-                                        ) : (
-                                            <FaFilePdf size={20} />
-                                        )}
-                                    </div>
-                                </td>
-                                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                    <span className="text-white bg-cyan-400 hover:bg-cyan-500 font-medium rounded-full text-sm px-3 py-1 text-center me-2 mb-2 dark:focus:ring-yellow-900">
-                                        <strong>
-                                            {/* @ts-ignore */}
-                                            <small>{formatDate(item?.createdAt)}</small>
-                                        </strong>
-                                    </span>
-                                </td>
-                                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                    <ActionBtnGroup
-                                        itemId={item.id}
-                                        link={`/webpanel/news/edit/${item.id}`}
-                                        deleteItem={deleteItem}
-                                        nextLink={true}
-                                    />
-                                </td>
-                                <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                                    <SwitcherStatus
-                                        id={item?.id}
-                                        status={Boolean(item?.status)}
-                                        onChange={onChangeStatus}
-                                    />
+                        {items.length > 0 ? (
+                            items.map((item, key) => (
+                                <tr key={key}>
+                                    <td className="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
+                                        {(pageState - 1) * Number(process.env.NEXT_PUBLIC_PERPAGE) +
+                                            (key + 1)}
+                                    </td>
+                                    <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                                        <div className="flex justify-between">
+                                            <strong>
+                                                <small>{item?.blog_title_th}</small>
+                                            </strong>
+                                            {item?.attachment ? (
+                                                <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}${item.attachment}`}><FaFilePdf className="text-red-500" size={20} /></Link>
+                                            ) : (
+                                                <FaFilePdf size={20} />
+                                            )}
+                                        </div>
+                                    </td>
+                                    <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                                        <span className="text-white bg-cyan-400 hover:bg-cyan-500 font-medium rounded-full text-sm px-3 py-1 text-center me-2 mb-2 dark:focus:ring-yellow-900">
+                                            <strong>
+                                                {/* @ts-ignore */}
+                                                <small>{formatDate(item?.createdAt)}</small>
+                                            </strong>
+                                        </span>
+                                    </td>
+                                    <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                                        <ActionBtnGroup
+                                            itemId={item.id}
+                                            link={`/webpanel/news/edit/${item.id}`}
+                                            deleteItem={deleteItem}
+                                            nextLink={true}
+                                        />
+                                    </td>
+                                    <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
+                                        <SwitcherStatus
+                                            id={item?.id}
+                                            status={Boolean(item?.status)}
+                                            onChange={onChangeStatus}
+                                        />
+                                    </td>
+                                </tr>
+                            ))
+                        ) : (
+                            <tr>
+                                <td colSpan={5} className="text-center p-5">
+                                    No data
                                 </td>
                             </tr>
-                        ))}
+                        )}
                     </tbody>
                     {total > Number(process.env.NEXT_PUBLIC_PERPAGE) && (
                         <AntPagination

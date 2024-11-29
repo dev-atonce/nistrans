@@ -17,9 +17,15 @@ const FormEdit = ({ id }: FormEditProps) => {
     Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">
   >({
     blog_image: "",
-    blog_title: "",
-    blog_description: "",
-    blog_detail: "",
+    blog_title_th: "",
+    blog_title_en: "",
+    blog_title_jp: "",
+    blog_description_th: "",
+    blog_description_en: "",
+    blog_description_jp: "",
+    blog_detail_th: "",
+    blog_detail_en: "",
+    blog_detail_jp: "",
     slug: "",
   });
 
@@ -34,9 +40,15 @@ const FormEdit = ({ id }: FormEditProps) => {
   useEffect(() => {
     if (items.length > 0) {
       setBlogState({
-        blog_title: items[0].blog_title,
-        blog_description: items[0].blog_description,
-        blog_detail: items[0].blog_detail,
+        blog_title_th: items[0].blog_title_th,
+        blog_title_en: items[0].blog_title_en,
+        blog_title_jp: items[0].blog_title_jp,
+        blog_description_th: items[0].blog_description_th,
+        blog_description_en: items[0].blog_description_en,
+        blog_description_jp: items[0].blog_description_jp,
+        blog_detail_th: items[0].blog_detail_th,
+        blog_detail_en: items[0].blog_detail_en,
+        blog_detail_jp: items[0].blog_detail_jp,
         slug: items[0].slug,
         blog_image: items[0].blog_image,
       });
