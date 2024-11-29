@@ -15,7 +15,7 @@ interface BannerSlideProps {
   banner: ApiResponse;
 }
 
-export default function CoverSwiper({ banner }: BannerSlideProps) {
+export default function CoverSwiper({ banner, lang }: any) {
   return (
     <div className="header-slider">
       <div className="w-full header-cover">

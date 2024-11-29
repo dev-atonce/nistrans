@@ -1,7 +1,7 @@
 import Link from "next/link";
 import NewsCard from "../molecule/NewsCard";
 
-export default function LatestNews() {
+export default function LatestNews({ lang }: any) {
   return (
     <div className="container mx-auto border-b border-slate-100 pb-20">
       <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
@@ -20,7 +20,7 @@ export default function LatestNews() {
       </div>
       <div className="flex justify-center pt-10">
         <Link
-          href={`/service`}
+          href={`/${lang}/news-activity`}
           // href={`/${lang.toLowerCase()}/news-activity`}
           className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
         >

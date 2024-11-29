@@ -35,28 +35,25 @@ const fetchBanner = async () => {
   return data;
 };
 
-// const lng = params.lng?.toUpperCase();
-
 export default async function Home({ params }: Props) {
   const lng = params.lng;
   const blogs = await fetchBlog();
   const banner = await fetchBanner();
-  console.log(lng)
 
   return (
     <>
       {/* Banner */}
-      <CoverSwiper banner={banner} lng={lng}/>
+      <CoverSwiper banner={banner} lang={lng} />
 
-      <ServiceSection lng={lng}/>
-      <AboutSection lng={lng}/>
-      <HomeMoving />
-      <WarehouseManagement />
-      <HacoLab />
-      <LatestNews />
+      <ServiceSection lang={lng} />
+      <AboutSection lang={lng} />
+      <HomeMoving lang={lng} />
+      <WarehouseManagement lang={lng} />
+      <HacoLab lang={lng} />
+      <LatestNews lang={lng} />
       {/* Blog */}
       <div className="container mx-auto">
-        <Blog home={true} limit={3} blogs={blogs} />
+        <Blog home={true} limit={3} blogs={blogs} lang={lng} />
       </div>
     </>
   );

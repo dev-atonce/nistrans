@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function HomeMoving() {
+export default function HomeMoving({ lang }: any) {
   return (
     <div className="py-20">
       <div className="container mx-auto text-slate-700">
@@ -36,10 +36,7 @@ export default function HomeMoving() {
           </div>
 
           <div className="col-span-4">
-            <section
-              className="flex flex-col items-center gap-4"
-             
-            >
+            <section className="flex flex-col items-center gap-4">
               <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
                 <div className="text-xs">
                   ให้บริการภายใน
@@ -63,10 +60,7 @@ export default function HomeMoving() {
           </div>
 
           <div className="col-span-4">
-            <section
-              className=" flex flex-col items-center gap-4"
-            
-            >
+            <section className=" flex flex-col items-center gap-4">
               <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
                 <div className="text-xs">
                   ตั้งแต่ปริมาณมาก
@@ -95,8 +89,7 @@ export default function HomeMoving() {
 
         <div className="flex justify-center">
           <Link
-            href={`/service`}
-            // href={`/${lang.toLowerCase()}/news-activity`}
+            href={`${lang}/service/moving`}
             className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
           >
             รายละเอียดเพิ่มเติม

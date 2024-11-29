@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function HacoLab() {
+export default function HacoLab({ lang }: any) {
   return (
     <>
       <style jsx>
@@ -287,7 +287,7 @@ export default function HacoLab() {
             </section>
             <div className="flex justify-center pt-10">
               <Link
-                href={`/service`}
+                href={`/${lang}/service/haco-lab`}
                 // href={`/${lang.toLowerCase()}/news-activity`}
                 className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
               >
