@@ -1,4 +1,8 @@
 {
+  "HomePage": {
+    "title": "สวัสดี ",
+    "about": "Go to the about page"
+  },
   "page": {
     "home": "หน้าแรก",
     "about-us": "เกี่ยวกับเรา",

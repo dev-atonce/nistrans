@@ -3,7 +3,7 @@ const controllers = require("../../controllers/blog.controller");
 const validator = require("../../validators");
 const auth = require("../auth");
 
-router.get("/limit/:limit", controllers.onGet);
+router.get("/", controllers.onGet);
 
 router.get("/all", auth.required, controllers.onGetAll);
 router.get("/:id", [auth.required, validator.blog.findById, validator.check], controllers.onGetById);

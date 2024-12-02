@@ -15,7 +15,7 @@ const methods = {
 
   async find(req) {
     try {
-      const limit = req.query.limit|| +config.pageLimit;
+      const limit = req.query.limit || +config.pageLimit;
       const offset = +(limit * ((req.query.page || 1) - 1));
       const _q = methods.scopeSearch(req);
       _q.query.status = true;
