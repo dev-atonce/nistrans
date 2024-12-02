@@ -26,6 +26,7 @@ export default function Header({ logo, lng }: any) {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
     document.querySelector("html")?.classList.toggle("nav-open");
+    document.querySelector('body')?.classList.add('overflow-hidden');
   };
   const closeSideBar = (e: any) => {
     const subMenuItem = e?.target.closest('.submenu-item')
@@ -35,6 +36,7 @@ export default function Header({ logo, lng }: any) {
     }
     setIsOpen(false);
     document.querySelector("html")?.classList.remove("nav-open");
+    document.querySelector('body')?.classList.remove('overflow-hidden');
   };
   const toggleSubMenu = (e: any) => {
     const subMenu = e.currentTarget.parentElement?.querySelector(".sub-menu");
@@ -46,6 +48,7 @@ export default function Header({ logo, lng }: any) {
       const icon = e.currentTarget.parentElement?.querySelector(".plus-icon");
       // icon?.classList.toggle("rotate-135");
       subMenu?.classList.toggle("open");
+      
     } else {
       // @ts-ignore
       closeSideBar();
@@ -57,7 +60,7 @@ export default function Header({ logo, lng }: any) {
 
   return (
     <div className="shadow-md bg-white ">
-      <div className="header  container mx-auto">
+      <div className="header container mx-auto">
         <div className="xl:flex justify-between mx-auto h-full px-2 lg:px-0">
           <div className="logo">
             <div className="py-4 flex justify-between">
@@ -102,9 +105,10 @@ export default function Header({ logo, lng }: any) {
 
         </div>
       </div>
-      <div className="flex">
+      <div className="flex overflow-hidden">
+        <div className={`backdrop ${isOpen?`fixed`:`hidden`} top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}></div>
         <div
-          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed block lg:none top-0 right-0 h-full z-99 w-80 text-black bg-white transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           <div className="grid content-stretch">
