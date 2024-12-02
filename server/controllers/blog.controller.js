@@ -3,7 +3,7 @@ const Service = require("../services/blog.service");
 const methods = {
   async onGet(req, res) {
     try {
-      let result = await Service.findHome(req, res);
+      let result = await Service.find(req, res);
       res.success(result);
     } catch (error) {
       res.error(error);
