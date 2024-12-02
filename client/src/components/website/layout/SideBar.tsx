@@ -10,7 +10,7 @@ export default function SideBar({ sideBar, language, lng }: any) {
   return (
     <div className="flex">
       <div
-        className="sidebar-wraper w-full max-h-screen "
+        className="sidebar-wraper w-full max-h-screen z-99"
         style={{ height: `calc(100vh - 68px)` }}
       >
         <ul className="sidebar-menu px-4 py-10">

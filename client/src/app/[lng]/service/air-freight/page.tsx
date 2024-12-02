@@ -59,7 +59,7 @@ export default function AirFreight() {
 
           <div className="airSer">
             <div className="grid grid-cols-12">
-              <div className="col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <a
                   className="fancyBox"
                   href="/img/air-freight-forwarding/006.jpg"
@@ -73,14 +73,14 @@ export default function AirFreight() {
                   />
                 </a>
               </div>
-              <div className="col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <div className="airSerText">
                   TAFA
                   <br />
                   member certificate
                 </div>
               </div>
-              <div className="col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <a
                   className="fancyBox"
                   href="/img/air-freight-forwarding/007.jpg"
@@ -94,7 +94,7 @@ export default function AirFreight() {
                   />
                 </a>
               </div>
-              <div className="col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <div className="airSerText">
                   IATA
                   <br />
