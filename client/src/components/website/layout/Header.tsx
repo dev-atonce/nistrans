@@ -6,6 +6,7 @@ import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoPersonSharp } from "react-icons/io5";
 import LanguageSwitcher from "../molecule/LanguageSwitcher";
+import { useTranslation } from '../../../app/i18n/client';
 
 export default function Header({ logo, lng }: any) {
   const [currentLanguage, setCurrentLanguage] = useState<string>(lng);
@@ -45,10 +46,9 @@ export default function Header({ logo, lng }: any) {
       setOpenSubMenu(!openSubMenu);
       setTimeout;
       e.currentTarget.closest(".menu-item").classList.toggle("active");
-      const icon = e.currentTarget.parentElement?.querySelector(".plus-icon");
+      // const icon = e.currentTarget.parentElement?.querySelector(".plus-icon");
       // icon?.classList.toggle("rotate-135");
       subMenu?.classList.toggle("open");
-      
     } else {
       // @ts-ignore
       closeSideBar();
@@ -105,27 +105,25 @@ export default function Header({ logo, lng }: any) {
 
         </div>
       </div>
-      <div className="flex overflow-hidden">
+      <div className="block lg:none overflow-hidden">
         <div className={`backdrop ${isOpen?`fixed`:`hidden`} top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}></div>
         <div
-          className={`fixed block lg:none top-0 right-0 h-full z-99 w-80 text-black bg-white transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed w-80 h-full top-0 right-0 z-99 text-black bg-white transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
-          <div className="grid content-stretch">
-            <SideBar
-              lng={lng}
-              sideBar={{ toggleSubMenu, closeSideBar }}
-              language={{
-                currentLanguage,
-                setCurrentLanguage,
-                openID,
-                setOpenID,
-                openLang,
-                setOpenLang,
-                languages,
-              }}
-            />
-          </div>
+          <SideBar
+            lng={lng}
+            sideBar={{ toggleSubMenu, closeSideBar }}
+            language={{
+              currentLanguage,
+              setCurrentLanguage,
+              openID,
+              setOpenID,
+              openLang,
+              setOpenLang,
+              languages,
+            }}
+          />
         </div>
       </div>
     </div>

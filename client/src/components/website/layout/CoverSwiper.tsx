@@ -10,12 +10,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ApiResponse, BannerProps } from "@/types/bannerType";
 import News from "../organism/News";
+import { useTranslation } from '../../../app/i18n/client';
 
 interface BannerSlideProps {
   banner: ApiResponse;
 }
 
-export default function CoverSwiper({ banner, lang }: any) {
+export default function CoverSwiper({ banner, lng }: any) {
+  const { t } = useTranslation(lng,'cover');
   return (
     <div className="header-slider">
       <div className="w-full header-cover">
@@ -38,18 +40,9 @@ export default function CoverSwiper({ banner, lang }: any) {
                         className="absolute lg:top-[80px] w-full top-0 left-0 right-0  flex flex-col items-center gap-4"
                         style={{ textShadow: "1px 1px #2F2F2F" }}
                       >
-                        <h1 className="text-white text-2xl md:text-5xl py-4 ">
-                          Reaching and Delivering to the World
-                        </h1>
-                        <p className="text-white text-sm sm:text-lg md:text-3xl">
-                          A pioneer in international multimodal logistics
-                        </p>
-                        <p className="text-white text-sm sm:text-lg md:text-xl w-[50%] text-center">
-                          SIAM NISTRANS (Thai Nissin) is committed to extending
-                          its business overseas, and providing innovative
-                          strategies in order to meet different business needs
-                          and be a real Global Logistics Service Provider.
-                        </p>
+                        <h1 className="text-white text-2xl md:text-5xl py-4 ">{t('h1')}</h1>
+                        <h2 className="text-white text-sm sm:text-lg md:text-3xl">{t('h2')}</h2>
+                        <p className="text-white text-sm sm:text-lg md:text-xl w-[50%] text-center">{t('p')}</p>
                       </div>
                       <News />
                     </div>

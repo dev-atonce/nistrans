@@ -1,0 +1,23 @@
+{
+    "home":"หน้าแรก",
+    "about":"เกี่ยวกับเรา",
+    "service":"บริการ",
+    "news":"ข่าว",
+    "contact":"ติดต่อเรา",
+
+    "profile":"โปรไฟล์บริษัท",
+    "history":"ประวัติความเป็นมา",
+    "policy":"นโยบาย",
+
+    "sea-freight":"การขนส่งทางทะเล",
+    "air-freight":"การขนส่งทางอากาศ",
+    "land-transportation":"การขนส่งทางบก",
+    "warehouse":"คลังสินค้า",
+    "machinery-installation":"งานติดตั้งเครื่องจักร",
+    "house-moving":"การย้ายบ้าน",
+    "packing-loading":"การบรรจุและการโหลด",
+    "custom-clearance":"พิธีการศุลกากร",
+    "scm-solutions":"โซลูชั่น SCM",
+
+    "apply":"สมัครงาน"
+}

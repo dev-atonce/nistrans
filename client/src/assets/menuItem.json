@@ -1,29 +1,67 @@
 [
-  { "title": "HOME", "href": "/" },
+  { "key":"home", "title": "HOME", "href": "/" },
   {
+    "key":"about", 
     "title": "ABOUT",
     "href": "/about-us",
     "subMenu": [
-      { "href": "/about-us/company-profile", "title": "Company Profile" },
-      { "href": "/about-us/company-history", "title": "Company History" },
-      { "href": "/about-us/company-policy", "title": "Company Policy" }
+      { "key":"profile", "href": "/about-us/company-profile", "title": "Company Profile"},
+      { "key":"history", "href": "/about-us/company-history", "title": "Company History" },
+      { "key":"policy", "href": "/about-us/company-policy", "title": "Company Policy" }
     ]
   },
   {
+    "key":"service", 
     "title": "SERVICE",
     "href": "/service",
     "subMenu": [
-      { "href": "/service/sea-freight", "title": "Sea Freight Forwarding" },
-      { "href": "/service/air-freight", "title": "Air Freight Forwarding" },
-      { "href": "/service/land-transportation", "title": "Land Transportation" },
-      { "href": "/service/warehouse", "title": "Warehouse" },
-      { "href": "/service/machinery-installation", "title": "Machinary Installation" },
-      { "href": "/service/house-moving", "title": "House Moving" },
-      { "href": "/service/packing-loading", "title": "Packing / Loading" },
-      { "href": "/service/custom-clearance", "title": "Custom Clearance" },
-      { "href": "/service/scm-solutions", "title": "SCM Solutions" }
+      { 
+        "key":"sea-freight",
+        "href": "/service/sea-freight",
+        "title": "Sea Freight Forwarding" 
+      },
+      { 
+        "key":"air-freight",
+        "href": "/service/air-freight",
+        "title": "Air Freight Forwarding" 
+      },
+      { 
+        "key":"land-transportation",
+        "href": "/service/land-transportation",
+        "title": "Land Transportation" 
+      },
+      { 
+        "key":"warehouse",
+        "href": "/service/warehouse",
+        "title": "Warehouse" 
+      },
+      { 
+        "key":"machinery-installation",
+        "href": "/service/machinery-installation",
+        "title": "Machinery Installation" 
+      },
+      { 
+        "key":"house-moving",
+        "href": "/service/house-moving",
+        "title": "House Moving" 
+      },
+      { 
+        "key":"packing-loading",
+        "href": "/service/packing-loading",
+        "title": "Packing / Loading" 
+      },
+      { 
+        "key":"custom-clearance",
+        "href": "/service/custom-clearance",
+        "title": "Custom Clearance" 
+      },
+      { 
+        "key":"scm-solutions",
+        "href": "/service/scm-solutions",
+        "title": "SCM Solutions" 
+      }
     ]
   },
-  { "title": "NEWS", "href": "/news-activity" },
-  { "title": "CONTACT", "href": "/contact" }
+  { "key":"news", "title": "NEWS", "href": "/news-activity" },
+  { "key":"contact", "title": "CONTACT", "href": "/contact" }
 ]
