@@ -52,18 +52,7 @@ export async function generateMetadata(
     icons: [{ rel: "icon", url: Favicon.src }],
   };
 }
-const fetchContact = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/contactinfo`,
-    {
-      cache: "no-store",
-    }
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-};
+
 export default async function RootLayout({
   children,
   params: { lng },
@@ -71,7 +60,6 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lng: string };
 }>) {
-  const contact = await fetchContact();
   return (
     <html lang={lng} dir={dir(lng)}>
       <ConfigProvider
@@ -91,9 +79,9 @@ export default async function RootLayout({
       >
         <PageSettingProvider>
           <body className={kanit.className}>
-            <Header contact={contact} lng={lng}/>
+            <Header lng={lng}/>
             {children}
-            <Footer contact={contact} lng={lng}/>
+            <Footer lng={lng}/>
           </body>
         </PageSettingProvider>
       </ConfigProvider>

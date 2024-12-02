@@ -2,80 +2,101 @@ import Link from "next/link";
 import ProductCard from "../molecule/ProductCard";
 
 export default async function ServiceSection({ data, page, lang }: any) {
+  const lng = lang.toUpperCase();
+
   const mocks = [
     {
-      serviceNameTH: "ตัวแทนจัดหางาน",
-      serviceNameEN: "Recruitment Agency",
+      serviceNameTH: "การขนส่งทางทะเล",
+      serviceNameEN: "Sea Freight Forwarding",
       id: "6723623a3bfe8293c45a61e7",
-      image: "ser_icon_1.png",
+      url: "sea-freight",
+      image: "/img/sea-freight.jpg",
     },
     {
-      serviceNameTH: "ล่าม และแปลภาษา",
-      serviceNameEN: "Interpreter and Translator",
+      serviceNameTH: "การขนส่งทางอากาศ",
+      serviceNameEN: "Air Freight Forwarding",
       id: "672362703bfe8293c45a6204",
-      image: "ser_icon_2.png",
+      url: "sea-freight",
+      image: "/img/air-freight.jpg",
     },
     {
-      serviceNameTH: "จัดหางาน",
-      serviceNameEN: "Recruitment Service Outsourcing",
+      serviceNameTH: "การขนส่งทางบก",
+      serviceNameEN: "Land Transportation",
       id: "6725f68bba81c2130216fe4e",
-      image: "ser_icon_3.png",
+      url: "sea-freight",
+      image: "/img/land.jpg",
     },
     {
-      serviceNameTH: "จัดหางาน",
-      serviceNameEN: "Recruitment Service Outsourcing",
+      serviceNameTH: "ธุรกิจคลังสินค้า",
+      serviceNameEN: "Warehouse",
       id: "6725f68bba81c2130216fe4e",
-      image: "ser_icon_3.png",
+      url: "sea-freight",
+      image: "/img/warehouse.jpg",
     },
   ];
   const mock2 = [
     {
-      serviceNameTH: "ตัวแทนจัดหางาน",
-      serviceNameEN: "Recruitment Agency",
+      serviceNameTH: "การขนส่งทางทะเล",
+      serviceNameEN: "Sea Freight Forwarding",
       id: "6723623a3bfe8293c45a61e7",
-      image: "ser_icon_1.png",
+      url: "sea-freight",
+      image: "/img/sea-freight.jpg",
     },
     {
-      serviceNameTH: "ล่าม และแปลภาษา",
-      serviceNameEN: "Interpreter and Translator",
+      serviceNameTH: "การขนส่งทางอากาศ",
+      serviceNameEN: "Air Freight Forwarding",
       id: "672362703bfe8293c45a6204",
-      image: "ser_icon_2.png",
+      url: "sea-freight",
+      image: "/img/air-freight.jpg",
     },
     {
-      serviceNameTH: "จัดหางาน",
-      serviceNameEN: "Recruitment Service Outsourcing",
+      serviceNameTH: "การขนส่งทางบก",
+      serviceNameEN: "Land Transportation",
       id: "6725f68bba81c2130216fe4e",
-      image: "ser_icon_3.png",
+      url: "sea-freight",
+      image: "/img/land.jpg",
     },
     {
-      serviceNameTH: "จัดหางาน",
-      serviceNameEN: "Recruitment Service Outsourcing",
+      serviceNameTH: "ธุรกิจคลังสินค้า",
+      serviceNameEN: "Warehouse",
       id: "6725f68bba81c2130216fe4e",
-      image: "ser_icon_3.png",
+      url: "sea-freight",
+      image: "/img/warehouse.jpg",
     },
     {
-      serviceNameTH: "ตัวแทนจัดหางาน",
-      serviceNameEN: "Recruitment Agency",
+      serviceNameTH: "การขนส่งเครื่องจักร",
+      serviceNameEN: "Machinery Installation",
       id: "6723623a3bfe8293c45a61e7",
-      image: "ser_icon_1.png",
+      url: "sea-freight",
+      image: "/img/machine.jpg",
     },
     {
-      serviceNameTH: "ล่าม และแปลภาษา",
-      serviceNameEN: "Interpreter and Translator",
+      serviceNameTH: "ธุรกิจงานขนย้าย",
+      serviceNameEN: "House Moving",
       id: "672362703bfe8293c45a6204",
-      image: "ser_icon_2.png",
+      url: "sea-freight",
+      image: "/img/moving.jpg",
     },
     {
-      serviceNameTH: "จัดหางาน",
-      serviceNameEN: "Recruitment Service Outsourcing",
+      serviceNameTH: "งานบรรจุภัณฑ์",
+      serviceNameEN: "Packing・Loading",
       id: "6725f68bba81c2130216fe4e",
-      image: "ser_icon_3.png",
+      url: "sea-freight",
+      image: "/img/packing.jpg",
     },
     {
-      serviceNameTH: "จัดหางาน",
-      serviceNameEN: "Recruitment Service Outsourcing",
+      serviceNameTH: "งานพิธีการศุลกากร",
+      serviceNameEN: "Customs Clearance",
       id: "6725f68bba81c2130216fe4e",
-      image: "ser_icon_3.png",
+      url: "sea-freight",
+      image: "/img/customs.jpg",
+    },
+    {
+      serviceNameTH: "SCM Solution",
+      serviceNameEN: "SCM Solution",
+      id: "6725f68bba81c2130216fe4e",
+      url: "sea-freight",
+      image: "/img/solution.jpg",
     },
   ];
   const list = page ? mock2 : mocks;
@@ -87,19 +108,20 @@ export default async function ServiceSection({ data, page, lang }: any) {
       </div>
       <div className="grid grid-cols-12 gap-6 px-20 ">
         {list?.map((i: any, k: any) => (
-          <ProductCard item={i} key={k} />
+          <ProductCard item={i} key={k} lng={lng} />
         ))}
       </div>
-      <div className="flex justify-center">
-        <Link
-          href={`/service`}
-          // href={`/${lang.toLowerCase()}/news-activity`}
-          className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
-        >
-          บริการทั้งหมดของเรา
-          {/* {t("button.see-all")} */}
-        </Link>
-      </div>
+      {!page && (
+        <div className="flex justify-center">
+          <Link
+            href={`/${lang}/service`}
+            className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
+          >
+            บริการทั้งหมดของเรา
+            {/* {t("button.see-all")} */}
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

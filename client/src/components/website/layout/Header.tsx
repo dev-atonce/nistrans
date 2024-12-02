@@ -1,17 +1,13 @@
 "use client";
 import { Logo } from "../atom/logo/Logo";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import NavBar from "../organism/menu/NavBar";
 import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Script from "next/script";
-import { hasCookie, setCookie } from "cookies-next";
 import { IoPersonSharp } from "react-icons/io5";
-import { ignore } from "antd/es/theme/useToken";
 import LanguageSwitcher from "../molecule/LanguageSwitcher";
 
-export default function Header({ logo, contact, lng }: any) {
+export default function Header({ logo, lng }: any) {
   const [currentLanguage, setCurrentLanguage] = useState<string>(lng);
   const [openLang, setOpenLang] = useState<Boolean>(false);
   const [openID, setOpenID] = useState<String>("");
@@ -31,10 +27,10 @@ export default function Header({ logo, contact, lng }: any) {
     setIsOpen(!isOpen);
     document.querySelector("html")?.classList.toggle("nav-open");
   };
-  const closeSideBar = (e:any) => {
-    let subMenuItem = e?.target.closest('.submenu-item')
-    if(subMenuItem){
-      subMenuItem.closest('.sidebar-menu').querySelectorAll('.active').map((e:any)=>e.target.classList.remove('active'))
+  const closeSideBar = (e: any) => {
+    const subMenuItem = e?.target.closest('.submenu-item')
+    if (subMenuItem) {
+      subMenuItem.closest('.sidebar-menu').querySelectorAll('.active').map((e: any) => e.target.classList.remove('active'))
       subMenuItem.classList.add('active')
     }
     setIsOpen(false);
@@ -78,13 +74,13 @@ export default function Header({ logo, contact, lng }: any) {
           </div>
           <div className="flex justify-between h-full items-center gap-30 ">
             <div className="hidden xl:flex items-center gap-10 ">
-              <NavBar lng={lng}/>
+              <NavBar lng={lng} />
               <div className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 ">
                 <IoPersonSharp />
                 <span>สมัครงาน</span>
               </div>
             </div>
-            <LanguageSwitcher 
+            <LanguageSwitcher
               position="bottom"
               round="rounded-full"
               id="Header"
@@ -103,18 +99,16 @@ export default function Header({ logo, contact, lng }: any) {
             />
           </div>
 
-          
+
         </div>
       </div>
       <div className="flex">
         <div
-          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="grid content-stretch">
             <SideBar
-              contact={contact}
               lng={lng}
               sideBar={{ toggleSubMenu, closeSideBar }}
               language={{
@@ -126,7 +120,6 @@ export default function Header({ logo, contact, lng }: any) {
                 setOpenLang,
                 languages,
               }}
-              
             />
           </div>
         </div>

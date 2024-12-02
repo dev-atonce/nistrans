@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function ProductCard({ item }: any) {
+export default function ProductCard({ item, lng }: any) {
   return (
     <Link
-      href={`/service/${item?.id}`}
+      href={`${lng?.toLowerCase()}/service/${item?.url}`}
       //   href={`/${lang?.toLowerCase()}/service/${item?.id}`}
       className="group   pb-4 transition-all duration-500 col-span-12 md:col-span-6  xl:col-span-3 rounded-lg overflow-hidden"
     >
       <Image
-        src={"/img/banner1.png"}
+        src={item?.image}
+        // src={"/img/banner1.png"}
         // src={
         //   item?.image
         //     ? `${process.env.NEXT_PUBLIC_BASE_URL}${item?.image}`
@@ -21,8 +22,8 @@ export default function ProductCard({ item }: any) {
         loading="lazy"
       />
       <h3 className="px-4 group-hover:text-[#070B76] pt-2  text-lg transition-all text-center text-blue-950">
-        {/* {item[`serviceName${lang}`] || item?.serviceNameTH} */}
-        Item Name
+        {item[`serviceName${lng}`] || item?.serviceNameTH}
+        {/* Item Name */}
       </h3>
     </Link>
   );

@@ -2,7 +2,7 @@ import Link from "next/link";
 import BlogSection from "@/components/website/organism/BlogSection";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
-export default function Blog({ home, limit, blogs }: any) {
+export default function Blog({ home, limit, blogs, lang }: any) {
   return (
     <div className="border-slate-200 py-12 ">
       {home && (
@@ -16,7 +16,7 @@ export default function Blog({ home, limit, blogs }: any) {
         {home && (
           <div className="flex justify-center pt-10">
             <Link
-              href={`/service`}
+              href={`/${lang}/news-activity`}
               // href={`/${lang.toLowerCase()}/news-activity`}
               className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
             >

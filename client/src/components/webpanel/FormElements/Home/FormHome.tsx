@@ -2,17 +2,13 @@
 import { useEffect, useState } from "react";
 import { useUsersStore } from "@/store/usersStore";
 import { useAboutStore } from "@/store/aboutStore";
-import { useContactStore } from "@/store/contactStore";
-import { ContactProps } from "@/types/contactType";
 import ImagePreview from "../../Input/ImagePreview";
 
 const FormHome = () => {
-  const { updateItem } = useContactStore();
   const { updateLogo } = useAboutStore();
   const [logoState, setLogoState] = useState({ header: "", footer: "" });
   const [selectedHeader, setSelectedHeader] = useState<File | undefined | Blob>();
   const [selectedFooter, setSelectedFooter] = useState<File | undefined | Blob>();
-  const [contactState, setContactState] = useState<Partial<ContactProps>>({});
 
   const onFetch = async () => {
     const data = await fetch(
@@ -32,21 +28,6 @@ const FormHome = () => {
     });
   };
 
-  const onFetchContact = async () => {
-    const data = await fetch(
-      `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/contactinfo`,
-      {
-        cache: "no-store",
-        headers: {
-          authorization: `Bearer ${useUsersStore.getState().token}`,
-        },
-      }
-    );
-    const contact = await data?.json();
-
-    setContactState(contact);
-  };
-
   const handleLogoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, files } = event.target;
     if (files && files[0]) {
@@ -57,25 +38,12 @@ const FormHome = () => {
     }
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setContactState((prevState: any) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
   const handleSubmitLogo = async () => {
     await updateLogo(logoState?.header, "header");
     await updateLogo(logoState?.footer, "footer");
   };
 
-  const handleSubmitContact = async () => {
-    await updateItem(contactState);
-  };
-
   useEffect(() => {
-    onFetchContact();
     onFetch();
   }, []);
 
@@ -146,177 +114,6 @@ const FormHome = () => {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-12 gap-4 px-6.5 py-4 bg-white">
-        <div className="col-span-12 border-b pb-4 py-3 border-stroke  dark:border-strokedark">
-          <h3 className="font-medium text-black dark:text-white">
-            Contact Info.
-          </h3>
-        </div>
-        <div className="col-span-4">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Email 1
-          </label>
-          <input
-            type="text"
-            name="email"
-            value={contactState?.email || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-4">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Email 2
-          </label>
-          <input
-            type="text"
-            name="email2"
-            value={contactState?.email2 || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-4">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Email 3
-          </label>
-          <input
-            type="text"
-            name="email3"
-            value={contactState?.email3 || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-4">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Contact 1 (Phone)
-          </label>
-          <input
-            type="text"
-            name="telephone"
-            value={contactState?.telephone || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-4">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Contact 2 (Phone)
-          </label>
-          <input
-            type="text"
-            name="telephone2"
-            value={contactState?.telephone2 || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-4">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Contact 3 (Phone)
-          </label>
-          <input
-            type="text"
-            name="telephone3"
-            value={contactState?.telephone3 || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-3">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Facebook
-          </label>
-          <input
-            type="text"
-            name="facebook"
-            value={contactState?.facebook || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-3">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Line
-          </label>
-          <input
-            type="text"
-            name="line"
-            value={contactState?.line || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-3">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Instagram
-          </label>
-          <input
-            type="text"
-            name="instagram"
-            value={contactState?.instagram || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-3">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Tiktok
-          </label>
-          <input
-            type="text"
-            name="tiktok"
-            value={contactState?.tiktok || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-6">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Address
-          </label>
-          <textarea
-            rows={7}
-            name="addressTH"
-            value={contactState?.addressTH || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-6">
-          <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-            Google Map
-          </label>
-          <textarea
-            rows={7}
-            name="gMap"
-            value={contactState?.gMap || ""}
-            onChange={handleChange}
-            placeholder="Enter your data"
-            className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-          />
-        </div>
-        <div className="col-span-12">
-          <button
-            onClick={handleSubmitContact}
-            className="flex w-full justify-center rounded bg-primary p-3 font-medium text-gray hover:bg-opacity-90"
-          >
-            Save
-          </button>
         </div>
       </div>
     </div>
