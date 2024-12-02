@@ -29,7 +29,7 @@ export default function SideBar({ sideBar, language, contact, lng }: any) {
           {menuItem.map((item, index) => (
             <li key={index} className="menu-item rounded-lg">
               <Link
-                href={item.href}
+                href={`/${lng}${item.href}`}
                 title={item.title}
                 onClick={(e) => sideBar.toggleSubMenu(e)}
                 className="p-2 hover:text-red-600 flex items-center justify-between"
