@@ -1,20 +1,16 @@
 import type { Metadata, ResolvingMetadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
 import Header from "@/components/website/layout/Header";
 import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
-import { Kanit, Roboto } from "next/font/google";
+import { Kanit } from "next/font/google";
 import { ConfigProvider } from "antd";
-import "./../../css/all.scss"
-
 import Favicon from "../icon.ico";
-import { dir } from "i18next";
-import { languages } from "../i18n/settings";
-
-export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }));
-}
+import "./globals.css";
+import "./../../css/all.scss"
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
 const kanit = Kanit({
   subsets: ["latin"],
@@ -22,10 +18,6 @@ const kanit = Kanit({
   style: ["normal", "italic"],
 });
 
-// export const metadata: Metadata = {
-//   title: "YMC Translation",
-//   description: "YMC Translation",
-// };
 const pageName = "home";
 export async function generateMetadata(
   { params, searchParams }: any,
@@ -60,8 +52,13 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lng: string };
 }>) {
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(lng as any)) {
+    notFound();
+  }
+  const messages = await getMessages();
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lng}>
       <ConfigProvider
         theme={{
           token: {
@@ -79,9 +76,11 @@ export default async function RootLayout({
       >
         <PageSettingProvider>
           <body className={kanit.className}>
-            <Header lng={lng}/>
-            {children}
-            <Footer lng={lng}/>
+            <NextIntlClientProvider messages={messages}>
+              <Header lng={lng} />
+              {children}
+              <Footer lng={lng} />
+            </NextIntlClientProvider>
           </body>
         </PageSettingProvider>
       </ConfigProvider>
