@@ -1,23 +1,4 @@
 {
-  "page": {
-    "home": "ホーム",
-    "about-us": "会社案内",
-    "policy": "Policy",
-    "service": "サービス",
-    "blog": "ブログ",
-    "career": "採用情報",
-    "contact-us": "お問い合わせ",
-    "social": "ソーシャルメディア",
-    "our-client": "お取引先のご紹介（一部）",
-    "contact-section": {
-      "title": "Air-Con Parts Engineering (Thailand) Co., Ltd. は、エアコンおよび冷凍機用のストップバルブ、パイプ、アキュムレータなどの関連部品を製造しています。",
-      "description": "タイ投資委員会（BOI）から全面的なプロモーション特権が付与されており、日本の技術とプロフェッショナルな管理体制をもとに、最高品質のものづくりを実現しています。"
-    }
-  },
-  "button": {
-    "see-all": "すべて見る",
-    "send": "送信"
-  },
   "header": {
     "home": "ホームページ",
     "about": "会社情報",
@@ -43,30 +24,35 @@
     "h2": "国際複合一貫物流のパイオニア",
     "p": "SIAM NISTRANS（タイ日新）は、海外への事業拡大と、さまざまなビジネスニーズに対応し、真のグローバル物流サービスプロバイダーとなるための革新的な戦略の提供に取り組んでいます。"
   },
-  "service": {
-    "more-info": "さらに詳しい情報"
-  },
   "contact": {
     "title": "お問い合わせ先",
     "telephone": "Tel",
-    "fax": "Fax",
-    "email": "Email",
-    "line": "ID Line",
-    "contact-form": "Contact Form"
+    "contact-form": "Contact Form",
+    "company-name": "Siam Nistrans Co.,Ltd.",
+    "address": "15th Fl., 191/66,68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey, Khet Klongtoey, Bangkok 10110 THAILAND"
   },
   "contact-form": {
-    "title": "お問い合わせフォーム",
-    "name": "名前",
-    "email": "メールアドレス",
+    "companyName": "会社名",
+    "contactName": "名前",
+    "department": "所属部署",
     "telephone": "電話番号",
-    "detail": "詳細",
-    "place": "位置",
-    "success": "Send message success",
-    "error": "Something wrong, Please try again later",
+    "email": "E-mail",
+    "title": "お問い合わせ件名",
+    "option": {
+      "1": "輸送について",
+      "2": "HACO Lab. について",
+      "3": "倉庫・保管について",
+      "4": "採用情報について",
+      "5": "引越について",
+      "6": "その他"
+    },
+    "detail": "お問い合わせ内容",
+    "send": "送 信",
     "validate": {
-      "require": "この項目は入力必須です",
-      "email": "メールアドレスが間違っています",
-      "number": "ハイフンを含まず、数字のみで入力してください。"
+      "require": "をご入力ください。",
+      "email": "e-mailをご入力ください。",
+      "number": "TELをご入力ください。",
+      "maxLenght": "Don't fill over {{maxLenght}} letters"
     }
   },
   "sea-freight":

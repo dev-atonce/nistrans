@@ -79,7 +79,7 @@ export default async function RootLayout({
             <NextIntlClientProvider messages={messages}>
               <Header lng={lng} />
               {children}
-              <Footer lng={lng} />
+              <Footer />
             </NextIntlClientProvider>
           </body>
         </PageSettingProvider>

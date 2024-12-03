@@ -3,7 +3,7 @@ const controllers = require("../../controllers/formcontact.controller");
 const auth = require("../auth");
 const validator = require("../../validators");
 
-router.post("/", [validator.formcontact.insert, validator.check], controllers.send); // client 
+router.post("/", controllers.send); // client 
 
 router.get("/all/", auth.required, controllers.onGetAll);
 router.get("/:id", [auth.required, validator.formcontact.findById, validator.check], controllers.onGetById);
