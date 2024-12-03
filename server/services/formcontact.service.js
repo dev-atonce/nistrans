@@ -28,7 +28,7 @@ let MailGenerator = new Mailgen({
     theme: 'salted',
     product: {
         name: 'Siam Nistrans Co.,Ltd.',
-        link: 'https://mailgen.js/'// URL Website
+        link: 'https://th.nissin-asia.com/'// URL Website
     }
 });
 
@@ -54,11 +54,11 @@ const methods = {
                         data: [
                             {
                                 '#': 'Name',
-                                detail: req.body.title,
+                                detail: req.body.contactName,
                             },
                             {
                                 '#': 'Company',
-                                detail: req.body.company_name,
+                                detail: req.body.companyName,
                             },
                             {
                                 '#': 'Department',
@@ -70,11 +70,11 @@ const methods = {
                             },
                             {
                                 '#': 'Telephone',
-                                detail: req.body.phone,
+                                detail: req.body.telephone,
                             },
                             {
-                                '#': 'Subject',
-                                detail: req.body.subject,
+                                '#': 'Topic',
+                                detail: req.body.topic,
                             },
                             {
                                 '#': 'Details',

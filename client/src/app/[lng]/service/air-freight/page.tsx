@@ -1,6 +1,6 @@
 import Cover from "@/components/website/layout/Cover";
 
-export default function AirFreight() {
+export default function AirFreight({ params }: { params: { lng: string } }) {
   return (
     <>
       <Cover
@@ -165,7 +165,7 @@ export default function AirFreight() {
               </div>
               <div className="col-span-2"></div>
             </div>
-            
+
           </div>
 
           <div className="handlingBox">

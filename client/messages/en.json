@@ -1,23 +1,4 @@
 {
-  "page": {
-    "home": "Home",
-    "about-us": "About Us",
-    "policy": "Policy",
-    "service": "Service",
-    "blog": "Blog",
-    "career": "Career",
-    "contact-us": "Contact Us",
-    "social": "Social Media",
-    "our-client": "Our Clients",
-    "contact-section": {
-      "title": "Air-Con Parts Engineering (Thailand) Co., Ltd. Produces Stop valves, pipes and accumulators for air-conditioners and refrigeration unit and related parts.",
-      "description": "It has been granted Full promotion privileges by the Board of investment. The highest quality Manufacturing using technology from Japan and professional management skills is Incorporated."
-    }
-  },
-  "button": {
-    "see-all": "See All",
-    "send": "Send"
-  },
   "header": {
     "home": "Home",
     "about": "About",
@@ -43,35 +24,35 @@
     "h2": "A pioneer in international multimodal logistics",
     "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
   },
-  "service": {
-    "more-info": "More Information"
-  },
   "contact": {
     "title": "Contact Us",
     "telephone": "Tel",
-    "fax": "Fax",
-    "email": "Email",
-    "line": "ID Line",
-    "contact-form": "Contact Form"
+    "contact-form": "Contact Form",
+    "company-name": "Siam Nistrans Co.,Ltd.",
+    "address": "15th Fl., 191/66,68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey, Khet Klongtoey, Bangkok 10110 THAILAND"
   },
   "contact-form": {
-    "title": "Contact Form",
-    "name": "Name",
-    "email": "Email",
-    "telephone": "Tel",
-    "detail": "Detail",
-    "place": "Location",
-    "success": "Send message success",
-    "error": "Something wrong, Please try again later",
+    "companyName": "Company name",
+    "contactName": "Name",
+    "department": "Department",
+    "telephone": "Telephone",
+    "email": "E-mail",
+    "title": "Inquiry subject",
+    "option": {
+      "1": "Transport",
+      "2": "HACO Lab.",
+      "3": "Warehouse/storage",
+      "4": "Careers",
+      "5": "Moving",
+      "6": "Others"
+    },
+    "detail": "Inquiry contents",
+    "send": "Send",
     "validate": {
-      "require": "กรุณากรอกข้อมูล",
-      "email": "กรุณากรอกอีเมลให้ถูกต้อง",
-      "number": "ตัวเลขเท่านั้น",
-      "validate": {
-        "require": "This field is required",
-        "email": "Email incorrect",
-        "number": "Number Only"
-      }
+      "require": "Please fill the information",
+      "email": "Please fill the correct Email",
+      "number": "Number Only",
+      "maxLenght": "Don't fill over {{maxLenght}} letters"
     }
   },
   "footer": {

@@ -7,7 +7,7 @@ export default function Cover({ pageName, prevPage, noHeading }: any) {
 
   return (
     <div className="w-full ">
-      <div className="relative  lg:block hidden">
+      <div className="relative lg:block hidden">
         <Image
           className="w-full shadow-sm"
           src="/img/cover_img.png"
@@ -17,7 +17,7 @@ export default function Cover({ pageName, prevPage, noHeading }: any) {
           alt="cover"
           priority={true}
         />
-        <div className=" container mx-auto">
+        <div className=" container mx-auto px-2 xl:px-0">
           <div
             className="absolute top-[15%] hidden xl:block"
             style={{ textShadow: "1px 1px #2F2F2F" }}
@@ -40,7 +40,7 @@ export default function Cover({ pageName, prevPage, noHeading }: any) {
         </div>
       </div>
       {!noHeading && (
-        <div className="container mx-auto mt-4 ">
+        <div className="container mx-auto mt-4 px-2 xl:px-0">
           <div className="py-4 flex flex-col gap-3 ">
             <h1 className="text-black text-2xl ">{pageName}</h1>
             <div className="h-1 w-20 bg-orange-400"></div>
