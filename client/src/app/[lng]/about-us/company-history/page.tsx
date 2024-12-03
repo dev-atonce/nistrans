@@ -1,18 +1,6 @@
 import Cover from "@/components/website/layout/Cover";
 import { Metadata, ResolvingMetadata } from "next";
 
-const fetchData = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/about/about-us`,
-    {
-      cache: "no-store",
-    }
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-};
 const pageName = "about-us";
 export async function generateMetadata(
   { params, searchParams }: any,
@@ -39,7 +27,6 @@ export async function generateMetadata(
   };
 }
 export default async function AboutPage() {
-  const data = await fetchData();
   return (
     <>
       <Cover
