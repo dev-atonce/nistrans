@@ -18,17 +18,34 @@
     "see-all": "すべて見る",
     "send": "送信"
   },
-
-  "cover": {
-    "title": "AIR-CON PARTS ENGINEERING (THAILAND) COMPANY LIMITED",
-    "caption": "空調設備および冷凍機器用のスペアパーツの製造と販売を行っております。",
-    "description": "エアコン・冷凍部品の輸出および国内販売。"
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "service": "Service",
+    "news": "News",
+    "contact": "Contact",
+    "profile": "Company Profile",
+    "history": "Company History",
+    "policy": "Company Policy",
+    "sea-freight": "Sea Freight",
+    "air-freight": "Air Freight",
+    "land-transportation": "Land Transportation",
+    "warehouse": "Warehouse",
+    "machinery-installation": "Machinery Installation",
+    "house-moving": "House Monving",
+    "packing-loading": "Packing/Loading",
+    "custom-clearance": "Custom Clearance",
+    "scm-solutions": "SCM Solutions",
+    "apply": "Apply"
   },
-
+  "cover": {
+    "h1": "世界への到達と提供",
+    "h2": "国際複合一貫物流のパイオニア",
+    "p": "SIAM NISTRANS（タイ日新）は、海外への事業拡大と、さまざまなビジネスニーズに対応し、真のグローバル物流サービスプロバイダーとなるための革新的な戦略の提供に取り組んでいます。"
+  },
   "service": {
     "more-info": "さらに詳しい情報"
   },
-
   "contact": {
     "title": "お問い合わせ先",
     "telephone": "Tel",
@@ -37,7 +54,6 @@
     "line": "ID Line",
     "contact-form": "Contact Form"
   },
-
   "contact-form": {
     "title": "お問い合わせフォーム",
     "name": "名前",
@@ -45,10 +61,8 @@
     "telephone": "電話番号",
     "detail": "詳細",
     "place": "位置",
-
     "success": "Send message success",
     "error": "Something wrong, Please try again later",
-
     "validate": {
       "require": "この項目は入力必須です",
       "email": "メールアドレスが間違っています",

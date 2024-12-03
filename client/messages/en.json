@@ -1,8 +1,4 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
-  },
   "page": {
     "home": "Home",
     "about-us": "About Us",
@@ -22,10 +18,30 @@
     "see-all": "See All",
     "send": "Send"
   },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "service": "Service",
+    "news": "News",
+    "contact": "Contact",
+    "profile": "Company Profile",
+    "history": "Company History",
+    "policy": "Company Policy",
+    "sea-freight": "Sea Freight",
+    "air-freight": "Air Freight",
+    "land-transportation": "Land Transportation",
+    "warehouse": "Warehouse",
+    "machinery-installation": "Machinery Installation",
+    "house-moving": "House Monving",
+    "packing-loading": "Packing/Loading",
+    "custom-clearance": "Custom Clearance",
+    "scm-solutions": "SCM Solutions",
+    "apply": "Apply"
+  },
   "cover": {
-    "title": "AIR-CON PARTS ENGINEERING (THAILAND) COMPANY LIMITED",
-    "caption": "Manufacture and distribute air conditioning and refrigeration spare parts.",
-    "description": "Air conditioner and refrigeration parts for export and domestic sales."
+    "h1": "Reaching and Delivering to the World",
+    "h2": "A pioneer in international multimodal logistics",
+    "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
   },
   "service": {
     "more-info": "More Information"

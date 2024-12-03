@@ -1,20 +1,20 @@
 "use client";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
 import { FaPlus } from "react-icons/fa";
 import menuItem from "@/assets/menuItem.json";
 import { RiCloseLargeLine } from "react-icons/ri";
-import { useTranslation } from '../../../app/i18n/client';
+import {useTranslations} from 'next-intl';
+import {Link} from '@/i18n/routing';
 
 export default function SideBar({ sideBar, language, lng }: any) {
-  const {t} = useTranslation(lng,'header');
   const pathname = usePathname();
+  const t = useTranslations('header');
   return (
     <div className="relative h-full">
       <div
         className="sidebar-wraper w-full max-h-screen p-4 z-99"
-        // style={{ height: `calc(100vh - 68px)` }}
+      // style={{ height: `calc(100vh - 68px)` }}
       >
         <ul className="sidebar-menu">
           <button
@@ -45,7 +45,7 @@ export default function SideBar({ sideBar, language, lng }: any) {
                   {item?.subMenu.map((sub, i) => (
                     <li key={index + i}>
                       <Link
-                        href={`/${lng}${sub.href}`}
+                        href={`${sub.href}`}
                         title={sub.title}
                         onClick={sideBar.closeSideBar}
                         className="submenu-item"
@@ -60,7 +60,7 @@ export default function SideBar({ sideBar, language, lng }: any) {
           ))}
         </ul>
       </div>
-      <div className="absolute flex justify-between w-full max-w-90 p-4 bg-white" style={{bottom:'0px'}}>
+      <div className="absolute flex justify-between w-full max-w-90 p-4 bg-white" style={{ bottom: '0px' }}>
         <div className="flex items-center justify-between w-full">
           <div className="text-black notranslate flex gap-1">
             {language.languages.map((ld: any, i: number) => (

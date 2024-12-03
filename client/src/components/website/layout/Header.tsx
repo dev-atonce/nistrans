@@ -6,7 +6,6 @@ import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoPersonSharp } from "react-icons/io5";
 import LanguageSwitcher from "../molecule/LanguageSwitcher";
-import { useTranslation } from '../../../app/i18n/client';
 
 export default function Header({ logo, lng }: any) {
   const [currentLanguage, setCurrentLanguage] = useState<string>(lng);
@@ -56,8 +55,6 @@ export default function Header({ logo, lng }: any) {
   };
   const toggleLanguage = () => setOpenLang(!openLang);
 
-
-
   return (
     <div className="shadow-md bg-white ">
       <div className="header container mx-auto">
@@ -77,7 +74,7 @@ export default function Header({ logo, lng }: any) {
           </div>
           <div className="flex justify-between h-full items-center gap-30 ">
             <div className="hidden xl:flex items-center gap-10 ">
-              <NavBar lng={lng} />
+              <NavBar />
               <div className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 ">
                 <IoPersonSharp />
                 <span>สมัครงาน</span>
@@ -101,12 +98,10 @@ export default function Header({ logo, lng }: any) {
               }}
             />
           </div>
-
-
         </div>
       </div>
       <div className="block lg:none overflow-hidden">
-        <div className={`backdrop ${isOpen?`fixed`:`hidden`} top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}></div>
+        <div className={`backdrop ${isOpen ? `fixed` : `hidden`} top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}></div>
         <div
           className={`fixed w-80 h-full top-0 right-0 z-99 text-black bg-white transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}

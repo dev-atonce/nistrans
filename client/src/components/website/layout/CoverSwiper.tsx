@@ -7,17 +7,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import Image from "next/image";
-import Link from "next/link";
 import { ApiResponse, BannerProps } from "@/types/bannerType";
 import News from "../organism/News";
-import { useTranslation } from '../../../app/i18n/client';
 
 interface BannerSlideProps {
   banner: ApiResponse;
 }
 
-export default function CoverSwiper({ banner, lng }: any) {
-  const { t } = useTranslation(lng,'cover');
+export default function CoverSwiper({ banner }: any) {
   return (
     <div className="header-slider">
       <div className="w-full header-cover">

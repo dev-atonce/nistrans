@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Breadcrumb from "../molecule/Breadcrumb";
-export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
+import { useTranslations } from 'next-intl';
+
+export default function Cover({ pageName, prevPage, noHeading }: any) {
+  const t = useTranslations('cover');
+
   return (
     <div className="w-full ">
       <div className="relative  lg:block hidden">
@@ -19,16 +23,13 @@ export default function Cover({ pageName, prevPage, engName, noHeading }: any) {
             style={{ textShadow: "1px 1px #2F2F2F" }}
           >
             <p className="text-white  text-3xl py-2">
-              Reaching and Delivering to the World{" "}
+              {t('h1')}
             </p>
             <p className="text-white text-2xl py-2">
-              A pioneer in international multimodal logistics
+              {t('h2')}
             </p>
             <p className="text-white text-base w-[70%]">
-              SIAM NISTRANS (Thai Nissin) is committed to extending its business
-              overseas, and providing innovative strategies in order to meet
-              different business needs and be a real Global Logistics Service
-              Provider.
+              {t('p')}
             </p>
           </div>
         </div>
