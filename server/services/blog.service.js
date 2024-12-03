@@ -102,7 +102,7 @@ const methods = {
             reject(ErrorBadRequest(error.message));
           }
         }
-      })
+      });
     });
   },
 
@@ -135,12 +135,11 @@ const methods = {
             }
           };
 
-          const fieldsToUpdate = [
-            "blog_image",
-            "attachment",
-          ];
+          const fieldsToUpdate = ["blog_image", "attachment"];
 
-          await Promise.all(fieldsToUpdate.map(field => handleFileUpdate(field)));
+          await Promise.all(
+            fieldsToUpdate.map((field) => handleFileUpdate(field))
+          );
           await Blog.updateOne({ _id: req.params.id }, data, {
             runValidators: true,
             new: true,
@@ -171,17 +170,14 @@ const methods = {
         }
       };
 
-      const filesToDelete = [
-        obj?.blog_image,
-        obj?.attachment,
-      ];
+      const filesToDelete = [obj?.blog_image, obj?.attachment];
 
-      await Promise.all(filesToDelete.map(path => deleteFile(path)));
+      await Promise.all(filesToDelete.map((path) => deleteFile(path)));
       return { msg: "deleted success" };
     } catch (error) {
       return Promise.reject(ErrorBadRequest(error.message));
     }
-  }
+  },
 };
 
 module.exports = { ...methods };

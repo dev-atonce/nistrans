@@ -186,7 +186,10 @@ export default function HacoLab({ lang }: any) {
           </div>
         </div>
         <div className="homeWarehouse py-20 hidden md:block">
-          <div className="container mx-auto 2xl:px-40">
+          <div
+            className="container mx-auto 2xl:px-40 "
+            style={{ background: "white" }}
+          >
             <section
               className="wow fadeInUp"
               data-wow-offset="50"

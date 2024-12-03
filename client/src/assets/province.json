@@ -3,462 +3,688 @@
     "id": "1",
     "PROVINCE_CODE": "10",
     "name": "กรุงเทพมหานคร",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Bangkok",
+    "name_jp": "バンコク"
   },
   {
     "id": "2",
     "PROVINCE_CODE": "11",
     "name": "สมุทรปราการ",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Samut Prakan",
+    "name_jp": "サムットプラカーン"
   },
   {
     "id": "3",
     "PROVINCE_CODE": "12",
     "name": "นนทบุรี",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Nonthaburi",
+    "name_jp": "ノンタブリー"
   },
   {
     "id": "4",
     "PROVINCE_CODE": "13",
     "name": "ปทุมธานี",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Pathum Thani",
+    "name_jp": "パトゥムターニー"
   },
   {
     "id": "5",
     "PROVINCE_CODE": "14",
     "name": "พระนครศรีอยุธยา",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Phra Nakhon Si Ayutthaya",
+    "name_jp": "プラナコーンシーアユッタヤー"
   },
   {
     "id": "6",
     "PROVINCE_CODE": "15",
     "name": "อ่างทอง",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Ang Thong",
+    "name_jp": "アーントーン"
   },
   {
     "id": "7",
     "PROVINCE_CODE": "16",
     "name": "ลพบุรี",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Lopburi",
+    "name_jp": "ロッブリー"
   },
   {
     "id": "8",
     "PROVINCE_CODE": "17",
     "name": "สิงห์บุรี",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Sing Buri",
+    "name_jp": "シンブリー"
   },
   {
     "id": "9",
     "PROVINCE_CODE": "18",
     "name": "ชัยนาท",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Chai Nat",
+    "name_jp": "チャイナート"
   },
   {
     "id": "10",
     "PROVINCE_CODE": "19",
     "name": "สระบุรี",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Saraburi",
+    "name_jp": "サラブリー"
   },
   {
     "id": "11",
     "PROVINCE_CODE": "20",
     "name": "ชลบุรี",
-    "GEO_ID": 5
+    "GEO_ID": 5,
+    "name_en": "Chonburi",
+    "name_jp": "チョンブリー"
   },
   {
     "id": "12",
     "PROVINCE_CODE": "21",
     "name": "ระยอง",
-    "GEO_ID": 5
+    "GEO_ID": 5,
+    "name_en": "Rayong",
+    "name_jp": "ラヨーン"
   },
   {
     "id": "13",
     "PROVINCE_CODE": "22",
     "name": "จันทบุรี",
-    "GEO_ID": 5
+    "GEO_ID": 5,
+    "name_en": "Chanthaburi",
+    "name_jp": "チャンタブリー"
   },
   {
     "id": "14",
     "PROVINCE_CODE": "23",
     "name": "ตราด",
-    "GEO_ID": 5
+    "GEO_ID": 5,
+    "name_en": "Trat",
+    "name_jp": "トラート"
   },
   {
     "id": "15",
     "PROVINCE_CODE": "24",
     "name": "ฉะเชิงเทรา",
-    "GEO_ID": 5
+    "GEO_ID": 5,
+    "name_en": "Chachoengsao",
+    "name_jp": "チャチューンサオ"
   },
   {
     "id": "16",
     "PROVINCE_CODE": "25",
     "name": "ปราจีนบุรี",
-    "GEO_ID": 5
+    "GEO_ID": 5,
+    "name_en": "Prachinburi",
+    "name_jp": "プラチンブリー"
   },
   {
     "id": "17",
     "PROVINCE_CODE": "26",
     "name": "นครนายก",
-    "GEO_ID": 2
+    "GEO_ID": 2,
+    "name_en": "Nakhon Nayok",
+    "name_jp": "ナコーンナーヨック"
   },
   {
     "id": "18",
     "PROVINCE_CODE": "27",
     "name": "สระแก้ว",
-    "GEO_ID": 5
+    "GEO_ID": 5,
+    "name_en": "Sa Kaeo",
+    "name_jp": "サケーオ"
   },
   {
     "id": "19",
     "PROVINCE_CODE": "30",
     "name": "นครราชสีมา",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Nakhon Ratchasima",
+    "name_jp": "ナコーンラーチャシーマー"
   },
   {
     "id": "20",
     "PROVINCE_CODE": "31",
     "name": "บุรีรัมย์",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Buri Ram",
+    "name_jp": "ブリラム"
+  },
+  {
+    "id": "12",
+    "PROVINCE_CODE": "21",
+    "name": "ระยอง",
+    "GEO_ID": 5,
+    "name_en": "Rayong",
+    "name_jp": "ラヨーン"
+  },
+  {
+    "id": "13",
+    "PROVINCE_CODE": "22",
+    "name": "จันทบุรี",
+    "GEO_ID": 5,
+    "name_en": "Chanthaburi",
+    "name_jp": "チャンタブリー"
+  },
+  {
+    "id": "14",
+    "PROVINCE_CODE": "23",
+    "name": "ตราด",
+    "GEO_ID": 5,
+    "name_en": "Trat",
+    "name_jp": "トラート"
+  },
+  {
+    "id": "15",
+    "PROVINCE_CODE": "24",
+    "name": "ฉะเชิงเทรา",
+    "GEO_ID": 5,
+    "name_en": "Chachoengsao",
+    "name_jp": "チャチューンサオ"
+  },
+  {
+    "id": "16",
+    "PROVINCE_CODE": "25",
+    "name": "ปราจีนบุรี",
+    "GEO_ID": 5,
+    "name_en": "Prachinburi",
+    "name_jp": "プラチンブリー"
+  },
+  {
+    "id": "17",
+    "PROVINCE_CODE": "26",
+    "name": "นครนายก",
+    "GEO_ID": 2,
+    "name_en": "Nakhon Nayok",
+    "name_jp": "ナコーンナーヨック"
+  },
+  {
+    "id": "18",
+    "PROVINCE_CODE": "27",
+    "name": "สระแก้ว",
+    "GEO_ID": 5,
+    "name_en": "Sa Kaeo",
+    "name_jp": "サケーオ"
+  },
+  {
+    "id": "19",
+    "PROVINCE_CODE": "30",
+    "name": "นครราชสีมา",
+    "GEO_ID": 3,
+    "name_en": "Nakhon Ratchasima",
+    "name_jp": "ナコーンラーチャシーマー"
+  },
+  {
+    "id": "20",
+    "PROVINCE_CODE": "31",
+    "name": "บุรีรัมย์",
+    "GEO_ID": 3,
+    "name_en": "Buri Ram",
+    "name_jp": "ブリラム"
   },
   {
     "id": "21",
     "PROVINCE_CODE": "32",
     "name": "สุรินทร์",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Surin",
+    "name_jp": "スリン"
   },
   {
     "id": "22",
     "PROVINCE_CODE": "33",
     "name": "ศรีสะเกษ",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Si Sa Ket",
+    "name_jp": "シーサケート"
   },
   {
     "id": "23",
     "PROVINCE_CODE": "34",
     "name": "อุบลราชธานี",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Ubon Ratchathani",
+    "name_jp": "ウボンラーチャターニー"
   },
   {
     "id": "24",
     "PROVINCE_CODE": "35",
     "name": "ยโสธร",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Yasothon",
+    "name_jp": "ヤソトーン"
   },
   {
     "id": "25",
     "PROVINCE_CODE": "36",
     "name": "ชัยภูมิ",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Chaiyaphum",
+    "name_jp": "チャイヤプーム"
   },
   {
     "id": "26",
     "PROVINCE_CODE": "37",
     "name": "อำนาจเจริญ",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Amnat Charoen",
+    "name_jp": "アムナートチャルーン"
   },
   {
     "id": "27",
     "PROVINCE_CODE": "39",
     "name": "หนองบัวลำภู",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Nong Bua Lamphu",
+    "name_jp": "ノーンブワラムプー"
   },
   {
     "id": "28",
     "PROVINCE_CODE": "40",
     "name": "ขอนแก่น",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Khon Kaen",
+    "name_jp": "コンケーン"
   },
   {
     "id": "29",
     "PROVINCE_CODE": "41",
     "name": "อุดรธานี",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Udon Thani",
+    "name_jp": "ウドンターニー"
   },
   {
     "id": "30",
     "PROVINCE_CODE": "42",
     "name": "เลย",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Loei",
+    "name_jp": "ルーイ"
   },
   {
     "id": "31",
     "PROVINCE_CODE": "43",
     "name": "หนองคาย",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Nong Khai",
+    "name_jp": "ノーンカーイ"
   },
   {
     "id": "32",
     "PROVINCE_CODE": "44",
     "name": "มหาสารคาม",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Maha Sarakham",
+    "name_jp": "マハサラカム"
   },
   {
     "id": "33",
     "PROVINCE_CODE": "45",
     "name": "ร้อยเอ็ด",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Roi Et",
+    "name_jp": "ロイエット"
   },
   {
     "id": "34",
     "PROVINCE_CODE": "46",
     "name": "กาฬสินธุ์",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Kalasin",
+    "name_jp": "カラシン"
   },
   {
     "id": "35",
     "PROVINCE_CODE": "47",
     "name": "สกลนคร",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Sakon Nakhon",
+    "name_jp": "サコンナコン"
   },
   {
     "id": "36",
     "PROVINCE_CODE": "48",
     "name": "นครพนม",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Nakhon Phanom",
+    "name_jp": "ナコーンパノム"
   },
   {
     "id": "37",
     "PROVINCE_CODE": "49",
     "name": "มุกดาหาร",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Mukdahan",
+    "name_jp": "ムックダハーン"
   },
   {
     "id": "38",
     "PROVINCE_CODE": "50",
     "name": "เชียงใหม่",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Chiang Mai",
+    "name_jp": "チェンマイ"
   },
   {
     "id": "39",
     "PROVINCE_CODE": "51",
     "name": "ลำพูน",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Lamphun",
+    "name_jp": "ラムプーン"
   },
   {
     "id": "40",
     "PROVINCE_CODE": "52",
     "name": "ลำปาง",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Lampang",
+    "name_jp": "ラムパーン"
   },
   {
     "id": "41",
     "PROVINCE_CODE": "53",
     "name": "อุตรดิตถ์",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Uttaradit",
+    "name_jp": "ウッタラディット"
   },
   {
     "id": "42",
     "PROVINCE_CODE": "54",
     "name": "แพร่",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Phrae",
+    "name_jp": "プレー"
   },
   {
     "id": "43",
     "PROVINCE_CODE": "55",
     "name": "น่าน",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Nan",
+    "name_jp": "ナーン"
   },
   {
     "id": "44",
     "PROVINCE_CODE": "56",
     "name": "พะเยา",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Phayao",
+    "name_jp": "パヤオ"
   },
   {
     "id": "45",
     "PROVINCE_CODE": "57",
     "name": "เชียงราย",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Chiang Rai",
+    "name_jp": "チェンライ"
   },
   {
     "id": "46",
     "PROVINCE_CODE": "58",
     "name": "แม่ฮ่องสอน",
-    "GEO_ID": 1
+    "GEO_ID": 1,
+    "name_en": "Mae Hong Son",
+    "name_jp": "メーホンソーン"
   },
   {
     "id": "47",
     "PROVINCE_CODE": "60",
     "name": "นครสวรรค์",
-    "GEO_ID": 2
+    "GEO_ID": 6,
+    "name_en": "Nakhon Sawan",
+    "name_jp": "ナコーンサワン"
   },
   {
     "id": "48",
     "PROVINCE_CODE": "61",
     "name": "อุทัยธานี",
-    "GEO_ID": 2
+    "GEO_ID": 6,
+    "name_en": "Uthai Thani",
+    "name_jp": "ウタイターニー"
   },
   {
     "id": "49",
     "PROVINCE_CODE": "62",
     "name": "กำแพงเพชร",
-    "GEO_ID": 2
+    "GEO_ID": 6,
+    "name_en": "Kamphaeng Phet",
+    "name_jp": "カンペーンペット"
   },
   {
     "id": "50",
     "PROVINCE_CODE": "63",
     "name": "ตาก",
-    "GEO_ID": 4
+    "GEO_ID": 6,
+    "name_en": "Tak",
+    "name_jp": "ターク"
   },
   {
     "id": "51",
     "PROVINCE_CODE": "64",
     "name": "สุโขทัย",
-    "GEO_ID": 2
+    "GEO_ID": 6,
+    "name_en": "Sukhothai",
+    "name_jp": "スコータイ"
   },
   {
     "id": "52",
     "PROVINCE_CODE": "65",
     "name": "พิษณุโลก",
-    "GEO_ID": 2
+    "GEO_ID": 6,
+    "name_en": "Phitsanulok",
+    "name_jp": "ピッサヌローク"
   },
   {
     "id": "53",
     "PROVINCE_CODE": "66",
     "name": "พิจิตร",
-    "GEO_ID": 2
+    "GEO_ID": 6,
+    "name_en": "Phichit",
+    "name_jp": "ピチット"
   },
   {
     "id": "54",
     "PROVINCE_CODE": "67",
     "name": "เพชรบูรณ์",
-    "GEO_ID": 2
+    "GEO_ID": 6,
+    "name_en": "Phetchabun",
+    "name_jp": "ペッチャブーン"
   },
   {
     "id": "55",
     "PROVINCE_CODE": "70",
     "name": "ราชบุรี",
-    "GEO_ID": 4
+    "GEO_ID": 4,
+    "name_en": "Ratchaburi",
+    "name_jp": "ラチャブリー"
   },
   {
     "id": "56",
     "PROVINCE_CODE": "71",
     "name": "กาญจนบุรี",
-    "GEO_ID": 4
+    "GEO_ID": 4,
+    "name_en": "Kanchanaburi",
+    "name_jp": "カンチャナブリー"
   },
   {
     "id": "57",
     "PROVINCE_CODE": "72",
     "name": "สุพรรณบุรี",
-    "GEO_ID": 2
+    "GEO_ID": 4,
+    "name_en": "Suphan Buri",
+    "name_jp": "スパンブリー"
   },
   {
     "id": "58",
     "PROVINCE_CODE": "73",
     "name": "นครปฐม",
-    "GEO_ID": 2
+    "GEO_ID": 4,
+    "name_en": "Nakhon Pathom",
+    "name_jp": "ナコーンパトム"
   },
   {
     "id": "59",
     "PROVINCE_CODE": "74",
     "name": "สมุทรสาคร",
-    "GEO_ID": 2
+    "GEO_ID": 4,
+    "name_en": "Samut Sakhon",
+    "name_jp": "サムットサーコーン"
   },
   {
     "id": "60",
     "PROVINCE_CODE": "75",
     "name": "สมุทรสงคราม",
-    "GEO_ID": 2
+    "GEO_ID": 4,
+    "name_en": "Samut Songkhram",
+    "name_jp": "サムットソンクラーム"
   },
   {
     "id": "61",
     "PROVINCE_CODE": "76",
     "name": "เพชรบุรี",
-    "GEO_ID": 4
+    "GEO_ID": 4,
+    "name_en": "Phetchaburi",
+    "name_jp": "ペッチャブリー"
   },
   {
     "id": "62",
     "PROVINCE_CODE": "77",
     "name": "ประจวบคีรีขันธ์",
-    "GEO_ID": 4
+    "GEO_ID": 4,
+    "name_en": "Prachuap Khiri Khan",
+    "name_jp": "プラチュワップキーリカン"
   },
   {
     "id": "63",
     "PROVINCE_CODE": "80",
     "name": "นครศรีธรรมราช",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Nakhon Si Thammarat",
+    "name_jp": "ナコーンシータマラート"
   },
   {
     "id": "64",
     "PROVINCE_CODE": "81",
     "name": "กระบี่",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Krabi",
+    "name_jp": "クラビ"
   },
   {
     "id": "65",
     "PROVINCE_CODE": "82",
     "name": "พังงา",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Phang Nga",
+    "name_jp": "パンガー"
   },
   {
     "id": "66",
     "PROVINCE_CODE": "83",
     "name": "ภูเก็ต",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Phuket",
+    "name_jp": "プーケット"
   },
   {
     "id": "67",
     "PROVINCE_CODE": "84",
     "name": "สุราษฎร์ธานี",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Surat Thani",
+    "name_jp": "スラートターニー"
   },
   {
     "id": "68",
     "PROVINCE_CODE": "85",
     "name": "ระนอง",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Ranong",
+    "name_jp": "ラノーン"
   },
   {
     "id": "69",
     "PROVINCE_CODE": "86",
     "name": "ชุมพร",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Chumphon",
+    "name_jp": "チュムポン"
   },
   {
     "id": "70",
     "PROVINCE_CODE": "90",
     "name": "สงขลา",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Songkhla",
+    "name_jp": "ソンクラー"
   },
   {
     "id": "71",
     "PROVINCE_CODE": "91",
     "name": "สตูล",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Satun",
+    "name_jp": "サトゥーン"
   },
   {
     "id": "72",
     "PROVINCE_CODE": "92",
     "name": "ตรัง",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Trang",
+    "name_jp": "トラン"
   },
   {
     "id": "73",
     "PROVINCE_CODE": "93",
     "name": "พัทลุง",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Phatthalung",
+    "name_jp": "パッタルン"
   },
   {
     "id": "74",
     "PROVINCE_CODE": "94",
     "name": "ปัตตานี",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Pattani",
+    "name_jp": "パタニ"
   },
   {
     "id": "75",
     "PROVINCE_CODE": "95",
     "name": "ยะลา",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Yala",
+    "name_jp": "ヤラー"
   },
   {
     "id": "76",
     "PROVINCE_CODE": "96",
     "name": "นราธิวาส",
-    "GEO_ID": 6
+    "GEO_ID": 6,
+    "name_en": "Narathiwat",
+    "name_jp": "ナラティワート"
   },
   {
     "id": "77",
     "PROVINCE_CODE": "97",
     "name": "บึงกาฬ",
-    "GEO_ID": 3
+    "GEO_ID": 3,
+    "name_en": "Bueng Kan",
+    "name_jp": "ブンカーン"
   }
 ]

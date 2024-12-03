@@ -4,7 +4,7 @@ import { Metadata, ResolvingMetadata } from "next";
 
 const fetchBlog = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog/limit/8`,
+    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=8&type=blog`,
     {
       cache: "no-store",
     }
@@ -39,6 +39,7 @@ export async function generateMetadata(
 }
 export default async function BlogPage() {
   const blogs = await fetchBlog();
+
   return (
     <>
       <Cover

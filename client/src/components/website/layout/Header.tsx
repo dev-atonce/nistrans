@@ -6,6 +6,7 @@ import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoPersonSharp } from "react-icons/io5";
 import LanguageSwitcher from "../molecule/LanguageSwitcher";
+import { Link } from '@/i18n/routing';
 
 export default function Header({ logo, lng }: any) {
   const [currentLanguage, setCurrentLanguage] = useState<string>(lng);
@@ -26,17 +27,20 @@ export default function Header({ logo, lng }: any) {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
     document.querySelector("html")?.classList.toggle("nav-open");
-    document.querySelector('body')?.classList.add('overflow-hidden');
+    document.querySelector("body")?.classList.add("overflow-hidden");
   };
   const closeSideBar = (e: any) => {
-    const subMenuItem = e?.target.closest('.submenu-item')
+    const subMenuItem = e?.target.closest(".submenu-item");
     if (subMenuItem) {
-      subMenuItem.closest('.sidebar-menu').querySelectorAll('.active').map((e: any) => e.target.classList.remove('active'))
-      subMenuItem.classList.add('active')
+      subMenuItem
+        .closest(".sidebar-menu")
+        .querySelectorAll(".active")
+        .map((e: any) => e.target.classList.remove("active"));
+      subMenuItem.classList.add("active");
     }
     setIsOpen(false);
     document.querySelector("html")?.classList.remove("nav-open");
-    document.querySelector('body')?.classList.remove('overflow-hidden');
+    document.querySelector("body")?.classList.remove("overflow-hidden");
   };
   const toggleSubMenu = (e: any) => {
     const subMenu = e.currentTarget.parentElement?.querySelector(".sub-menu");
@@ -75,10 +79,13 @@ export default function Header({ logo, lng }: any) {
           <div className="flex justify-between h-full items-center gap-30 ">
             <div className="hidden xl:flex items-center gap-10 ">
               <NavBar />
-              <div className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 ">
+              <Link
+                href={`/${lng}/recruitment`}
+                className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 "
+              >
                 <IoPersonSharp />
                 <span>สมัครงาน</span>
-              </div>
+              </Link>
             </div>
             <LanguageSwitcher
               position="bottom"
@@ -94,16 +101,19 @@ export default function Header({ logo, lng }: any) {
                 toggleLanguage,
                 languages,
                 toggleHover,
-                hovered
+                hovered,
               }}
             />
           </div>
         </div>
       </div>
       <div className="block lg:none overflow-hidden">
-        <div className={`backdrop ${isOpen ? `fixed` : `hidden`} top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}></div>
         <div
-          className={`fixed w-80 h-full top-0 right-0 z-99 text-black bg-white transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`backdrop ${isOpen ? `fixed` : `hidden`
+            } top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}
+        ></div>
+        <div
+          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           <SideBar

@@ -5,8 +5,8 @@ export default function NewsCard() {
     <div className="bg-white p-4 rounded-md text-sm text-slate-700">
       <div className="grid grid-cols-12">
         <div className="col-span-2">2023.09.05</div>
-        <div className="col-span-1">
-          <span className="bg-slate-700 rounded-xl px-1 py-1 text-xs text-white">
+        <div className="col-span-1 hidden lg:block">
+          <span className="bg-slate-700 rounded-xl px-1 py-1 text-xs text-white ">
             ประกาศ
           </span>
         </div>

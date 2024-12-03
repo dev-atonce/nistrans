@@ -2,16 +2,17 @@ import Cover from "@/components/website/layout/Cover";
 import Blog from "@/components/website/layout/Blog";
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
+import provinces from "@/assets/province.json";
 
 const fetchBlog = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog/limit/8`,
+    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?type=recruitment`,
     {
       cache: "no-store",
     }
   );
   const data = await res.json();
-  return data;
+  return data?.rows;
 };
 const pageName = "blog";
 export async function generateMetadata(
@@ -38,8 +39,16 @@ export async function generateMetadata(
     },
   };
 }
-export default async function RecruitmentPage() {
+export default async function RecruitmentPage({ params: { lang } }: any) {
   const blogs = await fetchBlog();
+
+  const formattedDate = (date: any) => {
+    const dateFormat = new Date(date); // Original date
+    return `${dateFormat.getFullYear()}/${String(
+      dateFormat.getMonth() + 1
+    ).padStart(2, "0")}/${String(dateFormat.getDate()).padStart(2, "0")}`;
+  };
+
   return (
     <>
       <Cover
@@ -56,26 +65,20 @@ export default async function RecruitmentPage() {
             <span className="col-span-4">สถานที่ทำงาน</span>
             {/* <span className="col-span-2"></span> */}
           </div>
-          <div className="grid grid-cols-12 py-4 border-b border-slate-200">
-            <span className="col-span-3">2023/09/22 </span>
-            <span className="col-span-5">Warehouse Supervisor </span>
-            <span className="col-span-4">Laem Chabang</span>
-          </div>
-          <div className="grid grid-cols-12 py-4 border-b border-slate-200">
-            <span className="col-span-3">2023/09/22 </span>
-            <span className="col-span-5">Warehouse Supervisor </span>
-            <span className="col-span-4">Laem Chabang</span>
-          </div>
-          <div className="grid grid-cols-12 py-4 border-b border-slate-200">
-            <span className="col-span-3">2023/09/22 </span>
-            <span className="col-span-5">Warehouse Supervisor </span>
-            <span className="col-span-4">Laem Chabang</span>
-          </div>
-          <div className="grid grid-cols-12 py-4 border-b border-slate-200">
-            <span className="col-span-3">2023/09/22 </span>
-            <span className="col-span-5">Warehouse Supervisor </span>
-            <span className="col-span-4">Laem Chabang</span>
-          </div>
+          {blogs?.map((i: any) => (
+            <div className="grid grid-cols-12 py-4 border-b border-slate-200">
+              <span className="col-span-3">{formattedDate(i?.createdAt)} </span>
+              <span className="col-span-5">
+                {i[`blog_title_${lang}`] || i?.blog_title_th}
+              </span>
+              <span className="col-span-4">
+                {/* @ts-ignore */}
+                {provinces?.find((j: any) => j?.id == i?.location)["name_en"] ||
+                  // @ts-ignore
+                  provinces?.find((j: any) => j?.id == i?.location)?.name}
+              </span>
+            </div>
+          ))}
         </div>
         <div className="grid grid-cols-3 md:grid-cols-12 py-4 gap-4 ">
           <Image
