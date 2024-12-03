@@ -1,6 +1,9 @@
 import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
 
 export default function SeaFreight() {
+  const t = useTranslations('sea-freight');
+  const branchs = useTranslations('branchs');
   return (
     <>
       <Cover
@@ -10,67 +13,37 @@ export default function SeaFreight() {
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">การขนส่งทางทะเล</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
           <div>
-            <div
-            >
-              บริษัทให้บริการขนส่งแบบไร้รอยต่อทั่วทุกมุมโลกในฐานะ International
-              Freight Forwarder เช่น การลดค่าขนส่งทางทะเลและต้นทุนการขนส่ง
-              การส่งมอบสินค้าและการขนส่งอย่างฉับไว เป็นต้น
-              โดยอาศัยการประสานความร่วมมือกับ NISSIN Corporation
-              ซึ่งมีเครือข่ายอยู่ 150 ประเทศทั่วโลก รวมถึงบริษัทต่างๆ ในเครือ
-              และเอเยนต์รายใหญ่
-            </div>
-
-            <div className="pageTitle1 mt-10">การขนส่งทางทะเลของ Siam Nistrans</div>
-
-            <div className="pageTitle2">
-              ขนส่งต่อเนื่องหลายรูปแบบด้วยเครือข่ายที่กระจายอยู่ทั่วโลก (Door to
-              Door)!
-              <br />
-              วางใจได้และปลอดภัยด้วยบริการการขนส่งแบบรวมตู้ (Consolidation)
+            <div>{t('section1.p')}</div>
+            <div className="pageTitle1 mt-10">{t('h2')}</div>
+            <div className="pageTitle2" style={{whiteSpace:'pre'}}>
+              {t('h3')}
             </div>
 
             <ul className="textNum">
               <li className="nNum">
-                <div className="nNumText">จุดเด่น</div>
+                <div className="nNumText">{t('section2.title')}</div>
                 <div className="nNumNum">01</div>
               </li>
-              <li className="tText">
-                นับตั้งแต่เปิดทำการในปี 2530 เป็นต้นมา
-                เราใช้ประสบการณ์และองค์ความรู้ด้านการขนส่งต่อเนื่องหลากหลายรูปแบบเพื่อส่งมอบสินค้าสำคัญของลูกค้าไปยังทุกที่ทั่วโลกอย่าง
-                "วางใจได้และปลอดภัย" โดยถือคติ <br />
-                "เชื่อมั่นและจริงใจ"
-              </li>
+              <li className="tText">{t('section2.p1')} </li>
             </ul>
 
             <ul className="textNum">
               <li className="nNum">
-                <div className="nNumText">จุดเด่น</div>
+                <div className="nNumText">{t('section2.title')}</div>
                 <div className="nNumNum">02</div>
               </li>
-              <li className="tText">
-                พนักงานขายของเราซึ่งสั่งสมประสบการณ์จากการไปประจำการในต่างประเทศมามากมายและมีความรู้เกี่ยวกับท้องถิ่นเป็นอย่างดี
-                จะเป็นผู้ออกแบบและนำเสนอแผนการขนส่งอย่างพิถีพิถัน
-                เพื่อเพิ่มประสิทธิภาพและประสิทธิผลให้ดียิ่งขึ้น
-              </li>
+              <li className="tText">{t('section2.p2')}</li>
             </ul>
 
             <ul className="textNum">
               <li className="nNum">
-                <div className="nNumText">จุดเด่น</div>
+                <div className="nNumText">{t('section2.title')}</div>
                 <div className="nNumNum">03</div>
               </li>
-              <li
-                className="tText"
-                style={{ fontSize: "17px", paddingRight: "0" }}
-              >
-                ไม่ว่าจะเป็น "การบริการขนส่งต่อเนื่องหลายรูปแบบ" แบบ Door to
-                Door (รับสัมภาระในประเทศ-ขนส่งทางทะเล-ขนส่งทางบกที่ต่างประเทศ)
-                ให้แก่ลูกค้า, การขนส่งแบบจัดสรรตู้สินค้าร่วมกัน (LCL),
-                การขนส่งแบบ FCL หรือ Buyer Consolidation ฯลฯ
-                เราก็สามารถให้บริการได้ด้วยการติดต่อบริษัทเรือรายใหญ่ระดับโลกหรือผ่านเครือข่ายในต่างประเทศ
+              <li className="tText">{t('section2.p3')}
               </li>
             </ul>
 
@@ -108,67 +81,46 @@ export default function SeaFreight() {
             </div>
             <div className="grid">
               <div className="bg-blue-950 p-1">
-                <div className="text-2xl text-white fw-bold text-center py-2">นำเสนอเส้นทางขนส่งและวิธีการขนส่งที่สอดคล้องตามความต้องการของลูกค้า</div>
+                <div className="text-2xl text-white fw-bold text-center py-2">{t('section3.title')}</div>
                 <div className="grid grid-cols-12 bg-white transportation-routes">
                     <div className="col-span-6 md:col-span-2 grid justify-center item">
                       <img src="/img/service/service-1.png" alt="ต้นทางจัดส่ง" />
-                      <p className="text-center">ต้นทางจัดส่ง</p>
+                      <p className="text-center">{t('section3.step1')}</p>
                     </div>
                     <div className="col-span-6 md:col-span-2 grid justify-center item">
                       <img src="/img/service/service-2.png" alt="รับสินค้า" />
-                      <p className="text-center">รับสินค้า</p>
+                      <p className="text-center">{t('section3.step2')}</p>
                     </div>
                     <div className="col-span-6 md:col-span-2 grid justify-center item">
                       <img src="/img/service/service-5.png" alt="คลังสินค้า" />
-                      <p className="text-center">คลังสินค้า</p>
+                      <p className="text-center">{t('section3.step3')}</p>
                     </div>
                     <div className="col-span-6 md:col-span-2 grid justify-center item">
                       <img src="/img/service/service-4.png" alt="ขนส่งทางทะเล" />
-                      <p className="text-center">ขนส่งทางทะเล</p>
+                      <p className="text-center">{t('section3.step4')}</p>
                     </div>
                     <div className="col-span-6 md:col-span-2 grid justify-center item">
                       <img src="/img/service/service-5.png" alt="คลังสินค้า" />
-                      <p className="text-center">คลังสินค้า</p>
+                      <p className="text-center">{t('section3.step5')}</p>
                     </div>
                     <div className="col-span-6 md:col-span-2 grid justify-center item">
                       <img src="/img/service/service-6.png" alt="ปลายทางจัดส่ง" />
-                      <p className="text-center">ปลายทางจัดส่ง</p>
+                      <p className="text-center">{t('section3.step6')}</p>
                     </div>
                 </div>
 
               </div>
             </div>
-
-            {/* <div className="ssfBox1">
-              <div className="relative flex justify-center">
-                <img
-                  src="/img/sea-freight-forwarding/process.jpg"
-                  className=""
-                  alt="Sea Freight Forwarding"
-                />
-                <div className="ssfBox1Text1">
-                  นำเสนอเส้นทางขนส่งและวิธีการขนส่งที่สอดคล้องตามความต้องการของลูกค้า
-                </div>
-                <ul className="absolute flex justify-center bottom-4">
-                  <li className="text-center" style={{width:'9.7rem'}}>ต้นทางจัดส่ง</li>
-                  <li className="text-center" style={{width:'9.7rem'}}>รับสินค้า</li>
-                  <li className="text-center" style={{width:'9.7rem'}}>คลังสินค้า</li>
-                  <li className="text-center" style={{width:'9.7rem'}}>ขนส่งทางทะเล</li>
-                  <li className="text-center" style={{width:'9.7rem'}}>คลังสินค้า</li>
-                  <li className="text-center" style={{width:'9.7rem'}}>ปลายทางจัดส่ง</li>
-                </ul>
-              </div>
-            </div> */}
             <div>
               <div className="handlingBox">
-                <div className="handlingTitle">สาขาที่ให้บริการ</div>
+                <div className="handlingTitle">{branchs('title')}</div>
                 <ul className="list-disc grid md:flex">
-                  <li className="ms-8 ps-0">กรุงเทพมหานคร</li>
-                  <li className="ms-8 ps-0">พระนครศรีอยุธยา</li>
-                  <li className="ms-8 ps-0">แหลมฉบัง</li>
-                  <li className="ms-8 ps-0">ปราจีนบุรี</li>
-                  <li className="ms-8 ps-0">เชียงใหม่</li>
-                  <li className="ms-8 ps-0">บางปะกง</li>
+                  <li className="ms-8 ps-0">{branchs('bangkok')}</li>
+                  <li className="ms-8 ps-0">{branchs('ayutthaya')}</li>
+                  <li className="ms-8 ps-0">{branchs('laem-chabang')}</li>
+                  <li className="ms-8 ps-0">{branchs('prachinburi')}</li>
+                  <li className="ms-8 ps-0">{branchs('chiang-mai')}</li>
+                  <li className="ms-8 ps-0">{branchs('bangpakong')}</li>
                 </ul>
               </div>
             </div>

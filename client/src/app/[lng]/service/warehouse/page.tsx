@@ -1,6 +1,8 @@
 import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
 
 export default function Warehouse() {
+  const t = useTranslations('warehouse');
   return (
     <>
       <Cover
@@ -10,19 +12,11 @@ export default function Warehouse() {
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">ธุรกิจคลังสินค้า</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
           <div>
-            <div className="branchesTopic">
-              คลังสินค้าของบริษัทมีบริการคลังสินค้าที่มีการเพิ่มมูลค่า เช่น งานบรรจุภัณฑ์ การจัดส่งโดยรถของบริษัท ฯลฯ
-              ให้สอดคล้องตามความต้องการของลูกค้า รวมทั้งใส่ใจต่อการให้บริการอย่างพิถีพิถัน
-              ด้วยการควบคุมสินค้าคงคลังและการนำเข้า-ออกคลังสินค้าโดยใช้ระบบ WMS ที่บริษัทพัฒนาขึ้น
-            </div>
-            <div className="pageTitle1">
-              ลักษณะพิเศษของคลังสินค้าและ
-              <br />
-              การจัดเก็บของ Siam Nistrans
-            </div>
+            <div className="branchesTopic">{t('section1.p')}</div>
+            <h2 className="pageTitle1">{t('h2')}</h2>
             <div className="pageTitle2">
               <div className="grid grid-cols-12 gap-4">
                 <div className="col-span-1"></div>
@@ -48,7 +42,7 @@ export default function Warehouse() {
                       lineHeight: "150%",
                     }}
                   >
-                    ใบอนุญาตประกอบธุรกิจคลังสินค้า
+                    {t('section2.permit')}
                   </div>
                 </div>
                 <div
@@ -59,33 +53,24 @@ export default function Warehouse() {
                     padding: "10px 30px 0 0",
                   }}
                 >
-                  คลังสินค้าแต่ละแห่งมีความสามารถในการจัดหาพื้นที่ว่างที่มากพอ{" "} 
-                  รวมทั้งมีการจัดขั้นตอนการจ่ายสินค้าให้ราบรื่นกว่าเดิมด้วยการ 
-                  วางระบบปริมาณการจัดเก็บและปริมาณการกระจายสินค้า
+                  {t('section2.p')}
                 </div>
               </div>
               <div className="clearfix"></div>
             </div>
             <ul className="textNum">
               <li className="nNum">
-                <div className="nNumText">จุดเด่น</div>
+                <div className="nNumText">{t('section2.title')}</div>
                 <div className="nNumNum">01</div>
               </li>
-              <li className="tText">
-                ให้บริการงาน Logistics Hub
-                ที่มีประสิทธิภาพด้วยการใช้คลังสินค้าที่จัดสร้างขึ้นควบคู่ไปกับสาขาแต่ละแห่งเพื่อรองรับสินค้าทุกประเภท
-                นอกจากนี้ยังมีการใช้ระบบคลังสินค้าและระบบควบคุมสินค้าคงคลังซึ่งพัฒนาขึ้นโดยเครือ
-                Nissin ในประเทศญี่ปุ่นและประเทศต่างๆ
-                เพื่อให้การรองรับด้านซอฟต์แวร์โดยมีทีมงาน
-                ITภายในบริษัทดำเนินการควบคุม
+              <li className="tText">{t('section2.1.1')}
               </li>
             </ul>
             <div style={{ width: "270px", margin: "0 auto" }}>
               <a className="pageBtnMore" href="scm-solutions.php">
                 <div className="pageBtnMoreBg"></div>
                 <div className="pageBtnMoreHover"></div>
-                <div className="pageBtnMoreText">
-                  IT Solution ของ Siam Nistrans
+                <div className="pageBtnMoreText">{t('section2.1.2')}
                 </div>
               </a>
             </div>
@@ -120,7 +105,7 @@ export default function Warehouse() {
               </div>
             </div>
 
-            <div className="pageTitle1">การควบคุมคลังสินค้า</div>
+            <div className="pageTitle1">{t('section2.1.3')}</div>
             <div className="mt-10 mb-20">
               <div className="grid grid-cols-12 gap-4">
                 <div className="col-span-1 md:hidden"></div>
@@ -130,7 +115,7 @@ export default function Warehouse() {
                     className="img-responsive"
                     alt="Warehouse"
                   />
-                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">นำเข้าคลังสินค้า</div>
+                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">{t('section2.1.4')}</div>
                 </div>
                 <div className="col-span-1 md:hidden"></div>
                 <div className="col-span-1 md:hidden"></div>
@@ -140,7 +125,7 @@ export default function Warehouse() {
                     className="img-responsive"
                     alt="Warehouse"
                   />
-                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">จัดเก็บ</div>
+                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">{t('section2.1.5')}</div>
                 </div>
                 <div className="col-span-1 md:hidden"></div>
                 <div className="col-span-1 md:hidden"></div>
@@ -151,7 +136,7 @@ export default function Warehouse() {
                     alt="Warehouse"
                   />
                   <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">
-                    เตรียมกระจายสินค้าออกจากคลังสินค้า
+                  {t('section2.1.6')}
                   </div>
                 </div>
                 <div className="col-span-1 md:hidden"></div>
@@ -162,11 +147,11 @@ export default function Warehouse() {
                     className="img-responsive"
                     alt="Warehouse"
                   />
-                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">ขนส่ง (นำเข้าออกคลังสินค้า)</div>
+                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">{t('section2.1.7')}</div>
                 </div>
               </div>
             </div>
-            <div className="pageTitle1">คลังสินค้าอันตราย</div>
+            <div className="pageTitle1">{t('section2.1.8')}</div>
             <div className="dwhRow">
               <div className="grid grid-cols-12 gap-4">
                 <div className="col-span-2"></div>
@@ -178,13 +163,13 @@ export default function Warehouse() {
                 <div className="col-span-2"></div>
                 <div className="col-span-1"></div>
                 <div className="col-span-10">
-                  <div className="dwhText1 no-margin-t">ก่อตั้งคลังสินค้าอันตรายใน T-park บางนา กม.39 สามารถเก็บรักษา DIW type 1, 2, 3, UN Class 3, 6.1, 8, 9 ได้ กรุณาติดต่อสอบถามพร้อมแสดงเอกสารข้อมูลความปลอดภัยสารเคมี (SDS)</div>
+                  <div className="dwhText1 no-margin-t">{t('section2.1.9')}</div>
                   <div className="dwhText2">
-                    สถานที่
+                  {t('section2.1.10')}
                     <a className="dwhMap" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/7qDpaGqx3gKx26298"></a>
                     <a className="dwhMapPdf" target="_blank" rel="noopener noreferrer" href="../file/SIAM_NISTRANS_Map.pdf"></a>
                   </div>
-                  <div className="dwhText1">คลังสินค้าใน T-park บางนา กม.39 อยู่ใกล้กับนิคมอุตสาหกรรมและเขตท่าเรือ จึงเป็นจุดที่เหมาะสมที่สุดในการกระจายสินค้า</div>
+                  <div className="dwhText1">{t('section2.1.13')}</div>
                   <div className="grid grid-cols-12 gap-4">
                     <div className="col-span-6">
                       <a className="fancyBox" href="/img/service/warehouse/019.jpg" title="">
@@ -205,27 +190,21 @@ export default function Warehouse() {
                   <a className="fancyBox" href="/img/service/warehouse/017.jpg" title="">
                     <img src="/img/service/warehouse/017.jpg" className="img-responsive" alt="" />
                   </a>
-                  <div className="dwhText1"> มีพื้นที่เก็บรักษาถึง 1,000 ตารางเมตร เป็นไปตามมาตรฐาน DIW </div>
+                  <div className="dwhText1">{t('section2.1.14')}</div>
                 </div>
                 <div className="col-span-12 md:col-span-5">
                   <a className="fancyBox" href="/img/service/warehouse/018.jpg" rel="groupimg" title="">
                     <img src="/img/service/warehouse/018.jpg" className="img-responsive" alt=""/>
                   </a>
-                  <div className="dwhText1">เจ้าหน้าที่ผู้มีใบอนุญาตจัดการวัตถุอันตรายจะคอยให้บริการด้านการเก็บ</div>
+                  <div className="dwhText1">{t('section2.1.15')}</div>
                 </div>
               </div>
             </div>
 
-            <div className="pageTitle1">คลังสินค้าอันตราย</div>
+            <div className="pageTitle1">{t('section2.1.16')}</div>
             <div className="my-10">
               <div className="grid grid-cols-12 gap-4">
-                <div className="col-span-12">
-                  เราเปิดให้บริการคลังสินค้าควบคุมอุณหภูมิไว้ภายในคลังสินค้า BPK41
-                  ควบคุมอุณหภูมิไว้ที่ 18-25℃ ด้วยเครื่องปรับอากาศตลอด 24 ชั่วโมง
-                  และรักษาความชื้นไว้ที่ประมาณ 60%
-                  สำหรับสินค้าที่ต้องจัดเก็บด้วยความระมัดระวังเป็นพิเศษ
-                  โปรดสอบถามเราโดยตรง การจัดเก็บในคลังสินค้าเดียวกับสินค้าทั่วไป
-                  จะช่วยให้การขนส่งเป็นไปอย่างมีประสิทธิภาพมากขึ้น
+                <div className="col-span-12">{t('section2.1.17')}
                 </div>
                 <div className="col-span-4">
                   <img
@@ -252,14 +231,9 @@ export default function Warehouse() {
             </div>
           
 
-            <div className="pageTitle1 mt-20">คลังสินค้าทัณฑ์บน</div>
+            <div className="pageTitle1 mt-20">{t('section2.1.18')}</div>
             <div className="grid grid-cols-12 gap-4 mt-10 mb-20">
-              <div className="col-span-12">
-                บริษัทฯ ได้ทำการเปิดคลังสินค้าทัณฑ์บนในนิคมอุตสาหกรรมลำพูน FTZ 3
-                <br />
-                ซึ่งสามารถให้บริการ จัดเก็บเอกสารสัญญา สินค้าติดทัณฑ์บน
-                การบริหารจัดการคลังสินค้าทัณฑ์บน
-                และการขนส่งสินค้าทัณฑ์บนระหว่างโรงงาน
+              <div className="col-span-12">{t('section2.1.19')}
               </div>
               <div className="col-span-4">
                 <img
@@ -327,10 +301,8 @@ export default function Warehouse() {
                           </svg>
                         </a>
                       </div>
-                      <div className="whText3">
-                        45-46 ม.2 ต.อุทัย อ.อุทัย จ.พระนครศรีอยุธยา 13210
-                        <br />
-                        เนื้อที่คลังสินค้า: 11,340 ตร.ม.
+                      <div className="whText3" style={{whiteSpace:'pre'}}>
+                        {t('section2.1.24')}
                       </div>
                     </div>
 
