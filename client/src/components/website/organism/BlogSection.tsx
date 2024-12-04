@@ -7,24 +7,30 @@ import { useEffect, useState } from "react";
 interface BlogSectionProps {
   limit: number;
   home: boolean;
-  blogs?: any;
+  lng: string;
 }
 
-const BlogSection = ({ limit, home, blogs }: BlogSectionProps) => {
+const BlogSection = ({ limit, home, lng }: BlogSectionProps) => {
   const [page, setPage] = useState(1);
   const [blogList, setBlogList] = useState([]);
   const [total, setTotal] = useState(0);
 
-  async function blogFetch() {
-    if (blogs?.rows) {
-      setBlogList(blogs?.rows);
-    }
-    setTotal(blogs?.total);
-  }
+  const fetchBlog = async (page: number, limit: number) => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=${limit}&type=blog&page=${page}`,
+      {
+        cache: "no-store",
+      }
+    );
+    const data = await res.json();
+    setBlogList(data?.rows);
+    setTotal(data?.total);
+    return data;
+  };
 
   useEffect(() => {
-    blogFetch();
-  }, [page]);
+    fetchBlog(page, limit);
+  }, [page, limit]);
 
   return (
     <>
@@ -33,7 +39,7 @@ const BlogSection = ({ limit, home, blogs }: BlogSectionProps) => {
       ) : (
         <>
           <Row gutter={[16, 16]}>
-            <BlogCard data={blogList}></BlogCard>
+            <BlogCard data={blogList} lng={lng}></BlogCard>
           </Row>
           {!home && (
             <AntPagination

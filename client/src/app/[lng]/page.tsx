@@ -11,16 +11,6 @@ interface Props {
   params: { lng: string };
 }
 
-const fetchBlog = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=3&type=blog`,
-    {
-      cache: "no-store",
-    }
-  );
-  const data = await res.json();
-  return data;
-};
 const fetchNews = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=5&type=news`,
@@ -45,7 +35,6 @@ const fetchBanner = async () => {
 
 export default async function Home({ params }: Props) {
   const lng = params.lng;
-  const blogs = await fetchBlog();
   const banner = await fetchBanner();
   const news = await fetchNews();
 
@@ -61,7 +50,7 @@ export default async function Home({ params }: Props) {
       <LatestNews lang={lng} news={news} />
       {/* Blog */}
       <div className="container mx-auto">
-        <Blog home={true} limit={3} blogs={blogs} lang={lng} />
+        <Blog home={true} limit={3} />
       </div>
     </>
   );

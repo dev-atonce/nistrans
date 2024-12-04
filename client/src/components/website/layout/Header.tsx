@@ -80,7 +80,7 @@ export default function Header({ logo, lng }: any) {
             <div className="hidden xl:flex items-center gap-10 ">
               <NavBar />
               <Link
-                href={`/${lng}/recruitment`}
+                href={`/recruitment`}
                 className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 "
               >
                 <IoPersonSharp />
