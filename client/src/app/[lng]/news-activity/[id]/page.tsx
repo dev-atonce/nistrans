@@ -15,26 +15,32 @@ const fetchBlog = async ({ id }: { id: string }) => {
 export default async function ServicePage({
   params,
 }: {
-  params: { id: string };
+  params: { id: string, lng: string };
 }) {
   const { id } = params;
   const blog = await fetchBlog({ id });
-  const { blog_title, blog_image, blog_detail } = blog[0];
+  const lng = params.lng;
+  const blogTitleKey = `blog_title_${lng}`;
+  const blogImageKey = `blog_image`;
+  const blogDetailKey = `blog_detail_${lng}`;
+
+  const blogTitle = blog[0][blogTitleKey];
+  const blogImage = blog[0][blogImageKey];
+  const blogDetail = blog[0][blogDetailKey];
 
   return (
     <>
       <Cover
         noHeading={true}
         pageName="บทความ"
-        engName="Blog"
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container mx-auto pb-10 text-black py-10">
-        <h1 className="text-red-600 text-2xl">{blog_title}</h1>
+        <h1 className="text-red-600 text-2xl mb-5">{blogTitle}</h1>
         <div className="lg:px-20 flex justify-center">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_URL}${blog_image}`}
-            alt={blog_title}
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}${blogImage}`}
+            alt={blogTitle}
             width={500}
             height={500}
             quality={80}
@@ -43,7 +49,7 @@ export default async function ServicePage({
           />
         </div>
         <div className="py-10">
-          <div dangerouslySetInnerHTML={{ __html: blog_detail }} />
+          <div dangerouslySetInnerHTML={{ __html: blogDetail }} />
         </div>
       </div>
     </>

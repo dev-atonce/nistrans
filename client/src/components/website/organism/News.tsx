@@ -3,7 +3,7 @@ import NewsCard from "../molecule/NewsCard";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 
-export default function () {
+export default function News() {
   return (
     <div className=" px-0 sm:px-4 lg:px-20 xl:px-40  z-20 container mx-auto absolute top-90 ">
       <div className="w-full gap-4 border-slate-100 border shadow-md rounded-lg py-4 px-4 lg:px-4 bg-slate-200 grid grid-cols-12 text-slate-700 ">
