@@ -11,7 +11,7 @@ export default function LatestNews({ lang, news }: any) {
       <div className="lg:px-40 border-slate-200">
         {news?.map((i: any) => (
           <div className="border-b border-slate-200">
-            <NewsCard />
+            <NewsCard item={i}/>
           </div>
         ))}
       </div>

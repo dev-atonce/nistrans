@@ -1,186 +1,243 @@
 {
-    "header": {
-        "home": "Home",
-        "about": "About",
-        "service": "Service",
-        "news": "News",
-        "contact": "Contact",
-        "profile": "Company Profile",
-        "history": "Company History",
-        "policy": "Company Policy",
-        "sea-freight": "Sea Freight",
-        "air-freight": "Air Freight",
-        "land-transportation": "Land Transportation",
-        "warehouse": "Warehouse",
-        "machinery-installation": "Machinery Installation",
-        "house-moving": "House Monving",
-        "packing-loading": "Packing/Loading",
-        "custom-clearance": "Custom Clearance",
-        "scm-solutions": "SCM Solutions",
-        "apply": "Apply"
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "service": "Service",
+    "news": "News",
+    "contact": "Contact",
+    "profile": "Company Profile",
+    "history": "Company History",
+    "policy": "Company Policy",
+    "sea-freight": "Sea Freight",
+    "air-freight": "Air Freight",
+    "land-transportation": "Land Transportation",
+    "warehouse": "Warehouse",
+    "machinery-installation": "Machinery Installation",
+    "house-moving": "House Monving",
+    "packing-loading": "Packing/Loading",
+    "custom-clearance": "Custom Clearance",
+    "scm-solutions": "SCM Solutions",
+    "apply": "Apply"
+  },
+  "cover": {
+    "h1": "Reaching and Delivering to the World",
+    "h2": "A pioneer in international multimodal logistics",
+    "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
+  },
+  "service-section": {
+    "heading": "Our services",
+    "see-more": "See More"
+  },
+  "about-section": {
+    "heading": "Siam Nistrans was established in 1987 as the Thai subsidiary of Nissin Corporation",
+    "p": "Since then we have provided safe and secure multimodal transport services to our customers across Nissin's global network. In Thailand, we have offices and warehouses in various locations such as Bangkok, Chiangmai, Ayutthaya, Prachinburi, Laem Chabang and Bangpakong, and we offer the best-suited and innovative logistics and packaging solutions by combining our hardware and software platforms in order to satisfy the customers' requirements."
+  },
+  "moving-section": {
+    "heading": "Moving by Siam Nistrans",
+    "1-1": "From/To Thailand",
+    "1-2": "Overseas moving",
+    "1-3": "No worries about unexpected transfer or repatriation. With our integrated service from packing, collecting, customs clearance to delivery, we take care of each customer's household goods with safe and speedy operation.",
+    "2-1": "Within Thailand",
+    "2-2": "Domestic moving",
+    "2-3": "With our network throughout Thailand, not only in Bangkok, we provide services to meet the customers' needs, no matter how great the scale is.",
+    "3-1": "From large to small",
+    "3-2": "Office relocation",
+    "3-3": "Now matter how large or small your office is, we deliver your properties to a new location with least effect on your day-to-day operations.",
+    "see-more": "Read More"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "telephone": "Tel",
+    "contact-form": "Contact Form",
+    "company-name": "Siam Nistrans Co.,Ltd.",
+    "address": "15th Fl., 191/66,68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey\nKhet Klongtoey, Bangkok 10110 THAILAND"
+  },
+  "contact-form": {
+    "companyName": "Company name",
+    "contactName": "Name",
+    "department": "Department",
+    "telephone": "Telephone",
+    "email": "E-mail",
+    "title": "Inquiry subject",
+    "option": {
+      "1": "Transport",
+      "2": "HACO Lab.",
+      "3": "Warehouse/storage",
+      "4": "Careers",
+      "5": "Moving",
+      "6": "Others"
     },
-    "cover": {
-        "h1": "Reaching and Delivering to the World",
-        "h2": "A pioneer in international multimodal logistics",
-        "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
-    },
-    "contact": {
-        "title": "Contact Us",
-        "telephone": "Tel",
-        "contact-form": "Contact Form",
-        "company-name": "Siam Nistrans Co.,Ltd.",
-        "address": "15th Fl., 191/66,68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey\nKhet Klongtoey, Bangkok 10110 THAILAND"
-    },
-    "contact-form": {
-        "companyName": "Company name",
-        "contactName": "Name",
-        "department": "Department",
-        "telephone": "Telephone",
-        "email": "E-mail",
-        "title": "Inquiry subject",
-        "option": {
-            "1": "Transport",
-            "2": "HACO Lab.",
-            "3": "Warehouse/storage",
-            "4": "Careers",
-            "5": "Moving",
-            "6": "Others"
-        },
-        "detail": "Inquiry contents",
-        "send": "Send",
-        "validate": {
-            "require": "Please fill the information",
-            "email": "Please fill the correct Email",
-            "number": "Number Only",
-            "maxLenght": "Don't fill over {{maxLenght}} letters"
-        }
-    },
-    "sea-freight": {
-        "h1": "Sea Freight",
-        "section1": {
-            "p": "As an International Freight Forwarder, we provide seamless transportation services all over the world, such as reducing sea freight and transportation costs, providing prompt delivery and transportation, etc., through cooperation with NISSIN Corporation, which has a network in 150 countries worldwide, as well as affiliated companies and major agents."
-        },
-        "h2": "Siam Nistrans Sea Freight",
-        "h3": "Multimodal transportation with a global network (Door to Door)<br />Reliable and safe with consolidation services",
-        "section2": {
-            "title": "Highlights",
-            "p1": "Since our opening in 1987, we have used our experience and knowledge in multimodal transportation to deliver our customers' essential goods anywhere in the world with \"Reliability and Safety\", based on the motto \"Trust and Sincerity\".",
-            "p2": "Our sales staff, who have accumulated extensive experience from overseas assignments and have excellent local knowledge, will carefully design and propose transportation plans to enhance efficiency and effectiveness.",
-            "p3": "Whether it is \"Multi-modal transportation service\" Door to Door (pick up luggage domestically - sea freight - land freight overseas) to customers, Container Line (LCL) transportation, FCL transportation or Buyer Consolidation, etc., we can provide services by contacting major world-class shipping companies or through overseas networks."
-        },
-        "section3": {
-            "title": "Provide transportation routes and methods that meet customer needs.",
-            "step1": "Shipping Origin",
-            "step2": "Receiving Goods",
-            "step3": "Warehouse",
-            "step4": "Sea Freight",
-            "step5": "Warehouse",
-            "step6": "Shipping Destination"
-        }
-    },
-    "air-freight": {
-        "h1": "Air Freight Forwarding",
-        "h2": "Transport flow",
-        "h3": "Collection > Export declaration/Customs clearance > Air transportation > Import declaration > Delivery \"Door to Door\" international transport",
-        "section1": {
-            "p": "As a global logistics service provider, we offer reliable and quick transport services with the best routes that meet your requests. We have established a network with the major airlines that enables us to secure necessary cargo space even in high seasons, such as before long holidays or in an urgent case. The types of products that we deliver for export or import vary greatly. We offer multimodal international transport services including Door to Door cases based on our abundant experience in this field."
-        },
-        "section2": {
-            "title": "Feature",
-            "hilight1": "With our global network, we provide integrated transport services, including bothersome customs clearance, to deliver your cargo to the destination. With long-term experience as an IATA certified air cargo agent and reliable systems that meet your needs, we help you to export and import cargo.",
-            "image1": "/img/service/air-freight/en-001.jpg"
-        }
-    },
-    "land-transportation": {
-        "h1": "Land Transportation",
-        "h2": "Our strengths in land transport",
-        "section1": {
-            "p": "ith over 100 owned trucks, we deliver your valuable cargo to the destination port or airport in a safe and timely manner. Our land transport services include domestic transport within Thailand and also cross-border transport to Laos, Cambodia, Malaysia and the other ASEAN countries."
-        },
-        "section2": {
-            "title": "Feature",
-            "1": {
-                "1": "We own over 100 trucks and directly employ all the drivers who are trained on eco-driving to ensure safe driving all the time.",
-                "2": "Siam Nistrans' cargo vehicles",
-                "3": "Head truck: 15 units",
-                "4": "10W truck: 7 units",
-                "5": "6W truck: 60 units",
-                "6": "4W pickup truck: 29 units"
-            },
-            "2": {
-                "1": "Our safe and reliable cargo transport services are \"Q-mark (Quality Mark)\" certified by the Department of Land Transport, Ministry of Transport of Thailand.",
-                "2": "The Q-mark program is the certification granted by Department of Land Transport, Ministry of Transport of Thailand to truck service providers. The Q-mark certification is one of the conditions for transport under the Cross-Border Transport Agreement (CBTA). We were certified with Q-mark in October 2018."
-            },
-            "3": {
-                "1": "We provide cross-border transport services with our own trucks licensed under the CBTA.",
-                "2": "The Cross-Border Transport Agreement (CBTA) is one of the main initiatives for trade facilitation under the development program of the Greater Mekong Sub region (GMS), consisting of Thailand, Cambodia, Laos, Myanmar, Vietnam and China (the Yunnan province and the Guangxi Zhuang Autonomous Region (GZAR)). The CBTA allows cross-border vehicle movement, single-stop inspection and other goods transport benefits that facilitate land transport within the Mekong sub region.",
-                "3": "Currently, the \"Early Harvest\" package has been implemented, which allows all the members except Myanmar to provide cross-border transport."
-            },
-            "4": {
-                "1": "East-West Economic Corridor area services",
-                "2": "We are one of the pioneers that have developed and offered land transport routes between Thailand and its neighboring countries such as Laos, Cambodia, Malaysia, and the other ASEAN countries. We help you by reducing the cargo transit time and stock in transport.",
-                "3": "International land transport permit"
-            }
-        }
-    },
-    "warehouse": {
-        "h1": "Warehouse",
-        "h2": "Our strengths in warehouse",
-        "section1": {
-            "p": "With the warehouse management system (WMS) developed by us, we provide high value-added warehouse services that meet your needs, including not only limited to packing, but also delivery by our own trucks."
-        },
-        "section2": {
-            "title": "Feature",
-            "p": "We offer a smooth distribution flow with our warehouses having plenty of cargo space and computerized stock monitoring.",
-            "permit": "Warehouse business license",
-            "1": {
-                "1": "With warehouses located next to our branches, we provide efficient logistics hub functions. From the software aspect, we use warehouse and stock management systems developed by the Nissin Group and support by our internal IT team.",
-                "2": "Our technology-based solutions",
-                "3": "Warehouse management",
-                "4": "Receiving",
-                "5": "Storage",
-                "6": "Picking and distribution processing",
-                "7": "Delivery",
-                "8": "Dangerous goods warehouse",
-                "9": "We have opened a dangerous goods warehouse at T-park Bangna Km.39. DIW types 1, 2, 3, as well as UN Classes 3, 6.1, 8, 9, etc. can be stored. Please contact us with your SDS information.",
-                "10": "Location",
-                "11": "Google MAP",
-                "12": "PDF MAP",
-                "13": "Inside T-Park Bangna Km.39, which is the best logistics area near the industrial parks and port areas.",
-                "14": "Storage area of 1,000 ㎡ that complies with the DIW standard.",
-                "15": "Staff with the relevant license to handle dangerous goods will support your optimal storage.",
-                "16": "Temperature-controlled Warehouse",
-                "17": "A temperature-controlled warehouse has been opened in the BPK41 warehouse. The temperature is set at 18°C to 25°C with 24-hour air conditioning and humidity is maintained at around 60%. For storage of delicate cargo, please contact us. By storing such goods in the same warehouse as general cargo, we can provide the efficient delivery service.",
-                "18": "Bonded Warehouse",
-                "19": "The company established a bonded warehouse in FTZ 3 Lamphun Industrial Estate. It is suitable to store bonded materials, bonded products, bonded VMI, as well as, transportation and delivery between factories.",
-                "20": "Our warehouses",
-                "21": "Our warehouses are located in major commercial areas near Bangkok and in Chiang Mai that meet customer requirements.",
-                "22": "Ayutthaya",
-                "23": "MAP",
-                "24": "45-46 Moo 2, Tambol Uthai, Amphur Uthai,\n\rAyutthaya 13210\n\rWarehouse area ：11,340㎡",
-                "25": "Click a location to show details of the warehouse"
-            }
-        }
-    },
-    "machinery-installation": {
-        "p": "",
-        "image1": ""
-    },
-    "house-moving": {},
-    "packing-loading": {},
-    "custom-clearance": {},
-    "scm-solutions": {},
-    "branchs": {
-        "title": "取 扱 拠 点",
-        "airport": "Airport Branch(Suvanabhumi Airport)",
-        "laem-chabang": "Laem Chabang Branch",
-        "prachinburi": "Prachinburi Branch",
-        "bangna": "Bangna KM. 39 DG Branch",
-        "ayutthaya": "Ayutthaya Branch",
-        "chiang-mai": "Chiang Mai Branch",
-        "bangkok": "Bangkok Branch"
-    },
-    "footer": {
-        "message": " The company receives investment promotion for the production of airconditioner and refrigeration parts, both for export and domestic sales. Additionally, the company has been certified in quality management with ISO 9001 and ISO 14001 standards. The registered capital is provided by Japanese investors."
+    "detail": "Inquiry contents",
+    "send": "Send",
+    "validate": {
+      "require": "Please fill the information",
+      "email": "Please fill the correct Email",
+      "number": "Number Only",
+      "maxLenght": "Don't fill over {{maxLenght}} letters"
     }
+  },
+
+  "sea-freight": {
+    "h1": "Sea Freight",
+    "section1": {
+      "p": "As an International Freight Forwarder, we provide seamless transportation services all over the world, such as reducing sea freight and transportation costs, providing prompt delivery and transportation, etc., through cooperation with NISSIN Corporation, which has a network in 150 countries worldwide, as well as affiliated companies and major agents."
+    },
+    "h2": "Siam Nistrans Sea Freight",
+    "h3": "Multimodal transportation with a global network (Door to Door)<br />Reliable and safe with consolidation services",
+    "section2": {
+      "title": "Highlights",
+      "p1": "Since our opening in 1987, we have used our experience and knowledge in multimodal transportation to deliver our customers' essential goods anywhere in the world with \"Reliability and Safety\", based on the motto \"Trust and Sincerity\".",
+      "p2": "Our sales staff, who have accumulated extensive experience from overseas assignments and have excellent local knowledge, will carefully design and propose transportation plans to enhance efficiency and effectiveness.",
+      "p3": "Whether it is \"Multi-modal transportation service\" Door to Door (pick up luggage domestically - sea freight - land freight overseas) to customers, Container Line (LCL) transportation, FCL transportation or Buyer Consolidation, etc., we can provide services by contacting major world-class shipping companies or through overseas networks."
+    },
+    "section3": {
+      "title": "Provide transportation routes and methods that meet customer needs.",
+      "step1": "Shipping Origin",
+      "step2": "Receiving Goods",
+      "step3": "Warehouse",
+      "step4": "Sea Freight",
+      "step5": "Warehouse",
+      "step6": "Shipping Destination"
+    }
+  },
+  "air-freight": {
+    "h1": "Air Freight Forwarding",
+    "h2": "Transport flow",
+    "h3": "Collection > Export declaration/Customs clearance > Air transportation > Import declaration > Delivery \"Door to Door\" international transport",
+    "section1": {
+      "p": "As a global logistics service provider, we offer reliable and quick transport services with the best routes that meet your requests. We have established a network with the major airlines that enables us to secure necessary cargo space even in high seasons, such as before long holidays or in an urgent case. The types of products that we deliver for export or import vary greatly. We offer multimodal international transport services including Door to Door cases based on our abundant experience in this field."
+    },
+    "section2": {
+      "title": "Feature",
+      "hilight1": "With our global network, we provide integrated transport services, including bothersome customs clearance, to deliver your cargo to the destination. With long-term experience as an IATA certified air cargo agent and reliable systems that meet your needs, we help you to export and import cargo.",
+      "image1": "/img/service/air-freight/en-001.jpg"
+    }
+  },
+  "land-transportation": {
+    "h1": "Land Transportation",
+    "h2": "Our strengths in land transport",
+    "section1": {
+      "p": "ith over 100 owned trucks, we deliver your valuable cargo to the destination port or airport in a safe and timely manner. Our land transport services include domestic transport within Thailand and also cross-border transport to Laos, Cambodia, Malaysia and the other ASEAN countries."
+    },
+    "section2": {
+      "title": "Feature",
+      "1": {
+        "1": "We own over 100 trucks and directly employ all the drivers who are trained on eco-driving to ensure safe driving all the time.",
+        "2": "Siam Nistrans' cargo vehicles",
+        "3": "Head truck: 15 units",
+        "4": "10W truck: 7 units",
+        "5": "6W truck: 60 units",
+        "6": "4W pickup truck: 29 units"
+      },
+      "2": {
+        "1": "Our safe and reliable cargo transport services are \"Q-mark (Quality Mark)\" certified by the Department of Land Transport, Ministry of Transport of Thailand.",
+        "2": "The Q-mark program is the certification granted by Department of Land Transport, Ministry of Transport of Thailand to truck service providers. The Q-mark certification is one of the conditions for transport under the Cross-Border Transport Agreement (CBTA). We were certified with Q-mark in October 2018."
+      },
+      "3": {
+        "1": "We provide cross-border transport services with our own trucks licensed under the CBTA.",
+        "2": "The Cross-Border Transport Agreement (CBTA) is one of the main initiatives for trade facilitation under the development program of the Greater Mekong Sub region (GMS), consisting of Thailand, Cambodia, Laos, Myanmar, Vietnam and China (the Yunnan province and the Guangxi Zhuang Autonomous Region (GZAR)). The CBTA allows cross-border vehicle movement, single-stop inspection and other goods transport benefits that facilitate land transport within the Mekong sub region.",
+        "3": "Currently, the \"Early Harvest\" package has been implemented, which allows all the members except Myanmar to provide cross-border transport."
+      },
+      "4": {
+        "1": "East-West Economic Corridor area services",
+        "2": "We are one of the pioneers that have developed and offered land transport routes between Thailand and its neighboring countries such as Laos, Cambodia, Malaysia, and the other ASEAN countries. We help you by reducing the cargo transit time and stock in transport.",
+        "3": "International land transport permit"
+      }
+    }
+  },
+  "warehouse": {
+    "h1": "Warehouse",
+    "h2": "Our strengths in warehouse",
+    "section1": {
+      "p": "With the warehouse management system (WMS) developed by us, we provide high value-added warehouse services that meet your needs, including not only limited to packing, but also delivery by our own trucks."
+    },
+    "section2": {
+      "title": "Feature",
+      "p": "We offer a smooth distribution flow with our warehouses having plenty of cargo space and computerized stock monitoring.",
+      "permit": "Warehouse business license",
+      "1": {
+        "1": "With warehouses located next to our branches, we provide efficient logistics hub functions. From the software aspect, we use warehouse and stock management systems developed by the Nissin Group and support by our internal IT team.",
+        "2": "Our technology-based solutions",
+        "3": "Warehouse management",
+        "4": "Receiving",
+        "5": "Storage",
+        "6": "Picking and distribution processing",
+        "7": "Delivery",
+        "8": "Dangerous goods warehouse",
+        "9": "We have opened a dangerous goods warehouse at T-park Bangna Km.39. DIW types 1, 2, 3, as well as UN Classes 3, 6.1, 8, 9, etc. can be stored. Please contact us with your SDS information.",
+        "10": "Location",
+        "11": "Google MAP",
+        "12": "PDF MAP",
+        "13": "Inside T-Park Bangna Km.39, which is the best logistics area near the industrial parks and port areas.",
+        "14": "Storage area of 1,000 ㎡ that complies with the DIW standard.",
+        "15": "Staff with the relevant license to handle dangerous goods will support your optimal storage.",
+        "16": "Temperature-controlled Warehouse",
+        "17": "A temperature-controlled warehouse has been opened in the BPK41 warehouse. The temperature is set at 18°C to 25°C with 24-hour air conditioning and humidity is maintained at around 60%. For storage of delicate cargo, please contact us. By storing such goods in the same warehouse as general cargo, we can provide the efficient delivery service.",
+        "18": "Bonded Warehouse",
+        "19": "The company established a bonded warehouse in FTZ 3 Lamphun Industrial Estate. It is suitable to store bonded materials, bonded products, bonded VMI, as well as, transportation and delivery between factories.",
+        "20": "Our warehouses",
+        "21": "Our warehouses are located in major commercial areas near Bangkok and in Chiang Mai that meet customer requirements.",
+        "22": "Ayutthaya",
+        "23": "MAP",
+        "24": "45-46 Moo 2, Tambol Uthai, Amphur Uthai,\n\rAyutthaya 13210\n\rWarehouse area ：11,340㎡",
+        "25": "Click a location to show details of the warehouse"
+      }
+    }
+  },
+  "machinery-installation": {
+    "p": "",
+    "image1": ""
+  },
+  "house-moving": {},
+  "packing-loading": {},
+  "custom-clearance": {},
+  "scm-solutions": {},
+  "branchs": {
+    "title": "取 扱 拠 点",
+    "airport": "Airport Branch(Suvanabhumi Airport)",
+    "laem-chabang": "Laem Chabang Branch",
+    "prachinburi": "Prachinburi Branch",
+    "bangna": "Bangna KM. 39 DG Branch",
+    "ayutthaya": "Ayutthaya Branch",
+    "chiang-mai": "Chiang Mai Branch",
+    "bangkok": "Bangkok Branch"
+  },
+  "footer": {
+    "message": " The company receives investment promotion for the production of airconditioner and refrigeration parts, both for export and domestic sales. Additionally, the company has been certified in quality management with ISO 9001 and ISO 14001 standards. The registered capital is provided by Japanese investors."
+  },
+  "cookie": {
+    "topic": "Cookie policy",
+    "description": "Siam Nistrans Co., Ltd. (the “Company”) respects privacy right of the viewer or the user and understands your expectation that information provided through this website should be properly protected. We hereby announce the Cookie Policy (the “Cookie Policy”) which shall apply to this website.",
+    "cookie-use": {
+      "heading": "Company’s use of cookies",
+      "p": "A cookie is a small file containing letters and numbers that the Company store on your browser, the hard drive of your computer, tablet or mobile device. When you visit our website, the Company may collect information from you through cookies. This website uses different types of cookies including but not limited to as set out below."
+    },
+    "cookie-type": {
+      "heading": "Type of cookies used in our website",
+      "1-1": "Type of cookies",
+      "1-2": "Purposes",
+      "1-3": "Expiry",
+      "2-1": "Necessary cookies",
+      "2-2": "Necessary cookies are required for the operations of the website to ensure the security, simplicity, and integrity of functional use. They include, for example, cookies that enable basic functions such as page navigation or enable the viewer or user to log in and access to the member secure areas of the website. The website cannot function properly without these cookies. These cookies placed on your device do not store any personally identifiable information.",
+      "2-3": "10 years",
+      "3-1": "Performance cookies",
+      "3-2": "Performance cookies allow us to count the number of viewers of our website and traffic sources of such viewers. They enable us to understand how the viewer or user interacts with the website and which page is the most or the least popular by collecting and reporting information anonymously and to help us improve the website and provide user the better experience. If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its processing performance.",
+      "3-3": "10 years",
+      "4-1": "Functionality cookies",
+      "4-2": "Functionality cookies may be set by the Company or by third party providers. They enable the website to operate in accordance with your preferences, for example, to recognize your username together with your password and remember how you customized the site for your future visits. If you do not allow these cookies, then some of the website services may not function properly.",
+      "4-3": "10 years",
+      "5-1": "Targeting cookies",
+      "5-2": "Targeting cookies may be set through our website by our advertising partners. They store data of your visit to our website, the pages you have visited and the links you have followed. The Company will use this information to make our website and the advertising displayed on it more relevant to your interests. The Company may also share this information with third parties for these purposes. If you do not allow these cookies, you will experience less targeted advertising.",
+      "5-3": "10 years"
+    },
+    "more-detail": {
+      "heading": "Additional information",
+      "p": "To learn more about personal data protection, your rights as a data subject and contact information of the Company, please visit our Privacy Notice at Here."
+    },
+    "cookie-policy": {
+      "heading": "Updates to this Cookie Policy",
+      "p": "The Company regularly reviews and, if appropriate, updates this Cookie Policy from time to time to ensure that your personal data is properly protected. Please refer to this page for the updated Cookie Policy."
+    },
+    "date": "Last updated: 01/06/2022"
+  }
 }

@@ -31,11 +31,11 @@ const BlogCard = ({ data }: BlogCardProps) => {
           >
             <div>
               <span className="line-clamp-2 text-base  text-slate-800 my-4">
-                {item?.blog_title}
+                {item?.blog_title_th}
               </span>
               {/* <Divider className="mt-3 mb-2" /> */}
               <p className="line-clamp-3 h-11 text-slate-600 ">
-                {item?.blog_description}
+                {item?.blog_description_th}
               </p>
             </div>
           </Card>

@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function HomeMoving({ lang }: any) {
+  const t = useTranslations("moving-section");
   return (
     <div className="py-20">
       <div className="container mx-auto text-slate-700">
         <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
-          <h2 className="text-3xl">งานขนย้ายโดย Siam Nistrans</h2>
+          <h2 className="text-3xl">{t("heading")}</h2>
           <div className="h-1 w-20 bg-orange-400"></div>
         </div>
 
@@ -14,75 +16,38 @@ export default function HomeMoving({ lang }: any) {
             <section className="flex flex-col items-center gap-4">
               <div className="flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
                 <div className="text-xs ">
-                  งานขนย้ายเข้า/ออก
                   <br />
-                  ระหว่างประเทศ
+                  {t("1-1")}
                 </div>
-                <div className="text-orange-500">
-                  งานขนย้าย
-                  <br />
-                  ไปต่างประเทศ
-                </div>
+                <div className="text-orange-500">{t("1-2")}</div>
                 <img className="w-[50px] rounded-full" src="../img/001.jpg" />
               </div>
-              <div className="">
-                ขนส่งสัมภาระที่มีความสำคัญต่อลูกค้าไปยังประเทศต่างๆ
-                ทั่วโลกอย่างปลอดภัย แน่นอน
-                และรวดเร็วทันใจนับตั้งแต่การบรรจุสัมภาระ การรับสัมภาระ
-                พิธีการศุลกากร และการจัดส่ง ทั้งในกรณีย้ายที่ทำงานกะหันหัน
-                หรือย้ายกลับประเทศ
-              </div>
+              <div className="">{t("1-3")}</div>
             </section>
           </div>
 
           <div className="col-span-4">
             <section className="flex flex-col items-center gap-4">
               <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
-                <div className="text-xs">
-                  ให้บริการภายใน
-                  <br />
-                  ประเทศไทย
-                </div>
-                <div className=" text-orange-500">
-                  งานขนย้าย
-                  <br />
-                  ภายในประเทศไทย
-                </div>
+                <div className="text-xs">{t("2-1")}</div>
+                <div className=" text-orange-500">{t("2-2")}</div>
                 <img className="w-[50px] " src="../img/002.jpg" />
               </div>
-              <div className="">
-                ไม่ว่าจะเป็นการขนย้ายในปริมาณมากหรือการขนย้ายในปริมาณน้อย
-                เราก็ให้บริการอย่างพิถีพิถันและมั่นใจได้
-                โดยใช้เครือข่ายที่มีอยู่ทั่วประเทศไทย
-                ซึ่งไม่จำกัดเฉพาะในกรุงเทพฯ เท่านั้น
-              </div>
+              <div className="">{t("2-3")}</div>
             </section>
           </div>
 
           <div className="col-span-4">
             <section className=" flex flex-col items-center gap-4">
               <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
-                <div className="text-xs">
-                  ตั้งแต่ปริมาณมาก
-                  <br />
-                  ไปจนถึงปริมาณน้อย
-                </div>
-                <div className=" text-orange-500">
-                  งานขนย้าย
-                  <br />
-                  สำนักงาน
-                </div>
+                <div className="text-xs">{t("3-1")}</div>
+                <div className=" text-orange-500">{t("3-2")}</div>
                 <img
                   className="w-[50px] h-[50px] rounded-full"
                   src="../img/003.jpg"
                 />
               </div>
-              <div className="">
-                Siam Nistrans
-                จะนำส่งสัมภาระของลูกค้าไปยังจุดหมายที่ต้องการโดยที่งานของลูกค้าไม่ต้องสะดุด
-                เริ่มตั้งแต่การบรรจุสัมภาระ การขนส่ง การติดตั้งเครื่องจักร
-                ไม่ว่าจะมีปริมาณเท่าใดก็ตาม
-              </div>
+              <div className="">{t("3-3")}</div>
             </section>
           </div>
         </div>
