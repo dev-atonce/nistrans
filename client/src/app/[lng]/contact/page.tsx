@@ -13,7 +13,7 @@ export async function generateMetadata({ params, searchParams }: any, parent: Re
   );
 
   return {
-    metadataBase: new URL("https://ymctranslation.com"),
+    metadataBase: new URL("https://th.nissin-asia.com"),
     title: response[`seoTitle${lng}`],
     description: response[`seoDescription${lng}`],
     keywords: response[`seoKeyword${lng}`],

@@ -1,9 +1,10 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+
 interface BreadcrumbProps {
   pageName: any;
   prevPage: any;
-  // prevPage: { pageName: string | null; url: string | null }:any;
 }
+
 const Breadcrumb = ({ pageName, prevPage }: any) => {
   return (
     <div className="py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-black">

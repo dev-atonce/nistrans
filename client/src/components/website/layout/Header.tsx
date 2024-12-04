@@ -6,9 +6,11 @@ import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoPersonSharp } from "react-icons/io5";
 import LanguageSwitcher from "../molecule/LanguageSwitcher";
-import { Link } from '@/i18n/routing';
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function Header({ logo, lng }: any) {
+  const t = useTranslations("header");
   const [currentLanguage, setCurrentLanguage] = useState<string>(lng);
   const [openLang, setOpenLang] = useState<Boolean>(false);
   const [openID, setOpenID] = useState<String>("");
@@ -80,11 +82,11 @@ export default function Header({ logo, lng }: any) {
             <div className="hidden xl:flex items-center gap-10 ">
               <NavBar />
               <Link
-                href={`/${lng}/recruitment`}
+                href={`/recruitment`}
                 className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 "
               >
                 <IoPersonSharp />
-                <span>สมัครงาน</span>
+                <span>{t("apply")}</span>
               </Link>
             </div>
             <LanguageSwitcher
@@ -109,8 +111,9 @@ export default function Header({ logo, lng }: any) {
       </div>
       <div className="block lg:none overflow-hidden">
         <div
-          className={`backdrop ${isOpen ? `fixed` : `hidden`
-            } top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}
+          className={`backdrop ${
+            isOpen ? `fixed` : `hidden`
+          } top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}
         ></div>
         <div
           className={`fixed block z-99 lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "translate-x-full"

@@ -11,7 +11,7 @@ export default function Contact() {
             <p className="font-semibold">
               {t('company-name')}
             </p>
-            <span className="text-base text-center md:text-left w-[300px]">
+            <span className="text-base text-center md:text-left w-[300px]" style={{ whiteSpace: 'pre' }}>
               {t('address')}
             </span>
           </div>

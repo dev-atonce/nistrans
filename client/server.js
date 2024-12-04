@@ -4,7 +4,7 @@ const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname =
-  process.env.NODE_ENV !== "production" ? "localhost" : "ymctranslation.com";
+  process.env.NODE_ENV !== "production" ? "localhost" : "th.nissin-asia.com";
 const port = 3000;
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port });

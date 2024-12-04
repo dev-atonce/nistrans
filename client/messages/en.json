@@ -4,6 +4,7 @@
     "about": "About",
     "service": "Service",
     "news": "News",
+    "blog": "Blog",
     "contact": "Contact",
     "profile": "Company Profile",
     "history": "Company History",
@@ -24,12 +25,33 @@
     "h2": "A pioneer in international multimodal logistics",
     "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
   },
+  "service-section": {
+    "heading": "Our services",
+    "see-more": "See More"
+  },
+  "about-section": {
+    "heading": "Siam Nistrans was established in 1987 as the Thai subsidiary of Nissin Corporation",
+    "p": "Since then we have provided safe and secure multimodal transport services to our customers across Nissin's global network. In Thailand, we have offices and warehouses in various locations such as Bangkok, Chiangmai, Ayutthaya, Prachinburi, Laem Chabang and Bangpakong, and we offer the best-suited and innovative logistics and packaging solutions by combining our hardware and software platforms in order to satisfy the customers' requirements."
+  },
+  "moving-section": {
+    "heading": "Moving by Siam Nistrans",
+    "1-1": "From/To Thailand",
+    "1-2": "Overseas moving",
+    "1-3": "No worries about unexpected transfer or repatriation. With our integrated service from packing, collecting, customs clearance to delivery, we take care of each customer's household goods with safe and speedy operation.",
+    "2-1": "Within Thailand",
+    "2-2": "Domestic moving",
+    "2-3": "With our network throughout Thailand, not only in Bangkok, we provide services to meet the customers' needs, no matter how great the scale is.",
+    "3-1": "From large to small",
+    "3-2": "Office relocation",
+    "3-3": "Now matter how large or small your office is, we deliver your properties to a new location with least effect on your day-to-day operations.",
+    "see-more": "Read More"
+  },
   "contact": {
     "title": "Contact Us",
     "telephone": "Tel",
     "contact-form": "Contact Form",
     "company-name": "Siam Nistrans Co.,Ltd.",
-    "address": "15th Fl., 191/66,68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey, Khet Klongtoey, Bangkok 10110 THAILAND"
+    "address": "15th Fl., 191/66,68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey\nKhet Klongtoey, Bangkok 10110 THAILAND"
   },
   "contact-form": {
     "companyName": "Company name",
@@ -55,29 +77,74 @@
       "maxLenght": "Don't fill over {{maxLenght}} letters"
     }
   },
-  "sea-freight":
-  {
-      "h1":"Sea Freight",
-      "section1": {
-          "p":"As an International Freight Forwarder, we provide seamless transportation services all over the world, such as reducing sea freight and transportation costs, providing prompt delivery and transportation, etc., through cooperation with NISSIN Corporation, which has a network in 150 countries worldwide, as well as affiliated companies and major agents."
+
+  "sea-freight": {
+    "h1": "Sea Freight",
+    "section1": {
+      "p": "As an International Freight Forwarder, we provide seamless transportation services all over the world, such as reducing sea freight and transportation costs, providing prompt delivery and transportation, etc., through cooperation with NISSIN Corporation, which has a network in 150 countries worldwide, as well as affiliated companies and major agents."
+    },
+    "h2": "Siam Nistrans Sea Freight",
+    "h3": "Multimodal transportation with a global network (Door to Door)<br />Reliable and safe with consolidation services",
+    "section2": {
+      "title": "Highlights",
+      "p1": "Since our opening in 1987, we have used our experience and knowledge in multimodal transportation to deliver our customers' essential goods anywhere in the world with \"Reliability and Safety\", based on the motto \"Trust and Sincerity\".",
+      "p2": "Our sales staff, who have accumulated extensive experience from overseas assignments and have excellent local knowledge, will carefully design and propose transportation plans to enhance efficiency and effectiveness.",
+      "p3": "Whether it is \"Multi-modal transportation service\" Door to Door (pick up luggage domestically - sea freight - land freight overseas) to customers, Container Line (LCL) transportation, FCL transportation or Buyer Consolidation, etc., we can provide services by contacting major world-class shipping companies or through overseas networks."
+    },
+    "section3": {
+      "title": "Provide transportation routes and methods that meet customer needs.",
+      "step1": "Shipping Origin",
+      "step2": "Receiving Goods",
+      "step3": "Warehouse",
+      "step4": "Sea Freight",
+      "step5": "Warehouse",
+      "step6": "Shipping Destination"
+    }
+  },
+  "air-freight": {
+    "h1": "Air Freight Forwarding",
+    "h2": "Transport flow",
+    "h3": "Collection > Export declaration/Customs clearance > Air transportation > Import declaration > Delivery \"Door to Door\" international transport",
+    "section1": {
+      "p": "As a global logistics service provider, we offer reliable and quick transport services with the best routes that meet your requests. We have established a network with the major airlines that enables us to secure necessary cargo space even in high seasons, such as before long holidays or in an urgent case. The types of products that we deliver for export or import vary greatly. We offer multimodal international transport services including Door to Door cases based on our abundant experience in this field."
+    },
+    "section2": {
+      "title": "Feature",
+      "hilight1": "With our global network, we provide integrated transport services, including bothersome customs clearance, to deliver your cargo to the destination. With long-term experience as an IATA certified air cargo agent and reliable systems that meet your needs, we help you to export and import cargo.",
+      "image1": "/img/service/air-freight/en-001.jpg"
+    }
+  },
+  "land-transportation": {
+    "h1": "Land Transportation",
+    "h2": "Our strengths in land transport",
+    "section1": {
+      "p": "ith over 100 owned trucks, we deliver your valuable cargo to the destination port or airport in a safe and timely manner. Our land transport services include domestic transport within Thailand and also cross-border transport to Laos, Cambodia, Malaysia and the other ASEAN countries."
+    },
+    "section2": {
+      "title": "Feature",
+      "1": {
+        "1": "We own over 100 trucks and directly employ all the drivers who are trained on eco-driving to ensure safe driving all the time.",
+        "2": "Siam Nistrans' cargo vehicles",
+        "3": "Head truck: 15 units",
+        "4": "10W truck: 7 units",
+        "5": "6W truck: 60 units",
+        "6": "4W pickup truck: 29 units"
       },
-      "h2":"Siam Nistrans Sea Freight",
-      "h3":"Multimodal transportation with a global network (Door to Door)<br />Reliable and safe with consolidation services",
-      "section2": {
-          "title":"Highlights",
-          "p1":"Since our opening in 1987, we have used our experience and knowledge in multimodal transportation to deliver our customers' essential goods anywhere in the world with \"Reliability and Safety\", based on the motto \"Trust and Sincerity\".",
-          "p2":"Our sales staff, who have accumulated extensive experience from overseas assignments and have excellent local knowledge, will carefully design and propose transportation plans to enhance efficiency and effectiveness.",
-          "p3":"Whether it is \"Multi-modal transportation service\" Door to Door (pick up luggage domestically - sea freight - land freight overseas) to customers, Container Line (LCL) transportation, FCL transportation or Buyer Consolidation, etc., we can provide services by contacting major world-class shipping companies or through overseas networks."
+      "2": {
+        "1": "Our safe and reliable cargo transport services are \"Q-mark (Quality Mark)\" certified by the Department of Land Transport, Ministry of Transport of Thailand.",
+        "2": "The Q-mark program is the certification granted by Department of Land Transport, Ministry of Transport of Thailand to truck service providers. The Q-mark certification is one of the conditions for transport under the Cross-Border Transport Agreement (CBTA). We were certified with Q-mark in October 2018."
       },
-      "section3": {
-          "title":"Provide transportation routes and methods that meet customer needs.",
-          "step1":"Shipping Origin",
-          "step2":"Receiving Goods",
-          "step3":"Warehouse",
-          "step4":"Sea Freight",
-          "step5":"Warehouse",
-          "step6":"Shipping Destination"
+      "3": {
+        "1": "We provide cross-border transport services with our own trucks licensed under the CBTA.",
+        "2": "The Cross-Border Transport Agreement (CBTA) is one of the main initiatives for trade facilitation under the development program of the Greater Mekong Sub region (GMS), consisting of Thailand, Cambodia, Laos, Myanmar, Vietnam and China (the Yunnan province and the Guangxi Zhuang Autonomous Region (GZAR)). The CBTA allows cross-border vehicle movement, single-stop inspection and other goods transport benefits that facilitate land transport within the Mekong sub region.",
+        "3": "Currently, the \"Early Harvest\" package has been implemented, which allows all the members except Myanmar to provide cross-border transport."
+      },
+      "4": {
+        "1": "East-West Economic Corridor area services",
+        "2": "We are one of the pioneers that have developed and offered land transport routes between Thailand and its neighboring countries such as Laos, Cambodia, Malaysia, and the other ASEAN countries. We help you by reducing the cargo transit time and stock in transport.",
+        "3": "International land transport permit"
       }
+    }
   },
   "air-freight":
   {
@@ -95,6 +162,7 @@
             "2":"輸出窓口",
             "3":"輸入窓口"
       }
+    }
   },
   "land-transportation":{
       "h1":"Land Transportation",

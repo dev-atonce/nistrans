@@ -1,13 +1,13 @@
-import { Divider, Card, Col } from "antd";
-
+import { Card, Col } from "antd";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 interface BlogCardProps {
   data: any[];
+  lng: string;
 }
 
-const BlogCard = ({ data }: BlogCardProps) => {
+const BlogCard = ({ data, lng }: BlogCardProps) => {
   return data?.map((item: any, key: number) => {
     return (
       <Col xs={24} sm={12} md={12} lg={8} key={key}>
@@ -16,6 +16,7 @@ const BlogCard = ({ data }: BlogCardProps) => {
           href={`/news-activity/${item?.slug}`}
         >
           <Card
+            className="z-1"
             hoverable
             cover={
               <Image
@@ -30,12 +31,11 @@ const BlogCard = ({ data }: BlogCardProps) => {
             }
           >
             <div>
-              <span className="line-clamp-2 text-base  text-slate-800 my-4">
-                {item?.blog_title}
+              <span className="line-clamp-2 text-base text-slate-800 mb-1">
+                {item[`blog_title_${lng}`]}
               </span>
-              {/* <Divider className="mt-3 mb-2" /> */}
-              <p className="line-clamp-3 h-11 text-slate-600 ">
-                {item?.blog_description}
+              <p className="line-clamp-3 h-11 text-slate-600">
+                {item[`blog_description_${lng}`]}
               </p>
             </div>
           </Card>
