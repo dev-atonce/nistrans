@@ -13,7 +13,7 @@ export default function Footer({ logo }: any) {
           <div className="gap-4 md:gap-0 py-5 flex items-center justify-between flex-col md:flex-row">
             <div className="flex items-start gap-4 flex-col">
               <Logo img={logo} />
-              <span className="text-base text-center md:text-left ">
+              <span className="text-base text-center md:text-left" style={{ whiteSpace: 'pre' }}>
                 {t('address')}
               </span>
               <div className="flex items-center gap-4">
