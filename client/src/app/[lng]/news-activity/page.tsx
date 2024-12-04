@@ -1,6 +1,7 @@
 import Cover from "@/components/website/layout/Cover";
 import Blog from "@/components/website/layout/Blog";
 import { Metadata, ResolvingMetadata } from "next";
+import { useTranslations } from 'next-intl';
 
 const pageName = "blog";
 export async function generateMetadata({ params, searchParams }: any, parent: ResolvingMetadata): Promise<Metadata> {
@@ -22,14 +23,19 @@ export async function generateMetadata({ params, searchParams }: any, parent: Re
   };
 }
 
-export default async function BlogPage({ params }: { params: { lng: string } }) {
+export default function BlogPage({ params }: { params: { lng: string } }) {
+  const t = useTranslations('header');
   return (
     <>
       <Cover
-        pageName="บทความ"
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        pageName={t('news')}
+        prevPage={{ pageName: t('home'), url: "/" }}
       />
-      <div className="container mx-auto ">
+      <div className="container mx-auto px-2 xl:px-0">
+        <div className="py-4 flex flex-col gap-3 ">
+          <h1 className="text-black text-2xl ">{t('blog')}</h1>
+          <div className="h-1 w-20 bg-orange-400"></div>
+        </div>
         <Blog home={false} limit={6} lng={params.lng} />
       </div>
     </>

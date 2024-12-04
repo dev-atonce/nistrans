@@ -34,7 +34,7 @@ export default function Cover({ pageName, prevPage, noHeading }: any) {
           </div>
         </div>
         <div className="bg-slate-500/20 w-full">
-          <div className=" hidden md:block container mx-auto">
+          <div className=" hidden md:block container mx-auto px-2 xl:px-0">
             <Breadcrumb pageName={pageName} prevPage={prevPage} />
           </div>
         </div>
