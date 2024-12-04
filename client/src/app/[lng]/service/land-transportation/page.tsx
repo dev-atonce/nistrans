@@ -1,6 +1,9 @@
 import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
 
 export default function LandTransport() {
+  const t = useTranslations('land-transportation');
+  const b = useTranslations('branchs');
   return (
     <>
       <Cover
@@ -10,32 +13,20 @@ export default function LandTransport() {
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">การขนส่งทางบก</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
           <div>
-            <div className="branchesTopic">
-              เราใช้รถบรรทุกสินค้าของบริษัทที่มีมากกว่า 100
-              คันในการขนส่งสินค้าสำคัญจนถึงท่าเรือหรือสนามบินอย่างปลอดภัยและฉับไว
-              ไม่เฉพาะการขนส่งภายในประเทศไทยเท่านั้น
-              แต่ยังรวมถึงบริการขนส่งข้ามพรมแดน เช่น ลาว กัมพูชา มาเลเซีย
-              และประเทศต่างๆ ในอาเซียน
-            </div>
-
-            <div className="pageTitle1">
-              ข้อดีของการขนส่งทางบกโดย Siam Nistrans
-            </div>
+            <div className="branchesTopic">{t('section1.p')}</div>
+            <h2 className="pageTitle1">{t('h2')}</h2>
 
             <div style={{ height: "40px" }}></div>
 
             <ul className="textNum mt-4 mb-0">
               <li className="nNum">
-                <div className="nNumText">จุดเด่น</div>
+                <div className="nNumText">{t('section2.title')}</div>
                 <div className="nNumNum">01</div>
               </li>
-              <li className="tText">
-                มีรถบรรทุกของบริษัทกว่า 100 คัน
-                และพนักงานขับรถทุกคนเป็นพนักงานของบริษัทที่ได้รับการควบคุมให้ขับแบบเป็นมิตรต่อสิ่งแวดล้อมจึงใส่ใจต่อการขับขี่อย่างปลอดภัยอยู่เสมอ
-              </li>
+              <li className="tText">{t('section2.1.1')}</li>
             </ul>
 
 
@@ -43,11 +34,11 @@ export default function LandTransport() {
                 <div className="col-span-1"></div>
                 <div className="col-span-12 md:col-span-4">
                   <div className="bg-slate-200 p-6">
-                      <h5 className="font-bold text-xl mb-2">รถบรรทุกสินค้าขนส่งที่ Siam Nistrans มีอยู่</h5>
-                      <p className="text-lg mb-2">・รถบรรทุกหัวลาก 15 คัน</p>
-                      <p className="text-lg mb-2">・รถบรรทุก 10 ล้อ 7 คัน</p>
-                      <p className="text-lg mb-2">・รถบรรทุก 6 ล้อ 60 คัน</p>
-                      <p className="text-lg mb-2">・รถปิกอัพ 4 ล้อ 29 คัน</p>
+                      <h5 className="font-bold text-xl mb-2">{t('section2.1.2')}</h5>
+                      <p className="text-lg mb-2">・{t('section2.1.3')}</p>
+                      <p className="text-lg mb-2">・{t('section2.1.4')}</p>
+                      <p className="text-lg mb-2">・{t('section2.1.5')}</p>
+                      <p className="text-lg mb-2">・{t('section2.1.6')}</p>
                   </div>
                 </div>
                 <div className="col-span-12 md:col-span-6">
@@ -63,15 +54,10 @@ export default function LandTransport() {
 
             <ul className="textNum">
               <li className="nNum">
-                <div className="nNumText">จุดเด่น</div>
+                <div className="nNumText">{t('section2.title')}</div>
                 <div className="nNumNum">02</div>
               </li>
-              <li className="tText">
-                ได้รับการยอมรับด้านการขนส่งสินค้าที่มีความปลอดภัยและมีเสถียรภาพ
-                จนได้รับ Q-mark (Quality Mark)
-                <br />
-                ซึ่งรับรองโดยกรมการขนส่งทางบก กระทรวงคมนาคมของประเทศไทย
-              </li>
+              <li className="tText">{t('section2.2.1')}</li>
             </ul>
 
 
@@ -105,24 +91,17 @@ export default function LandTransport() {
                 </div>
               </div>
               <div className="col-span-12 mt-4 md:col-span-4 md:mt-0 mb-8">
-                <span>
-                  ระบบ Q-Mark เป็นระบบรับรองบริษัทขนส่งทางรถบรรทุกที่ ดำเนินการโดยกรมการขนส่งทางบก กระทรวงคมนาคม และใช้เป็นเงื่อนไขสำหรับการสัญจรระหว่างกันตามความข้อตกลงว่าด้วยการขนส่งข้ามแดน
-                  (CBTA) โดยบริษัทได้รับ Q-mark นี้ในเดือนตุลาคม 2561
-                </span>
+                <span>{t('section2.2.2')}</span>
               </div>
             </div>
      
 
             <ul className="textNum">
               <li className="nNum">
-                <div className="nNumText">จุดเด่น</div>
+                <div className="nNumText">{t('section2.title')}</div>
                 <div className="nNumNum">03</div>
               </li>
-              <li className="tText">
-                ให้บริการการขนส่งข้ามแดนด้วยรถบรรทุกของบริษัทที่มีใบอนุญาตตามความตกลง
-                <br />
-                ว่าด้วยการขนส่งข้ามแดน (CBTA)
-              </li>
+              <li className="tText">{t('section2.3.1')}</li>
             </ul>
 
             <div className="grid grid-cols-12 gap-4">
@@ -156,27 +135,13 @@ export default function LandTransport() {
                     </a>
                   </div>
                   <div className="imgText">
-                    ใบอนุญาตการขนส่งทางถนนในภูมิภาคลุ่มน้ำโขง
+                    {t('section2.3.4')}
                   </div>
                 </div>
                 </div>
                 <div className="col-span-12 md:col-span-5 mb-">
-                  <p className="mb-2">
-                    ความตกลงว่าด้วยการขนส่งข้ามแดน (Cross-Border Transport
-                    Agreement)
-                    เป็นหนึ่งในหลักสำคัญของขอบข่ายในการทำให้การค้าระหว่างประเทศเป็นไปอย่างราบรื่นตามโปรแกรมพัฒนาอนุภาคลุ่มน้ำโขง
-                    (Greater Mekong Subregion) ประเทศใน GMS
-                    นอกจากมีประเทศลุ่มน้ำโขง 5 ประเทศ (ไทย กัมพูชา ลาว
-                    เมียนมาร์ เวียดนาม) แล้วยังมีจีน
-                    (มณฑลยูนนานและเขตปกครองตนเองชนชาติจ้วงมณฑลกวางสี)
-                    เข้าร่วมด้วย การใช้ยานพาหนะที่กำหนดไว้ตาม CBTA
-                    ในการเคลื่อนย้ายถ่ายเทระหว่างกัน การตรวจสอบเพียงจุดเดียว
-                    (Single Stop Inspection:SSI)
-                    หรือการปฏิบัติตามระเบียบการขนย้ายวัตถุสิ่งของต่างๆ จะช่วยให้วางใจได้ว่าการขนส่งทางบกในภูมิภาคลุ่มน้ำโขงจะเกิดความราบรื่นขึ้น
-                  </p>
-                  <p className="mb-2">
-                    ปัจจุบันสามารถขนส่งระหว่างกันได้แล้วระหว่างประเทศภาคีสมาชิกยกเว้นเมียนมาร์ อันเป็นผลมาจากมาตรการ Early Harvest ของ CBTA
-                  </p>
+                  <p className="mb-2">{t('section2.3.2')}</p>
+                  <p className="mb-2">{t('section2.3.3')}</p>
                 </div>
               </div>
               
@@ -185,18 +150,15 @@ export default function LandTransport() {
             <div className="mb-10">
               <ul className="textNum no-margin-t">
                 <li className="nNum">
-                  <div className="nNumText">จุดเด่น</div>
+                  <div className="nNumText">{t('section2.title')}</div>
                   <div className="nNumNum">04</div>
                 </li>
-                <li className="tText">
-                  การให้บริการขนส่งในพื้นที่ระเบียงเศรษฐกิจพิเศษภาคตะวันออก (EEC)
-                  และประเทศเพื่อนบ้านใกล้เคียง
-                </li>
+                <li className="tText">{t('section2.4.1')}</li>
               </ul>
               <div className="grid grid-cols-12 gap-4">
                 <div className="col-span-1"></div>
                 <div className="col-span-12 md:col-span-10">
-                  <p>พัฒนาเส้นทางขนส่งทางบกทั้งขาออกและขาเข้าระหว่างประเทศไทยกับประเทศเพื่อนบ้าน เช่น ลาว กัมพูชา มาเลเซีย และประเทศต่างๆ ในอาเซียนให้ได้โดยเร็วเพื่อให้บริการในเส้นทางต่างๆ ซึ่งจะอำนวยประโยชน์ในด้านการลด Transit Time ของสินค้าและลดสินค้าคงคลังในการขนส่ง</p>
+                  <p>{t('section2.4.2')}</p>
                 </div>
                 <div className="col-span-1"></div>
                 <div className="sm:hidden md:col-span-1"></div>
@@ -223,9 +185,7 @@ export default function LandTransport() {
                     />
                   </a>
                   <div className="imgText">
-                    <span>
-                      ใบอนุญาตประกอบการขนส่งระหว่างประเทศด้วยรถบรรทุก
-                    </span>
+                    <span>{t('section2.4.3')}</span>
                   </div>
                 </div>
               </div>
@@ -233,14 +193,14 @@ export default function LandTransport() {
 
             <div>
               <div className="handlingBox">
-                <div className="handlingTitle">สาขาที่ให้บริการ</div>
+                <div className="handlingTitle">{b('title')}</div>
                 <ul className="list-disc grid md:flex">
-                  <li className="ms-8 ps-0">กรุงเทพมหานคร</li>
-                  <li className="ms-8 ps-0">พระนครศรีอยุธยา</li>
-                  <li className="ms-8 ps-0">บางปะกง</li>
-                  <li className="ms-8 ps-0">แหลมฉบัง</li>
-                  <li className="ms-8 ps-0">ปราจีนบุรี</li>
-                  <li className="ms-8 ps-0">เชียงใหม่</li>
+                  <li className="ms-8 ps-0">{b('bangkok')}</li>
+                  <li className="ms-8 ps-0">{b('ayutthaya')}</li>
+                  <li className="ms-8 ps-0">{b('bangpakong')}</li>
+                  <li className="ms-8 ps-0">{b('laem-chabang')}</li>
+                  <li className="ms-8 ps-0">{b('prachinburi')}</li>
+                  <li className="ms-8 ps-0">{b('chiang-mai')}</li>
                 </ul>
               </div>
             </div>

@@ -1,6 +1,9 @@
 import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
 
 export default function Packing() {
+  const t = useTranslations('packing-loading');
+  const b = useTranslations('branchs');
   return (
     <>
       <Cover
@@ -10,25 +13,15 @@ export default function Packing() {
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">งานบรรจุภัณฑ์</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
-          <div className="branchesTopic no-padding-r">
-            Siam Nistrans
-            ขอเสนอวัสดุบรรจุภัณฑ์และวิธีบรรจุภัณฑ์ที่เหมาะสมตามความต้องการของลูกค้า
-            <br />
-            หรือตามคุณลักษณะของผลิตภัณฑ์
-          </div>
-
-          <div className="pageTitle1">
-            ออกแบบบรรจุภัณฑ์ให้เหมาะสมกับคุณลักษณะ
-            <br />
-            ของผลิตภัณฑ์
-          </div>
+          <div className="branchesTopic no-padding-r">{t('section1.p')}</div>
+          <h2 className="pageTitle1">{t('h2')}</h2>
 
           <div className="picRow1">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12">
-                <div className="pacLoaText3 no-margin-t">ฟิล์มกันสนิม</div>
+                <div className="pacLoaText3 no-margin-t">{t('section1.1.title')}</div>
               </div>
               <div className="col-span-12 md:col-span-4">
                 <img
@@ -52,10 +45,8 @@ export default function Packing() {
                 />
               </div>
               <div className="col-span-12">
-                <div className="pacLoaText2">
-                  ปกป้องผลิตภัณฑ์ด้วยฟิล์มกันสนิม
-                </div>
-                <div className="pacLoaText3">บรรจุภัณฑ์สุญญากาศ</div>
+                <div className="pacLoaText2">{t('section1.1.p')}</div>
+                <div className="pacLoaText3">{t('section1.2.title')}</div>
               </div>
               <div className="col-span-12 md:col-span-6">
                 <img
@@ -72,12 +63,8 @@ export default function Packing() {
                 />
               </div>
               <div className="col-span-12">
-                <div className="pacLoaText2">
-                  ป้องกันความชื้นหรือสนิมด้วยบรรจุภัณฑ์สุญญากาศ
-                </div>
-                <div className="pacLoaText3">
-                  บรรจุภัณฑ์เมื่อจะขนส่งชิ้นส่วนยานยนต์หรือรถประกอบเสร็จสมบูรณ์
-                </div>
+                <div className="pacLoaText2">{t('section1.2.p')}</div>
+                <div className="pacLoaText3">{t('section1.3.title')}</div>
               </div>
               <div className="col-span-12 md:col-span-3">
                 <img
@@ -108,17 +95,12 @@ export default function Packing() {
                 />
               </div>
               <div className="col-span-12">
-                <div className="pacLoaText2">
-                  ใช้กล่องไม้หรือกล่องเหล็กกล้าแบบจัดสร้างตามออเดอร์
-                  (Made-to-order) สำหรับตัวรถ
-                </div>
+                <div className="pacLoaText2">{t('section1.3.p')}</div>
               </div>
             </div>
           </div>
 
-          <div className="pageTitle1" style={{ marginTop: "130px" }}>
-            ประเภทบรรจุภัณฑ์และภาพการปฏิบัติงาน
-          </div>
+          <div className="pageTitle1" style={{ marginTop: "130px" }}>{t('section2.title')}</div>
 
           <div className="picRow1">
             <div className="grid grid-cols-12 gap-4">
@@ -128,11 +110,7 @@ export default function Packing() {
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
-                <div className="pacLoaText1">
-                  จัดสร้างกล่องไม้ตามออเดอร์ให้เหมาะสม
-                  <br />
-                  กับมาตรฐานของผลิตภัณฑ์
-                </div>
+                <div className="pacLoaText1">{t('section2.1')}</div>
               </div>
               <div className="col-span-12 md:col-span-4">
                 <img
@@ -140,11 +118,7 @@ export default function Packing() {
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
-                <div className="pacLoaText1">
-                  บรรจุภัณฑ์แบบวางบนพาเลท
-                  <br />
-                  ช่วยเพิ่มประสิทธิภาพการวางบรรทุก
-                </div>
+                <div className="pacLoaText1">{t('section2.2')}</div>
               </div>
               <div className="col-span-12 md:col-span-4">
                 <img
@@ -152,12 +126,7 @@ export default function Packing() {
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
-                <div
-                  className="pacLoaText1"
-                  style={{ height: "54px", paddingTop: "15px" }}
-                >
-                  บรรจุภัณฑ์กล่องไม้
-                </div>
+                <div className="pacLoaText1">{t('section2.3')}</div>
               </div>
             </div>
             <div style={{ height: "20px" }}></div>
@@ -168,11 +137,7 @@ export default function Packing() {
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
-                <div className="pacLoaText1">
-                  บรรจุภัณฑ์สำหรับชิ้นส่วน
-                  <br />
-                  แผ่นโลหะสำหรับตัวรถ
-                </div>
+                <div className="pacLoaText1">{t('section2.4')}</div>
               </div>
               <div className="col-span-12 md:col-span-4">
                 <img
@@ -180,11 +145,7 @@ export default function Packing() {
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
-                <div className="pacLoaText1">
-                  การปฏิบัติงานบรรจุภัณฑ์
-                  <br />
-                  ชิ้นส่วนตัวรถ
-                </div>
+                <div className="pacLoaText1">{t('section2.5')}</div>
               </div>
               <div className="col-span-12 md:col-span-4">
                 <img
@@ -192,23 +153,19 @@ export default function Packing() {
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
-                <div className="pacLoaText1">
-                  งานบรรจุภัณฑ์เบาะที่นั่ง
-                  <br />
-                  สำหรับรถยนต์
-                </div>
+                <div className="pacLoaText1">{t('section2.6')}</div>
               </div>
             </div>
           </div>
 
           <div className="handlingBox">
-              <div className="handlingTitle">สาขาที่ให้บริการ</div>
+              <div className="handlingTitle">{b('title')}</div>
               <ul className="list-disc grid md:flex">
-                <li className="ms-8 ps-0">พระนครศรีอยุธยา</li>
-                <li className="ms-8 ps-0">บางปะกง</li>
-                <li className="ms-8 ps-0">แหลมฉบัง</li>
-                <li className="ms-8 ps-0">ปราจีนบุรี</li>
-                <li className="ms-8 ps-0">เชียงใหม่</li>
+                <li className="ms-8 ps-0">{b('ayutthaya')}</li>
+                <li className="ms-8 ps-0">{b('bangpakong')}</li>
+                <li className="ms-8 ps-0">{b('laem-chabang')}</li>
+                <li className="ms-8 ps-0">{b('prachinburi')}</li>
+                <li className="ms-8 ps-0">{b('chiang-mai')}</li>
               </ul>
             </div>
 

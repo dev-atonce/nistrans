@@ -18,7 +18,7 @@ export default function SeaFreight() {
           <div>
             <div>{t('section1.p')}</div>
             <div className="pageTitle1 mt-10">{t('h2')}</div>
-            <div className="pageTitle2" style={{whiteSpace:'pre'}}>
+            <div className="pageTitle2">
               {t('h3')}
             </div>
 

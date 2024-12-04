@@ -1,6 +1,9 @@
 import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
 
 export default function AirFreight({ params }: { params: { lng: string } }) {
+  const t = useTranslations('air-freight');
+  const b = useTranslations('branchs');
   return (
     <>
       <Cover
@@ -10,51 +13,25 @@ export default function AirFreight({ params }: { params: { lng: string } }) {
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">การขนส่งทางอากาศ</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
           <div className="branchesTopic">
             <span>
-              เราให้บริการขนส่งที่วางใจได้และฉับไวด้วยเส้นทางที่เหมาะสมที่สุดตามความประสงค์ของลูกค้า
-              ในฐานะ Global Logistics Service Provider แม้ในช่วงเร่งรีบ เช่น
-              วันหยุดยาว หรือก่อนวันหยุดยาว
-              เราก็สามารถจัดหาพื้นที่ว่างสำหรับสินค้าที่จำเป็นให้ได้โดยใช้เครือข่ายร่วมกับบริษัทสายการบิน
-              อีกทั้งสามารถตอบสนองได้อย่างยืดหยุ่นต่อความต้องการเร่งด่วนด้วยรายการสินค้าที่
-              Siam Nistrans ดำเนินการมีอยู่มากมายหลายสาขาทั้งขาเข้าและขาออก
-              เราจึงขอนำเสนอการขนส่งแบบต่อเนื่องระหว่างประเทศซึ่งดำเนินการโดยอาศัยประสบการณ์จริงมากมาย
-              ซึ่งรวมถึงความต้องการแบบ Door to Door
+              {t('section1.p')}
             </span>
           </div>
 
-          <div className="pageTitle1">ลำดับการขนส่ง</div>
-
-          <div className="pageTitle2">
-            รวบรวมสินค้า{" "}
-            <i className="fa fa-angle-right" aria-hidden="true"></i>
-            ยื่นเรื่องขอส่งออก{" "}
-            <i className="fa fa-angle-right" aria-hidden="true"></i>
-            ดำเนินการพิธีการศุลกากร{" "}
-            <i className="fa fa-angle-right" aria-hidden="true"></i>
-            ขนส่งทางอากาศ{" "}
-            <i className="fa fa-angle-right" aria-hidden="true"></i>
-            <br />
-            NISSIN ในประเทศปลายทางยื่นเรื่องขอนำเข้า{" "}
-            <i className="fa fa-angle-right" aria-hidden="true"></i>
-            จัดส่ง
-            <br />
-            ขนส่งออกนอกประเทศแบบ Door to Door
-          </div>
+          <h2 className="pageTitle1">{t('h2')}</h2>
+          <h3 className="pageTitle2">
+            {t('h3')}
+          </h3>
 
           <ul className="textNum">
             <li className="nNum">
-              <div className="nNumText">จุดเด่น</div>
+              <div className="nNumText">{t('section2.title')}</div>
               <div className="nNumNum">01</div>
             </li>
-            <li className="tText">
-              ขนส่งสินค้าของลูกค้าไปต่างประเทศด้วยบริการขนส่งแบบต่อเนื่องที่ใช้ประโยชน์จากเครือข่ายระดับสากล
-              ซึ่งรวมไปถึงงานพิธีการศุลกากรที่วุ่นวาย
-              เราดำเนินการด้านสินค้าส่งออกและนำเข้าโดยมีการจัดวางระบบที่สามารถรองรับความต้องการของลูกค้าได้โดยอาศัยประสบการณ์ที่สั่งสมมานานหลายปีในฐานะผู้ให้บริการขนส่งสินค้าทางอากาศที่ได้รับการรับรองโดย
-              IATA
-            </li>
+            <li className="tText">{t('section2.p1')}</li>
           </ul>
 
           <div className="airSer">
@@ -105,7 +82,7 @@ export default function AirFreight({ params }: { params: { lng: string } }) {
           </div>
 
           <img
-            src="/img/air-freight-forwarding/001.jpg"
+            src={t('section2.image1')}
             className="mx-auto"
             style={{ marginTop: "60px" }}
             alt="Air Freight Forwarding"
@@ -151,14 +128,14 @@ export default function AirFreight({ params }: { params: { lng: string } }) {
             <div className="grid grid-cols-12">
               <div className="col-span-2"></div>
               <div className="col-span-12 md:col-span-8 boxPhone1">
-                <div>ช่องทางให้คำปรึกษาเรื่องการส่งออก/การนำเข้าของสาขาสนามบิน</div>
+                <div>{t('section2.1')}</div>
                 <div className="grid grid-cols-12">
                   <div className="col-span-12 md:col-span-6 pt-4">
-                    <div className="boxPhone1Label">ให้คำปรึกษาในการส่งออก</div>
+                    <div className="boxPhone1Label">{t('section2.2')}</div>
                     <a className="ms-2" href="tel:+66-2-134-7112">+66-2-134-7112</a>
                   </div>
                   <div className="col-span-12 md:col-span-6 pt-4">
-                    <div className="boxPhone1Label">ให้คำปรึกษาในการนำเข้า</div>
+                    <div className="boxPhone1Label">{t('section2.3')}</div>
                     <a className="ms-2" href="tel:+66-2-134-7003">+66-2-134-7003~5</a>
                   </div>
                 </div>
@@ -169,14 +146,14 @@ export default function AirFreight({ params }: { params: { lng: string } }) {
           </div>
 
           <div className="handlingBox">
-            <div className="handlingTitle">สาขาที่ให้บริการ</div>
+            <div className="handlingTitle">{b('title')}</div>
             <ul className="list-disc grid md:flex">
-              <li className="ms-8 ps-0">กรุงเทพมหานคร</li>
-              <li className="ms-8 ps-0">สนามบินสุวรรณภูมิ</li>
-              <li className="ms-8 ps-0">พระนครศรีอยุธยา</li>
-              <li className="ms-8 ps-0">แหลมฉบัง</li>
-              <li className="ms-8 ps-0">ปราจีนบุรี</li>
-              <li className="ms-8 ps-0">เชียงใหม่</li>
+              <li className="ms-8 ps-0">{b('bangkok')}</li>
+              <li className="ms-8 ps-0">{b('airport')}</li>
+              <li className="ms-8 ps-0">{b('ayutthaya')}</li>
+              <li className="ms-8 ps-0">{b('laem-chabang')}</li>
+              <li className="ms-8 ps-0">{b('prachinburi')}</li>
+              <li className="ms-8 ps-0">{b('chiang-mai')}</li>
             </ul>
             {/* <div className="handlingList">
               <table>

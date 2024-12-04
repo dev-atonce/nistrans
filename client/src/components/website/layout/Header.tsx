@@ -113,7 +113,7 @@ export default function Header({ logo, lng }: any) {
             } top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}
         ></div>
         <div
-          className={`fixed block lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed block z-99 lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           <SideBar

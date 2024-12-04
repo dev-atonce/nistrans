@@ -1,6 +1,9 @@
 import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
 
 export default function MachineInstallation() {
+  const t = useTranslations('machinery-installation');
+  const b = useTranslations('branchs');
   return (
     <>
       <Cover
@@ -10,25 +13,13 @@ export default function MachineInstallation() {
         prevPage={{ pageName: "หน้าแรก", url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">ธุรกิจคลังสินค้า</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
           <div className="branchesTopic text-center no-padding-l no-padding-r">
-            <div
-              style={{
-                width: "auto",
-                display: "table",
-                margin: "0 auto",
-                textAlign: "left",
-              }}
-            >
-              Siam Nistrans ให้บริการขนส่งเครื่องจักร
-              (ตั้งแต่ขนย้ายออกจากโรงงานไปจนถึงงานติดตั้งที่หน้างาน)
-              <br />
-              แบบ One-Stop-Service โดยถือคติความปลอดภัยต้องมาเป็นอันดับหนึ่ง
-            </div>
+            <div>{t('section1.p')}</div>
           </div>
 
-          <div className="pageTitle1">ลำดับการขนส่งเครื่องจักร</div>
+          <h2 className="pageTitle1">{t('h2')}</h2>
 
           <div className="mt-10 mb-20">
             <div className="grid grid-cols-12 gap-2">
@@ -36,73 +27,73 @@ export default function MachineInstallation() {
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40">
-                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">ขนย้ายเครื่องจักรออกจากพื้นที่</p>
+                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.1')}</p>
                   </div>
                   <div className="arrow-right"></div>
                 </div>
-                <img src="/img/service/service-7.png" alt="ขนย้ายเครื่องจักรออกจากพื้นที่" />
+                <img src="/img/service/service-7.png" alt={t('section1.1')} />
               </div>
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40 min-w-16">
-                      <p className="[writing-mode:vertical-lr] h-full text-center p-3">บรรจุ</p>
+                      <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.2')}</p>
                   </div>
                   <div className="arrow-right"></div>
                 </div>
-                <img src="/img/service/service-8.png" alt="พิธีการศุลกากร" />
+                <img src="/img/service/service-8.png" alt={t('section1.1.2')} />
               </div>
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40  min-w-18">
-                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">พิธีการศุลกากร</p>
+                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.3')}</p>
                   </div>
                   <div className="arrow-right"></div>
                 </div>
-                <img src="/img/service/service-9.png" alt="พิธีการศุลกากร" />
+                <img src="/img/service/service-9.png" alt={t('section1.1.3')} />
               </div>
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40  min-w-18">
-                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">ขนส่งระหว่างประเทศ</p>
+                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.4')}</p>
                   </div>
                   <div className="arrow-right"></div>
                 </div>
-                <img src="/img/service/service-10.png" alt="ขนส่งระหว่างประเทศ" />
+                <img src="/img/service/service-10.png" alt={t('section1.1.4')} />
               </div>
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40  min-w-18">
-                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">พิธีการศุลกากร</p>
+                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.5')}</p>
                   </div>
                   <div className="arrow-right"></div>
                 </div>
-                <img src="/img/service/service-9.png" alt="พิธีการศุลกากร" />
+                <img src="/img/service/service-9.png" alt={t('section1.1.5')} />
               </div>
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40  min-w-18">
-                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">จัดส่ง</p>
+                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.6')}</p>
                   </div>
                   <div className="arrow-right"></div>
                 </div>
-                <img src="/img/service/service-2.png" alt="จัดส่ง" />
+                <img src="/img/service/service-2.png" alt={t('section1.1.6')} />
               </div>
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40  min-w-18">
-                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">บรรจุและขนย้ายเข้าพื้นที่</p>
+                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.7')}</p>
                   </div>
                   <div className="arrow-right"></div>
                 </div>
-                <img src="/img/service/service-1.png" alt="บรรจุและขนย้ายเข้าพื้นที่" />
+                <img src="/img/service/service-1.png" alt={t('section1.1.7')} />
               </div>
               <div className="col-span-3 md:col-span-2 xl:col-span-1">
                 <div className="relative flex">
                   <div className="bg-orange-50 h-40  min-w-18">
-                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">ติดตั้ง</p>
+                    <p className="[writing-mode:vertical-lr] h-full text-center p-3">{t('section1.1.8')}</p>
                   </div>
                 </div>
-                <img src="/img/service/service-7.png" alt="ติดตั้ง" />
+                <img src="/img/service/service-7.png" alt={t('section1.1.8')} />
               </div>
             </div>
           </div>
@@ -114,35 +105,25 @@ export default function MachineInstallation() {
                 <img
                   src="/img/service/machinery-installation/001.jpg"
                   className="img-responsive"
-                  alt="สภาพการดำเนินงานบรรจุภัณฑ์โดยพนักงาน"
+                  alt={t('section1.2.1')}
                 />
-                <div className="macInsText1">
-                  สภาพการดำเนินงานบรรจุภัณฑ์
-                  <br />
-                  โดยพนักงาน
-                </div>
+                <div className="macInsText1">{t('section1.2.1')}</div>
               </div>
               <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/machinery-installation/002.jpg"
                   className="img-responsive"
-                  alt="ดำเนินงานบรรจุภัณฑ์ให้เหมาะสมตามประเภทของเครื่องจักร"
+                  alt={t('section1.2.2')}
                 />
-                <div className="macInsText1">
-                  ดำเนินงานบรรจุภัณฑ์ให้เหมาะสม
-                  <br />
-                  ตามประเภทของเครื่องจักร
-                </div>
+                <div className="macInsText1">{t('section1.2.2')}</div>
               </div>
               <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/machinery-installation/003.jpg"
                   className="img-responsive"
-                  alt="งานบรรจุเข้าตู้คอนเทนเนอร์"
+                  alt={t('section1.2.3')}
                 />
-                <div className="macInsText1" style={{ padding: "18px 0" }}>
-                  งานบรรจุเข้าตู้คอนเทนเนอร์
-                </div>
+                <div className="macInsText1">{t('section1.2.3')}</div>
               </div>
               <div className="hidden md:block col-span-1"></div>
               <div className="hidden md:block col-span-1"></div>
@@ -150,36 +131,36 @@ export default function MachineInstallation() {
                 <img
                   src="/img/service/machinery-installation/004.jpg"
                   className="img-responsive"
-                  alt="ขนส่งเครื่องจักรขนาดใหญ่"
+                  alt={t('section1.2.4')}
                 />
-                <div className="macInsText1">ขนส่งเครื่องจักรขนาดใหญ่</div>
+                <div className="macInsText1">{t('section1.2.4')}</div>
               </div>
               <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/machinery-installation/005.jpg"
                   className="img-responsive"
-                  alt="ขนย้ายเครื่องจักรเข้าพื้นที่"
+                  alt={t('section1.2.5')}
                 />
-                <div className="macInsText1">ขนย้ายเครื่องจักรเข้าพื้นที่</div>
+                <div className="macInsText1">{t('section1.2.5')}</div>
               </div>
               <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/machinery-installation/006.jpg"
                   className="img-responsive"
-                  alt="งานติดตั้ง"
+                  alt={t('section1.2.6')}
                 />
-                <div className="macInsText1">งานติดตั้ง</div>
+                <div className="macInsText1">{t('section1.2.6')}</div>
               </div>
             </div>
           </div>
           <div className="handlingBox">
-            <div className="handlingTitle">สาขาที่ให้บริการ</div>
+            <div className="handlingTitle">{b('title')}</div>
             <ul className="list-disc grid md:flex">
-              <li className="ms-8 ps-0">พระนครศรีอยุธยา</li>
-              <li className="ms-8 ps-0">บางปะกง</li>
-              <li className="ms-8 ps-0">แหลมฉบัง</li>
-              <li className="ms-8 ps-0">ปราจีนบุรี</li>
-              <li className="ms-8 ps-0">เชียงใหม่</li>
+              <li className="ms-8 ps-0">{b('ayutthaya')}</li>
+              <li className="ms-8 ps-0">{b('bangpakong')}</li>
+              <li className="ms-8 ps-0">{b('laem-chabang')}</li>
+              <li className="ms-8 ps-0">{b('prachinburi')}</li>
+              <li className="ms-8 ps-0">{b('chiang-mai')}</li>
             </ul>
           </div>
         </div>
