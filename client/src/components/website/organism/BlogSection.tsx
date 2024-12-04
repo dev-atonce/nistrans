@@ -25,7 +25,6 @@ const BlogSection = ({ limit, home, lng }: BlogSectionProps) => {
     const data = await res.json();
     setBlogList(data?.rows);
     setTotal(data?.total);
-    return data;
   };
 
   useEffect(() => {

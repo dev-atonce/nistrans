@@ -2,6 +2,7 @@ import Cover from "@/components/website/layout/Cover";
 import Blog from "@/components/website/layout/Blog";
 import { Metadata, ResolvingMetadata } from "next";
 import { useTranslations } from 'next-intl';
+import LatestNews from "@/components/website/layout/LatestNews";
 
 const pageName = "blog";
 export async function generateMetadata({ params, searchParams }: any, parent: ResolvingMetadata): Promise<Metadata> {
@@ -32,7 +33,10 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
         prevPage={{ pageName: t('home'), url: "/" }}
       />
       <div className="container mx-auto px-2 xl:px-0">
-        <div className="py-4 flex flex-col gap-3 ">
+        <div className="border-slate-200">
+          <LatestNews home={false} lang={params.lng} limit={6} />
+        </div>
+        <div className="py-4 flex flex-col gap-3 mt-10">
           <h1 className="text-black text-2xl ">{t('blog')}</h1>
           <div className="h-1 w-20 bg-orange-400"></div>
         </div>

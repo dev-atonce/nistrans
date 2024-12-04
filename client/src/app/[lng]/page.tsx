@@ -11,17 +11,6 @@ interface Props {
   params: { lng: string };
 }
 
-const fetchNews = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=5&type=news`,
-    {
-      cache: "no-store",
-    }
-  );
-  const data = await res.json();
-  return data.rows;
-};
-
 const fetchBanner = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/banner`,
@@ -36,7 +25,6 @@ const fetchBanner = async () => {
 export default async function Home({ params }: Props) {
   const lng = params.lng;
   const banner = await fetchBanner();
-  const news = await fetchNews();
 
   return (
     <>
@@ -47,7 +35,7 @@ export default async function Home({ params }: Props) {
       <HomeMoving lang={lng} />
       <WarehouseManagement lang={lng} />
       <HacoLab lang={lng} />
-      <LatestNews lang={lng} news={news} />
+      <LatestNews home={true} lang={lng} limit={4} />
       {/* Blog */}
       <div className="container mx-auto">
         <Blog home={true} limit={3} />
