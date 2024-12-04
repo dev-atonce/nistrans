@@ -22,8 +22,7 @@ const BlogCard = ({ data, lng }: BlogCardProps) => {
               <Image
                 className="w-full aspect-[3/2] object-cover"
                 alt="blog_image"
-                // src={`${process.env.NEXT_PUBLIC_BASE_URL}${item?.blog_image}`}
-                src={`/img/about.png`}
+                src={`${process.env.NEXT_PUBLIC_BASE_URL}${item?.blog_image}`}
                 width={500}
                 height={300}
                 quality={80}
