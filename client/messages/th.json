@@ -20,6 +20,12 @@
         "scm-solutions": "โซลูชั่น SCM",
         "apply": "สมัครงาน"
     },
+    "blog-section": {
+        "news": "ข่าวสารล่าสุด",
+        "more": "รายละเอียดเพิ่มเติม",
+        "announcement": "ประกาศ",
+        "blog": "บทความ"
+    },
     "cover": {
         "h1": "Reaching and Delivering to the World",
         "h2": "ผู้บุกเบิกด้านการขนส่งหลายรูปแบบระหว่างประเทศ",
