@@ -2,15 +2,16 @@ import Cover from "@/components/website/layout/Cover";
 import { useTranslations } from "next-intl";
 
 export default function AirFreight({ params }: { params: { lng: string } }) {
+  const h = useTranslations('header');
   const t = useTranslations('air-freight');
   const b = useTranslations('branchs');
   return (
     <>
       <Cover
         noHeading={true}
-        pageName="บริการของเรา"
+        pageName={t('h1')}
         engName="Service"
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        prevPage={{ pageName: h('home'), url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
