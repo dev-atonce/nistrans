@@ -20,6 +20,12 @@
     "scm-solutions": "SCM Solutions",
     "apply": "Apply"
   },
+  "blog-section": {
+    "news": "News",
+    "more": "See More",
+    "announcement": "Announcement",
+    "blog": "Blog"
+  },
   "cover": {
     "h1": "Reaching and Delivering to the World",
     "h2": "A pioneer in international multimodal logistics",
