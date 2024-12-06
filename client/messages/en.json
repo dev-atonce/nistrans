@@ -36,13 +36,19 @@
   "moving-section": {
     "heading": "Moving by Siam Nistrans",
     "1-1": "From/To Thailand",
-    "1-2": "Overseas moving",
+    "1-1-2": "",
+    "1-2": "Overseas ",
+    "1-2-2": "moving",
     "1-3": "No worries about unexpected transfer or repatriation. With our integrated service from packing, collecting, customs clearance to delivery, we take care of each customer's household goods with safe and speedy operation.",
-    "2-1": "Within Thailand",
-    "2-2": "Domestic moving",
+    "2-1": "Within ",
+    "2-1-2": "Thailand",
+    "2-2": "Domestic ",
+    "2-2-2": "moving",
     "2-3": "With our network throughout Thailand, not only in Bangkok, we provide services to meet the customers' needs, no matter how great the scale is.",
     "3-1": "From large to small",
-    "3-2": "Office relocation",
+    "3-1-2": "",
+    "3-2": "Office ",
+    "3-2-2": "relocation",
     "3-3": "Now matter how large or small your office is, we deliver your properties to a new location with least effect on your day-to-day operations.",
     "see-more": "Read More"
   },
@@ -410,5 +416,32 @@
       "p": "The Company regularly reviews and, if appropriate, updates this Cookie Policy from time to time to ensure that your personal data is properly protected. Please refer to this page for the updated Cookie Policy."
     },
     "date": "Last updated: 01/06/2022"
+  },
+  "warehouse-section": {
+    "heading": "Warehouse ・ Stock control by Siam Nistrans",
+    "p": "We provide higher value-added services to meet the customers' needs, including not only limited to stock control, also packing design and packing.",
+    "point": "POINT",
+    "1": "Transport network throughout Thailand, including five warehouses in the Central region and one in Chiang Mai",
+    "2": "Systematized control on the cargo volume stored or received/delivered to establish a smooth distribution flow",
+    "3": "Extensive warehouse capacity to meet the customers' demand",
+    "4": "Strict compliance by all warehouse staff with 5S.",
+    "see-more": "Read More"
+  },
+  "haco-section": {
+    "heading": "Distribution container management by Siam Nistrans",
+    "heading2": "Solutions for problems of distribution containers management",
+    "p1": "HACO Lab. solves problems in distribution and establish",
+    "p2": "future logistics services by combining \"distribution containers\"",
+    "p3": "and \"new technology\".",
+    "1-1": "Simple operations with",
+    "1-2": "smartphones by",
+    "1-3": "downloading the app.",
+    "2-1": "Attach labels to distribution",
+    "2-2": "containers. Easy to read the",
+    "2-3": "information with smartphone.",
+    "3-1": "Information is managed at the cloud service.",
+    "3-2": "Easy access from anywhere as long as",
+    "3-3": "the Internet is connected.",
+    "see-more": "Read More"
   }
 }
