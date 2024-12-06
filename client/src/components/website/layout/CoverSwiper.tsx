@@ -9,12 +9,14 @@ import "swiper/css/effect-fade";
 import Image from "next/image";
 import { ApiResponse, BannerProps } from "@/types/bannerType";
 import News from "../organism/News";
+import { useTranslations } from "next-intl";
 
 interface BannerSlideProps {
   banner: ApiResponse;
 }
 
 export default function CoverSwiper({ banner }: any) {
+  const t = useTranslations('cover')
   return (
     <div className="header-slider">
       <div className="w-full header-cover">

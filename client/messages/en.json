@@ -146,57 +146,6 @@
       }
     }
   },
-  "air-freight":
-  {
-      "h1":"Air Freight Forwarding",
-      "h2":"Transport flow",
-      "h3":"Collection > Export declaration/Customs clearance > Air transportation > Import declaration > Delivery \"Door to Door\" international transport",
-      "section1": {
-          "p":"As a global logistics service provider, we offer reliable and quick transport services with the best routes that meet your requests. We have established a network with the major airlines that enables us to secure necessary cargo space even in high seasons, such as before long holidays or in an urgent case. The types of products that we deliver for export or import vary greatly. We offer multimodal international transport services including Door to Door cases based on our abundant experience in this field."
-      },
-      "section2": {
-            "title": "Feature",
-            "p1": "With our global network, we provide integrated transport services, including bothersome customs clearance, to deliver your cargo to the destination. With long-term experience as an IATA certified air cargo agent and reliable systems that meet your needs, we help you to export and import cargo.",
-            "image1":"/img/service/air-freight/en-001.jpg",
-            "1":"空港支店の輸出 / 輸入窓口",
-            "2":"輸出窓口",
-            "3":"輸入窓口"
-      }
-    }
-  },
-  "land-transportation":{
-      "h1":"Land Transportation",
-      "h2":"Our strengths in land transport",
-      "section1": {
-          "p":"ith over 100 owned trucks, we deliver your valuable cargo to the destination port or airport in a safe and timely manner. Our land transport services include domestic transport within Thailand and also cross-border transport to Laos, Cambodia, Malaysia and the other ASEAN countries."
-      },
-      "section2":{
-          "title": "Feature",
-          "1":{
-              "1":"We own over 100 trucks and directly employ all the drivers who are trained on eco-driving to ensure safe driving all the time.",
-              "2":"Siam Nistrans' cargo vehicles",
-              "3":"Head truck: 15 units",
-              "4":"10W truck: 7 units",
-              "5":"6W truck: 60 units",
-              "6":"4W pickup truck: 29 units"
-          },
-          "2":{
-              "1":"Our safe and reliable cargo transport services are \"Q-mark (Quality Mark)\" certified by the Department of Land Transport, Ministry of Transport of Thailand.",
-              "2":"The Q-mark program is the certification granted by Department of Land Transport, Ministry of Transport of Thailand to truck service providers. The Q-mark certification is one of the conditions for transport under the Cross-Border Transport Agreement (CBTA). We were certified with Q-mark in October 2018."
-          },
-          "3":{
-              "1":"We provide cross-border transport services with our own trucks licensed under the CBTA.",
-              "2":"The Cross-Border Transport Agreement (CBTA) is one of the main initiatives for trade facilitation under the development program of the Greater Mekong Sub region (GMS), consisting of Thailand, Cambodia, Laos, Myanmar, Vietnam and China (the Yunnan province and the Guangxi Zhuang Autonomous Region (GZAR)). The CBTA allows cross-border vehicle movement, single-stop inspection and other goods transport benefits that facilitate land transport within the Mekong sub region.",
-              "3":"Currently, the \"Early Harvest\" package has been implemented, which allows all the members except Myanmar to provide cross-border transport.",
-              "4":"GMS Road Transport Permit"
-          },
-          "4":{
-              "1":"East-West Economic Corridor area services",
-              "2":"We are one of the pioneers that have developed and offered land transport routes between Thailand and its neighboring countries such as Laos, Cambodia, Malaysia, and the other ASEAN countries. We help you by reducing the cargo transit time and stock in transport.",
-              "3":"International land transport permit"
-          }
-      }
-  },
   "warehouse":{
       "h1":"Warehouse",
       "h2":"Our strengths in warehouse",
