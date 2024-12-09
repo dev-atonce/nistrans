@@ -393,6 +393,7 @@
     "section2":{
         "title":"Why HACO Lab.?",
         "1":"You can enjoy import with duty exemption on returnable containers.",
+        "1-p":"Depending on local Customs laws.",
         "2":"You can reduce cost by visualizing the distribution container inventory in order to prevent lost and slow-moving items.",
         "3":"It is easy to introduce because it is not just a management system for logistics containers, but can be added to the current logistics mobile.",
         "4":"You can easily use the app anywhere in the world because of smartphone app and cloud manadement.",
@@ -449,5 +450,13 @@
       "p": "The Company regularly reviews and, if appropriate, updates this Cookie Policy from time to time to ensure that your personal data is properly protected. Please refer to this page for the updated Cookie Policy."
     },
     "date": "Last updated: 01/06/2022"
+  },
+  "modal": {
+    "law": {
+      "jp-title":"Japan's Customs Act",
+      "jp":"Customs Tariff Act Section 14 (Unconditional duty exemption)\nDuty on the following goods to be imported shall be exempted in accordance with the provisions of the Cabinet Order:\nClause 11: Containers (including similar goods) for goods exported from the country as prescribed under the Cabinet Order and used for such export or to be used for import.\nCustoms Tariff Act Section 17 (Duty exemption on re-export)\nDuty on the following goods to be exported within one (1) year from the date of import permit shall be exempted in accordance with the provisions of the Cabinet Order:\nClause 1 (ii) Containers for imported goods as prescribed under the Cabinet Order\nClause 1 (iii) Goods used as a container for exported goods as prescribed under the Cabinet Order\nAs of October 2019",
+      "th-title":"Thailand's Customs Act",
+      "th":"Duty exemption on returnable containers for imported goods.\nOn July 9, 2018, the Customs Bureau issued a notification (No.154 / 2561) to apply a tax exemption measure for returnable containers for imported cargo called \"return boxes\".\n※For details, please contact us."
+    }
   }
 }
