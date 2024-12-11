@@ -16,29 +16,11 @@ const Dashboard: React.FC = () => {
         <CardDataStats title="Home" link="/webpanel/home">
           <FaHome size={20} />
         </CardDataStats>
-        <CardDataStats title="About Us" link="/webpanel/about-us">
-          <ImProfile size={20} />
-        </CardDataStats>
         <CardDataStats title="Banner" link="/webpanel/banner">
           <IoMdImages size={20} />
         </CardDataStats>
         <CardDataStats title="Blog" link="/webpanel/blog">
           <RiContactsBook2Fill size={20} />
-        </CardDataStats>
-        <CardDataStats title="Service" link="/webpanel/jobservice">
-          <RiContactsBook2Fill size={20} />
-        </CardDataStats>
-        <CardDataStats title="Job Post" link="/webpanel/jobpost">
-          <BsFillWalletFill size={20} />
-        </CardDataStats>
-        <CardDataStats title="Job Application" link="/webpanel/jobapply">
-          <FaShoppingCart size={20} />
-        </CardDataStats>
-        <CardDataStats title="Corporate Contact" link="/webpanel/jobcorporate">
-          <IoPeopleSharp size={20} />
-        </CardDataStats>
-        <CardDataStats title="Resume Store" link="/webpanel/jobinformation">
-          <FaCalendarAlt size={20} />
         </CardDataStats>
         <CardDataStats title="Mailbox" link="/webpanel/mailbox">
           <IoIosMail size={20} />

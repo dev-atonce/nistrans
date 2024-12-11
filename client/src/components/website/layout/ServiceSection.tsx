@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import ProductCard from "../molecule/ProductCard";
 import { useTranslations } from "next-intl";
 
@@ -129,7 +129,7 @@ export default async function ServiceSection({ data, page, lang }: any) {
       {!page && (
         <div className="flex justify-center">
           <Link
-            href={`/${lang}/service`}
+            href={`/service`}
             className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
           >
             {t("see-more")}

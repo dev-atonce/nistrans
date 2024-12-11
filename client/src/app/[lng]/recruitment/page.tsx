@@ -3,6 +3,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import provinces from "@/assets/province.json";
 import { Link } from "@/i18n/routing";
+import BtnShadow from "@/components/website/atom/button/BtnShadow";
 
 const fetchBlog = async () => {
   const res = await fetch(
@@ -131,13 +132,8 @@ export default async function RecruitmentPage({
                   provinces?.find((j: any) => j?.id == i?.location)?.name}
               </span>
               <span className="col-span-12 md:col-span-2 sm:col-span-2 mt-2 md:mt-0 flex justify-end md:justify-start">
-                <Link
-                  href={`recruitment/${i?.slug}`}
-                  className="border-2 border-[#1d2f4f] flex items-center px-3 py-1 md:px-5 md:py-1.5 text-xs md:text-sm text-white bg-[#1d2f4f] hover:bg-white hover:text-[#1d2f4f]"
-                >
-                  {/* @ts-ignore */}
-                  {pagename.view[lng]}
-                </Link>
+                {/* @ts-ignore */}
+                <BtnShadow href={`recruitment/${i?.slug}`} text={`${pagename.view[lng]}`} />
               </span>
             </div>
           ))}

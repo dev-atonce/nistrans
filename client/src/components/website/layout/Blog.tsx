@@ -17,7 +17,7 @@ export default function Blog({ home, limit, lng }: any) {
         {home && (
           <div className="flex justify-center pt-10">
             <Link
-              href={`news-activity`}
+              href={`/news-activity`}
               className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
             >
               {t('more')}

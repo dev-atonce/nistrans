@@ -1,3 +1,4 @@
+import BtnShadow from "@/components/website/atom/button/BtnShadow";
 import Cover from "@/components/website/layout/Cover";
 import { Link } from "@/i18n/routing";
 import { FaRegClock } from "react-icons/fa";
@@ -80,7 +81,7 @@ export default async function RecruitmentDetailPage({ params }: { params: { slug
                 </div>
                 <div className="flex justify-center items-center gap-2 mt-10">
                     {/* @ts-ignore */}
-                    <Link href={`/contact`} className="border-2 border-[#1d2f4f] flex items-center px-10 py-1 text-sm text-white bg-[#1d2f4f] hover:bg-white hover:text-[#1d2f4f]">{pagename.view[lng]}</Link>
+                    <BtnShadow href={`/contact`} text={pagename.view[lng]} />
                 </div>
             </div>
         </>
