@@ -29,7 +29,7 @@ export default async function Home({ params }: Props) {
   return (
     <>
       {/* Banner */}
-      <CoverSwiper banner={banner} lang={lng} />
+      <CoverSwiper banner={banner} lang={lng} home={true} limit={2} />
       <ServiceSection lang={lng} />
       <AboutSection lang={lng} />
       <HomeMoving lang={lng} />
@@ -38,7 +38,7 @@ export default async function Home({ params }: Props) {
       <LatestNews home={true} lang={lng} limit={4} />
       {/* Blog */}
       <div className="container mx-auto">
-        <Blog home={true} limit={3} />
+        <Blog home={true} limit={3} lng={lng} />
       </div>
     </>
   );

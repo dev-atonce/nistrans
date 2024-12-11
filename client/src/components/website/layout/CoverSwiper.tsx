@@ -15,8 +15,8 @@ interface BannerSlideProps {
   banner: ApiResponse;
 }
 
-export default function CoverSwiper({ banner }: any) {
-  const t = useTranslations('cover')
+export default function CoverSwiper({ banner, lang, home, limit }: any) {
+  const t = useTranslations("cover");
   return (
     <div className="header-slider">
       <div className="w-full header-cover">
@@ -36,20 +36,24 @@ export default function CoverSwiper({ banner }: any) {
                   <div className="">
                     <div className="container mx-auto relative ">
                       <div
-                        className="absolute lg:top-[80px] w-full top-0 left-0 right-0  flex flex-col items-center gap-4"
+                        className="absolute xl:top-[40px] 2xl:top-[80px] w-full top-0 left-0 right-0  flex flex-col items-center gap-4"
                         style={{ textShadow: "1px 1px #2F2F2F" }}
                       >
-                        <h1 className="text-white text-2xl md:text-5xl py-4 ">{t('h1')}</h1>
-                        <h2 className="text-white text-sm sm:text-lg md:text-3xl">{t('h2')}</h2>
-                        <p className="text-white text-sm sm:text-lg md:text-xl w-[50%] text-center">{t('p')}</p>
+                        <h1 className="text-white text-3xl xl:text-5xl py-4 text-center">
+                          {t("h1")}
+                        </h1>
+                        <h2 className="text-white text-sm sm:text-lg xl:text-3xl hidden sm:block">
+                          {t("h2")}
+                        </h2>
+                        <p className="text-white text-sm sm:text-lg xl:text-xl xl:w-[70%] text-center hidden md:block">
+                          {t("p")}
+                        </p>
                       </div>
-                      <News />
+                      <News lang={lang} home={home} limit={limit} />
                     </div>
                     <Image
-                      src={"/img/banner1.png"}
-                      // src={`${process.env.NEXT_PUBLIC_BASE_URL}${
-                      //   item?.image"
-                      // } `}
+                      // src={"/img/banner1.png"}
+                      src={`${process.env.NEXT_PUBLIC_BASE_URL}${item?.image} `}
                       alt={item.image_alt}
                       width={1920}
                       height={500}
