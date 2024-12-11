@@ -1,43 +1,33 @@
 import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
 
 export default function Packing() {
+  const t = useTranslations('scm-solutions');
+  const h = useTranslations('header');
   return (
     <>
       <Cover
         noHeading={true}
-        pageName="บริการของเรา"
+        pageName={t('h1')}
         engName="Service"
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        prevPage={{ pageName: h('home'), url: "/" }}
       />
       <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">งานพิธีการศุลกากร</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
-          <div className="branchesTopic text-center">
-            ใช้ประโยชน์จาก "Information Platform"
-            แพลตฟอร์มข้อมูลเกี่ยวกับการขนส่งกระจายสินค้า+IT <br />
-            ซึ่งได้รับการพัฒนาอย่างเป็นเอกเทศโดยบริษัท เพื่อสนับสนุน SCM (Supply
-            Chain Management) <br />
-            ของลูกค้าโดยรวม
+          <div className="branchesTopic text-center">{t('section1.p')}
           </div>
 
-          <div className="pageTitle1">ให้บริการดำเนินงานแทนในรูปแบบ 3PL</div>
+          <h2 className="pageTitle1">{t('h2')}</h2>
 
-          <div className="pageTitle2">
-            รับแผนการผลิตจากลูกค้า
-            ควบคุมการสั่งซื้อและการตอบคำถามเรื่องกำหนดการส่งมอบ
-            และจัดทำแผนการส่งมอบประจำเดือนและคำสั่งการส่งมอบที่มีความเหมาะสมที่สุดให้โดยอัตโนมัติ
-            โดยลิงก์กับตารางกำหนดการเดินเรือ
-            ข้อมูลสินค้าคงคลังซึ่งรวมไปถึงสินค้าคงคลังบนเรือเดินทะเล
-            ไปจนถึงการจัดส่งไปยังจุดหมายปลายทางส่งมอบ
-            รวมทั้งสนับสนุนการจัดทำเอกสารส่งออกและนำเข้า
-            นำเสนอข้อมูลการวิเคราะห์ SCM
+          <h3 className="pageTitle2">{t('h3')}</h3>
+          <div className="flex items-center justify-center">
+            <img
+              src={t('section1.image')}
+              className="img-responsive"
+              alt="SCM Solutions"
+            />
           </div>
-
-          <img
-            src="/img/service/scm-solutions/015.jpg"
-            className="img-responsive img-center"
-            alt="SCM Solutions"
-          />
 
           {/* <div className="scmText1">
   3PL型業務代行サービス
@@ -48,9 +38,7 @@ export default function Packing() {
   </div>
 </div> */}
 
-          <div className="pageTitle1" style={{ marginTop: "120px" }}>
-            ให้บริการการขนส่งกระจายสินค้าแบบ "มองเห็นได้" โดยรวม
-          </div>
+          <div className="pageTitle1" style={{ marginTop: "120px" }}>{t('section2.title')}</div>
 
           <a
             className="fancyBox"
@@ -66,30 +54,30 @@ export default function Packing() {
             />
           </a>
 
-          <div className="scmText3">Information Platform</div>
+          <div className="scmText3">{t('section2.title')}</div>
 
           <div className="scmTextRotate">
             <ul>
               {[
-                "แผนการผลิต",
-                "ให้คำตอบเรื่องกำหนดการส่งมอบ",
-                "แผนการสั่งซื้อ",
-                "สั่งซื้อ",
-                "รวบรวมสินค้า",
-                "ปฏิบัติงานบรรจุภัณฑ์",
-                "Vanning",
-                "BOOKING",
-                "จัดทำเอกสาร",
-                "ยื่นเรื่องขอส่งออก",
-                "ขนย้ายเข้าพื้นที่",
-                "ออก B/L",
-                "ออก A/N",
-                "พิธีการศุลกากรขาเข้า",
-                "ดำเนินเรื่อง Drayage",
-                "จัดเก็บ",
-                "คำสั่งการส่งมอบ",
-                "ส่งมอบ",
-                "จัดส่ง",
+                t('section2.platform.1'),
+                t('section2.platform.2'),
+                t('section2.platform.3'),
+                t('section2.platform.4'),
+                t('section2.platform.5'),
+                t('section2.platform.6'),
+                t('section2.platform.7'),
+                t('section2.platform.8'),
+                t('section2.platform.9'),
+                t('section2.platform.10'),
+                t('section2.platform.11'),
+                t('section2.platform.12'),
+                t('section2.platform.13'),
+                t('section2.platform.14'),
+                t('section2.platform.15'),
+                t('section2.platform.16'),
+                t('section2.platform.17'),
+                t('section2.platform.18'),
+                t('section2.platform.19'),
               ].map((text, index) => (
                 <li key={index}>
                   <span>{text}</span>
@@ -100,43 +88,31 @@ export default function Packing() {
 
           <img
             src="/img/service/scm-solutions/013.jpg"
-            className="img-responsive img-center"
+            className="img-responsive w-full"
             alt="SCM Solutions"
           />
 
           <div className="scmText1" style={{ margin: "50px 0" }}>
-            จัดการข้อมูลการขนส่งและกระจายสินค้าแบบครบวงจร
-            <div className="small">
-              จัดการและนำเสนอข้อมูลการขนส่งและกระจายสินค้าของลูกค้าแบบบูรณาการตั้งแต่การวางแผนจนเสร็จสิ้นการจัดส่ง
-              นอกจากนี้ยังจัดเก็บเอกสารที่เกี่ยวข้องในเวลาเดียวกัน
-            </div>
+          {t('section2.more.title')}
+            <div className="small">{t('section2.more.p')}</div>
           </div>
 
           <ul className="textNum">
             <li className="nNum">
-              <div className="nNumText">จุดเด่น</div>
+              <div className="nNumText">{t('section2.feature')}</div>
               <div className="nNumNum">01</div>
             </li>
             <li className="tText">
-              มองเห็นสถานะสินค้าของลูกค้าได้แบบครบวงจรและจากที่เดียวผ่านการขนส่งและกระจายสินค้าโดยรวมตั้งแต่
-              <br />
-              การนำเข้า-ส่งออก การจัดเก็บ ไปจนถึงการจัดส่ง
-              ด้วยการเชื่อมโยงข้อมูลของระบบต่างๆ (WMS, Forwarding System)
-              มาเชื่อมโยงกับ Information Platform
+              {t('section2.1')}
             </li>
           </ul>
 
           <ul className="textNum">
             <li className="nNum">
-              <div className="nNumText">จุดเด่น</div>
+              <div className="nNumText">{t('section2.feature')}</div>
               <div className="nNumNum">02</div>
             </li>
-            <li className="tText" style={{ position: "relative" }}>
-              การใช้ร่วมกับ "HACO Lab."
-              จะทำให้การขนส่งกระจายสินค้าแบบหมุนเวียนระหว่างซัพพลายเออร์และปลายทาง
-              <br />
-              ส่งมอบซึ่งเชื่อมกับ SCMสามารถมองเห็นได้อย่างเรียลไทม์ว่า "อะไร
-              อยู่ที่ใด และมีจำนวนเท่าไร"
+            <li className="tText" style={{ position: "relative" }}>{t('section2.2')}
               <div className="scmBtnHaco">
                 <a className="pageBtnMore" href="haco-lab.php">
                   <div className="pageBtnMoreBg"></div>
