@@ -9,7 +9,8 @@ module.exports = {
   pageLimit: process.env.PAGE_LIMIT || 15,
   apiVersion: process.env.API_VERSION || 1,
 
-  limitFileSize: process.env.LIMIT_FILE_SIZE || 200000,
+  limitFileSize: process.env.LIMIT_FILE_SIZE || 2 * 1024 * 1024,
+  limitFieldSize: process.env.LIMIT_FIELD_SIZE || 25 * 1024 * 1024,
   cacheControlMaxAgeDay: process.env.CACHE_CONTROL_MAX_AGE_DAY || 30,
 
   mailHost: process.env.MAIL_HOST,

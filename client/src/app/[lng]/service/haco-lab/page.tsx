@@ -1,32 +1,47 @@
-import Cover from "@/components/website/layout/Cover";
+"use client";
 
-export default function Haco() {
+import Cover from "@/components/website/layout/Cover";
+import { useTranslations } from "next-intl";
+import BtnShadow from "@/components/website/atom/button/BtnShadow";
+import Modal from "@/components/website/atom/modal/Modal";
+import { useState } from "react";
+
+export default function Haco() 
+{
+  const m = useTranslations('modal')
+  const h = useTranslations('header');
+  const t = useTranslations('haco-lab');
+  const b = useTranslations('branchs');
+
+  const [showModal, setModal] = useState<Boolean>(false);
+  const [typeModal, setType] = useState<string>('');
+  const [titleModal,setTitle] = useState<string>('');
+  const [detailModal,setDetail] = useState<string>('');
+
+  const setModalHandler = ({ev,law}:any) => {
+    console.log(ev,law)
+    setModal(!showModal);
+    setType(ev);
+    setDetail(law=='jp'?m('law.jp'):m('law.th'));
+    setTitle(law=='jp'?m('law.jp-title'):m('law.th-title'))
+  }
+  const closeModal = () => {
+    setModal(false);
+  }
+
   return (
     <>
       <Cover
         noHeading={true}
-        pageName="บริการของเรา"
+        pageName={t('h1')}
         engName="Service"
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        prevPage={{ pageName: h('home'), url: "/" }}
       />
       <div className="container mx-auto pb-10 text-black py-10">
-        <h1 className="text-blue-950 text-2xl">HACO Lab.</h1>
+        <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
           <div>
-            <div className="branchesTopic no-margin-b">
-              ในการป้องกันการสูญหายของภาชนะบรรจุสำหรับขนส่งสินค้าที่มีความสำคัญ
-              การควบคุมภาชนะเป็นรายชิ้นถือเป็นเรื่องจำเป็น
-              การควบคุมภาชนะขนส่งต้องสิ้นเปลืองทั้งเวลาและแรงงาน
-              จึงมีลูกค้าที่มีความไม่สะดวกอยู่เป็นจำนวนมาก
-              เพื่อเป็นการแก้ไขปัญหาความไม่สะดวกดังกล่าว เราจึงขอนำเสนอ "HACO
-              Lab." ซึ่งเป็นการนำ "ภาชนะขนส่ง"
-              มาลิงก์กับแอปพลิเคชันบนสมาร์ทโฟนเพื่อทำการเก็บบันทึกและควบคุมอย่างง่ายดายบนคลาวด์
-              ยิ่งไปกว่านั้นตามกฎหมายศุลกากรของประเทศญี่ปุ่นหรือประเทศไทยได้กำหนดมาตรการยกเว้นภาษีสำหรับ
-              Returnable Box การใช้ HACO Lab. จึงช่วยลดต้นทุนได้อีกด้วย
-              เราขอนำเสนอ "การพัฒนา" "การควบคุม" และ "การใช้"
-              ภาชนะขนส่งที่มีประสิทธิภาพแบบ One Stop ร่วมกับพาร์ตเนอร์หลายราย
-              เพื่อเนรมิตการขนส่งที่เหมาะสมที่สุดสำหรับลูกค้า
-            </div>
+            <div className="branchesTopic no-margin-b">{t('p')}</div>
 
             <div
               className="embed-responsive embed-responsive-16by9"
@@ -41,286 +56,265 @@ export default function Haco() {
               ></iframe>
             </div>
 
-            <div className="pageTitle1">กลไกการทำงานของ HACO Lab.</div>
+            <div className="pageTitle1">{t('h2')}</div>
 
-            <div className="hacoRow1Text1">ระบบคัลเลอร์โค้ด</div>
-
-            <ul className="hacoRow1">
-              <li>
-                <img src="../images/haco-lab/001.jpg" alt="HACO Lab." />
-                <div>
-                  <p>ออกคัลเลอร์โค้ด นำฉลากไปติดบนภาชนะขนส่งแต่ละชิ้น</p>
-                  <div style={{ fontSize: "70%", lineHeight: "140%" }}>
-                    ※Chameleon Code เป็นผลิตภัณฑ์ของ SHIFT Inc.
-                    และเป็นเครื่องหมายการค้าจดทะเบียนของ SHIFT Inc.
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <img src="../images/arrowR-2.jpg" alt="Arrow" />
-              </li>
-
-              <li>
-                <img src="../images/haco-lab/002.jpg" alt="HACO Lab." />
-                <div>ดาวน์โหลดแอปพลิเคชันในมือถือ และรับการยืนยัน License</div>
-              </li>
-
-              <li>
-                <img src="../images/arrowR-2.jpg" alt="Arrow" />
-              </li>
-
-              <li>
-                <img src="../images/haco-lab/003.jpg" alt="HACO Lab." />
-                <div>สแกนคัลเลอร์โค้ดด้วยมือถือ</div>
-              </li>
-
-              <li style={{ paddingTop: "130px" }}>
-                <img src="../images/arrowR-3.jpg" alt="Arrow" />
-              </li>
-
-              <li style={{ position: "relative" }}>
-                <div style={{ position: "absolute", marginTop: "215px" }}>
-                  <img src="../images/haco-lab/004.jpg" alt="HACO Lab." />
+            <div className="grid grid-cols-12">
+              <div className="col-span-9">
+                <div className="bg-[#1c2f50] text-white text-xl p-2 text-center my-8">{t('section1.1.1')}</div>
+              </div>
+              <div className="col-span-3"></div>
+            </div>
+            <div className="hidden md:block">
+              <ul className="hacoRow1">
+                <li>
+                  <img src="/img/service/haco-lab/001.jpg" alt="HACO Lab." />
                   <div>
-                    ข้อมูลต่างๆ เช่น เวลาที่สแกน สถานที่ที่สแกน
-                    จะมีการจัดเก็บไว้ในคลาวด์
+                    <p>{t('section1.1.1-1')}</p>
+                    <div style={{ fontSize: "70%", lineHeight: "140%" }}>
+                      ※{t('section1.1.1-1-1')}
+                    </div>
                   </div>
+                </li>
+                <li>
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" />
+                </li>
+                <li>
+                  <img src="/img/service/haco-lab/002.jpg" alt="HACO Lab." />
+                  <div>{t('section1.1.1-2')}</div>
+                </li>
+                <li>
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" />
+                </li>
+                <li>
+                  <img src="/img/service/haco-lab/003.jpg" alt="HACO Lab." />
+                  <div>{t('section1.1.1-3')}</div>
+                </li>
+                <li style={{ paddingTop: "130px" }}>
+                  <img src="/img/service/haco-lab/arrowR-3.jpg" alt="Arrow" />
+                </li>
+                <li style={{ position: "relative" }}>
+                  <div style={{ position: "absolute", marginTop: "215px" }}>
+                    <img src="/img/service/haco-lab/004.jpg" alt="HACO Lab." />
+                    <div>{t('section1.1.3')}</div>
+                  </div>
+                </li>
+              </ul>
+              <div className="grid grid-cols-12">
+                <div className="col-span-9">
+                  <div className="bg-[#1c2f50] text-white text-xl p-2 text-center my-8">
+                    <p>
+                      {t('section1.1.2')}
+                    </p>
+                  </div>
+                  <p className="text-xl mb-4">
+                    {t('section1.1.2-p')}
+                  </p>
                 </div>
-              </li>
-            </ul>
-
-            <div className="hacoRow1Text1">
-              RFID (Radio Frequency Identification)
-            </div>
-
-            <div className="hacoRow1Text2">
-              ติด "RFID Label" ซึ่งมีการป้อนข้อมูลอิเล็กทรอนิกส์ไว้
-              แล้วอ่านข้อมูลอิเล็กทรอนิกส์ด้วยเครื่องอ่าน (RFID Handy)
-            </div>
-
-            <ul className="hacoRow1">
-              <li>
-                <img src="../images/haco-lab/008.jpg" alt="HACO Lab." />
-                <div className="hacoRow1Text3">RFID Label</div>
-                <div>ออก RFID Label นำไปติดที่ภาชนะขนส่งแต่ละชิ้น</div>
-              </li>
-
-              <li>
-                <img src="../images/arrowR-2.jpg" alt="Arrow" />
-              </li>
-
-              <li>
-                <img src="../images/haco-lab/009.jpg" alt="HACO Lab." />
-                <div className="hacoRow1Text3">RFID Handy</div>
-                <div>อ่าน RFID Label ด้วยHandy</div>
-              </li>
-
-              <li>&nbsp;</li>
-
-              <li>
-                <img
-                  src="../images/haco-lab/010.jpg"
-                  style={{ marginLeft: "-30px" }}
-                  alt="HACO Lab."
-                />
-                <div>แม้อยู่ในระยะหลายเมตรก็สามารถอ่านได้</div>
-              </li>
-
-              <li style={{ paddingTop: "0" }}>
-                <img src="../images/arrowR-4.jpg" alt="Arrow" />
-              </li>
-
-              <li>&nbsp;</li>
-            </ul>
-
-            <div className="hacoRow2">
-              <ul>
+                <div className="col-span-3"></div>
+              </div>
+              <ul className="hacoRow1">
                 <li>
-                  <img src="../images/box-icon.png" alt="HACO Lab." />
+                  <img src="/img/service/haco-lab/008.jpg" alt="HACO Lab." />
+                  <div className="hacoRow1Text3">{t('section1.1.2-1')}</div>
+                  <div>{t('section1.1.2-1-p')}</div>
                 </li>
+
                 <li>
-                  ภาชนะขนส่งอยู่ที่ใด
-                  ก็ยืนยันได้เพียงมองบนหน้าจอคอมพิวเตอร์แวบเดียว!
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" />
                 </li>
+
+                <li>
+                  <img src="/img/service/haco-lab/009.jpg" alt="HACO Lab." />
+                  <div className="hacoRow1Text3">{t('section1.1.2-2')}</div>
+                  <div>{t('section1.1.2-2-p')}</div>
+                </li>
+                <li>&nbsp;</li>
+                <li>
+                  <img
+                    src="/img/service/haco-lab/010.jpg"
+                    style={{ marginLeft: "-30px" }}
+                    alt="HACO Lab."
+                  />
+                  <div>{t('section1.1.2-3')}</div>
+                </li>
+                <li style={{ paddingTop: "0" }}>
+                  <img src="/img/service/haco-lab/arrowR-4.jpg" alt="Arrow" />
+                </li>
+                <li>&nbsp;</li>
               </ul>
             </div>
 
-            <div className="pageTitle1">ข้อดีของ HACO Lab.</div>
-
-            <div className="hacoRow3">
-              <div className="row">
-                <div className="col-xs-3">
+            <div className="grid grid-cols-12 md:hidden">
+              <div className="col-span-12">
+                <img src="/img/service/haco-lab/001.jpg" alt="HACO Lab." />
+                <div>
+                  <p>{t('section1.1.1-1')}</p>
+                  <div className="text-sm">
+                    ※{t('section1.1.1-1-1')}
+                  </div>
+                  <div className="w-full flex justify-center">
+                    <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" className="rotate-90 mb-4"/>
+                  </div>
+                </div>
+              </div>
+              <div className="col-span-12">
+                <img src="/img/service/haco-lab/002.jpg" alt="HACO Lab." />
+                <div>{t('section1.1.1-2')}</div>
+                <div className="w-full flex justify-center">
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" className="rotate-90 mb-4"/>
+                </div>
+              </div>
+              <div className="col-span-12">
+                <img src="/img/service/haco-lab/003.jpg" alt="HACO Lab." />
+                <div>{t('section1.1.1-3')}</div>    
+                <div className="w-full flex justify-center">
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" className="rotate-90 mb-4"/>
+                </div>            
+              </div>
+              <div className="col-span-12">
+                <img src="/img/service/haco-lab/004.jpg" alt="HACO Lab." />
+                <div>{t('section1.1.3')}</div>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:hidden">
+                <div className="bg-[#1c2f50] text-white text-xl p-2 text-center my-8">
+                  <p>{t('section1.1.2')}</p>
+                </div>
+                <p className="text-xl mb-4">{t('section1.1.2-p')}</p>
+            </div>
+            <div className="grid grid-cols-12 gap-4 md:hidden">
+              <div className="col-span-12">
+                <div className="relative flex justify-center">
+                  <img src="/img/service/haco-lab/008.jpg" alt="HACO Lab." />
+                  <div className="absolute top-2 text-white text-xl">{t('section1.1.2-1')}</div>
+                </div>
+                <div className="my-4 text-center">{t('section1.1.2-1-p')}</div>
+                <div className="w-full flex justify-center">
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" className="rotate-90"/>
+                </div>
+              </div>
+              <div className="col-span-12">
+                <div className="relative flex justify-center">
+                  <img src="/img/service/haco-lab/009.jpg" alt="HACO Lab." />
+                  <div className="absolute top-2 text-white text-xl">{t('section1.1.2-2')}</div>
+                </div>
+                <div className="my-4 text-center">{t('section1.1.2-2-p')}</div>
+                <div className="w-full flex justify-center">
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" className="rotate-90"/>
+                </div>
+              </div>
+              <div className="col-span-12">
+                <div className="w-full flex justify-center">
                   <img
-                    src="../images/haco-lab/011.jpg"
-                    className="img-responsive img-center"
-                    alt="HACO Lab."
-                  />
+                      src="/img/service/haco-lab/010.jpg"
+                      style={{ marginLeft: "-30px" }}
+                      alt="HACO Lab."
+                    />
+                </div>
+                <div className="my-4 text-center">{t('section1.1.2-3')}</div>
+                <div className="w-full flex justify-center">
+                  <img src="/img/service/haco-lab/arrowR-2.jpg" alt="Arrow" className="rotate-90"/>
+                </div>
+              </div>
+              <div className="col-span-12">
+                <img src="/img/service/haco-lab/004.jpg" alt="HACO Lab." />
+                <div>{t('section1.1.3')}</div>
+              </div>
+            </div>
+            <div className="hacoRow2">
+              <ul>
+                <li>
+                  <img src="/img/service/haco-lab/box-icon.png" alt="HACO Lab." />
+                </li>
+                <li>{t('section1.1.other')}</li>
+              </ul>
+            </div>
+            <div className="pageTitle1">{t('section2.title')}</div>
+            <div className="hacoRow3">
+              <div className="grid grid-cols-12 gap-4">
+                <div className="col-span-12 md:col-span-3 p-4">
+                  <div className="flex items-center justify-center">
+                    <img
+                      src="/img/service/haco-lab/011.jpg"
+                      className="img-responsive img-center"
+                      alt="HACO Lab."
+                    />
+                  </div>
                   <div className="hacoRow3Text1">
-                    ใช้ Returnable Box เพื่อรับการยกเว้นภาษี
+                    {t('section2.1')}
                     <br />
                     <div style={{ fontSize: "70%" }}>
-                      ※อิงตามกฎหมายศุลกากรของแต่ละประเทศ
+                      ※{t('section2.1-p')}
                     </div>
                   </div>
                   <div className="hacoRow3Btn">
-                    <div className="row">
-                      <div className="col-xs-6">
-                        <a
-                          className="pageBtnMore"
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#JPLaw"
-                        >
-                          <div className="pageBtnMoreBg"></div>
-                          <div className="pageBtnMoreHover"></div>
-                          <div className="pageBtnMoreText">
-                            กฎหมายศุลกากรของประเทศญี่ปุ่น
-                          </div>
-                        </a>
+                    <div className="flex justify-between gap-2">
+                      <div className="w-[50%]">
+                        <BtnShadow action="law" law="jp" text={t('section2.button-jp')} color={`blue-950`} setModalHandler={setModalHandler}/>
                       </div>
-                      <div className="col-xs-6">
-                        <a
-                          className="pageBtnMore"
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#THLaw"
-                        >
-                          <div className="pageBtnMoreBg"></div>
-                          <div className="pageBtnMoreHover"></div>
-                          <div className="pageBtnMoreText">
-                            กฎหมายศุลกากรของประเทศไทย
-                          </div>
-                        </a>
+                      <div className="w-[50%]">
+                        <BtnShadow action="law" law="th" text={t('section2.button-th')} color={`blue-950`} setModalHandler={setModalHandler}/>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div className="col-xs-3">
-                  <img
-                    src="../images/haco-lab/005.jpg"
-                    className="img-responsive img-center"
-                    alt="HACO Lab."
-                  />
-                  <div className="hacoRow3Text1">
-                    ป้องกันการสูญหายหรือการตกค้างด้วยสต็อกภาชนะขนส่งที่มองเห็นได้
-                    จึงช่วยลดต้นทุน
-                    <br />
-                    <br />
+                <div className="col-span-12 md:col-span-3 p-4">
+                  <div className="flex items-center justify-center">
+                    <img
+                      src="/img/service/haco-lab/005.jpg"
+                      className="img-responsive img-center"
+                      alt="HACO Lab."
+                    />
                   </div>
+                  <div className="hacoRow3Text1">{t('section2.2')}</div>
                 </div>
-
-                <div className="col-xs-3">
-                  <img
-                    src="../images/haco-lab/006.jpg"
-                    className="img-responsive img-center"
-                    alt="HACO Lab."
-                  />
-                  <div className="hacoRow3Text1">
-                    ไม่ใช่การสร้างระบบควบคุมเฉพาะสำหรับภาชนะขนส่ง
-                    แต่เป็นการเพิ่มเติมเข้าไปในรูปแบบการขนส่งและกระจายสินค้าในปัจจุบัน
-                    จึงนำไปใช้ได้ง่าย
-                  </div>
+                <div className="col-span-12 md:col-span-3 p-4">
+                  <div className="flex items-center justify-center">
+                    <img
+                      src="/img/service/haco-lab/006.jpg"
+                      className="img-responsive img-center"
+                      alt="HACO Lab."
+                    />
+                    </div>
+                  <div className="hacoRow3Text1">{t('section2.3')}</div>
                 </div>
-
-                <div className="col-xs-3">
-                  <img
-                    src="../images/haco-lab/007.jpg"
-                    className="img-responsive img-center"
-                    alt="HACO Lab."
-                  />
-                  <div className="hacoRow3Text1">
-                    ใช้แอปพลิเคชันบนสมาร์ทโฟนและคลาวด์ในการควบคุม
-                    จึงสามารถนำไปใช้ได้ไม่ว่าจะอยู่ส่วนใดของโลก
-                    <br />
-                    <br />
+                <div className="col-span-12 md:col-span-3 p-4">
+                  <div className="flex items-center justify-center">
+                    <img
+                      src="/img/service/haco-lab/007.jpg"
+                      className="img-responsive img-center"
+                      alt="HACO Lab."
+                    />
                   </div>
+                  <div className="hacoRow3Text1">{t('section2.4')}</div>
                 </div>
               </div>
             </div>
-
-            <div style={{ width: "365px", margin: "0 auto" }}>
-              <a href="#" data-toggle="modal" data-target="#contactModel">
-                ลูกค้าที่พิจารณาจะนำไปใช้ กรุณาติดต่อที่นี่
+            <div>
+              <a className="pageBtnMore" href="#" data-toggle="modal" data-target="#contactModel">
+                <div className="pageBtnMoreBg"></div>
+                <div className="pageBtnMoreHover"></div>
+                <div className="pageBtnMoreText">{t('section2.click-to-contact')}</div>
               </a>
             </div>
-
-            <div className="handlingBox">
-              <div className="handlingTitle">สาขาที่ให้บริการ</div>
-              <div className="handlingList">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>・พระนครศรีอยุธยา</td>
-                      <td>・บางปะกง</td>
-                      <td>・แหลมฉบัง</td>
-                      <td>・ปราจีนบุรี</td>
-                      <td>・เชียงใหม่</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* Modals */}
-            <div className="modal fade" id="JPLaw" role="dialog">
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-body">
-                    <div className="modalText">
-                      กฎหมายศุลกากรของประเทศญี่ปุ่น...
-                    </div>
-                    <button
-                      type="button"
-                      className="contactBtn contactClose"
-                      data-dismiss="modal"
-                    >
-                      ปิด
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="modal fade" id="THLaw" role="dialog">
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-body">
-                    <div className="modalText">
-                      กฎหมายศุลกากรของประเทศไทย...
-                    </div>
-                    <button
-                      type="button"
-                      className="contactBtn contactClose"
-                      data-dismiss="modal"
-                    >
-                      ปิด
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="modal fade" id="contactModel" role="dialog">
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-body">
-                    <div className="modalText">Contact form here...</div>
-                    <button
-                      type="button"
-                      className="contactBtn contactClose"
-                      data-dismiss="modal"
-                    >
-                      ปิด
-                    </button>
-                  </div>
+            <div className="grid grid-cols-12">
+              <div className="col-span-12">
+                <div className="handlingBox">
+                  <div className="handlingTitle">{b('title')}</div>
+                  <ul className="list-disc grid md:flex">
+                    <li className="ms-8 ps-0">{b('ayutthaya')}</li>
+                    <li className="ms-8 ps-0">{b('bangpakong')}</li>
+                    <li className="ms-8 ps-0">{b('laem-chabang')}</li>
+                    <li className="ms-8 ps-0">{b('prachinburi')}</li>
+                    <li className="ms-8 ps-0">{b('chiang-mai')}</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {showModal && <Modal title={titleModal} action={typeModal} closeModal={closeModal} detailModal={detailModal}/>}
     </>
   );
 }

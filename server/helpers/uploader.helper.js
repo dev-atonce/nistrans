@@ -18,7 +18,10 @@ const method = {
 
         const upload = multer({
             storage: storage,
-            limits: { fileSize: config.limitFileSize },
+            limits: {
+                fileSize: 2 * 1024 * 1024,
+                fieldSize: 25 * 1024 * 1024,
+            },
         });
 
         return upload;
