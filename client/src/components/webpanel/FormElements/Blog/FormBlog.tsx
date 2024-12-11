@@ -50,7 +50,7 @@ const FormBlog = ({
                   type="text"
                   name={`blog_title_${_v}`}
                   // @ts-ignore
-                  value={`${itemState[`blog_title_${_v}`]}`}
+                  value={`${itemState[`blog_title_${_v}`] ? itemState[`blog_title_${_v}`] : ""}`}
                   onChange={setItemState}
                   placeholder={`Blog Title ${_v.toUpperCase()}`}
                   className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -112,7 +112,7 @@ const FormBlog = ({
                   className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                   name={`blog_description_${_v}`}
                   // @ts-ignore
-                  value={`${itemState[`blog_description_${_v}`]}`}
+                  value={`${itemState[`blog_description_${_v}`] ? itemState[`blog_description_${_v}`] : ""}`}
                   onChange={(event) => setItemState(event)}
                   placeholder={`Blog Description ${_v.toUpperCase()}`}
                 />

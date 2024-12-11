@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import BtnShadow from "@/components/website/atom/button/BtnShadow";
 import Modal from "@/components/website/atom/modal/Modal";
 import { useState } from "react";
+import { Link } from "@/i18n/routing";
 
 export default function Haco() 
 {
@@ -16,14 +17,13 @@ export default function Haco()
   const [showModal, setModal] = useState<Boolean>(false);
   const [typeModal, setType] = useState<string>('');
   const [titleModal,setTitle] = useState<string>('');
-  const [detailModal,setDetail] = useState<string>('');
+  const [law,setLaw] = useState<string>('');
 
-  const setModalHandler = ({ev,law}:any) => {
-    console.log(ev,law)
+  const setModalHandler = (action:any,law:any) => {
     setModal(!showModal);
-    setType(ev);
-    setDetail(law=='jp'?m('law.jp'):m('law.th'));
-    setTitle(law=='jp'?m('law.jp-title'):m('law.th-title'))
+    setType(action);
+    setLaw(law);
+    setTitle(law=='jp'?`${m('law.jp.title')}`:`${m('law.th.title')}`)
   }
   const closeModal = () => {
     setModal(false);
@@ -37,7 +37,7 @@ export default function Haco()
         engName="Service"
         prevPage={{ pageName: h('home'), url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black py-10">
+      <div className="container px-2 md:px-0 mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t('h1')}</h1>
         <div className="py-10">
           <div>
@@ -290,12 +290,17 @@ export default function Haco()
                 </div>
               </div>
             </div>
-            <div>
-              <a className="pageBtnMore" href="#" data-toggle="modal" data-target="#contactModel">
+            <div className="grid grid-cols-12 gap-4">
+              <div className="col-start-4"></div>
+              <div className="col-span-4">
+                <BtnShadow href="contact" text={t('section2.click-to-contact')} color={`blue-950`} />
+              </div>
+             
+              {/* <Link className="pageBtnMore" href="#">
                 <div className="pageBtnMoreBg"></div>
                 <div className="pageBtnMoreHover"></div>
                 <div className="pageBtnMoreText">{t('section2.click-to-contact')}</div>
-              </a>
+              </Link> */}
             </div>
             <div className="grid grid-cols-12">
               <div className="col-span-12">
@@ -314,7 +319,13 @@ export default function Haco()
           </div>
         </div>
       </div>
-      {showModal && <Modal title={titleModal} action={typeModal} closeModal={closeModal} detailModal={detailModal}/>}
+      { showModal && <Modal 
+          title={titleModal} 
+          action={typeModal} 
+          law={law}
+          closeModal={closeModal} 
+        />
+      }
     </>
   );
 }

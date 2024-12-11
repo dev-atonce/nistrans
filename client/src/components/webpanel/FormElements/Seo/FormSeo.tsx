@@ -2,6 +2,7 @@ import { SeoProps } from "@/types/seoType";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useUsersStore } from "@/store/usersStore";
+import { Tabs } from "antd";
 
 interface FormSeoProps {
   itemState: SeoProps;
@@ -17,6 +18,11 @@ const FormSeo = ({ itemState, setItemState, handleSubmit }: FormSeoProps) => {
 
     !allow && router.push("/webpanel");
   }, []);
+
+  const envLangs = process.env.NEXT_PUBLIC_LANGUAGES;
+  // @ts-ignore
+  const languages = envLangs.split(",").map((i: any) => i);
+
   return (
     <div className="grid grid-cols-2 gap-9">
       <div className="flex flex-col gap-9">
@@ -34,43 +40,76 @@ const FormSeo = ({ itemState, setItemState, handleSubmit }: FormSeoProps) => {
               <label className="mb-3 block text-sm font-medium text-black dark:text-white">
                 Title
               </label>
-              <input
-                type="text"
-                name="seoTitleTH"
-                value={itemState?.seoTitleTH}
-                onChange={setItemState}
-                placeholder="Enter Seo Title"
-                className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+              <Tabs
+                type="card"
+                items={languages.map((_v, i) => {
+                  const id = String(i + 1);
+                  return {
+                    label: `${_v.toUpperCase()}`,
+                    key: id,
+                    children: <input
+                      type="text"
+                      name={`seoTitle${_v.toUpperCase()}`}
+                      // @ts-ignore
+                      value={`${itemState[`seoTitle${_v.toUpperCase()}`] ? itemState[`seoTitle${_v.toUpperCase()}`] : ""}`}
+                      onChange={setItemState}
+                      placeholder={`Enter Seo Title ${_v.toUpperCase()}`}
+                      className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    />,
+                  };
+                })}
               />
             </div>
             <div className="col-span-2">
               <label className="mb-3 block text-sm font-medium text-black dark:text-white">
                 Description
               </label>
-              <textarea
-                rows={7}
-                type="text"
-                name="seoDescriptionTH"
-                value={itemState.seoDescriptionTH}
-                // @ts-ignore
-                onChange={setItemState}
-                placeholder="Enter Seo Description"
-                className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+              <Tabs
+                type="card"
+                items={languages.map((_v, i) => {
+                  const id = String(i + 1);
+                  return {
+                    label: `${_v.toUpperCase()}`,
+                    key: id,
+                    children: <textarea
+                      rows={7}
+                      type="text"
+                      name={`seoDescription${_v.toUpperCase()}`}
+                      // @ts-ignore
+                      value={`${itemState[`seoDescription${_v.toUpperCase()}`] ? itemState[`seoDescription${_v.toUpperCase()}`] : ""}`}
+                      // @ts-ignore
+                      onChange={setItemState}
+                      placeholder={`Enter Seo Description ${_v.toUpperCase()}`}
+                      className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    />,
+                  };
+                })}
               />
             </div>
             <div className="col-span-2">
               <label className="mb-3 block text-sm font-medium text-black dark:text-white">
                 Keyword
               </label>
-              <textarea
-                rows={7}
-                type="text"
-                name="seoKeywordTH"
-                value={itemState.seoKeywordTH}
-                // @ts-ignore
-                onChange={setItemState}
-                placeholder="Enter Seo Keyword"
-                className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+              <Tabs
+                type="card"
+                items={languages.map((_v, i) => {
+                  const id = String(i + 1);
+                  return {
+                    label: `${_v.toUpperCase()}`,
+                    key: id,
+                    children: <textarea
+                      rows={7}
+                      type="text"
+                      name={`seoKeyword${_v.toUpperCase()}`}
+                      // @ts-ignore
+                      value={`${itemState[`seoKeyword${_v.toUpperCase()}`] ? itemState[`seoKeyword${_v.toUpperCase()}`] : ""}`}
+                      // @ts-ignore
+                      onChange={setItemState}
+                      placeholder={`Enter Seo Keyword ${_v.toUpperCase()}`}
+                      className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    />,
+                  };
+                })}
               />
             </div>
             <div className="col-span-2">

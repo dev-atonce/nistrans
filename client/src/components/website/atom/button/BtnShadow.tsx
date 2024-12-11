@@ -1,3 +1,5 @@
+import { Link } from "@/i18n/routing";
+
 const DoubleArrowRight = () => (
     <svg 
         width="25px" 
@@ -26,19 +28,34 @@ const DoubleArrowRight = () => (
     </svg>
 );
 
-export default function BtnShadow({action,law,text,color,modal,target,href,setModalHandler}:any)
+export default function BtnShadow({action,law,text,color,href,setModalHandler}:any)
 {
     const defaultColor = 'blue-950';
-    return (<a
-        className={`relative text-white bg-${color?color:defaultColor} border-${color?color:defaultColor} border-2 p-1 flex hover:text-${color?color:defaultColor} hover:shadow-[inset_12rem_0_0_0] hover:shadow-white duration-[600ms,600ms] transition-[color,box-shadow]`}
-        href={`${href?href:`javascript:`}`}
-        data-toggle="modal"
-        data-target="#JPLaw"
-        onClick={()=>setModalHandler(action,law)}
-    >
-        <span className="w-full text-center">{text}</span>
-        <div className="absolute right-0 top-1 h-full">
-            <DoubleArrowRight />
-        </div>
-    </a>)
+    return (
+        <>
+            {setModalHandler &&
+                <a
+                className={`relative text-white bg-${color?color:defaultColor} border-blue-950 border-2 p-1 flex hover:text-blue-950 hover:shadow-[inset_12rem_0_0_0] hover:shadow-white duration-[600ms,600ms] transition-[color,box-shadow]`}
+                href={`${href?href:`javascript:`}`}
+                onClick={(e)=>setModalHandler(action,law)}
+            >
+                <span className="w-full text-center">{text}</span>
+                <div className="absolute right-0 top-1 h-full">
+                    <DoubleArrowRight />
+                </div>
+            </a>}
+            {
+                !setModalHandler && 
+                <Link 
+                    className={`relative text-white flex items-center bg-${color?color:defaultColor} border-blue-950 border-2 p-1 flex hover:text-blue-950 hover:shadow-[inset_40rem_0_0_0] hover:shadow-white duration-[650ms,650ms] transition-[color,box-shadow]`}
+                    href={`/${href}`}
+                >
+                    <span className="w-full text-center">{text}</span>
+                    <div className="absolute right-0 top-1 h-full">
+                        <DoubleArrowRight />
+                    </div>
+                </Link>
+            }
+        </>
+    )
 }
