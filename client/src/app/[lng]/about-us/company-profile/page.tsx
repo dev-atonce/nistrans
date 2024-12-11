@@ -3,6 +3,7 @@ import CompoJp from "@/components/website/layout/CompanyProfile/CompoJp";
 import CompoTh from "@/components/website/layout/CompanyProfile/CompoTh";
 import Cover from "@/components/website/layout/Cover";
 import { Metadata, ResolvingMetadata } from "next";
+import { useTranslations } from "next-intl";
 
 const pageName = "about-us";
 export async function generateMetadata(
@@ -29,7 +30,9 @@ export async function generateMetadata(
     },
   };
 }
-export default async function AboutPage({ params: { lng } }: any) {
+export default function AboutPage({ params: { lng } }: any) {
+  const t = useTranslations("about-pages");
+  const h = useTranslations("header");
   const content =
     lng === "th" ? (
       <CompoTh />
@@ -43,9 +46,9 @@ export default async function AboutPage({ params: { lng } }: any) {
   return (
     <>
       <Cover
-        pageName="ข้อมูลบริษัท"
+        pageName={t("profile")}
         engName="About Us"
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        prevPage={{ pageName: h("home"), url: "/" }}
       />
       {content}
     </>

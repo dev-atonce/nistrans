@@ -1,8 +1,26 @@
-const ChinaBranches = () => {
+const ChinaBranches = ({ lng }: any) => {
+  const content = {
+    th: {
+      south: "ภาคใต้ของจีน ・ ฮ่องกง",
+      east: "ภาคตะวันออกของจีน",
+      north: "ภาคเหนือของจีน ・ภาคตะวันออกเฉียงเหนือของจีน",
+    },
+    en: {
+      south: "South China・Hong Kong",
+      east: "East China",
+      north: "North China, Northeast",
+    },
+    jp: {
+      south: "華南・香港",
+      east: "華東",
+      north: "華北・東北",
+    },
+  };
   return (
     <>
       <section>
-        <div className="pageTitle1">ภาคใต้ของจีน ・ ฮ่องกง</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["south"]}</div>
 
         <div className="branchesTitle">
           NISSIN TRANSPORTATION & WAREHOUSING (H.K.) LTD.
@@ -30,7 +48,8 @@ const ChinaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">ภาคตะวันออกของจีน</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["east"]}</div>
 
         <div className="branchesTitle">
           JIANGSU NISSIN SINOTRANS INTERNATIONAL TRANSPORTATION CO., LTD.
@@ -73,7 +92,8 @@ const ChinaBranches = () => {
 
       <section>
         <div className="pageTitle1">
-          ภาคเหนือของจีน ・ภาคตะวันออกเฉียงเหนือของจีน
+          {/* @ts-ignore */}
+          {content[lng]["north"]}
         </div>
 
         <div className="branchesTitle">

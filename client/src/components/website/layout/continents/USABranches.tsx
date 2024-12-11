@@ -1,8 +1,26 @@
-const USABranches = () => {
+const USABranches = ({ lng }: any) => {
+  const content = {
+    th: {
+      us: "สหรัฐอเมริกา",
+      ca: "เนเธอร์แลนด์",
+      mx: "เม็กซิโก",
+    },
+    en: {
+      us: "U.S.A",
+      ca: "Canada",
+      mx: "Mexico",
+    },
+    jp: {
+      us: "米国",
+      ca: "カナダ",
+      mx: "メキシコ",
+    },
+  };
   return (
     <>
       <section>
-        <div className="pageTitle1">สหรัฐอเมริกา</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["us"]}</div>
         <div className="branchesTitle">
           NISSIN INTERNATIONAL TRANSPORT U.S.A., INC.
           <a
@@ -20,7 +38,8 @@ const USABranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">แคนาดา</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["ca"]}</div>
         <div className="branchesTitle">
           NISSIN TRANSPORT (CANADA) INC.
           <a
@@ -38,7 +57,8 @@ const USABranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">เม็กซิโก</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["mx"]}</div>
         <div className="branchesTitle">
           NISTRANS INTERNACIONAL DE MEXICO,S.DE R.L.DE C.V.
           <a

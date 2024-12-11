@@ -18,7 +18,9 @@
     "packing-loading": "Packing/Loading",
     "custom-clearance": "Custom Clearance",
     "scm-solutions": "SCM Solutions",
-    "apply": "Apply"
+    "apply": "Apply",
+    "branch": "Domestic Branches",
+    "group": "Nissin Group"
   },
   "blog-section": {
     "news": "News",
@@ -529,5 +531,12 @@
       }
     },
     "close": "Close"
+  },
+  "about-pages": {
+    "group": "Domestic Branches",
+    "branch": "Domestic Branches",
+    "profile": "Company Profile",
+    "history": "Company History",
+    "behavior": "Corporate Behavior"
   }
 }

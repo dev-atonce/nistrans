@@ -1,8 +1,47 @@
-const EuroBranches = () => {
+const EuroBranches = ({ lng }: any) => {
+  const content = {
+    th: {
+      de: "เยอรมนี",
+      nd: "เนเธอร์แลนด์",
+      uk: "สหราชอาณาจักร",
+      es: "สเปน",
+      fr: "ฝรั่งเศส",
+      be: "เบลเยียม",
+      po: "โปแลนด์",
+      au: "ออสเตรีย",
+      ru: "รัสเซีย",
+      ka: "คาซัคสถาน",
+    },
+    en: {
+      de: "Germany",
+      nd: "Netherlands",
+      uk: "United Kingdom",
+      es: "Spain",
+      fr: "France",
+      be: "Belgium",
+      po: "Poland",
+      au: "Austria",
+      ru: "Russia",
+      ka: "Kazakhstan",
+    },
+    jp: {
+      de: "ドイツ",
+      nd: "オランダ",
+      uk: "英国",
+      es: "スペイン",
+      fr: "フランス",
+      be: "ベルギー",
+      po: "ポーランド",
+      au: "オーストリア",
+      ru: "ロシア",
+      ka: "カザフスタン",
+    },
+  };
   return (
     <>
       <section>
-        <div className="pageTitle1">เยอรมนี</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["de"]}</div>
         <div className="branchesTitle">
           NISSIN TRANSPORT GMBH
           <a
@@ -20,7 +59,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">เนเธอร์แลนด์</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["nd"]}</div>
         <div className="branchesTitle">
           NISSIN TRANSPORT GmbH Tilburg Branch
         </div>
@@ -32,7 +72,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">สหราชอาณาจักร</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["uk"]}</div>
         <div className="branchesTitle">
           NISSIN (U.K.) LTD.
           <a
@@ -51,7 +92,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">สเปน</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["es"]}</div>
         <div className="branchesTitle">NISSIN TRANSPORTES ESPANA S.A.</div>
         <div className="branchesText">
           Avda. Diagonal, 309, 5-A. 08013, Barcelona, Spain
@@ -61,7 +103,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">ฝรั่งเศส</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["fr"]}</div>
         <div className="branchesTitle">NISSIN FRANCE S.A.S.</div>
         <div className="branchesText">
           C/O GEODIS WILSON FRANCE SAS 344, Rue de La Belle Etoile, Paris Nord
@@ -72,7 +115,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">เบลเยียม</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["be"]}</div>
         <div className="branchesTitle">NISSIN BELGIUM N.V.</div>
         <div className="branchesText">
           C/O SACO GROUPAIR NV Bedrijvenzone Machelen Cargo 738/B2.6 B-1830
@@ -83,7 +127,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">โปแลนด์</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["po"]}</div>
         <div className="branchesTitle">NISSIN LOGISTICS POLAND SP. Z O.O.</div>
         <div className="branchesText">
           Ostaszewo 57K, 87-148 Lysomice, Poland
@@ -93,7 +138,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">ออสเตรีย</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["au"]}</div>
         <div className="branchesTitle">NISSIN TRANSPORT GES. MBH</div>
         <div className="branchesText">
           Kasernstrasse 5, 2301 Gross Enzersdorf, Austria
@@ -103,7 +149,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">รัสเซีย</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["ru"]}</div>
         <div className="branchesTitle">
           LIMITED LIABILITY COMPANY &quot;NISSIN RUS&quot;
         </div>
@@ -123,7 +170,8 @@ const EuroBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">คาซัคสถาน</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1">{content[lng]["ka"]}</div>
         <div className="branchesTitle">ALMATY REP. OFFICE</div>
         <div className="branchesText">
           151/115 Abay Avenue Office 1003, 10th Floor, Business Center

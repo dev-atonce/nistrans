@@ -1,8 +1,44 @@
-const AsiaBranches = () => {
+const AsiaBranches = ({ lng }: any) => {
+  const content = {
+    th: {
+      th: "ประเทศไทย",
+      sg: "สิงคโปร์",
+      ma: "มาเลเซีย",
+      ph: "ฟิลิปปินส์",
+      in: "อินเดีย",
+      indo: "อินโดนีเซีย",
+      vn: "เวียดนาม",
+      la: "สปป.ลาว",
+      my: "พม่า",
+    },
+    en: {
+      th: "Thailand",
+      sg: "Singapore",
+      ma: "Malaysia",
+      ph: "Philippines",
+      in: "India",
+      indo: "Indonesia",
+      vn: "Vietnam",
+      la: "Lao P. D. R.",
+      my: "Myanmar",
+    },
+    jp: {
+      th: "タイ",
+      sg: "シンガポール",
+      ma: "マレーシア",
+      ph: "フィリピン",
+      in: "インド",
+      indo: "インドネシア",
+      vn: "ベトナム",
+      la: "ラオス",
+      my: "ミャンマー",
+    },
+  };
   return (
     <>
       <section>
-        <div className="pageTitle1">ประเทศไทย</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["th"]}</div>
 
         <div className="branchesTitle">
           SIAM NISTRANS CO., LTD.
@@ -67,7 +103,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">สิงคโปร์</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["sg"]}</div>
 
         <div className="branchesTitle">NISSIN TRANSPORT (S) PTE. LTD.</div>
 
@@ -79,7 +116,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">มาเลเซีย</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["ma"]}</div>
 
         <div className="branchesTitle">NISTRANS (M) SDN. BHD.</div>
 
@@ -103,7 +141,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">ฟิลิปปินส์</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["ph"]}</div>
 
         <div className="branchesTitle">
           NISSIN TRANSPORT PHILIPPINES CORPORATION
@@ -126,7 +165,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">อินเดีย</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["in"]}</div>
 
         <div className="branchesTitle">
           NISSIN ABC LOGISTICS PRIVATE LIMITED
@@ -141,7 +181,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">อินโดนีเซีย</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["indo"]}</div>
 
         <div className="branchesTitle">PT.NISSIN JAYA INDONESIA</div>
 
@@ -163,7 +204,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">เวียดนาม</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["vn"]}</div>
 
         <div className="branchesTitle">NISSIN LOGISTICS (VN) CO., LTD.</div>
 
@@ -185,7 +227,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">สปป.ลาว</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["la"]}</div>
 
         <div className="branchesTitle">LAO NISSIN SMT CO., LTD.</div>
 
@@ -198,7 +241,8 @@ const AsiaBranches = () => {
       </section>
 
       <section>
-        <div className="pageTitle1">พม่า</div>
+        {/* @ts-ignore */}
+        <div className="pageTitle1"> {content[lng]["my"]}</div>
 
         <div className="branchesTitle">YANGON REP. OFFICE</div>
 
