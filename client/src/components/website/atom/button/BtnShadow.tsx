@@ -47,7 +47,7 @@ export default function BtnShadow({action,law,text,color,href,setModalHandler}:a
             {
                 !setModalHandler && 
                 <Link 
-                    className={`relative text-white flex items-center bg-${color?color:defaultColor} border-blue-950 border-2 p-1 flex hover:text-blue-950 hover:shadow-[inset_40rem_0_0_0] hover:shadow-white duration-[650ms,650ms] transition-[color,box-shadow]`}
+                    className={`px-10 relative text-white flex items-center bg-${color?color:defaultColor} border-blue-950 border-2 p-1 flex hover:text-blue-950 hover:shadow-[inset_40rem_0_0_0] hover:shadow-white duration-[650ms,650ms] transition-[color,box-shadow]`}
                     href={`/${href}`}
                 >
                     <span className="w-full text-center">{text}</span>
