@@ -143,6 +143,16 @@ const methods = {
         }
     },
 
+    async update(req) {
+        try {
+            const obj = await FormContact.findOneAndUpdate({ _id: req.params.id }, { $set: req.body }, { new: true }).exec();
+            if (!obj) return Promise.reject(ErrorNotFound("id: not found"));
+            return obj;
+        } catch (error) {
+            return Promise.reject(ErrorBadRequest(error.message));
+        }
+    },
+
     async delete(id) {
         try {
             const obj = await FormContact.findOneAndDelete({ _id: id }).exec();
