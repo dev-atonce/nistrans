@@ -16,11 +16,12 @@ export default function Footer({ logo }: any) {
             <div className="flex items-start gap-4 flex-col">
               <Logo img={logo} />
               <span
-                className="text-base text-center md:text-left"
+                className="text-base text-center md:text-left hidden md:block"
                 style={{ whiteSpace: "pre" }}
               >
                 {t("address")}
               </span>
+              <span className="text-base text-center md:text-left block md:hidden">{t("address")}</span>
               <div className="flex items-center gap-4">
                 <FaPhone size={20} />
                 <span>
