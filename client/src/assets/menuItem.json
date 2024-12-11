@@ -17,8 +17,18 @@
       },
       {
         "key": "policy",
-        "href": "/about-us/company-policy",
-        "title": "Company Policy"
+        "href": "/about-us/corporate-behavior",
+        "title": "Corporate Behavior"
+      },
+      {
+        "key": "branch",
+        "href": "/about-us/branches",
+        "title": "Branches"
+      },
+      {
+        "key": "group",
+        "href": "/about-us/nissin-group",
+        "title": "Nission Group"
       }
     ]
   },

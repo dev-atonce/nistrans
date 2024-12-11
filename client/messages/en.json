@@ -14,7 +14,7 @@
     "land-transportation": "Land Transportation",
     "warehouse": "Warehouse",
     "machinery-installation": "Machinery Installation",
-    "house-moving": "House Monving",
+    "house-moving": "House Moving",
     "packing-loading": "Packing/Loading",
     "custom-clearance": "Custom Clearance",
     "scm-solutions": "SCM Solutions",
@@ -487,47 +487,47 @@
     "date": "Last updated: 01/06/2022"
   },
   "modal": {
-      "law": {
-          "jp":{
-              "title":"Japan's Customs Act",
-              "1":"Customs Tariff Act Section 14 (Unconditional duty exemption)",
-              "2":"Duty on the following goods to be imported shall be exempted in accordance with the provisions of the Cabinet Order:",
-              "3":"Clause 11: Containers (including similar goods) for goods exported from the country as prescribed under the Cabinet Order and used for such export or to be used for import.",
-              "4":"Customs Tariff Act Section 17 (Duty exemption on re-export)",
-              "5":"Duty on the following goods to be exported within one (1) year from the date of import permit shall be exempted in accordance with the provisions of the Cabinet Order:",
-              "6":"Clause 1 (ii) Containers for imported goods as prescribed under the Cabinet Order",
-              "7":"Clause 1 (iii) Goods used as a container for exported goods as prescribed under the Cabinet Order",
-              "8":"As of October 2019"
-          },
-          "th":{
-              "title":"Thailand's Customs Act",
-              "1":"Duty exemption on returnable containers for imported goods.",
-              "2":"On July 9, 2018, the Customs Bureau issued a notification (No.154 / 2561) to apply a tax exemption measure for returnable containers for imported cargo called \"return boxes\".",
-              "3":"※For details, please contact us."
-          }
+    "law": {
+      "jp": {
+        "title": "Japan's Customs Act",
+        "1": "Customs Tariff Act Section 14 (Unconditional duty exemption)",
+        "2": "Duty on the following goods to be imported shall be exempted in accordance with the provisions of the Cabinet Order:",
+        "3": "Clause 11: Containers (including similar goods) for goods exported from the country as prescribed under the Cabinet Order and used for such export or to be used for import.",
+        "4": "Customs Tariff Act Section 17 (Duty exemption on re-export)",
+        "5": "Duty on the following goods to be exported within one (1) year from the date of import permit shall be exempted in accordance with the provisions of the Cabinet Order:",
+        "6": "Clause 1 (ii) Containers for imported goods as prescribed under the Cabinet Order",
+        "7": "Clause 1 (iii) Goods used as a container for exported goods as prescribed under the Cabinet Order",
+        "8": "As of October 2019"
       },
-      "form":{
-          "name":"Name",
-          "company":"Company name",
-          "department":"Department",
-          "email":"Email",
-          "cEmail":"Email (confirm)",
-          "phone":"Phone",
-          "address":"address",
-          "subject":{
-              "transport":"Transport",
-              "warehouse":"Warehouse/storage",
-              "moving":"Moving",
-              "haco-lab":"HACO Lab.",
-              "career":"Careers",
-              "title":"Others"
-          },
-          "content":"content",
-          "privacy-policy":{
-              "1":"By clicking this checkbox, I agree to the",
-              "2":"privacy policy."
-          }
+      "th": {
+        "title": "Thailand's Customs Act",
+        "1": "Duty exemption on returnable containers for imported goods.",
+        "2": "On July 9, 2018, the Customs Bureau issued a notification (No.154 / 2561) to apply a tax exemption measure for returnable containers for imported cargo called \"return boxes\".",
+        "3": "※For details, please contact us."
+      }
+    },
+    "form": {
+      "name": "Name",
+      "company": "Company name",
+      "department": "Department",
+      "email": "Email",
+      "cEmail": "Email (confirm)",
+      "phone": "Phone",
+      "address": "address",
+      "subject": {
+        "transport": "Transport",
+        "warehouse": "Warehouse/storage",
+        "moving": "Moving",
+        "haco-lab": "HACO Lab.",
+        "career": "Careers",
+        "title": "Others"
       },
-      "close":"Close"
+      "content": "content",
+      "privacy-policy": {
+        "1": "By clicking this checkbox, I agree to the",
+        "2": "privacy policy."
+      }
+    },
+    "close": "Close"
   }
 }
