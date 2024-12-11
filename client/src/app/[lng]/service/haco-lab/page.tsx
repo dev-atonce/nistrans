@@ -292,7 +292,7 @@ export default function Haco()
             </div>
             <div className="grid grid-cols-12 gap-4">
               <div className="col-start-4"></div>
-              <div className="col-span-4">
+              <div className="col-span-12 md:col-span-4">
                 <BtnShadow href="contact" text={t('section2.click-to-contact')} color={`blue-950`} />
               </div>
              
