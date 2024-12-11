@@ -16,10 +16,14 @@ export default function HomeMoving({ lang }: any) {
             <section className="flex flex-col items-center gap-4">
               <div className="flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
                 <div className="text-xs ">
-                  <br />
                   {t("1-1")}
+                  <br />
+                  {t("1-1-2")}
                 </div>
-                <div className="text-orange-500">{t("1-2")}</div>
+                <div className="text-orange-500 font-semibold text-xl">
+                  {t("1-2")} <br />
+                  {t("1-2-2")}{" "}
+                </div>
                 <img className="w-[50px] rounded-full" src="../img/001.jpg" />
               </div>
               <div className="">{t("1-3")}</div>
@@ -29,8 +33,15 @@ export default function HomeMoving({ lang }: any) {
           <div className="col-span-4">
             <section className="flex flex-col items-center gap-4">
               <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
-                <div className="text-xs">{t("2-1")}</div>
-                <div className=" text-orange-500">{t("2-2")}</div>
+                <div className="text-xs">
+                  {t("2-1")}
+                  <br />
+                  {t("2-1-2")}
+                </div>
+                <div className=" text-orange-500 font-semibold text-xl">
+                  {t("2-2")} <br />
+                  {t("2-2-2")}
+                </div>
                 <img className="w-[50px] " src="../img/002.jpg" />
               </div>
               <div className="">{t("2-3")}</div>
@@ -40,8 +51,15 @@ export default function HomeMoving({ lang }: any) {
           <div className="col-span-4">
             <section className=" flex flex-col items-center gap-4">
               <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
-                <div className="text-xs">{t("3-1")}</div>
-                <div className=" text-orange-500">{t("3-2")}</div>
+                <div className="text-xs">
+                  {t("3-1")}
+                  <br />
+                  {t("3-1-2")}
+                </div>
+                <div className=" text-orange-500 font-semibold text-xl">
+                  {t("3-2")} <br />
+                  {t("3-2-2")}{" "}
+                </div>
                 <img
                   className="w-[50px] h-[50px] rounded-full"
                   src="../img/003.jpg"
@@ -52,13 +70,12 @@ export default function HomeMoving({ lang }: any) {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center py-10">
           <Link
             href={`${lang}/service/moving`}
             className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
           >
-            รายละเอียดเพิ่มเติม
-            {/* {t("button.see-all")} */}
+            {t("see-more")}
           </Link>
         </div>
       </div>

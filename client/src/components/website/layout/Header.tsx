@@ -64,16 +64,16 @@ export default function Header({ logo, lng }: any) {
   return (
     <div className="shadow-md bg-white ">
       <div className="header container mx-auto px-2 xl:px-0">
-        <div className="xl:flex justify-between mx-auto h-full px-2 lg:px-0">
+        <div className="xl:flex justify-between items-center mx-auto h-full px-2 lg:px-0">
           <div className="logo">
-            <div className="py-4 flex justify-between">
+            <div className="py-4 flex justify-between items-center">
               <Logo img={logo} />
               <div className="flex xl:hidden">
                 <div
                   className="cursor-pointer flex flex-col items-center justify-around w-8 h-8 burger"
                   onClick={toggleSidebar}
                 >
-                  <GiHamburgerMenu size={35} color="#ED1F23" />
+                  <GiHamburgerMenu size={35} color="#FC7503" />
                 </div>
               </div>
             </div>
@@ -116,8 +116,9 @@ export default function Header({ logo, lng }: any) {
           } top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}
         ></div>
         <div
-          className={`fixed block z-99 lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+          className={`fixed block z-99 lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         >
           <SideBar
             lng={lng}

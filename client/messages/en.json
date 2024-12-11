@@ -23,8 +23,9 @@
   "blog-section": {
     "news": "News",
     "more": "See More",
-    "announcement": "Announcement",
-    "blog": "Blog"
+    "announcement": "News",
+    "blog": "Blog",
+    "tracking": "Air Cargo Tracking"
   },
   "cover": {
     "h1": "Reaching and Delivering to the World",
@@ -42,14 +43,47 @@
   "moving-section": {
     "heading": "Moving by Siam Nistrans",
     "1-1": "From/To Thailand",
-    "1-2": "Overseas moving",
+    "1-1-2": "",
+    "1-2": "Overseas ",
+    "1-2-2": "moving",
     "1-3": "No worries about unexpected transfer or repatriation. With our integrated service from packing, collecting, customs clearance to delivery, we take care of each customer's household goods with safe and speedy operation.",
-    "2-1": "Within Thailand",
-    "2-2": "Domestic moving",
+    "2-1": "Within ",
+    "2-1-2": "Thailand",
+    "2-2": "Domestic ",
+    "2-2-2": "moving",
     "2-3": "With our network throughout Thailand, not only in Bangkok, we provide services to meet the customers' needs, no matter how great the scale is.",
     "3-1": "From large to small",
-    "3-2": "Office relocation",
+    "3-1-2": "",
+    "3-2": "Office ",
+    "3-2-2": "relocation",
     "3-3": "Now matter how large or small your office is, we deliver your properties to a new location with least effect on your day-to-day operations.",
+    "see-more": "Read More"
+  },
+  "warehouse-section": {
+    "heading": "Warehouse ・ Stock control by Siam Nistrans",
+    "p": "We provide higher value-added services to meet the customers' needs, including not only limited to stock control, also packing design and packing.",
+    "point": "POINT",
+    "1": "Transport network throughout Thailand, including five warehouses in the Central region and one in Chiang Mai",
+    "2": "Systematized control on the cargo volume stored or received/delivered to establish a smooth distribution flow",
+    "3": "Extensive warehouse capacity to meet the customers' demand",
+    "4": "Strict compliance by all warehouse staff with 5S.",
+    "see-more": "Read More"
+  },
+  "haco-section": {
+    "heading": "Distribution container management by Siam Nistrans",
+    "heading2": "Solutions for problems of distribution containers management",
+    "p1": "HACO Lab. solves problems in distribution and establish",
+    "p2": "future logistics services by combining \"distribution containers\"",
+    "p3": "and \"new technology\".",
+    "1-1": "Simple operations with",
+    "1-2": "smartphones by",
+    "1-3": "downloading the app.",
+    "2-1": "Attach labels to distribution",
+    "2-2": "containers. Easy to read the",
+    "2-3": "information with smartphone.",
+    "3-1": "Information is managed at the cloud service.",
+    "3-2": "Easy access from anywhere as long as",
+    "3-3": "the Internet is connected.",
     "see-more": "Read More"
   },
   "contact": {
@@ -368,38 +402,38 @@
       "2": "Combined with HACO Lab. and linked with SCM, the logistics cycle between suppliers and buyers, namely \"what, where and how many\", is visualized in a timely manner."
     }
   },
-  "haco-lab":{
-    "h1":"HACO Lab.",
-    "h2":"How HACO Lab. works",
-    "p":"In order to prevent the distribution containers from being lost, control of each individual container is required. However, the management needs a lot of work and is a difficult challenge for many companies. In order to solve such problems, we are providing HACO Lab., which links a \"logistics container\" with a smartphone app, records, and manages easily on the cloud. In Japan and Thailand, import duty on returnable containers is exempted under the laws, which means that the use of HACO Lab. could reduce cost. We, together with our business partners, provide one-stop efficient distribution container management solutions, from plan development and management to implementation, and help you to achieve the most optimized logistical operation.",
-    "section1":{
-      "1":{
-        "1":"Color code program",
-        "1-1":"Issue color code labels and attach to the distribution containers.",
-        "1-1-1":"Chameleon Code is a product and a registered trademark of SHIFT Co., Ltd.",
-        "1-2":"Download the app to your smartphone to be licensed.",
-        "1-3":"Scan the color code labels with your smartphone.",
-        "2":"RFID (Radio Frequency Identification)",
-        "2-p":"Attach an RFID label in which electronic data is input and read the data by an RFID handy reader.",
-        "2-1":"RFID label",
-        "2-1-p":"Issue the RFID label and attach it to the distribution container.",
-        "2-2":"RFID handy reader",
-        "2-2-p":"Read RFID label is read by the RFID handy reader.",
-        "2-3":"RFID handy reader available to read from a few meters away.",
-        "3":"Scanned data (e.g. time and location) is accumulated in cloud-based space.",
-        "other":"Location of the distribution containers can be checked easily on PC!"
+  "haco-lab": {
+    "h1": "HACO Lab.",
+    "h2": "How HACO Lab. works",
+    "p": "In order to prevent the distribution containers from being lost, control of each individual container is required. However, the management needs a lot of work and is a difficult challenge for many companies. In order to solve such problems, we are providing HACO Lab., which links a \"logistics container\" with a smartphone app, records, and manages easily on the cloud. In Japan and Thailand, import duty on returnable containers is exempted under the laws, which means that the use of HACO Lab. could reduce cost. We, together with our business partners, provide one-stop efficient distribution container management solutions, from plan development and management to implementation, and help you to achieve the most optimized logistical operation.",
+    "section1": {
+      "1": {
+        "1": "Color code program",
+        "1-1": "Issue color code labels and attach to the distribution containers.",
+        "1-1-1": "Chameleon Code is a product and a registered trademark of SHIFT Co., Ltd.",
+        "1-2": "Download the app to your smartphone to be licensed.",
+        "1-3": "Scan the color code labels with your smartphone.",
+        "2": "RFID (Radio Frequency Identification)",
+        "2-p": "Attach an RFID label in which electronic data is input and read the data by an RFID handy reader.",
+        "2-1": "RFID label",
+        "2-1-p": "Issue the RFID label and attach it to the distribution container.",
+        "2-2": "RFID handy reader",
+        "2-2-p": "Read RFID label is read by the RFID handy reader.",
+        "2-3": "RFID handy reader available to read from a few meters away.",
+        "3": "Scanned data (e.g. time and location) is accumulated in cloud-based space.",
+        "other": "Location of the distribution containers can be checked easily on PC!"
       }
     },
-    "section2":{
-        "title":"Why HACO Lab.?",
-        "1":"You can enjoy import with duty exemption on returnable containers.",
-        "1-p":"Depending on local Customs laws.",
-        "2":"You can reduce cost by visualizing the distribution container inventory in order to prevent lost and slow-moving items.",
-        "3":"It is easy to introduce because it is not just a management system for logistics containers, but can be added to the current logistics mobile.",
-        "4":"You can easily use the app anywhere in the world because of smartphone app and cloud manadement.",
-        "button-jp":"Japan's",
-        "button-th":"Thailand's",
-        "click-to-contact":"Click here to contact us."
+    "section2": {
+      "title": "Why HACO Lab.?",
+      "1": "You can enjoy import with duty exemption on returnable containers.",
+      "1-p": "Depending on local Customs laws.",
+      "2": "You can reduce cost by visualizing the distribution container inventory in order to prevent lost and slow-moving items.",
+      "3": "It is easy to introduce because it is not just a management system for logistics containers, but can be added to the current logistics mobile.",
+      "4": "You can easily use the app anywhere in the world because of smartphone app and cloud manadement.",
+      "button-jp": "Japan's",
+      "button-th": "Thailand's",
+      "click-to-contact": "Click here to contact us."
     }
   },
   "branchs": {
@@ -418,6 +452,7 @@
   },
   "cookie": {
     "topic": "Cookie policy",
+    "privacy-heading": "Privacy Notice",
     "description": "Siam Nistrans Co., Ltd. (the “Company”) respects privacy right of the viewer or the user and understands your expectation that information provided through this website should be properly protected. We hereby announce the Cookie Policy (the “Cookie Policy”) which shall apply to this website.",
     "cookie-use": {
       "heading": "Company’s use of cookies",
@@ -453,10 +488,10 @@
   },
   "modal": {
     "law": {
-      "jp-title":"Japan's Customs Act",
-      "jp":"Customs Tariff Act Section 14 (Unconditional duty exemption)\nDuty on the following goods to be imported shall be exempted in accordance with the provisions of the Cabinet Order:\nClause 11: Containers (including similar goods) for goods exported from the country as prescribed under the Cabinet Order and used for such export or to be used for import.\nCustoms Tariff Act Section 17 (Duty exemption on re-export)\nDuty on the following goods to be exported within one (1) year from the date of import permit shall be exempted in accordance with the provisions of the Cabinet Order:\nClause 1 (ii) Containers for imported goods as prescribed under the Cabinet Order\nClause 1 (iii) Goods used as a container for exported goods as prescribed under the Cabinet Order\nAs of October 2019",
-      "th-title":"Thailand's Customs Act",
-      "th":"Duty exemption on returnable containers for imported goods.\nOn July 9, 2018, the Customs Bureau issued a notification (No.154 / 2561) to apply a tax exemption measure for returnable containers for imported cargo called \"return boxes\".\n※For details, please contact us."
+      "jp-title": "Japan's Customs Act",
+      "jp": "Customs Tariff Act Section 14 (Unconditional duty exemption)\nDuty on the following goods to be imported shall be exempted in accordance with the provisions of the Cabinet Order:\nClause 11: Containers (including similar goods) for goods exported from the country as prescribed under the Cabinet Order and used for such export or to be used for import.\nCustoms Tariff Act Section 17 (Duty exemption on re-export)\nDuty on the following goods to be exported within one (1) year from the date of import permit shall be exempted in accordance with the provisions of the Cabinet Order:\nClause 1 (ii) Containers for imported goods as prescribed under the Cabinet Order\nClause 1 (iii) Goods used as a container for exported goods as prescribed under the Cabinet Order\nAs of October 2019",
+      "th-title": "Thailand's Customs Act",
+      "th": "Duty exemption on returnable containers for imported goods.\nOn July 9, 2018, the Customs Bureau issued a notification (No.154 / 2561) to apply a tax exemption measure for returnable containers for imported cargo called \"return boxes\".\n※For details, please contact us."
     }
   }
 }

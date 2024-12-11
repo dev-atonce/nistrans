@@ -6,11 +6,11 @@ import { Kanit } from "next/font/google";
 import { ConfigProvider } from "antd";
 import Favicon from "../icon.ico";
 import "./globals.css";
-import "./../../css/all.scss"
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
+import "./../../css/all.scss";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const kanit = Kanit({
   subsets: ["latin"],
@@ -66,8 +66,8 @@ export default async function RootLayout({
           },
           components: {
             Pagination: {
-              colorPrimary: "red",
-              colorPrimaryHover: "red",
+              colorPrimary: "#F87607",
+              colorPrimaryHover: "#F87607",
               borderRadius: 60,
               colorBgTextHover: "white",
             },

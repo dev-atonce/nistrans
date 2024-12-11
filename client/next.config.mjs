@@ -18,8 +18,8 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "192.168.0.199",
-        port: "3001",
+        hostname: "api-nistrans.oncewebdesign.com",
+        port: "",
       },
     ],
   },

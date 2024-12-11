@@ -8,6 +8,7 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ data, lng }: BlogCardProps) => {
+  console.log(data);
   return data?.map((item: any, key: number) => {
     return (
       <Col xs={24} sm={12} md={12} lg={8} key={key}>

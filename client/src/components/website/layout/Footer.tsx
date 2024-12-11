@@ -6,6 +6,7 @@ import { Link } from "@/i18n/routing";
 
 export default function Footer({ logo }: any) {
   const t = useTranslations("contact");
+  const tCookie = useTranslations("cookie");
 
   return (
     <div className="text-black bg-slate-200 ">
@@ -46,10 +47,10 @@ export default function Footer({ logo }: any) {
           </div>
           <div className="flex gap-4">
             <Link href="/cookie-policy" className="">
-              นโยบายการใช้คุกกี้
+              {tCookie("topic")}
             </Link>
             <Link href="/privacy-notice" className="">
-              ประกาศด้านการคุ้มครองข้อมูลส่วนบุคคล
+              {tCookie("privacy-heading")}
             </Link>
           </div>
         </div>
