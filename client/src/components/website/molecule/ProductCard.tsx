@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+
 export default function ProductCard({ item, lng }: any) {
   return (
     <Link
-      href={`${lng?.toLowerCase()}/service/${item?.url}`}
+      href={`/service/${item?.url}`}
       //   href={`/${lang?.toLowerCase()}/service/${item?.id}`}
       className="group   pb-4 transition-all duration-500 col-span-12 md:col-span-6  xl:col-span-3 rounded-lg overflow-hidden"
     >
