@@ -1,6 +1,6 @@
 "use client";
 import Breadcrumb from "@/components/webpanel/Breadcrumbs/Breadcrumb";
-import Message from "@/components/webpanel/FormElements/JobCorporate/Message";
+import Message from "@/components/webpanel/Message/Message";
 import DefaultLayout from "@/components/webpanel/Layouts/DefaultLayout";
 import { useUsersStore } from "@/store/usersStore";
 import { useEffect, useState } from "react";

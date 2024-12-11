@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function NavDropdown({ title, dropdownItems }: any) {
-  const t = useTranslations('header');
+  const t = useTranslations("header");
   const [show, setShow] = useState<String>("hidden");
   const [toggle, setToggle] = useState<Boolean>(false);
 
@@ -26,8 +26,9 @@ export default function NavDropdown({ title, dropdownItems }: any) {
         {title}
         <div
           id="dropdownNavbar"
-          className={`absolute ${show} dropdown z-20 bg-white overflow-hidden left-0 w-100 ${show ? `top-10` : ``
-            }`}
+          className={`absolute ${show} dropdown z-20 bg-white overflow-hidden left-0 w-100 ${
+            show ? `top-10` : ``
+          }`}
         >
           <ul aria-labelledby="dropdownLargeButton">
             {dropdownItems.map((v: any, k: any) => {
@@ -35,7 +36,7 @@ export default function NavDropdown({ title, dropdownItems }: any) {
                 <li key={k} className="divide-x divide-violet-50">
                   <Link
                     href={v?.href}
-                    className={`text-start hover:bg-slate-200 block px-4 py-2`}
+                    className={`text-start hover:bg-slate-100 hover:border-b border-orange-400   block px-4 py-2`}
                   >
                     {t(v?.key)}
                   </Link>

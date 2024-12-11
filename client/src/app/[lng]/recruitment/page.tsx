@@ -16,8 +16,11 @@ const fetchBlog = async () => {
   return data?.rows;
 };
 
-const pageName = "blog";
-export async function generateMetadata({ params, searchParams }: any, parent: ResolvingMetadata): Promise<Metadata> {
+const pageName = "recruitment";
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const lng = params.lng;
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
   // fetch data
@@ -66,10 +69,14 @@ const pagename = {
     th: "ดูรายละเอียด",
     en: "View",
     jp: "データを表示",
-  }
+  },
 };
 
-export default async function RecruitmentPage({ params }: { params: { lng: string } }) {
+export default async function RecruitmentPage({
+  params,
+}: {
+  params: { lng: string };
+}) {
   const blogs = await fetchBlog();
   const lng = params.lng;
 
@@ -91,16 +98,27 @@ export default async function RecruitmentPage({ params }: { params: { lng: strin
       <div className="container px-4 md:px-6 xl:px-0 mx-auto text-slate-800 my-10">
         <div className="text-xs sm:text-sm md:text-base">
           <div className="grid grid-cols-12 pb-8 border-b border-slate-200 font-semibold">
-            {/* @ts-ignore */}
-            <span className="col-span-4 md:col-span-2 sm:col-span-2 flex items-center">{pagename.date[lng]}</span>
-            {/* @ts-ignore */}
-            <span className="col-span-5 md:col-span-4 sm:col-span-4 flex items-center">{pagename.position[lng]}</span>
-            {/* @ts-ignore */}
-            <span className="col-span-3 md:col-span-3 flex items-center">{pagename.location[lng]}</span>
+            <span className="col-span-4 md:col-span-2 sm:col-span-2 flex items-center">
+              {/* @ts-ignore */}
+              {pagename.date[lng]}
+            </span>
+
+            <span className="col-span-5 md:col-span-4 sm:col-span-4 flex items-center">
+              {/* @ts-ignore */}
+              {pagename.position[lng]}
+            </span>
+
+            <span className="col-span-3 md:col-span-3 flex items-center">
+              {/* @ts-ignore */}
+              {pagename.location[lng]}
+            </span>
             <span className="hidden md:flex md:col-span-2 sm:col-span-2"></span>
           </div>
           {blogs?.map((i: any) => (
-            <div className="grid grid-cols-12 py-4 border-b border-slate-200" key={i?.id}>
+            <div
+              className="grid grid-cols-12 py-4 border-b border-slate-200"
+              key={i?.id}
+            >
               <span className="col-span-4 md:col-span-2 sm:col-span-2 flex items-center">
                 {formattedDate(i?.createdAt)}
               </span>

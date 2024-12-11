@@ -14,7 +14,7 @@ export default function NewsCard({ item, lang }: any) {
   const date = new Date(item?.createdAt);
   const t = useTranslations("blog-section");
   return (
-    <div className="bg-white p-4 rounded-md text-sm text-slate-700">
+    <div className="bg-white p-4 rounded-md text-sm text-slate-700 hover:bg-slate-300  transition-all">
       <div className="grid grid-cols-12">
         <div className="col-span-2">{convertedDate(date)}</div>
         <div className="col-span-1 hidden lg:block">
@@ -30,7 +30,7 @@ export default function NewsCard({ item, lang }: any) {
         {item?.attachment && (
           <a
             href={`${process.env.NEXT_PUBLIC_BASE_URL}${item?.attachment}`}
-            className="col-span-1 text-red"
+            className="col-span-1 "
           >
             <FaRegFilePdf size={25} />
           </a>

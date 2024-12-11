@@ -221,7 +221,7 @@ export default function PrivacyEN() {
             internal audit, including considering complaints regarding internal
             fraud or misconduct occurred in the Company, investigating and
             preventing fraud or other unlawful acts, examining requests for
-            using the Company's internal information system, etc.;
+            using the Company&apos;s internal information system, etc.;
           </li>
           <li>
             For detection and investigation under legal procedures and other
@@ -238,10 +238,10 @@ export default function PrivacyEN() {
             the contract which has been done legally;
           </li>
           <li>
-            For maintaining security within the Company’s buildings and premises
-            via Closed-Circuit Television (CCTV), screening, inspecting and
-            verifying identity for entering and exiting the Company’s buildings
-            and premises.
+            For maintaining security within the Company&apos;s buildings and
+            premises via Closed-Circuit Television (CCTV), screening, inspecting
+            and verifying identity for entering and exiting the Company&apos;s
+            buildings and premises.
           </li>
         </ul>
       </div>
