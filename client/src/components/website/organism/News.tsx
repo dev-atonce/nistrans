@@ -43,12 +43,12 @@ export default function News({ lang, home, limit }: any) {
       <div className="w-full gap-4 border-slate-100 border shadow-md rounded-lg py-4 px-4 lg:px-4 bg-slate-200 grid grid-cols-12 text-slate-700 ">
         <div className="rounded-md col-span-10 grid-cols-12 grid gap-2">
           <div className="col-span-9 rounded-md grid grid-cols-1 gap-1 ">
-            {newsList?.map((i: any) => (
-              <NewsCard lang={lang} item={i} />
+            {newsList?.map((i: any, index: any) => (
+              <NewsCard lang={lang} item={i} key={index} />
             ))}
           </div>
           <div className="col-span-1 rounded-md bg-white flex flex-col items-center justify-around">
-            <button>
+            <button className="">
               <FaCaretUp
                 size={40}
                 onClick={prevPage}
@@ -65,19 +65,19 @@ export default function News({ lang, home, limit }: any) {
           </div>
           <Link
             href="/news-activity"
-            className="col-span-2 rounded-md bg-white  flex items-center justify-center"
+            className="col-span-2 hover:bg-black hover:text-white transition-all rounded-md bg-white  flex items-center justify-center"
           >
             <TfiMenuAlt size={42} className="" />
           </Link>
         </div>
         <a
           href="https://www2.nissin-tw.co.jp/trace/cgi-bin/index.asp?language=0"
-          className="bg-white rounded-md col-span-2 items-center flex flex-col justify-center gap-2 py-4"
+          className="hover:bg-black hover:text-white transition-all bg-white rounded-md col-span-2 items-center flex flex-col justify-center gap-2 py-4"
         >
           <div>
             <BsFillBoxSeamFill size={50} />
           </div>
-          <div className="text-sm text-center hidden lg:block">
+          <div className="text-sm text-center hidden lg:block ">
             {t("tracking")}
           </div>
         </a>

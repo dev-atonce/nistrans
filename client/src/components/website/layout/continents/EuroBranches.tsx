@@ -105,7 +105,7 @@ const EuroBranches = () => {
       <section>
         <div className="pageTitle1">รัสเซีย</div>
         <div className="branchesTitle">
-          LIMITED LIABILITY COMPANY "NISSIN RUS"
+          LIMITED LIABILITY COMPANY &quot;NISSIN RUS&quot;
         </div>
         <div className="branchesText">
           11/10 Block 6, 2nd Floor, Office 222, Letnikovskaya Str., Moscow

@@ -20,7 +20,7 @@ const BlogSection = ({ limit, home, lng }: BlogSectionProps) => {
       `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/blog?limit=${limit}&type=blog&page=${page}`,
       {
         cache: "no-store",
-      }
+      } 
     );
     const data = await res.json();
     setBlogList(data?.rows);
