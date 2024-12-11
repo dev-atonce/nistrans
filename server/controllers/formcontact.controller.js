@@ -28,6 +28,15 @@ const methods = {
         }
     },
 
+    async onUpdate(req, res) {
+        try {
+            let result = await Service.update(req);
+            res.success(result);
+        } catch (error) {
+            res.error(error);
+        }
+    },
+
     async onDelete(req, res) {
         try {
             const result = await Service.delete(req.params.id);

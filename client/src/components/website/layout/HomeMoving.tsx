@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
 export default function HomeMoving({ lang }: any) {
@@ -72,7 +72,7 @@ export default function HomeMoving({ lang }: any) {
 
         <div className="flex justify-center py-10">
           <Link
-            href={`${lang}/service/moving`}
+            href={`/service/moving`}
             className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
           >
             {t("see-more")}
