@@ -48,8 +48,6 @@ const pagename = {
 export default async function RecruitmentDetailPage({ params }: { params: { slug: string, lng: string } }) {
     const { slug } = params;
     const blog = await fetchBlog({ slug });
-    console.log(blog);
-
     const lng = params.lng;
     const blogTitleKey = `blog_title_${lng}`;
     const blogDetailKey = `blog_detail_${lng}`;
