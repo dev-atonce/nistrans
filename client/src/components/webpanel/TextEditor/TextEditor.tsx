@@ -98,7 +98,7 @@ export const Editor = ({ itemState, handleEditorChange, languages }: TextEditorP
                 id={`editor-${lang}`}
                 theme="snow"
                 // @ts-ignore
-                value={itemState[`blog_detail_${lang}`] || ""}
+                value={itemState[`blog_detail_${lang}`] || '' ? itemState[`blog_detail_${lang}`] : ''}
                 onChange={(value) => handleEditorChange(value, lang)}
                 placeholder={`Write something ${lang.toUpperCase()} ...`}
                 modules={modules}

@@ -17,8 +17,14 @@ const FormAdd = ({ id }: FormEditProps) => {
   const [seoState, setSeoState] = useState<SeoProps>({
     page: "",
     seoDescriptionTH: "",
+    seoDescriptionEN: "",
+    seoDescriptionJP: "",
     seoKeywordTH: "",
+    seoKeywordEN: "",
+    seoKeywordJP: "",
     seoTitleTH: "",
+    seoTitleEN: "",
+    seoTitleJP: "",
   });
 
   const fetchData = async () => {
@@ -26,7 +32,7 @@ const FormAdd = ({ id }: FormEditProps) => {
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-     // @ts-ignore
+    // @ts-ignore
     const { name, value, files } = event.target;
     if (name === "image" && files && files[0]) {
       setSeoState((prevState) => ({
@@ -53,9 +59,15 @@ const FormAdd = ({ id }: FormEditProps) => {
   useEffect(() => {
     if (items.length > 0) {
       setSeoState({
-        seoDescriptionTH: items[0].seoDescriptionTH,
-        seoKeywordTH: items[0].seoKeywordTH,
-        seoTitleTH: items[0].seoTitleTH,
+        seoDescriptionTH: items[0]?.seoDescriptionTH,
+        seoDescriptionEN: items[0]?.seoDescriptionEN,
+        seoDescriptionJP: items[0]?.seoDescriptionJP,
+        seoKeywordTH: items[0]?.seoKeywordTH,
+        seoKeywordEN: items[0]?.seoKeywordEN,
+        seoKeywordJP: items[0]?.seoKeywordJP,
+        seoTitleTH: items[0]?.seoTitleTH,
+        seoTitleEN: items[0]?.seoTitleEN,
+        seoTitleJP: items[0]?.seoTitleJP,
         page: items[0].page,
       });
     }

@@ -2,8 +2,14 @@ export interface SeoProps {
     id?: string;
   page?: string;
   seoDescriptionTH: string;
+  seoDescriptionEN: string;
+  seoDescriptionJP: string;
   seoKeywordTH: string;
+  seoKeywordEN: string;
+  seoKeywordJP: string;
   seoTitleTH: string;
+  seoTitleEN: string;
+  seoTitleJP: string;
   createdAt?: string;
   updatedAt?: string;
 }

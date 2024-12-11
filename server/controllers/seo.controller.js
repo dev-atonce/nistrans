@@ -1,19 +1,6 @@
 const Seo = require("../services/seo.service");
 const { checkAllowFields } = require("../helpers/field.helper");
 
-const allowFields = {
-  update: [
-    "seoTitleTH",
-    "seoTitleEN",
-    "seoTitleJP",
-    "seoKeywordTH",
-    "seoKeywordEN",
-    "seoKeywordJP",
-    "seoDescriptionTH",
-    "seoDescriptionEN",
-    "seoDescriptionJP",
-  ],
-};
 const methods = {
   async onGetByPageName(req, res) {
     try {
@@ -44,7 +31,6 @@ const methods = {
 
   async onUpdate(req, res) {
     try {
-      checkAllowFields(req.body, allowFields.update);
       const result = await Seo.update(req?.params?.id, req.body);
       res.success(result);
     } catch (error) {
