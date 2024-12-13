@@ -50,7 +50,9 @@ export default function AboutPage({ params: { lng } }: any) {
         engName="Company Policy"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black">{content}</div>
+      <div className="container mx-auto pb-10 text-black mt-[-40px]">
+        {content}
+      </div>
     </>
   );
 }

@@ -7,6 +7,7 @@ export function Logo({ color, img }: any) {
       <Link href="/" className="_links">
         {/* {img && ( */}
         <Image
+          style={{ width: "300px !important" }}
           src={
             img
               ? `${process.env.NEXT_PUBLIC_BASE_URL}${img}`

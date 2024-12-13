@@ -33,8 +33,6 @@ export default function AboutPage({ params: { lng } }: any) {
   const content =
     lng === "th" ? (
       <div className="historyBox">
-        <div className="pageTitle1">ประวัติความเป็นมาของ SIAM NISTRANS</div>
-
         <div className="historyTb">
           <ul>
             <li>ต.ค. 2530</li>
@@ -137,8 +135,6 @@ export default function AboutPage({ params: { lng } }: any) {
       </div>
     ) : lng === "en" ? (
       <div className="historyBox">
-        <div className="pageTitle1">Company history</div>
-
         <div className="historyTb">
           <ul>
             <li>October 1987</li>
@@ -249,8 +245,6 @@ export default function AboutPage({ params: { lng } }: any) {
       </div>
     ) : lng === "jp" ? (
       <div className="historyBox">
-        <div className="pageTitle1">SIAM NISTRANSの沿革</div>
-
         <div className="historyTb">
           <ul>
             <li>1987年10月</li>
@@ -344,8 +338,6 @@ export default function AboutPage({ params: { lng } }: any) {
       </div>
     ) : (
       <div className="historyBox">
-        <div className="pageTitle1">ประวัติความเป็นมาของ SIAM NISTRANS</div>
-
         <div className="historyTb">
           <ul>
             <li>ต.ค. 2530</li>
@@ -455,7 +447,7 @@ export default function AboutPage({ params: { lng } }: any) {
         prevPage={{ pageName: h("home"), url: "/" }}
       />
       <div className="container mx-auto pb-10 text-black">
-        <div>{content}</div>
+        <div className="mt-[-60px]">{content}</div>
       </div>
     </>
   );

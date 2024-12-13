@@ -1418,7 +1418,8 @@ a.pageBtnMore {
 }
 
 .pageBtnMoreText:after {
-  content: "\f101";
+  content: ">>";
+  /* content: "\f101"; */
   font-family: FontAwesome, sans-serif;
   font-size: 26px;
   display: none;
@@ -1597,7 +1598,9 @@ a.branchesMap {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  /* background: url("../images/th/mapLink.png") no-repeat #1c2e50; */
+  /* background: #1c2e50;
+  color: white !important; */
+  background: url("/img/mapLink.png") no-repeat #1c2e50;
   background-size: 100% 100%;
 }
 
@@ -1635,7 +1638,7 @@ a.branchesLink {
   height: 23px;
   display: inline-block;
   text-decoration: none;
-  /* background: url("../images/th/webLink.png") no-repeat #1c2e50; */
+  background: url("/img/webLink.png") no-repeat #1c2e50;
   background-size: 100% 100%;
 }
 
@@ -2709,7 +2712,7 @@ a.serviceHACO {
 
 .picRow1 {
   color: #312f2f;
-  font-family: "Noto Sans JP", sans-serif;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -2978,7 +2981,7 @@ a.dwhMap {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  /* background: url("../images/googleMapLinkTH.png") no-repeat #1c2e50; */
+  background: url("/img/googleMapLink.png") no-repeat #1c2e50;
   background-size: 100% 100%;
 }
 
@@ -2995,7 +2998,7 @@ a.dwhMapPdf {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  /* background: url("../images/mapPdfTH.png") no-repeat #1c2e50; */
+  background: url("/img/mapPdf.png") no-repeat #1c2e50;
   background-size: 100% 100%;
 }
 

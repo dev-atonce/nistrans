@@ -20,7 +20,7 @@ export default function AboutSection({ description }: any) {
       <div className="container mx-auto flex flex-col items-center gap-4 sm:gap-10 relative">
         <div className="flex flex-col items-center gap-4">
           <h1
-            className="text-base sm:text-xl font-semibold text-white"
+            className="text-base sm:text-3xl font-[500] text-white text-center"
             style={{ textShadow: "black 1px 1px 1px" }}
           >
             {t("heading")}

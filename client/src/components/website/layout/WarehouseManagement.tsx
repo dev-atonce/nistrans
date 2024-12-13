@@ -10,15 +10,14 @@ export default function Warehouse({ lang }: any) {
           <div className="flex items-center text-slate-700">
             <div className="bg-slate-100 p-10 rounded-lg">
               <div className="py-10 flex justify-center items-center flex-col text-blue-950 gap-3">
-                <h2 className="text-2xl">{t("heading")}</h2>
-                <div className="h-1 w-20 bg-orange-400"></div>
+                <h2 className="text-2xl pageTitle1">{t("heading")}</h2>
               </div>
 
               <div className="pb-4">{t("p")}</div>
 
               <section className="bg-white my-1">
-                <ul className="grid grid-cols-12">
-                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2">
+                <ul className="grid grid-cols-12 textNum">
+                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2 nNum">
                     <div className="nNumText">{t("point")}</div>
                     <div className="nNumNum">01</div>
                   </li>
@@ -27,8 +26,8 @@ export default function Warehouse({ lang }: any) {
               </section>
 
               <section className="bg-white my-1">
-                <ul className="grid grid-cols-12">
-                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2">
+                <ul className="grid grid-cols-12 textNum">
+                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2 nNum">
                     <div className="nNumText">{t("point")}</div>
                     <div className="nNumNum">02</div>
                   </li>
@@ -37,8 +36,8 @@ export default function Warehouse({ lang }: any) {
               </section>
 
               <section className="my-1 bg-white">
-                <ul className="grid grid-cols-12">
-                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2">
+                <ul className="grid grid-cols-12 textNum">
+                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2 nNum">
                     <div className="nNumText">{t("point")}</div>
                     <div className="nNumNum">03</div>
                   </li>
@@ -51,8 +50,8 @@ export default function Warehouse({ lang }: any) {
                 data-wow-offset="50"
                 data-wow-delay="1.4s"
               >
-                <ul className="grid grid-cols-12">
-                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2">
+                <ul className="grid grid-cols-12 textNum">
+                  <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2 nNum">
                     <div className="nNumText">{t("point")}</div>
                     <div className="nNumNum">04</div>
                   </li>
