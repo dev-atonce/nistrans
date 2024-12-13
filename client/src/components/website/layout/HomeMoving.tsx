@@ -7,14 +7,14 @@ export default function HomeMoving({ lang }: any) {
     <div className="py-20">
       <div className="container mx-auto text-slate-700">
         <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
-          <h2 className="text-3xl">{t("heading")}</h2>
+          <h2 className="text-4xl font-[500] text-center ">{t("heading")}</h2>
           <div className="h-1 w-20 bg-orange-400"></div>
         </div>
 
         <div className="grid grid-cols-4 md:grid-cols-12 gap-6">
           <div className="col-span-4">
             <section className="flex flex-col items-center gap-4">
-              <div className="flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
+              <div className="flex flex-col items-center p-6 rounded-full border-4 border-black text-center gap-2 w-[200px] h-[200px]">
                 <div className="text-xs ">
                   {t("1-1")}
                   <br />
@@ -32,7 +32,7 @@ export default function HomeMoving({ lang }: any) {
 
           <div className="col-span-4">
             <section className="flex flex-col items-center gap-4">
-              <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
+              <div className=" flex flex-col items-center p-6 rounded-full border-4 border-black text-center gap-2 w-[200px] h-[200px]">
                 <div className="text-xs">
                   {t("2-1")}
                   <br />
@@ -50,7 +50,7 @@ export default function HomeMoving({ lang }: any) {
 
           <div className="col-span-4">
             <section className=" flex flex-col items-center gap-4">
-              <div className=" flex flex-col items-center p-6 rounded-full border-2 border-black text-center gap-2 w-[200px] h-[200px]">
+              <div className=" flex flex-col items-center p-6 rounded-full border-4 border-black text-center gap-2 w-[200px] h-[200px]">
                 <div className="text-xs">
                   {t("3-1")}
                   <br />
@@ -72,7 +72,7 @@ export default function HomeMoving({ lang }: any) {
 
         <div className="flex justify-center py-10">
           <Link
-            href={`/service/moving`}
+            href={`/service/house-moving`}
             className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
           >
             {t("see-more")}

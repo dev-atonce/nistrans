@@ -6,7 +6,7 @@ export default function HacoLab({ lang }: any) {
   const t = useTranslations("haco-section");
   return (
     <>
-      <style jsx>
+      {/* <style jsx>
         {`
           .homeWarehouse {
             background: #ffffff;
@@ -91,12 +91,12 @@ export default function HacoLab({ lang }: any) {
             margin-top: 15px;
           }
         `}
-      </style>
+      </style> */}
       <>
         <div className="text-slate-600 container mx-auto py-20 block md:hidden">
           <div className="">
             <div className="pb-10 flex justify-center items-center flex-col gap-3">
-              <h2 className="text-2xl">{t("heading")}</h2>
+              <h2 className="text-2xl  ">{t("heading")} </h2>
               <div className="h-1 w-20 bg-orange-400"></div>
             </div>
           </div>
@@ -204,13 +204,15 @@ export default function HacoLab({ lang }: any) {
               >
                 <div className="homeWarehouseTitle">
                   <div className="pb-10 flex justify-center items-center flex-col text-white gap-3">
-                    <h2 className="text-2xl">{t("heading")}</h2>
-                    <div className="h-1 w-20 bg-orange-400"></div>
+                    <h2 className="text-2xl pageTitle1">{t("heading")}</h2>
                   </div>
                 </div>
 
                 <div className="homeWarehouseText">
-                  <ul className="homeWarehouseText_1">
+                  <ul
+                    className="homeWarehouseText_1 "
+                    style={{ paddingBottom: "20px !important" }}
+                  >
                     <li>
                       <div className="homeWarehouseTextTitle font-jpNoto">
                         HACO Lab.

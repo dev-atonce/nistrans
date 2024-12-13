@@ -1,8 +1,6 @@
 export default function CorBeEN() {
   return (
     <div className="corBehBox">
-      <div className="pageTitle1">Charter of Corporate Behavior</div>
-
       <div className="corBehText">
         In recognition of our position as a good corporate citizen committed to
         contributing to the sustained growth of society and to engaging in free

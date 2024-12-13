@@ -1,8 +1,6 @@
 export default function CorBeTH() {
   return (
     <div className="corBehBox">
-      <div className="pageTitle1">แนวทางปฏิบัติของบริษัท</div>
-
       <div className="corBehText">
         Nissin Group (กลุ่มบริษัทเครือนิชชิน) กำหนดแนวทางปฏิบัติของบริษัทขึ้น
         เพื่อเป็นภารกิจในการมีส่วนร่วมพัฒนาสังคม

@@ -9,7 +9,7 @@ export default function Footer({ logo }: any) {
   const tCookie = useTranslations("cookie");
 
   return (
-    <div className="text-black bg-slate-200 ">
+    <div className="text-black bg-[#E9EAEE]">
       <div className="">
         <div className="container mx-auto pt-4 px-2 xl:px-0">
           <div className="gap-4 md:gap-0 py-5 flex items-center justify-between flex-col md:flex-row">
@@ -21,7 +21,9 @@ export default function Footer({ logo }: any) {
               >
                 {t("address")}
               </span>
-              <span className="text-base text-center md:text-left block md:hidden">{t("address")}</span>
+              <span className="text-base text-center md:text-left block md:hidden">
+                {t("address")}
+              </span>
               <div className="flex items-center gap-4">
                 <FaPhone size={20} />
                 <span>

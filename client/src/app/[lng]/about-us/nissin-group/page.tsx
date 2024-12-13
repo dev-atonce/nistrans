@@ -36,21 +36,21 @@ export default function AboutPage({ params: { lng } }: any) {
   const h = useTranslations("header");
   const content = {
     th: {
-      h1: "สำนักงานใหญ่ประเทศญี่ปุ่น",
+      h: "สำนักงานใหญ่ประเทศญี่ปุ่น",
       asia: "เอเชีย",
       china: "ประเทศจีน",
       eu: "ยุโรป",
       us: "อเมริกา",
     },
     en: {
-      h1: "Japan Head office",
+      h: "Japan Head office",
       asia: "Asia",
       china: "China",
       eu: "Europe",
       us: "America",
     },
     jp: {
-      h1: "日本 (本社)",
+      h: "日本 (本社)",
       asia: "アジア",
       china: "中国",
       eu: "",
@@ -65,11 +65,20 @@ export default function AboutPage({ params: { lng } }: any) {
         engName="Nissin Group Company"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black">
+      <div className="container mx-auto pb-10 text-black mt-[-40px]">
         <div className="corBehBox">
           {/* @ts-ignore */}
-          <div className="pageTitle1">{content[lng]["h1"]}</div>
+          <div className="pageTitle1">{content[lng]["h"]}</div>
 
+          <div className="branchesTitle">
+            NISSIN CORPORATION
+            <a
+              className="branchesLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="nissin-tw.com/english/"
+            ></a>
+          </div>
           <div className="branchesText">
             Nissay office building, 6-81 Onoe-cho, Naka-ku, Yokohama
             {/* 横浜市中区尾上町六丁目８１番地 ニッセイ横浜尾上町ビル */}

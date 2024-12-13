@@ -1,8 +1,6 @@
 export default function CorBeJP() {
   return (
     <div className="corBehBox">
-      <div className="pageTitle1">企業行動憲章</div>
-
       <div className="corBehText">
         株式会社日新は、よき企業市民として社会の持続的な発展に貢献することを使命とし、高い倫理観を堅持しつつ、グローバルに、自由で公正な企業活動を行うため、当社の企業行動憲章をここに定めます。
         <div className="corBehList">

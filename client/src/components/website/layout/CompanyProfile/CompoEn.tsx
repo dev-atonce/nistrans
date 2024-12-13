@@ -1,103 +1,117 @@
 export default function CompoEn() {
   return (
     <div className="container mx-auto pb-10 text-black">
+      <p className="branchesTopic no-padding-r ">
+        Siam Nistrans (Thai Nissin) was established in 1987 as the Thai
+        subsidiary of Nissin Corporation, which is a pioneer in integrated
+        international logistics that covers international and domestic transport
+        by sea, air, and land, warehouse and export packing, and moving. Since
+        establishment, we have handled customs clearance ourselves and
+        implemented on-line connection through EDI with all the related
+        departments. At the offices in Laem Chabang, Ayutthaya, Bangpakong,
+        Prachinburi and Chiang Mai, experienced staffs provide with attentive
+        services and closely communicate with our customers. As a global
+        logistics service provider, we provide seamless services all over the
+        world to meet the specific requirements of our customers.
+      </p>
       <div>
-        <div className="comInfoRow1">
-          <ul>
-            <li>Company Name</li>
-            <li>Siam Nistrans Co., Ltd.</li>
-          </ul>
-          <ul>
-            <li>Address</li>
-            <li>
-              15th Fl., 191/66, 68-69 CTI Tower, Ratchadapisek Rd.,
-              <br />
-              Kwang Klongtoey, Khet Klongtoey, Bangkok 10110, Thailand
-            </li>
-          </ul>
-          <ul>
-            <li>Phone</li>
-            <li>(+66)-2-261-1080~5 or 261-5343~6</li>
-          </ul>
-          <ul>
-            <li>Fax</li>
-            <li>(+66)-2-261-1024 or 1059~60</li>
-          </ul>
-          <ul>
-            <li>Date of Establishment</li>
-            <li>September 30, 1987</li>
-          </ul>
-          <ul>
-            <li>Capital</li>
-            <li>507,000,000 THB</li>
-          </ul>
-          <ul>
-            <li>Shareholders</li>
-            <li>
-              Nissin Corporation, CTI Logistics Co., Ltd.,
-              <br />
-              SBCS Co., Ltd., SMBC Management Service Co., Ltd.
-            </li>
-          </ul>
-          <ul>
-            <li>Number of Employees</li>
-            <li>750 (as of 2023)</li>
-          </ul>
-          <ul>
-            <li>Representative</li>
-            <li>Mr. Takatoshi Yatsuzuka</li>
-          </ul>
-          <ul>
-            <li>Business</li>
-            <li>
-              Air and sea cargo handling, warehousing, domestic land transport,
-              container transport, customs clearance,
-              <br />
-              export packing (auto parts, KD parts, CBUs), urgent and on-site
-              packing, machinery installation, and
-              <br />
-              exhibition setup/removal.
-            </li>
-          </ul>
-          <ul>
-            <li>Quality Policy</li>
-            <li>
-              Caring for customers, on-time delivery, employees, and continuous
-              improvement.
-            </li>
-          </ul>
-          <ul>
-            <li>Vision</li>
-            <li>
-              To lead as a domestic and international logistics service
-              provider.
-            </li>
-          </ul>
-          <ul>
-            <li>Mission</li>
-            <li>
-              1. Optimize CRM program
-              <br />
-              2. Modernize information systems
-              <br />
-              3. Enhance employee and team capabilities
-              <br />
-              4. Improve quality systems to meet international standards
-            </li>
-          </ul>
-        </div>
-
-        <div className="flex gap-2 my-4">
-          <img
-            src="/img/about/001.jpg"
-            className="hidden md:block"
-            alt="Company Profile 1"
-          />
-          <img
-            src="/img/about/002.jpg"
-            className="hidden md:block"
-            alt="Company Profile 2"
-          />
+        <div className="flex justify-between items-center">
+          <div className="comInfoRow1">
+            <ul>
+              <li>Company Name</li>
+              <li>Siam Nistrans Co., Ltd.</li>
+            </ul>
+            <ul>
+              <li>Address</li>
+              <li>
+                15th Fl., 191/66, 68-69 CTI Tower, Ratchadapisek Rd.,
+                <br />
+                Kwang Klongtoey, Khet Klongtoey, Bangkok 10110, Thailand
+              </li>
+            </ul>
+            <ul>
+              <li>Phone</li>
+              <li>(+66)-2-261-1080~5 or 261-5343~6</li>
+            </ul>
+            <ul>
+              <li>Fax</li>
+              <li>(+66)-2-261-1024 or 1059~60</li>
+            </ul>
+            <ul>
+              <li>Date of Establishment</li>
+              <li>September 30, 1987</li>
+            </ul>
+            <ul>
+              <li>Capital</li>
+              <li>507,000,000 THB</li>
+            </ul>
+            <ul>
+              <li>Shareholders</li>
+              <li>
+                Nissin Corporation, CTI Logistics Co., Ltd.,
+                <br />
+                SBCS Co., Ltd., SMBC Management Service Co., Ltd.
+              </li>
+            </ul>
+            <ul>
+              <li>Number of Employees</li>
+              <li>750 (as of 2023)</li>
+            </ul>
+            <ul>
+              <li>Representative</li>
+              <li>Mr. Takatoshi Yatsuzuka</li>
+            </ul>
+            <ul>
+              <li>Business</li>
+              <li>
+                Air and sea cargo handling, warehousing, domestic land
+                transport, container transport, customs clearance,
+                <br />
+                export packing (auto parts, KD parts, CBUs), urgent and on-site
+                packing, machinery installation, and
+                <br />
+                exhibition setup/removal.
+              </li>
+            </ul>
+            <ul>
+              <li>Quality Policy</li>
+              <li>
+                Caring for customers, on-time delivery, employees, and
+                continuous improvement.
+              </li>
+            </ul>
+            <ul>
+              <li>Vision</li>
+              <li>
+                To lead as a domestic and international logistics service
+                provider.
+              </li>
+            </ul>
+            <ul>
+              <li>Mission</li>
+              <li>
+                1. Optimize CRM program
+                <br />
+                2. Modernize information systems
+                <br />
+                3. Enhance employee and team capabilities
+                <br />
+                4. Improve quality systems to meet international standards
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2 ">
+            <img
+              src="/img/about/001.jpg"
+              className="hidden md:block"
+              alt="Company Profile 1"
+            />
+            <img
+              src="/img/about/002.jpg"
+              className="hidden md:block"
+              alt="Company Profile 2"
+            />
+          </div>
         </div>
 
         <a
