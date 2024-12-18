@@ -1,6 +1,6 @@
 export default function CompoTh() {
   return (
-    <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black">
+    <div className="container  px-2 mx-auto 2xl:px-20 xl:px-6 pb-10 text-black">
       <p className="branchesTopic no-padding-r">
         Siam Nistrans (สยามนิสทรานส์) ก่อตั้งขึ้นเมื่อพ.ศ. 2530
         เป็นนิติบุคคลในประเทศไทยของ NISSIN CORPORATION

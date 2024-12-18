@@ -13,7 +13,7 @@ export default function Cookie() {
         pageName={t("topic")}
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container  px-2 2xl:px-20 px-2 xl:px-0 mx-auto pb-10 text-black py-10">
+      <div className="container   2xl:px-20 px-2 xl:px-6 mx-auto pb-10 text-black py-10">
         <div className="cookie-box">
           <div className="pageTitle1">{t("topic")}</div>
 

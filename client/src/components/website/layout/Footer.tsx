@@ -11,7 +11,7 @@ export default function Footer({ logo }: any) {
   return (
     <div className="text-black bg-[#E9EAEE]">
       <div className="">
-        <div className="container  px-2 mx-auto 2xl:px-20 pt-4 px-2 xl:px-0">
+        <div className="container  px-2 mx-auto 2xl:px-20 pt-4 px-2  xl:px-6 ">
           <div className="gap-4 md:gap-0 py-5 flex items-center justify-between flex-col md:flex-row">
             <div className="flex items-start gap-4 flex-col">
               <Logo img={logo} />
@@ -44,7 +44,7 @@ export default function Footer({ logo }: any) {
         </div>
       </div>
       <div className="bg-blue-950 text-white">
-        <div className="container  px-2 mx-auto 2xl:px-20 py-4 px-2 xl:px-0 sm:flex-row flex-col flex justify-between text-xs">
+        <div className="container  px-2 mx-auto 2xl:px-20 py-4 px-2  xl:px-6  sm:flex-row flex-col flex justify-between text-xs">
           <div>
             <span className="">© Siam Nistrans Co., Ltd.</span>
           </div>

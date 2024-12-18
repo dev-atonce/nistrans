@@ -1,6 +1,6 @@
 export default function CompoEn() {
   return (
-    <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black">
+    <div className="container  px-2 mx-auto 2xl:px-20  xl:px-6 pb-10 text-black">
       <p className="branchesTopic no-padding-r ">
         Siam Nistrans (Thai Nissin) was established in 1987 as the Thai
         subsidiary of Nissin Corporation, which is a pioneer in integrated

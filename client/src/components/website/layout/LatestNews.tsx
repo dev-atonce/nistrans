@@ -39,7 +39,7 @@ export default function LatestNews({ home, lang, limit, seaFreight }: any) {
 
   return (
     <>
-      <div className="container   mx-auto border-b border-slate-100 mb-10 pb-10 px-2 xl:px-0">
+      <div className="container   mx-auto border-b border-slate-100 mb-10 pb-10 px-2  xl:px-6 ">
         {home && (
           <div
             className={`pb-20 flex justify-center items-center flex-col text-blue-950 gap-3`}

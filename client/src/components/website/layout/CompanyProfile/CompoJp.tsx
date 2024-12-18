@@ -1,6 +1,6 @@
 export default function CompoJp() {
   return (
-    <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black">
+    <div className="container  px-2 mx-auto 2xl:px-20  xl:px-6 pb-10 text-black">
       <p className="branchesTopic no-padding-r">
         Siam Nistrans (タイ日新)
         は、株式会社日新のタイ現地法人として1987年に設立されました。陸・海・空の

@@ -34,7 +34,7 @@ export default function ContactPage() {
         pageName={t("contact")}
         prevPage={{ pageName: t("home"), url: "/" }}
       />
-      <div className="container mx-auto 2xl:px-20 px-2 xl:px-0">
+      <div className="container mx-auto 2xl:px-20 px-2 xl:px-6">
         <Contact />
       </div>
     </>

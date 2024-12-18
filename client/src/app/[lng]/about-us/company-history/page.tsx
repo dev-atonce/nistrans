@@ -32,7 +32,7 @@ export default function AboutPage({ params: { lng } }: any) {
   const h = useTranslations("header");
   const content =
     lng === "th" ? (
-      <div className="historyBox">
+      <div className="historyBox ">
         <div className="historyTb">
           <ul>
             <li>ต.ค. 2530</li>
@@ -447,7 +447,7 @@ export default function AboutPage({ params: { lng } }: any) {
         image="/img/service/histo_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto 2xl:px-20 pb-10 text-black  px-2">
+      <div className="container mx-auto 2xl:px-20 pb-10 text-black xl:px-6  px-2">
         <div className="mt-[-60px]">{content}</div>
       </div>
     </>

@@ -96,7 +96,7 @@ export default async function RecruitmentPage({
         // @ts-ignore
         prevPage={{ pageName: pagename.home[lng], url: "/" }}
       />
-      <div className="container px-4 md:px-6 xl:px-0 mx-auto text-slate-800 my-10">
+      <div className="container px-2 md:px-6 xl:px-6 mx-auto text-slate-800 my-10">
         <div className="text-xs sm:text-sm md:text-base">
           <div className="grid grid-cols-12 pb-8 border-b border-slate-200 font-semibold">
             <span className="col-span-4 md:col-span-2 sm:col-span-2 flex items-center">

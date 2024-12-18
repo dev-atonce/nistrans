@@ -1078,7 +1078,7 @@ export default function AboutPage({ params: { lng } }: any) {
         image="/img/service/branch_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto 2xl:px-20 pb-10 text-black px-2">
+      <div className="container mx-auto 2xl:px-20 xl:px-6 pb-10 text-black px-2">
         {content}
       </div>
     </>

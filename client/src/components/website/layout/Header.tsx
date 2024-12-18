@@ -63,7 +63,7 @@ export default function Header({ logo, lng }: any) {
 
   return (
     <div className="shadow-md bg-white ">
-      <div className="header  container mx-auto 2xl:px-20 px-2 xl:px-0">
+      <div className="header  container mx-auto 2xl:px-20 px-2  xl:px-6 ">
         <div className="xl:flex justify-between items-center mx-auto h-full px-2 lg:px-0">
           <div className="logo">
             <div className="py-4 flex justify-between items-center">

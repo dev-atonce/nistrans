@@ -36,7 +36,7 @@ export default function BlogPage({ params }: { params: { lng: string } }) {
         image="/img/service/news_banner.jpg"
         prevPage={{ pageName: t("home"), url: "/" }}
       />
-      <div className="container mx-auto 2xl:px-20 px-2 xl:px-0">
+      <div className="container mx-auto 2xl:px-20 px-2 xl:px-6">
         <div className="border-slate-200">
           <LatestNews home={false} lang={params.lng} limit={10} />
         </div>

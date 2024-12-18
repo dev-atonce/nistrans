@@ -36,7 +36,7 @@ export default async function Home({ params }: Props) {
       <HomeMoving lang={lng} />
       <WarehouseManagement lang={lng} />
       <HacoLab lang={lng} />
-      <LatestNews home={true} lang={lng} limit={5} />
+      {/* <LatestNews home={true} lang={lng} limit={5} /> */}
       {/* Blog */}
       <div className="container mx-auto 2xl:px-20 px-2">
         <Blog home={true} limit={3} lng={lng} />
