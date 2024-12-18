@@ -11,7 +11,7 @@ export function Logo({ color, img }: any) {
           src={
             img
               ? `${process.env.NEXT_PUBLIC_BASE_URL}${img}`
-              : "/img/nistrans_logo.png"
+              : "/img/full_logo.png"
           }
           alt="rent"
           width={400}

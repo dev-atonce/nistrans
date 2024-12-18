@@ -444,9 +444,10 @@ export default function AboutPage({ params: { lng } }: any) {
       <Cover
         pageName={t("history")}
         engName="Company History"
+        image="/img/service/histo_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black">
+      <div className="container mx-auto 2xl:px-20 pb-10 text-black  px-2">
         <div className="mt-[-60px]">{content}</div>
       </div>
     </>

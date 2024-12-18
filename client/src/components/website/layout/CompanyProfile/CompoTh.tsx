@@ -1,6 +1,6 @@
 export default function CompoTh() {
   return (
-    <div className="container mx-auto pb-10 text-black">
+    <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black">
       <p className="branchesTopic no-padding-r">
         Siam Nistrans (สยามนิสทรานส์) ก่อตั้งขึ้นเมื่อพ.ศ. 2530
         เป็นนิติบุคคลในประเทศไทยของ NISSIN CORPORATION
@@ -94,7 +94,7 @@ export default function CompoTh() {
               </li>
             </ul>
 
-            <ul>
+            {/* <ul>
               <li>นโยบายคุณภาพ</li>
               <li>
                 <span>
@@ -129,7 +129,7 @@ export default function CompoTh() {
                   4. พัฒนาระบบคุณภาพการบริการให้ได้มาตรฐานสากล
                 </span>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="flex  flex-col gap-2">
             <img
@@ -178,7 +178,7 @@ export default function CompoTh() {
           allowFullScreen
         ></iframe>
 
-        <div className="container">
+        <div className="container  px-2">
           <div className="picRow1">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12 md:col-span-3 ">

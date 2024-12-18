@@ -2,8 +2,15 @@ import Cover from "@/components/website/layout/Cover";
 import PrivacyEN from "@/components/website/layout/privacy/PrivacyEn";
 import PrivacyJP from "@/components/website/layout/privacy/PrivacyJp";
 import PrivacyTH from "@/components/website/layout/privacy/PrivacyTh";
+import { useTranslations } from "next-intl";
 
 export default function Privacy({ params: { lng } }: any) {
+  const h = useTranslations("header");
+  const name = {
+    th: "ประกาศด้านการคุ้มครองข้อมูลส่วนบุคคล",
+    en: "Privacy Notice",
+    jp: "個人情報保護告示",
+  };
   const content =
     lng === "th" ? (
       <PrivacyTH />
@@ -18,11 +25,12 @@ export default function Privacy({ params: { lng } }: any) {
     <>
       <Cover
         noHeading={true}
-        pageName="ประกาศด้านการคุ้มครองข้อมูลส่วนบุคคล"
+        // @ts-ignore
+        pageName={name[lng]}
         engName="Privacy Notice"
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
+      <div className="container   2xl:px-20 px-2 xl:px-0 mx-auto pb-10 text-black py-10">
         {content}
       </div>
     </>

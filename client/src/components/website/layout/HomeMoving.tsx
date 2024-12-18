@@ -5,7 +5,7 @@ export default function HomeMoving({ lang }: any) {
   const t = useTranslations("moving-section");
   return (
     <div className="py-20">
-      <div className="container mx-auto text-slate-700">
+      <div className="container  px-2 mx-auto 2xl:px-20 text-slate-700">
         <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
           <h2 className="text-4xl font-[500] text-center ">{t("heading")}</h2>
           <div className="h-1 w-20 bg-orange-400"></div>

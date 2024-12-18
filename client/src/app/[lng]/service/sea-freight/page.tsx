@@ -1,7 +1,8 @@
 import Cover from "@/components/website/layout/Cover";
+import LatestNews from "@/components/website/layout/LatestNews";
 import { useTranslations } from "next-intl";
 
-export default function SeaFreight() {
+export default function SeaFreight({ params: { lng } }: any) {
   const h = useTranslations("header");
   const t = useTranslations("sea-freight");
   const branchs = useTranslations("branchs");
@@ -14,7 +15,7 @@ export default function SeaFreight() {
         prevPage={{ pageName: h("home"), url: "/" }}
         image="/img/service/sea-banner.jpg"
       />
-      <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
+      <div className="container 2xl:px-20 px-2 xl:px-0 mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t("h1")}</h1>
         <div className="py-10">
           <div>
@@ -124,6 +125,7 @@ export default function SeaFreight() {
                 </ul>
               </div>
             </div>
+            <LatestNews home={false} seaFreight={true} lang={lng} limit={100} />
           </div>
         </div>
       </div>

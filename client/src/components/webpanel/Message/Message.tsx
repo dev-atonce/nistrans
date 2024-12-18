@@ -12,7 +12,7 @@ export default function Message({
   type?: string;
 }) {
   // @ts-ignore
-  const { id, company_name, contact_name, phone, email, title, detail } = data;
+  const { telephone,id, companyName, contactName,department,address , email, title, detail } = data;
 
   return (
     <div className="bg-white p-10 text-xl flex flex-col gap-4">
@@ -20,10 +20,10 @@ export default function Message({
         <div>
           Message from:{" "}
           {type == "contactPage" ? (
-            <span className="font-bold text-2xl">{contact_name}</span>
+            <span className="font-bold text-2xl">{contactName}</span>
           ) : (
             <span className="font-bold text-2xl">
-              {company_name} - {contact_name}
+              {companyName} - {contactName}
             </span>
           )}
         </div>
@@ -38,7 +38,7 @@ export default function Message({
         Email: <span className="font-bold text-lg">{email}</span>
       </div>
       <div>
-        Phone: <span className="font-bold text-lg"> {phone}</span>
+        Phone: <span className="font-bold text-lg"> {telephone}</span>
       </div>
       <div>
         Detail: <span className="font-bold text-lg"> {detail}</span>

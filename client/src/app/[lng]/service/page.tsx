@@ -2,6 +2,7 @@ import Cover from "@/components/website/layout/Cover";
 import ServiceSection from "@/components/website/layout/ServiceSection";
 
 import { Metadata, ResolvingMetadata } from "next";
+import { useTranslations } from "next-intl";
 
 const pageName = "service";
 export async function generateMetadata(
@@ -27,14 +28,15 @@ export async function generateMetadata(
 }
 export default function ServicePage({ params: { lng } }: any) {
   const lang = lng;
+  const t = useTranslations("header");
   return (
     <>
       <Cover
-        pageName="บริการของเรา"
+        pageName={t("service")}
         engName="Service"
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        prevPage={{ pageName: t("home"), url: "/" }}
       />
-      <div className="container mx-auto ">
+      <div className="container  px-2 mx-auto 2xl:px-20 ">
         <ServiceSection page={true} lang={lang} />
       </div>
     </>
@@ -49,7 +51,7 @@ export default function ServicePage({ params: { lng } }: any) {
 //         engName="Service"
 //         prevPage={{ pageName: "หน้าแรก", url: "/" }}
 //       />
-//       <div className="container mx-auto ">
+//       <div className="container mx-auto 2xl:px-20 ">
 //         <ServiceSection page={true} lang={lang} />
 //       </div>
 //     </>

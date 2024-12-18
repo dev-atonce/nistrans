@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 
 export default function Cookie() {
   const t = useTranslations("cookie");
+  const h = useTranslations("header");
   const moreD = t("more-detail.p");
   console.log(moreD);
   return (
@@ -10,9 +11,9 @@ export default function Cookie() {
       <Cover
         noHeading={true}
         pageName={t("topic")}
-        prevPage={{ pageName: "หน้าแรก", url: "/" }}
+        prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container px-2 xl:px-0 mx-auto pb-10 text-black py-10">
+      <div className="container  px-2 2xl:px-20 px-2 xl:px-0 mx-auto pb-10 text-black py-10">
         <div className="cookie-box">
           <div className="pageTitle1">{t("topic")}</div>
 

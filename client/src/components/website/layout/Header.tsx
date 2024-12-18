@@ -63,7 +63,7 @@ export default function Header({ logo, lng }: any) {
 
   return (
     <div className="shadow-md bg-white ">
-      <div className="header container mx-auto px-2 xl:px-0">
+      <div className="header  container mx-auto 2xl:px-20 px-2 xl:px-0">
         <div className="xl:flex justify-between items-center mx-auto h-full px-2 lg:px-0">
           <div className="logo">
             <div className="py-4 flex justify-between items-center">
@@ -116,7 +116,7 @@ export default function Header({ logo, lng }: any) {
           } top-0 bg-black opacity-70 h-full w-full z-50 overflow-hidden`}
         ></div>
         <div
-          className={`fixed block z-99 lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300 z-40 ${
+          className={`fixed block z-99 lg:none top-0 right-0 h-full w-80 text-black bg-white transition-transform duration-300  ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

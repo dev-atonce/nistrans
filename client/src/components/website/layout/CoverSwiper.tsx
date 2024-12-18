@@ -19,7 +19,7 @@ export default function CoverSwiper({ banner, lang, home, limit }: any) {
   const t = useTranslations("cover");
   return (
     <div className="header-slider">
-      <div className="w-full header-cover">
+      <div className="w-full header-cover relative">
         <Swiper
           modules={[Autoplay, Navigation, Pagination, EffectFade]}
           spaceBetween={0}
@@ -29,12 +29,12 @@ export default function CoverSwiper({ banner, lang, home, limit }: any) {
           speed={1200}
           effect="fade"
         >
-          <ul>
+          <ul className="">
             {banner["rows"].map((item: BannerProps, key: number) => {
               return (
                 <SwiperSlide key={key} className=" ">
                   <div className="">
-                    <div className="container mx-auto relative ">
+                    <div className="container  px-2 mx-auto   ">
                       <div
                         className="absolute xl:top-[40px] 2xl:top-[100px] w-full top-0 left-0 right-0  flex flex-col items-center gap-4"
                         style={{ textShadow: "1px 1px #2F2F2F" }}
@@ -49,7 +49,6 @@ export default function CoverSwiper({ banner, lang, home, limit }: any) {
                           {t("p")}
                         </p>
                       </div>
-                      <News lang={lang} home={home} limit={limit} />
                     </div>
                     <Image
                       // src={"/img/banner1.png"}
@@ -65,6 +64,9 @@ export default function CoverSwiper({ banner, lang, home, limit }: any) {
             })}
           </ul>
         </Swiper>
+        <div className="container mx-auto">
+          <News lang={lang} home={home} limit={limit} />
+        </div>
       </div>
     </div>
   );

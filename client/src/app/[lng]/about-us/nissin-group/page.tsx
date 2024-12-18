@@ -53,7 +53,7 @@ export default function AboutPage({ params: { lng } }: any) {
       h: "日本 (本社)",
       asia: "アジア",
       china: "中国",
-      eu: "",
+      eu: "欧州",
       us: "米州",
     },
   };
@@ -63,9 +63,10 @@ export default function AboutPage({ params: { lng } }: any) {
       <Cover
         pageName={t("group")}
         engName="Nissin Group Company"
+        image="/img/service/group_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black mt-[-40px]">
+      <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black mt-[-40px]">
         <div className="corBehBox">
           {/* @ts-ignore */}
           <div className="pageTitle1">{content[lng]["h"]}</div>

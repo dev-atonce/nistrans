@@ -1,7 +1,7 @@
 import Cover from "@/components/website/layout/Cover";
 import Image from "next/image";
 import { FaRegClock } from "react-icons/fa";
-import 'react-quill/dist/quill.snow.css';
+import "react-quill/dist/quill.snow.css";
 
 const fetchBlog = async ({ id }: { id: string }) => {
   const res = await fetch(
@@ -42,10 +42,14 @@ const pagename = {
     th: "ประกาศ",
     en: "Announcement",
     jp: "お知らせ",
-  }
+  },
 };
 
-export default async function ServicePage({ params }: { params: { id: string, lng: string } }) {
+export default async function ServicePage({
+  params,
+}: {
+  params: { id: string; lng: string };
+}) {
   const { id } = params;
   const blog = await fetchBlog({ id });
   const lng = params.lng;
@@ -68,24 +72,26 @@ export default async function ServicePage({ params }: { params: { id: string, ln
         // @ts-ignore
         prevPage={{ pageName: pagename.home[lng], url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black py-10">
+      <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black py-10">
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-2">
             <h1 className="text-red-600 text-2xl">{blogTitle}</h1>
-            {blogType == "news" &&
+            {blogType == "news" && (
               <span className="bg-slate-700 rounded-xl px-1 py-1 text-xs text-white">
                 {
                   // @ts-ignore
-                  pagename.announcement[lng]}
+                  pagename.announcement[lng]
+                }
               </span>
-            }
+            )}
           </div>
           <div className="text-slate-500 text-md flex items-center gap-2">
-            <FaRegClock /><div>{convertedDate(blogDate)}</div>
+            <FaRegClock />
+            <div>{convertedDate(blogDate)}</div>
           </div>
         </div>
         <div className="lg:px-20 flex justify-center">
-          {blogImage &&
+          {blogImage && (
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_URL}${blogImage}`}
               alt={blogTitle}
@@ -95,7 +101,7 @@ export default async function ServicePage({ params }: { params: { id: string, ln
               loading="lazy"
               className="h-[500px] object-contain"
             />
-          }
+          )}
         </div>
         <div className="py-10 ql-editor">
           <div dangerouslySetInnerHTML={{ __html: blogDetail }} />

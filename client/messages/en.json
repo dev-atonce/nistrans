@@ -101,6 +101,10 @@
     "department": "Department",
     "telephone": "Telephone",
     "email": "E-mail",
+    "re-email": "Confirm Email",
+    "address": "Company Address",
+    "privacy": "By clicking this checkbox, I agree to the",
+    "privacy-link": "privacy policy.",
     "title": "Inquiry subject",
     "option": {
       "1": "Transport",
@@ -125,7 +129,7 @@
       "p": "As an International Freight Forwarder, we provide seamless transportation services all over the world, such as reducing sea freight and transportation costs, providing prompt delivery and transportation, etc., through cooperation with NISSIN Corporation, which has a network in 150 countries worldwide, as well as affiliated companies and major agents."
     },
     "h2": "Siam Nistrans Sea Freight",
-    "h3": "Multimodal transportation with a global network (Door to Door)<br />Reliable and safe with consolidation services",
+    "h3": "Multimodal transportation with a global network (Door to Door) Reliable and safe with consolidation services",
     "section2": {
       "title": "Highlights",
       "p1": "Since our opening in 1987, we have used our experience and knowledge in multimodal transportation to deliver our customers' essential goods anywhere in the world with \"Reliability and Safety\", based on the motto \"Trust and Sincerity\".",

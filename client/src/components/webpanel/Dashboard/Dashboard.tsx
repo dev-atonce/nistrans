@@ -9,13 +9,12 @@ import { FaUserGear } from "react-icons/fa6";
 import { BsFillWalletFill } from "react-icons/bs";
 
 const Dashboard: React.FC = () => {
-
   return (
     <>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
-        <CardDataStats title="Home" link="/webpanel/home">
+        {/* <CardDataStats title="Home" link="/webpanel/home">
           <FaHome size={20} />
-        </CardDataStats>
+        </CardDataStats> */}
         <CardDataStats title="Banner" link="/webpanel/banner">
           <IoMdImages size={20} />
         </CardDataStats>

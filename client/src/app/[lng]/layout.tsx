@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 import Header from "@/components/website/layout/Header";
 import Footer from "@/components/website/layout/Footer";
 import PageSettingProvider from "@/contexts/PageSettingContext";
-import { Kanit } from "next/font/google";
+import { Kanit, Noto_Sans_JP } from "next/font/google";
 import { ConfigProvider } from "antd";
 import Favicon from "../icon.ico";
 import "./globals.css";
@@ -11,11 +11,20 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import ContactButton from "@/components/website/molecule/ContactButton";
+import ToTop from "@/components/website/molecule/ToTop";
 
 const kanit = Kanit({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
   style: ["normal", "italic"],
+});
+
+const noto = Noto_Sans_JP({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const pageName = "home";
@@ -75,10 +84,16 @@ export default async function RootLayout({
         }}
       >
         <PageSettingProvider>
-          <body className={kanit.className}>
+          <body
+            className={
+              lng !== "jp" ? `${kanit.className}` : `${noto.className} `
+            }
+          >
             <NextIntlClientProvider messages={messages}>
               <Header lng={lng} />
               {children}
+              <ContactButton />
+              <ToTop />
               <Footer />
             </NextIntlClientProvider>
           </body>

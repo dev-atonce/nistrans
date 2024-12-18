@@ -39,7 +39,7 @@ export default function News({ lang, home, limit }: any) {
   }, [page, limit]);
 
   return (
-    <div className=" px-0 sm:px-4 lg:px-0  xl:px-20 2xl:px-40  z-20 container mx-auto hidden absolute lg:block md:top-[200px] top-[100px] xl:top-[280px] 2xl:top-[380px]">
+    <div className="  px-2 sm:px-4 lg:px-0  xl:px-20 2xl:px-40   z-20 container mx-auto hidden absolute lg:block md:top-[200px] top-[100px] xl:top-[280px] 2xl:top-[330px]">
       <div className="w-full gap-4  shadow-md rounded-lg py-4 px-4 lg:px-4 bg-slate-200/80 grid grid-cols-12 text-slate-700 ">
         <div className="rounded-md col-span-10 grid-cols-12 grid gap-2">
           <div className="col-span-9 rounded-md grid grid-cols-1 gap-1 ">

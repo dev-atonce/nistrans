@@ -26,7 +26,7 @@ export default function NavDropdown({ title, dropdownItems }: any) {
         {title}
         <div
           id="dropdownNavbar"
-          className={`absolute ${show} dropdown z-20 bg-white overflow-hidden left-0 w-100 ${
+          className={`absolute ${show} dropdown z-40 bg-white overflow-hidden left-0 w-100 ${
             show ? `top-10` : ``
           }`}
         >

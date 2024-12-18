@@ -2,14 +2,16 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function Contactform() {
-  const t = useTranslations('contact-form');
+  const t = useTranslations("contact-form");
   const {
     reset,
     register,
     handleSubmit,
+    watch,
     formState: { errors, isSubmitSuccessful },
   } = useForm();
 
@@ -67,77 +69,124 @@ export default function Contactform() {
           <input
             {...register("contactName", { required: true, maxLength: 100 })}
             type="text"
-            placeholder={t('contactName')}
-            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            placeholder={t("contactName") + "*"}
+            className="placeholder-red-600 bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
           {errors?.contactName?.type === "required" && (
-            <p className="text-xs text-red text-end">{t('validate.require')}</p>
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
           )}
           {errors?.contactName?.type === "maxLength" && (
-            <p className="text-xs text-red text-end">{t('validate.maxLenght', { maxLenght: 100 })}</p>
+            <p className="text-xs text-red text-end">
+              {t("validate.maxLenght", { maxLenght: 100 })}
+            </p>
           )}
         </div>
         <div className="col-span-2 md:col-span-1">
           <input
             {...register("companyName", { required: true, maxLength: 100 })}
             type="text"
-            placeholder={t('companyName')}
-            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            placeholder={t("companyName") + "*"}
+            className="placeholder-red-600 bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
           {errors?.companyName?.type === "required" && (
-            <p className="text-xs text-red text-end">{t('validate.require')}</p>
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
           )}
           {errors?.companyName?.type === "maxLength" && (
-            <p className="text-xs text-red text-end">{t('validate.maxLenght', { maxLenght: 100 })}</p>
+            <p className="text-xs text-red text-end">
+              {t("validate.maxLenght", { maxLenght: 100 })}
+            </p>
           )}
         </div>
         <div className="col-span-2 md:col-span-1">
           <input
-            {...register("department", { required: true, maxLength: 100 })}
+            {...register("department")}
             type="text"
-            placeholder={t('department')}
+            placeholder={t("department")}
             className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
           {errors?.department?.type === "required" && (
-            <p className="text-xs text-red text-end">{t('validate.require')}</p>
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
           )}
           {errors?.department?.type === "maxLength" && (
-            <p className="text-xs text-red text-end">{t('validate.maxLenght', { maxLenght: 100 })}</p>
+            <p className="text-xs text-red text-end">
+              {t("validate.maxLenght", { maxLenght: 100 })}
+            </p>
           )}
         </div>
         <div className="col-span-2 md:col-span-1">
           <input
             {...register("email", { required: true, maxLength: 100 })}
             type="email"
-            placeholder={t('email')}
-            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            placeholder={t("email") + "*"}
+            className="placeholder-red-600 bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
           {errors?.email?.type === "required" && (
-            <p className="text-xs text-red text-end">{t('validate.require')}</p>
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
           )}
           {errors?.email?.type === "maxLength" && (
-            <p className="text-xs text-red text-end">{t('validate.maxLenght', { maxLenght: 100 })}</p>
+            <p className="text-xs text-red text-end">
+              {t("validate.maxLenght", { maxLenght: 100 })}
+            </p>
           )}
         </div>
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
+          <input
+            {...register("reEmail", {
+              required: true,
+              validate: (val: string) => {
+                if (watch("email") != val) {
+                  return "Emails do not match!";
+                }
+              },
+            })}
+            type="email"
+            placeholder={t("re-email") + "*"}
+            className="placeholder-red-600 bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+          />
+          {errors?.reEmail?.type === "required" && (
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
+          )}
+          {errors?.reEmail?.type === "validate" && (
+            <p className="text-xs text-red text-end">{t("validate.email")}</p>
+          )}
+          {errors?.email?.type === "maxLength" && (
+            <p className="text-xs text-red text-end">
+              {t("validate.maxLenght", { maxLenght: 100 })}
+            </p>
+          )}
+        </div>
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("telephone", { pattern: /[\d+]/g, required: true })}
             type="text"
-            placeholder={t('telephone')}
-            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            placeholder={t("telephone") + "*"}
+            className="placeholder-red-600 bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
           {errors?.telephone?.type === "pattern" && (
-            <p className="text-xs text-red text-end">{t('number')}</p>
+            <p className="text-xs text-red text-end">{t("number")}</p>
           )}
           {errors?.telephone?.type === "required" && (
-            <p className="text-xs text-red text-end">{t('validate.require')}</p>
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
+          )}
+        </div>
+        <div className="col-span-2">
+          <textarea
+            {...register("address")}
+            rows={2}
+            placeholder={t("address")}
+            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+          />
+          {errors?.address?.type === "required" && (
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
           )}
         </div>
         <div className="col-span-2 md:col-span-2 grid grid-cols-4 py-4 text-slate-500 ">
           <div className="flex flex-col items-start">
-            <span className="text-black">{t('title')}</span>
+            <span className="text-red-600">{t("title")}*</span>
             {errors?.topic?.type === "required" && (
-              <p className="text-xs text-red text-end">{t('validate.require')}</p>
+              <p className="text-xs text-red text-end">
+                {t("validate.require")}
+              </p>
             )}
           </div>
           <div className="col-span-4 md:col-span-1 lg:col-span-4 2xl:col-span-1">
@@ -152,7 +201,7 @@ export default function Contactform() {
                 value={"การขนส่ง"}
               />
               <label htmlFor="" className="text-base">
-                {t('option.1')}
+                {t("option.1")}
               </label>
             </div>
             <div className="flex items-center gap-2">
@@ -166,7 +215,7 @@ export default function Contactform() {
                 value={"Haco Lab"}
               />
               <label htmlFor="" className="text-base">
-                {t('option.2')}
+                {t("option.2")}
               </label>
             </div>
           </div>
@@ -182,7 +231,7 @@ export default function Contactform() {
                 value={"คลังสินค้าและการจัดเก็บ"}
               />
               <label htmlFor="" className="text-base">
-                {t('option.3')}
+                {t("option.3")}
               </label>
             </div>
             <div className="flex items-center gap-2">
@@ -196,7 +245,7 @@ export default function Contactform() {
                 value={"ข่าวรับสมัครบุคคลากร"}
               />
               <label htmlFor="" className="text-base">
-                {t('option.4')}
+                {t("option.4")}
               </label>
             </div>
           </div>
@@ -212,7 +261,7 @@ export default function Contactform() {
                 value={"งานขนย้าย"}
               />
               <label htmlFor="" className="text-base">
-                {t('option.5')}
+                {t("option.5")}
               </label>
             </div>
             <div className="flex items-center gap-2">
@@ -227,28 +276,51 @@ export default function Contactform() {
                 value={"อื่นๆ"}
               />
               <label htmlFor="" className="text-base">
-                {t('option.6')}
+                {t("option.6")}
               </label>
             </div>
           </div>
         </div>
+
         <div className="col-span-2">
           <textarea
             {...register("detail", { required: true })}
             rows={5}
-            placeholder={t('detail')}
-            className="bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            placeholder={t("detail") + "*"}
+            className="placeholder-red-600 bg-white w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
           />
           {errors?.detail?.type === "required" && (
-            <p className="text-xs text-red text-end">{t('validate.require')}</p>
+            <p className="text-xs text-red text-end">{t("validate.require")}</p>
           )}
         </div>
-        <div className="flex justify-start gap-4 col-span-2 ">
+        <div className="flex flex-col items-start gap-4 col-span-2 ">
+          <div className="flex flex-items gap-2">
+            <input
+              {...register("privacyCheck", {
+                required: true,
+              })}
+              type="checkbox"
+              className=""
+              value={"Confirm"}
+            />
+            <label htmlFor="" className="text-base text-slate-800">
+              {t("privacy")}{" "}
+              <Link href="/privacy-notice/" className="text-blue-700">
+                {t("privacy-link")}
+              </Link>
+            </label>
+            {errors?.privacyCheck?.type === "required" && (
+              <p className="text-xs text-red text-end">
+                {t("validate.require")}
+              </p>
+            )}
+          </div>
+
           <button
             type="submit"
             className="uppercase px-12 hover:text-white border py-2 bg-white text-orange-600 rounded-xl  border-orange-600 hover:bg-orange-600 transition-all "
           >
-            {t('send')}
+            {t("send")}
           </button>
         </div>
       </form>

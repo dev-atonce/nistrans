@@ -92,6 +92,7 @@ export default async function RecruitmentPage({
       <Cover
         // @ts-ignore
         pageName={pagename.page[lng]}
+        image="/img/service/rec_banner.jpg"
         // @ts-ignore
         prevPage={{ pageName: pagename.home[lng], url: "/" }}
       />
@@ -132,8 +133,11 @@ export default async function RecruitmentPage({
                   provinces?.find((j: any) => j?.id == i?.location)?.name}
               </span>
               <span className="col-span-12 md:col-span-2 sm:col-span-2 mt-2 md:mt-0 flex justify-end md:justify-start">
-                {/* @ts-ignore */}
-                <BtnShadow href={`recruitment/${i?.slug}`} text={`${pagename.view[lng]}`} />
+                <BtnShadow
+                  href={`recruitment/${i?.slug}`}
+                  // @ts-ignore
+                  text={`${pagename.view[lng]}`}
+                />
               </span>
             </div>
           ))}

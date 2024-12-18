@@ -93,7 +93,7 @@ export default function HacoLab({ lang }: any) {
         `}
       </style> */}
       <>
-        <div className="text-slate-600 container mx-auto py-20 block md:hidden">
+        <div className="text-slate-600  px-2 container mx-auto 2xl:px-20 py-20 block md:hidden">
           <div className="">
             <div className="pb-10 flex justify-center items-center flex-col gap-3">
               <h2 className="text-2xl  ">{t("heading")} </h2>
@@ -124,7 +124,7 @@ export default function HacoLab({ lang }: any) {
               <div className="col-span-12">
                 <section className="flex flex-col items-center">
                   <img
-                    src="/img/006.jpg"
+                    src="/img/mobile.png"
                     alt="Control with smartphone"
                     className="img-responsive img-center"
                   />
@@ -141,7 +141,7 @@ export default function HacoLab({ lang }: any) {
               <div className="col-span-12">
                 <section className="flex flex-col items-center">
                   <img
-                    src="/img/007.jpg"
+                    src="/img/server.png"
                     alt="Labeling containers for easy management"
                     className="img-responsive img-center"
                   />
@@ -158,7 +158,7 @@ export default function HacoLab({ lang }: any) {
               <div className="col-span-12">
                 <section className="flex flex-col items-center">
                   <img
-                    src="/img/008.jpg"
+                    src="/img/computer.png"
                     alt="Cloud-based information control"
                     className="img-responsive img-center"
                   />
@@ -186,7 +186,7 @@ export default function HacoLab({ lang }: any) {
         </div>
         <div className="homeWarehouse py-20 hidden md:block">
           <div
-            className="container mx-auto 2xl:px-40 "
+            className="container  px-2 mx-auto 2xl:px-20 "
             style={{ background: "white" }}
           >
             <section

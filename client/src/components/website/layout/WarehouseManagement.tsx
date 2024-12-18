@@ -5,7 +5,7 @@ export default function Warehouse({ lang }: any) {
   const t = useTranslations("warehouse-section");
   return (
     <div className="">
-      <div className="container mx-auto">
+      <div className="container  px-2 mx-auto 2xl:px-20">
         <section className="md:w-[80%] w-full md:mx-auto">
           <div className="flex items-center text-slate-700">
             <div className="bg-slate-100 p-10 rounded-lg">

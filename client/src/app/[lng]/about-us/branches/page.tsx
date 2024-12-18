@@ -1075,9 +1075,12 @@ export default function AboutPage({ params: { lng } }: any) {
       <Cover
         pageName={t("branch")}
         engName="Domestic Branches"
+        image="/img/service/branch_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto pb-10 text-black">{content}</div>
+      <div className="container mx-auto 2xl:px-20 pb-10 text-black px-2">
+        {content}
+      </div>
     </>
   );
 }

@@ -117,12 +117,12 @@ export default function ServiceSection({ data, page, lang }: any) {
   ];
   const list = page ? mock2 : mocks;
   return (
-    <div className="container mx-auto py-20">
+    <div className="container  px-2 mx-auto 2xl:px-20 py-20">
       <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
-        <h2 className="text-4xl font-[500]"> {t("heading")}</h2>
+        <h2 className="text-3xl font-[500]"> {t("heading")}</h2>
         <div className="h-1 w-20 bg-orange-400"></div>
       </div>
-      <div className="grid grid-cols-12 gap-6 px-20 ">
+      <div className="grid grid-cols-12 gap-6 md:px-20 ">
         {list?.map((i: any, k: any) => (
           <ProductCard item={i} key={k} lng={lng} />
         ))}

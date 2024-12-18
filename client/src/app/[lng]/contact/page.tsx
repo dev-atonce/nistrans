@@ -1,10 +1,13 @@
 import Contact from "@/components/website/layout/Contact";
 import Cover from "@/components/website/layout/Cover";
 import { Metadata, ResolvingMetadata } from "next";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 const pageName = "contact";
-export async function generateMetadata({ params, searchParams }: any, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const lng = params.lng;
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
   // fetch data
@@ -24,14 +27,14 @@ export async function generateMetadata({ params, searchParams }: any, parent: Re
 }
 
 export default function ContactPage() {
-  const t = useTranslations('header');
+  const t = useTranslations("header");
   return (
     <>
       <Cover
-        pageName={t('contact')}
-        prevPage={{ pageName: t('home'), url: "/" }}
+        pageName={t("contact")}
+        prevPage={{ pageName: t("home"), url: "/" }}
       />
-      <div className="container mx-auto px-2 xl:px-0">
+      <div className="container mx-auto 2xl:px-20 px-2 xl:px-0">
         <Contact />
       </div>
     </>

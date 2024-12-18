@@ -19,7 +19,7 @@ export default function Cover({ pageName, prevPage, noHeading, image }: any) {
           alt="cover"
           priority={true}
         />
-        <div className=" container mx-auto px-2 xl:px-0">
+        <div className=" container  px-2 mx-auto 2xl:px-20 px-2 xl:px-0">
           <div
             className="absolute top-[15%] hidden xl:block"
             style={{ textShadow: "1px 1px #2F2F2F" }}
@@ -30,13 +30,13 @@ export default function Cover({ pageName, prevPage, noHeading, image }: any) {
           </div>
         </div>
         <div className="bg-slate-500/20 w-full">
-          <div className=" hidden md:block container mx-auto px-2 xl:px-0">
+          <div className=" hidden md:block container  px-2 mx-auto 2xl:px-20 px-2 xl:px-0">
             <Breadcrumb pageName={pageName} prevPage={prevPage} />
           </div>
         </div>
       </div>
       {!noHeading && (
-        <div className="container mx-auto mt-4 px-2 xl:px-0">
+        <div className="container  px-2 mx-auto 2xl:px-20 mt-4 px-2 xl:px-0">
           <div className="py-4 flex flex-col gap-3 ">
             <h1 className="text-blue-950 text-4xl font-[500] ">{pageName}</h1>
             <div className="h-1 w-20 bg-orange-400"></div>

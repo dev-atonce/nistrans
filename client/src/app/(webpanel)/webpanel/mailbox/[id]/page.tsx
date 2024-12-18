@@ -36,7 +36,7 @@ const MailBoxView = ({ params }: { params: { id: string } }) => {
     <>
       <DefaultLayout>
         <Breadcrumb
-          pageName={`Message: ${msg?.contact_name}`}
+          pageName={`Message from: ${msg?.companyName} - ${msg?.contactName}`}
           module={{ pageName: "Mail Box", url: "mailbox" }}
         />
         <Message data={msg} type="contactPage" />

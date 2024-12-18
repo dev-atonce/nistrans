@@ -21,6 +21,11 @@ const nextConfig = {
         hostname: "api-nistrans.oncewebdesign.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "snc-portal.th.nissin-asia.com",
+        port: "",
+      },
     ],
   },
 };

@@ -37,7 +37,7 @@ export default function Haco() {
         prevPage={{ pageName: h("home"), url: "/" }}
         image="/img/service/haco-lab/banner.jpg"
       />
-      <div className="container px-2 md:px-0 mx-auto pb-10 text-black py-10">
+      <div className="container 2xl:px-20 px-2 md:px-0 mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t("h1")}</h1>
         <div className="py-10">
           <div>

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import AntPagination from "../molecule/AntPagination";
 import { useTranslations } from "next-intl";
 
-export default function LatestNews({ home, lang, limit }: any) {
+export default function LatestNews({ home, lang, limit, seaFreight }: any) {
   const [page, setPage] = useState(1);
   const [newsList, setNewsList] = useState([]);
   const [total, setTotal] = useState(0);
@@ -20,7 +20,16 @@ export default function LatestNews({ home, lang, limit }: any) {
       }
     );
     const data = await res.json();
-    setNewsList(data?.rows);
+    seaFreight
+      ? setNewsList(
+          data?.rows?.filter(
+            (i: any) =>
+              i?.blog_title_en?.includes("SWB") ||
+              i?.blog_title_en?.includes("B/L")
+          )
+        )
+      : setNewsList(data?.rows);
+
     setTotal(data?.total);
   };
 
@@ -30,7 +39,7 @@ export default function LatestNews({ home, lang, limit }: any) {
 
   return (
     <>
-      <div className="container mx-auto border-b border-slate-100 mb-10 pb-10 px-2 xl:px-0">
+      <div className="container   mx-auto border-b border-slate-100 mb-10 pb-10 px-2 xl:px-0">
         {home && (
           <div
             className={`pb-20 flex justify-center items-center flex-col text-blue-950 gap-3`}
@@ -56,7 +65,7 @@ export default function LatestNews({ home, lang, limit }: any) {
             </Link>
           </div>
         )}
-        {!home && total > limit && (
+        {!home && !seaFreight && total > limit && (
           <AntPagination
             total={total}
             currentPage={page}

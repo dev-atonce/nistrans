@@ -48,6 +48,7 @@ export default function AboutPage({ params: { lng } }: any) {
       <Cover
         pageName={t("profile")}
         engName="About Us"
+        image="/img/service/comin_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
       {content}

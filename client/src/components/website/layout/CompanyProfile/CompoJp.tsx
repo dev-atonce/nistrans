@@ -1,6 +1,6 @@
 export default function CompoJp() {
   return (
-    <div className="container mx-auto pb-10 text-black">
+    <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black">
       <p className="branchesTopic no-padding-r">
         Siam Nistrans (タイ日新)
         は、株式会社日新のタイ現地法人として1987年に設立されました。陸・海・空の
@@ -71,7 +71,7 @@ export default function CompoJp() {
                 機械設備搬入作業、展示会搬入・搬出作業など
               </li>
             </ul>
-            <ul>
+            {/* <ul>
               <li>品質スローガン</li>
               <li>
                 お客様への気配り
@@ -100,7 +100,7 @@ export default function CompoJp() {
                 <br />
                 4. 国際水準に合致する業務品質の構築
               </li>
-            </ul>
+            </ul> */}
           </div>
 
           <div className="flex flex-col gap-2 ">
@@ -138,7 +138,7 @@ export default function CompoJp() {
           title="Siam Nistrans Location"
         ></iframe>
 
-        <div className="container mt-8">
+        <div className="container  px-2 mt-8">
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12 md:col-span-3">
               <img
