@@ -22,6 +22,9 @@ const methods = {
       _q.query.type = req.query.type;
 
       const rows = await Blog.find(_q.query)
+        .select(
+          "createdAt updatedAt blog_image attachment blog_title_th blog_title_en blog_title_jp blog_description_th blog_descrition_en blog_description_jp type location slug status sort"
+        )
         .sort({ createdAt: "desc" })
         .limit(limit)
         .skip(offset);
@@ -46,6 +49,9 @@ const methods = {
       _q.query.type = req.query.type;
 
       const rows = await Blog.find(_q.query)
+        .select(
+          "createdAt updatedAt blog_image attachment blog_title_th blog_title_en blog_title_jp blog_description_th blog_descrition_en blog_description_jp type location slug status sort"
+        )
         .sort({ createdAt: "desc" })
         .limit(limit)
         .skip(offset);
