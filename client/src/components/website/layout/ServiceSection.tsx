@@ -117,12 +117,12 @@ export default function ServiceSection({ data, page, lang }: any) {
   ];
   const list = page ? mock2 : mocks;
   return (
-    <div className="container  px-2 mx-auto 2xl:px-20 py-20">
-      <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
-        <h2 className="text-3xl font-[500]"> {t("heading")}</h2>
+    <div className="container  px-2 mx-auto 2xl:px-20 py-6 sm:py-20">
+      <div className="pb-6 sm:pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
+        <h2 className="sm:text-3xl text-xl font-[500]"> {t("heading")}</h2>
         <div className="h-1 w-20 bg-orange-400"></div>
       </div>
-      <div className="grid grid-cols-12 gap-6 md:px-20 ">
+      <div className="grid grid-cols-12 gap-2 sm:gap-6  ">
         {list?.map((i: any, k: any) => (
           <ProductCard item={i} key={k} lng={lng} />
         ))}
@@ -131,7 +131,7 @@ export default function ServiceSection({ data, page, lang }: any) {
         <div className="flex justify-center">
           <Link
             href={`/service`}
-            className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
+            className=" text-sm sm:text-base  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
           >
             {t("see-more")}
           </Link>

@@ -7,6 +7,7 @@ import ClickOutside from "./ClickOutside";
 import SidebarItem from "./SidebarItem";
 import { useUsersStore } from "@/store/usersStore";
 import { MdPowerSettingsNew } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -64,8 +65,14 @@ const menuGroups = [
 ];
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
+  const router = useRouter();
   const [pageName, setPageName] = useLocalStorage("selectedMenu", "dashboard");
   const { role, logout } = useUsersStore();
+
+  const handleLogout = async () => {
+    logout();
+    router.push("/webpanel/auth/signin");
+  };
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       <aside
@@ -169,7 +176,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             })}
 
             <button
-              onClick={() => logout()}
+              onClick={() => handleLogout()}
               className={` border border-white w-full py-2 group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-white duration-300 ease-in-out hover:text-white "
                 }`}
             >

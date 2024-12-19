@@ -10,7 +10,7 @@ interface BlogCardProps {
 const BlogCard = ({ data, lng }: BlogCardProps) => {
   return data?.map((item: any, key: number) => {
     return (
-      <Col xs={24} sm={12} md={12} lg={8} key={key}>
+      <Col xs={12} sm={12} md={12} lg={6} key={key}>
         <Link
           // @ts-ignore
           href={`/news-activity/${item?.slug}`}

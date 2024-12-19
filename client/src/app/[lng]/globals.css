@@ -1332,7 +1332,7 @@ ul.homeWarehouseText_1 > li {
   color: #1c2f50;
 
   font-weight: 500;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 100%;
   text-align: center;
   padding: 0 0 30px 0;
@@ -1719,7 +1719,7 @@ a.branchesLink:hover {
 /*====================*/
 
 .branchesDomestic {
-  margin: 100px 0;
+  margin: 50px 0;
 }
 
 /*====================*/
@@ -2973,7 +2973,7 @@ a.serviceHACO {
 }
 
 a.dwhMap {
-  position: absolute;
+  /* position: absolute; */
   bottom: 12px;
   right: 130px;
   width: 126px;
@@ -2990,7 +2990,7 @@ a.dwhMap:hover {
 }
 
 a.dwhMapPdf {
-  position: absolute;
+  /* position: absolute; */
   bottom: 12px;
   right: 0;
   width: 126px;
@@ -3882,7 +3882,7 @@ a.whPic {
 /*====================*/
 
 .scmBtnHaco {
-  width: 100px;
+  width: 150px;
   position: absolute;
   z-index: 1;
   right: 10px;
@@ -4050,7 +4050,7 @@ a.whPic {
 /*====================*/
 
 .corBehBox {
-  margin: 100px 0;
+  margin: 60px 0;
 }
 
 /*====================*/
@@ -4063,7 +4063,7 @@ a.whPic {
   font-weight: 400;
   font-size: 18px;
   line-height: 180%;
-  margin: 80px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .corBehText2 {
@@ -4123,7 +4123,7 @@ a.whPic {
 .historyTb > ul > li {
   display: table-cell;
   vertical-align: top;
-  padding: 11px 0;
+  padding: 8px 0;
 }
 
 .historyTb > ul > li:first-child {
@@ -4700,3 +4700,49 @@ a.whPic {
 }
 
 /*====================*/
+
+@media (max-width: 640px) {
+  .branchesTopic {
+    font-size: 14px;
+    padding: 30px 40px;
+    margin: 10px 0;
+  }
+  .comInfoRow1 {
+    font-size: 12px;
+  }
+
+  .historyTb > ul > li {
+    display: table-cell;
+    vertical-align: top;
+    padding: 4px 0;
+    font-size: 14px;
+  }
+
+  .corBehText {
+    font-size: 12px;
+  }
+
+  .textNum > li.tText {
+    background: #fef9f3;
+    color: #312f2f;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    padding: 0 15px;
+  }
+
+  .pageTitle1 {
+    font-size: 24px;
+  }
+
+  .pageTitle2 {
+    color: #1c2f50;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    margin: 60px 0;
+  }
+}

@@ -13,6 +13,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import ContactButton from "@/components/website/molecule/ContactButton";
 import ToTop from "@/components/website/molecule/ToTop";
+import CookiePopUp from "@/components/website/layout/CookiePopUp";
 
 const kanit = Kanit({
   subsets: ["latin"],
@@ -33,7 +34,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const lng = "TH";
+  const lng = params.lng?.toUpperCase();
 
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
@@ -95,6 +96,7 @@ export default async function RootLayout({
               <ContactButton />
               <ToTop />
               <Footer />
+              <CookiePopUp />
             </NextIntlClientProvider>
           </body>
         </PageSettingProvider>

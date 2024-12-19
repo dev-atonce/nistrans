@@ -86,7 +86,7 @@ export default async function RecruitmentDetailPage({
         </div>
         <div className="flex justify-center items-center gap-2 mt-10">
           {/* @ts-ignore */}
-          <BtnShadow href={`/contact`} text={pagename.view[lng]} />
+          <BtnShadow href={`contact`} text={pagename.view[lng]} />
         </div>
       </div>
     </>

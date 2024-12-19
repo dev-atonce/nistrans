@@ -85,5 +85,6 @@
     ]
   },
   { "key": "news", "title": "NEWS", "href": "/news-activity" },
+  { "key": "apply", "title": "RECRUITMENT", "href": "/recruitment" },
   { "key": "contact", "title": "CONTACT", "href": "/contact" }
 ]

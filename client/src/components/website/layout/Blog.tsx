@@ -8,7 +8,7 @@ export default function Blog({ home, limit, lng }: any) {
     <div className="border-slate-200">
       {home && (
         <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
-          <h2 className="text-4xl font-[500]">{t("blog")}</h2>
+          <h2 className="text-2xl sm:text-4xl font-[500]">{t("blog")}</h2>
           <div className="h-1 w-20 bg-orange-400"></div>
         </div>
       )}

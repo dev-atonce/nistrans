@@ -13,6 +13,7 @@ export default function Packing() {
         engName="Service"
         prevPage={{ pageName: h("home"), url: "/" }}
         image="/img/service/packing-loading/banner.jpg"
+        service={true}
       />
       <div className="container 2xl:px-20 px-2  xl:px-6  mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t("h1")}</h1>
@@ -29,21 +30,21 @@ export default function Packing() {
                   {t("section1.1.title")}
                 </div>
               </div>
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-4">
                 <img
                   src="/img/service/packing-loading/001.jpg"
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
               </div>
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-4">
                 <img
                   src="/img/service/packing-loading/002.jpg"
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
               </div>
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-4">
                 <img
                   src="/img/service/packing-loading/003.jpg"
                   className="img-responsive"
@@ -54,14 +55,14 @@ export default function Packing() {
                 <div className="pacLoaText2">{t("section1.1.p")}</div>
                 <div className="pacLoaText3">{t("section1.2.title")}</div>
               </div>
-              <div className="col-span-12 md:col-span-6">
+              <div className="col-span-6">
                 <img
                   src="/img/service/packing-loading/004.jpg"
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
               </div>
-              <div className="col-span-12 md:col-span-6">
+              <div className="col-span-6">
                 <img
                   src="/img/service/packing-loading/005.jpg"
                   className="img-responsive"
@@ -72,28 +73,28 @@ export default function Packing() {
                 <div className="pacLoaText2">{t("section1.2.p")}</div>
                 <div className="pacLoaText3">{t("section1.3.title")}</div>
               </div>
-              <div className="col-span-12 md:col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/packing-loading/006.jpg"
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
               </div>
-              <div className="col-span-12 md:col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/packing-loading/007.jpg"
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
               </div>
-              <div className="col-span-12 md:col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/packing-loading/008.jpg"
                   className="img-responsive"
                   alt="Packing・Loading"
                 />
               </div>
-              <div className="col-span-12 md:col-span-3">
+              <div className="col-span-6 md:col-span-3">
                 <img
                   src="/img/service/packing-loading/009.jpg"
                   className="img-responsive"
@@ -112,7 +113,7 @@ export default function Packing() {
 
           <div className="picRow1">
             <div className="grid grid-cols-12 gap-4">
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-6 md:col-span-4">
                 <img
                   src="/img/service/packing-loading/010.jpg"
                   className="img-responsive"
@@ -120,7 +121,7 @@ export default function Packing() {
                 />
                 <div className="pacLoaText1">{t("section2.1")}</div>
               </div>
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-6  md:col-span-4">
                 <img
                   src="/img/service/packing-loading/011.jpg"
                   className="img-responsive"
@@ -128,7 +129,7 @@ export default function Packing() {
                 />
                 <div className="pacLoaText1">{t("section2.2")}</div>
               </div>
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-6 md:col-span-4">
                 <img
                   src="/img/service/packing-loading/012.jpg"
                   className="img-responsive"
@@ -136,10 +137,8 @@ export default function Packing() {
                 />
                 <div className="pacLoaText1">{t("section2.3")}</div>
               </div>
-            </div>
-            <div style={{ height: "20px" }}></div>
-            <div className="grid grid-cols-12 gap-4">
-              <div className="col-span-12 md:col-span-4">
+
+              <div className="col-span-6 md:col-span-4">
                 <img
                   src="/img/service/packing-loading/013.jpg"
                   className="img-responsive"
@@ -147,7 +146,7 @@ export default function Packing() {
                 />
                 <div className="pacLoaText1">{t("section2.4")}</div>
               </div>
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-6 md:col-span-4">
                 <img
                   src="/img/service/packing-loading/014.jpg"
                   className="img-responsive"
@@ -155,7 +154,7 @@ export default function Packing() {
                 />
                 <div className="pacLoaText1">{t("section2.5")}</div>
               </div>
-              <div className="col-span-12 md:col-span-4">
+              <div className="col-span-6 md:col-span-4">
                 <img
                   src="/img/service/packing-loading/015.jpg"
                   className="img-responsive"

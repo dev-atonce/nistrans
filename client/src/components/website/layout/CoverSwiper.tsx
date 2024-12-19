@@ -39,15 +39,20 @@ export default function CoverSwiper({ banner, lang, home, limit }: any) {
                         className="absolute xl:top-[40px] 2xl:top-[100px] w-full top-0 left-0 right-0  flex flex-col items-center gap-4"
                         style={{ textShadow: "1px 1px #2F2F2F" }}
                       >
-                        <p className="text-white text-3xl xl:text-5xl py-4 text-center font-[600]">
+                        <p className="text-white text-2xl md:text-3xl xl:text-5xl py-4 text-center font-[600]">
                           {t("h1")}
                         </p>
-                        <p className="text-white text-sm sm:text-lg xl:text-3xl hidden sm:block font-[500]">
+                        <p className="text-white text-base sm:text-lg xl:text-3xl font-[500]">
                           {t("h2")}
                         </p>
-                        <p className="text-white text-sm sm:text-lg xl:text-xl xl:w-[70%] text-center hidden md:block">
-                          {t("p")}
-                        </p>
+                        <div>
+                          <p className="text-white  text-xs md:text-base lg:text-lg xl:text-xl text-start hidden sm:block">
+                            {t("p")}
+                          </p>
+                          <p className="text-white  text-xs md:text-base lg:text-lg xl:text-xl  text-start hidden sm:block">
+                            {t("p-2")}
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <Image

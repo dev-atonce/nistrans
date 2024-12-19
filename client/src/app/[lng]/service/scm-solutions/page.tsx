@@ -13,15 +13,18 @@ export default function Packing() {
         engName="Service"
         prevPage={{ pageName: h("home"), url: "/" }}
         image="/img/service/scm-solutions/banner.jpg"
+        service={true}
       />
       <div className="container 2xl:px-20 px-2  xl:px-6  mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t("h1")}</h1>
         <div className="py-10">
-          <div className="branchesTopic text-center">{t("section1.p")}</div>
+          <div className="branchesTopic text-start">{t("section1.p")}</div>
 
           <h2 className="pageTitle1">{t("h2")}</h2>
-
-          <h3 className="pageTitle2">{t("h3")}</h3>
+          {/* @ts-ignore */}
+          <h3 className="pageTitle2" style={{ textAlign: "start !important" }}>
+            {t("h3")}
+          </h3>
           <div className="flex items-center justify-center">
             <img
               src={t("section1.image")}
@@ -48,6 +51,7 @@ export default function Packing() {
             href="/img/service/scm-solutions/014-zoom.jpg"
             rel="groupimg"
             title=""
+            target="_blank"
           >
             <img
               src="/img/scm-014.jpg"
@@ -97,7 +101,7 @@ export default function Packing() {
 
           <div className="scmText1" style={{ margin: "50px 0" }}>
             {t("section2.more.title")}
-            <div className="small">{t("section2.more.p")}</div>
+            <div className="small text-start px-4">{t("section2.more.p")}</div>
           </div>
 
           <ul className="textNum">
@@ -108,15 +112,22 @@ export default function Packing() {
             <li className="tText">{t("section2.1")}</li>
           </ul>
 
-          <ul className="textNum">
+          <ul className="textNum ">
             <li className="nNum">
               <div className="nNumText">{t("section2.feature")}</div>
               <div className="nNumNum">02</div>
             </li>
-            <li className="tText" style={{ position: "relative" }}>
+            <li
+              className="tText py-10"
+              style={{ position: "relative", padding: "50px 15px !important" }}
+            >
               {t("section2.2")}
               <div className="scmBtnHaco">
-                <Link className="pageBtnMore" href="/service/haco-lab">
+                <Link
+                  className="pageBtnMore  "
+                  href="/service/haco-lab"
+                  target="_blank"
+                >
                   <div className="pageBtnMoreBg"></div>
                   <div className="pageBtnMoreHover"></div>
                   <div className="pageBtnMoreText">HACO Lab.</div>
@@ -129,7 +140,7 @@ export default function Packing() {
             <div className="grid grid-cols-12 gap-4">
               {["010", "016", "011", "012"].map((image, index) => (
                 <div
-                  className="col-span-12 md:col-span-4 xl:col-span-3"
+                  className="col-span-6 md:col-span-4 xl:col-span-3"
                   key={index}
                 >
                   <img

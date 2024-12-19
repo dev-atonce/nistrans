@@ -7,6 +7,8 @@ import WarehouseManagement from "@/components/website/layout/WarehouseManagement
 import HacoLab from "@/components/website/layout/HacoLab";
 import LatestNews from "@/components/website/layout/LatestNews";
 import Image from "next/image";
+import { BsFillBoxSeamFill } from "react-icons/bs";
+import CheckButton from "@/components/website/layout/CheckButton";
 
 interface Props {
   params: { lng: string };
@@ -31,6 +33,7 @@ export default async function Home({ params }: Props) {
     <>
       {/* Banner */}
       <CoverSwiper banner={banner} lang={lng} home={true} limit={2} />
+      <CheckButton />
       <ServiceSection lang={lng} />
       <AboutSection lang={lng} />
       <HomeMoving lang={lng} />
@@ -39,7 +42,7 @@ export default async function Home({ params }: Props) {
       {/* <LatestNews home={true} lang={lng} limit={5} /> */}
       {/* Blog */}
       <div className="container mx-auto 2xl:px-20 px-2">
-        <Blog home={true} limit={3} lng={lng} />
+        <Blog home={true} limit={4} lng={lng} />
         <div className="py-4 grid grid-cols-12 gap-4  md:w-[80%]  mx-auto">
           <a
             target="_blank"

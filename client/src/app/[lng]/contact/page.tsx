@@ -8,7 +8,7 @@ export async function generateMetadata(
   { params, searchParams }: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const lng = params.lng;
+  const lng = params.lng?.toUpperCase();
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
   // fetch data
   const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>

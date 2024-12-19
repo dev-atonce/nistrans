@@ -21,7 +21,7 @@ export async function generateMetadata(
   { params, searchParams }: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const lng = params.lng;
+  const lng = params.lng?.toUpperCase();
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
   // fetch data
   const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
@@ -68,7 +68,7 @@ const pagename = {
   view: {
     th: "ดูรายละเอียด",
     en: "View",
-    jp: "データを表示",
+    jp: "詳細",
   },
 };
 
@@ -96,7 +96,7 @@ export default async function RecruitmentPage({
         // @ts-ignore
         prevPage={{ pageName: pagename.home[lng], url: "/" }}
       />
-      <div className="container px-2 md:px-6 xl:px-6 mx-auto text-slate-800 my-10">
+      <div className="container 2xl:px-20 px-2 md:px-6 xl:px-6 mx-auto text-slate-800 my-10">
         <div className="text-xs sm:text-sm md:text-base">
           <div className="grid grid-cols-12 pb-8 border-b border-slate-200 font-semibold">
             <span className="col-span-4 md:col-span-2 sm:col-span-2 flex items-center">

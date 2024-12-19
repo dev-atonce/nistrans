@@ -2,7 +2,13 @@ import Image from "next/image";
 import Breadcrumb from "../molecule/Breadcrumb";
 import { useTranslations } from "next-intl";
 
-export default function Cover({ pageName, prevPage, noHeading, image }: any) {
+export default function Cover({
+  pageName,
+  prevPage,
+  noHeading,
+  image,
+  service,
+}: any) {
   const t = useTranslations("cover");
 
   return (
@@ -26,12 +32,17 @@ export default function Cover({ pageName, prevPage, noHeading, image }: any) {
           >
             <p className="text-white  text-3xl py-2">{t("h1")}</p>
             <p className="text-white text-2xl py-2">{t("h2")}</p>
-            <p className="text-white text-base w-[70%]">{t("p")}</p>
+            <p className="text-white text-base ">{t("p")}</p>
+            <p className="text-white text-base ">{t("p-2")}</p>
           </div>
         </div>
         <div className="bg-slate-500/20 w-full">
           <div className=" hidden md:block container  px-2 mx-auto 2xl:px-20 xl:px-6">
-            <Breadcrumb pageName={pageName} prevPage={prevPage} />
+            <Breadcrumb
+              pageName={pageName}
+              prevPage={prevPage}
+              service={service}
+            />
           </div>
         </div>
       </div>

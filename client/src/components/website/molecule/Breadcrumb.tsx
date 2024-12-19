@@ -1,11 +1,13 @@
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 interface BreadcrumbProps {
   pageName: any;
   prevPage: any;
 }
 
-const Breadcrumb = ({ pageName, prevPage }: any) => {
+const Breadcrumb = ({ pageName, prevPage, service }: any) => {
+  const t = useTranslations("header");
   return (
     <div className="py-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-black">
       <nav>
@@ -26,6 +28,11 @@ const Breadcrumb = ({ pageName, prevPage }: any) => {
             </li>
           ) : (
             ``
+          )}
+          {service && (
+            <li className=" ">
+              <Link href="/service">{t("service")} | </Link>
+            </li>
           )}
 
           <li className=" ">{pageName}</li>

@@ -19,6 +19,7 @@ export default function Warehouse() {
         engName="Service"
         prevPage={{ pageName: h("home"), url: "/" }}
         image="/img/service/warehouse/banner.jpg"
+        service={true}
       />
       <div className="container 2xl:px-20 px-2  xl:px-6  mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t("h1")}</h1>
@@ -35,6 +36,7 @@ export default function Warehouse() {
                     href="/img/service/warehouse/014.jpg"
                     rel="groupimg"
                     title=""
+                    target="_blank"
                   >
                     <img
                       src="/img/service/warehouse/014.jpg"
@@ -55,7 +57,7 @@ export default function Warehouse() {
                   </div>
                 </div>
                 <div
-                  className="col-span-12 md:col-span-7"
+                  className="col-span-12 md:col-span-7 text-start"
                   style={{
                     display: "inline-block",
                     wordBreak: "keep-all",
@@ -75,7 +77,11 @@ export default function Warehouse() {
               <li className="tText">{t("section2.1.1")}</li>
             </ul>
             <div style={{ width: "270px", margin: "0 auto" }}>
-              <Link className="pageBtnMore" href="/service/scm-solutions">
+              <Link
+                className="pageBtnMore"
+                href="/service/scm-solutions"
+                target="_blank"
+              >
                 <div className="pageBtnMoreBg"></div>
                 <div className="pageBtnMoreHover"></div>
                 <div className="pageBtnMoreText">{t("section2.1.2")}</div>
@@ -83,26 +89,23 @@ export default function Warehouse() {
             </div>
             <div className="picRow1 picRow1-1">
               <div className="grid grid-cols-12 gap-4">
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-10 md:col-span-4">
+                <div className="col-span-4 md:col-span-4">
                   <img
                     src="/img/service/warehouse/001.jpg"
                     className="img-responsive"
                     alt="Warehouse"
                   />
                 </div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-10 md:col-span-4">
+
+                <div className="col-span-4 md:col-span-4">
                   <img
                     src="/img/service/warehouse/002.jpg"
                     className="img-responsive"
                     alt="Warehouse"
                   />
                 </div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-10 md:col-span-4">
+
+                <div className="col-span-4 md:col-span-4">
                   <img
                     src="/img/service/warehouse/003.jpg"
                     className="img-responsive"
@@ -115,50 +118,46 @@ export default function Warehouse() {
             <div className="pageTitle1">{t("section2.1.3")}</div>
             <div className="mt-10 mb-20">
               <div className="grid grid-cols-12 gap-4">
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-10 md:col-span-3 relative flex justify-center">
+                <div className="col-span-6 md:col-span-3 relative flex justify-center">
                   <img
                     src="/img/service/warehouse/004.jpg"
                     className="img-responsive"
                     alt="Warehouse"
                   />
-                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">
+                  <div className="absolute top-4 text-xs p-2 m-0 text-white bg-[#1b304fcc]">
                     {t("section2.1.4")}
                   </div>
                 </div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-10 md:col-span-3 relative flex justify-center">
+
+                <div className=" col-span-6 md:col-span-3 relative flex justify-center">
                   <img
                     src="/img/service/warehouse/005.jpg"
                     className="img-responsive"
                     alt="Warehouse"
                   />
-                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">
+                  <div className="absolute top-4 text-xs p-2 m-0 text-white bg-[#1b304fcc]">
                     {t("section2.1.5")}
                   </div>
                 </div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-10 md:col-span-3 relative flex justify-center">
+
+                <div className=" col-span-6 md:col-span-3 relative flex justify-center">
                   <img
                     src="/img/service/warehouse/006.jpg"
                     className="img-responsive"
                     alt="Warehouse"
                   />
-                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">
+                  <div className="absolute top-4 text-xs p-2 m-0 text-white bg-[#1b304fcc]">
                     {t("section2.1.6")}
                   </div>
                 </div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-1 md:hidden"></div>
-                <div className="col-span-10 md:col-span-3 relative flex justify-center">
+
+                <div className=" col-span-6 md:col-span-3 relative flex justify-center">
                   <img
                     src="/img/service/warehouse/007.jpg"
                     className="img-responsive"
                     alt="Warehouse"
                   />
-                  <div className="absolute top-4 text-md p-2 m-0 text-white bg-[#1b304fcc]">
+                  <div className="absolute top-4 text-xs p-2 m-0 text-white bg-[#1b304fcc]">
                     {t("section2.1.7")}
                   </div>
                 </div>
@@ -173,6 +172,7 @@ export default function Warehouse() {
                     className="fancyBox"
                     rel="groupimg"
                     href="/img/service/warehouse/016.jpg"
+                    target="_blank"
                   >
                     <img
                       src="/img/service/warehouse/016.jpg"
@@ -181,26 +181,27 @@ export default function Warehouse() {
                     />
                   </a>
                 </div>
-                <div className="col-span-2"></div>
-                <div className="col-span-1"></div>
-                <div className="col-span-10">
+
+                <div className="col-span-12">
                   <div className="dwhText1 no-margin-t">
                     {t("section2.1.9")}
                   </div>
-                  <div className="dwhText2">
+                  <div className="dwhText2 flex justify-between  items-center w-full">
                     {t("section2.1.10")}
-                    <a
-                      className="dwhMap"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://goo.gl/maps/7qDpaGqx3gKx26298"
-                    ></a>
-                    <a
-                      className="dwhMapPdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="/file/SIAM_NISTRANS_Map.pdf"
-                    ></a>
+                    <div className="flex gap-1">
+                      <a
+                        className="dwhMap"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://goo.gl/maps/7qDpaGqx3gKx26298"
+                      ></a>
+                      <a
+                        className="dwhMapPdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="/file/SIAM_NISTRANS_Map.pdf"
+                      ></a>
+                    </div>
                   </div>
                   <div className="dwhText1">{t("section2.1.13")}</div>
                   <div className="grid grid-cols-12 gap-4">
@@ -209,6 +210,7 @@ export default function Warehouse() {
                         className="fancyBox"
                         href="/img/service/warehouse/019.jpg"
                         title=""
+                        target="_blank"
                       >
                         <img
                           src="/img/service/warehouse/019.jpg"
@@ -222,6 +224,7 @@ export default function Warehouse() {
                         className="fancyBox"
                         href="/img/service/warehouse/020.jpg"
                         title=""
+                        target="_blank"
                       >
                         <img
                           src="/img/service/warehouse/020.jpg"
@@ -232,13 +235,13 @@ export default function Warehouse() {
                     </div>
                   </div>
                 </div>
-                <div className="col-span-1"></div>
-                <div className="col-span-1"></div>
-                <div className="col-span-12 md:col-span-5">
+
+                <div className="col-span-6 md:col-span-6">
                   <a
                     className="fancyBox"
                     href="/img/service/warehouse/017.jpg"
                     title=""
+                    target="_blank"
                   >
                     <img
                       src="/img/service/warehouse/017.jpg"
@@ -248,12 +251,13 @@ export default function Warehouse() {
                   </a>
                   <div className="dwhText1">{t("section2.1.14")}</div>
                 </div>
-                <div className="col-span-12 md:col-span-5">
+                <div className="col-span-6 md:col-span-6">
                   <a
                     className="fancyBox"
                     href="/img/service/warehouse/018.jpg"
                     rel="groupimg"
                     title=""
+                    target="_blank"
                   >
                     <img
                       src="/img/service/warehouse/018.jpg"
