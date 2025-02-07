@@ -14,6 +14,7 @@ import { routing } from "@/i18n/routing";
 import ContactButton from "@/components/website/molecule/ContactButton";
 import ToTop from "@/components/website/molecule/ToTop";
 import CookiePopUp from "@/components/website/layout/CookiePopUp";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const kanit = Kanit({
   subsets: ["latin"],
@@ -44,7 +45,7 @@ export async function generateMetadata(
   );
 
   return {
-    metadataBase: new URL("https://siam-nistrans.com"),
+    metadataBase: new URL("https://th.nissin-asia.com"),
     title: response[`seoTitle${lng}`],
     description: response[`seoDescription${lng}`],
     keywords: response[`seoKeyword${lng}`],
@@ -99,6 +100,7 @@ export default async function RootLayout({
               <CookiePopUp />
             </NextIntlClientProvider>
           </body>
+          <GoogleTagManager gtmId="GTM-DXPPCZJV" />
         </PageSettingProvider>
       </ConfigProvider>
     </html>
