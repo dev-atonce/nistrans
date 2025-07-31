@@ -9,7 +9,7 @@ export async function generateMetadata(
   { params, searchParams }: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const lng = params.lng?.toUpperCase();
+  const lng = params.lng;
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
   // fetch data
   const response = await fetch(seoRoute, { cache: "no-store" }).then((res) =>
@@ -36,7 +36,7 @@ export default function ServicePage({ params: { lng } }: any) {
         engName="Service"
         prevPage={{ pageName: t("home"), url: "/" }}
       />
-      <div className="container  px-2 mx-auto ">
+      <div className="container  px-2 mx-auto 2xl:px-20 ">
         <ServiceSection page={true} lang={lang} />
       </div>
     </>

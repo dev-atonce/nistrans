@@ -1,0 +1,103 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/thnissin/domains/th.nissin-asia.com/public_html"
+PassengerBaseURI "/"
+PassengerNodejs "/home/thnissin/nodevenv/domains/th.nissin-asia.com/public_html/18/bin/node"
+PassengerAppType node
+PassengerStartupFile server.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    RewriteCond %{HTTPS} on
+    RewriteCond %{HTTP_HOST} ^www\.th\.nissin-asia\.com$
+    RewriteRule ^th/index\.php$ / [R=301,L]
+    RewriteRule ^en/index\.php$ /en [R=301,L]
+    RewriteRule ^jp/index\.php$ /jp [R=301,L]
+    RewriteRule ^th/domestic-branches\.php$ /th/about-us/branches [R=301,L]
+    RewriteRule ^en/domestic-branches\.php$ /en/about-us/branches [R=301,L]
+    RewriteRule ^jp/domestic-branches\.php$ /jp/about-us/branches [R=301,L]
+    RewriteRule ^th/company-profile\.php$ /th/about-us/company-profile [R=301,L]
+    RewriteRule ^en/company-profile\.php$ /en/about-us/company-profile [R=301,L]
+    RewriteRule ^jp/company-profile\.php$ /jp/about-us/company-profile [R=301,L]
+    RewriteRule ^th/corporate-behavior\.php$ /th/about-us/corporate-behavior [R=301,L]
+    RewriteRule ^en/corporate-behavior\.php$ /en/about-us/corporate-behavior [R=301,L]
+    RewriteRule ^jp/corporate-behavior\.php$ /jp/about-us/corporate-behavior [R=301,L]
+    RewriteRule ^th/history\.php$ /th/about-us/company-history [R=301,L]
+    RewriteRule ^en/history\.php$ /en/about-us/company-history [R=301,L]
+    RewriteRule ^jp/history\.php$ /jp/about-us/company-history [R=301,L]
+    RewriteRule ^th/overseas-branches\.php$ /th/about-us/nissin-group [R=301,L]
+    RewriteRule ^en/overseas-branches\.php$ /en/about-us/nissin-group  [R=301,L]
+    RewriteRule ^jp/overseas-branches\.php$ /jp/about-us/nissin-group  [R=301,L]
+
+    RewriteRule ^th/recruitment\.php$ /th/recruitment   [R=301,L]
+    RewriteRule ^en/recruitment\.php$ /en/recruitment  [R=301,L]
+    RewriteRule ^jp/recruitment\.php$ /jp/recruitment  [R=301,L]
+
+    RewriteRule ^th/news\.php$ /th/news-activity [R=301,L]
+    RewriteRule ^en/news\.php$ /en/news-activity [R=301,L]
+    RewriteRule ^jp/news\.php$ /jp/news-activity [R=301,L]
+
+    RewriteRule ^th/service\.php$ /th/service [R=301,L]
+    RewriteRule ^en/service\.php$ /en/service [R=301,L]
+    RewriteRule ^jp/service\.php$ /jp/service [R=301,L]
+
+    RewriteRule ^th/sea-freight-forwarding\.php$ /th/service/sea-freight [R=301,L]
+    RewriteRule ^en/sea-freight-forwarding\.php$ /en/service/sea-freight [R=301,L]
+    RewriteRule ^jp/sea-freight-forwarding\.php$ /jp/service/sea-freight [R=301,L]
+
+    RewriteRule ^th/air-freight-forwarding\.php$ /th/service/air-freight [R=301,L]
+    RewriteRule ^en/air-freight-forwarding\.php$ /en/service/air-freight [R=301,L]
+    RewriteRule ^jp/air-freight-forwarding\.php$ /jp/service/air-freight [R=301,L]
+
+    RewriteRule ^th/warehouse\.php$ /th/service/warehouse [R=301,L]
+    RewriteRule ^en/warehouse\.php$ /en/service/warehouse [R=301,L]
+    RewriteRule ^jp/warehouse\.php$ /jp/service/warehouse [R=301,L]
+
+    RewriteRule ^th/land-transportation\.php$ /th/service/land-transportation [R=301,L]
+    RewriteRule ^en/land-transportation\.php$ /en/service/land-transportation [R=301,L]
+    RewriteRule ^jp/land-transportation\.php$ /jp/service/land-transportation [R=301,L]
+
+    RewriteRule ^th/house-moving\.php$ /th/service/house-moving [R=301,L]
+    RewriteRule ^en/house-moving\.php$ /en/service/house-moving [R=301,L]
+    RewriteRule ^jp/house-moving\.php$ /jp/service/house-moving [R=301,L]
+
+    RewriteRule ^th/machinery-installation\.php$ /th/service/machinery-installation [R=301,L]
+    RewriteRule ^en/machinery-installation\.php$ /en/service/machinery-installation [R=301,L]
+    RewriteRule ^jp/machinery-installation\.php$ /jp/service/machinery-installation [R=301,L]
+
+    RewriteRule ^th/scm-solutions\.php$ /th/service/scm-solutions [R=301,L]
+    RewriteRule ^en/scm-solutions\.php$ /en/service/scm-solutions [R=301,L]
+    RewriteRule ^jp/scm-solutions\.php$ /jp/service/scm-solutions [R=301,L]
+
+    RewriteRule ^th/haco-lab\.php$ /th/service/haco-lab [R=301,L]
+    RewriteRule ^en/haco-lab\.php$ /en/service/haco-lab [R=301,L]
+    RewriteRule ^jp/haco-lab\.php$ /jp/service/haco-lab [R=301,L]
+
+    RewriteRule ^th/customs-clearance\.php$ /th/service/custom-clearance [R=301,L]
+    RewriteRule ^en/customs-clearance\.php$ /en/service/custom-clearance [R=301,L]
+    RewriteRule ^jp/customs-clearance\.php$ /jp/service/custom-clearance [R=301,L]
+
+    RewriteRule ^th/packing-loading\.php$ /th/service/packing-loading [R=301,L]
+    RewriteRule ^en/packing-loading\.php$ /en/service/packing-loading [R=301,L]
+    RewriteRule ^jp/packing-loading\.php$ /jp/service/packing-loading [R=301,L]
+
+    RewriteRule ^th/cookie-policy\.php$ /th/cookie-policy [R=301,L]
+    RewriteRule ^en/cookie-policy\.php$ /en/cookie-policy [R=301,L]
+    RewriteRule ^jp/cookie-policy\.php$ /jp/cookie-policy [R=301,L]
+
+    RewriteRule ^th/privacy-notice\.php$ /th/privacy-notice [R=301,L]
+    RewriteRule ^en/privacy-notice\.php$ /en/privacy-notice [R=301,L]
+    RewriteRule ^jp/privacy-notice\.php$ /jp/privacy-notice [R=301,L]
+
+    RewriteRule ^admin/login/index$ /webpanel [R=301,L]
+
+</IfModule>

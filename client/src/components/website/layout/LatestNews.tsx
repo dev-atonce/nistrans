@@ -39,12 +39,12 @@ export default function LatestNews({ home, lang, limit, seaFreight }: any) {
 
   return (
     <>
-      <div className="container   mx-auto border-b border-slate-100 mb-10 pb-10 px-2  xl:px-6 ">
+      <div className="container   mx-auto border-b border-slate-100 mb-10 pb-10 px-2 xl:px-0">
         {home && (
           <div
-            className={`pb-6 sm:pb-20 flex justify-center items-center flex-col text-blue-950 gap-3`}
+            className={`pb-20 flex justify-center items-center flex-col text-blue-950 gap-3`}
           >
-            <h2 className="text-2xl sm:text-4xl font-[500]">{t("news")}</h2>
+            <h2 className="text-4xl font-[500]">{t("news")}</h2>
             <div className="h-1 w-20 bg-orange-400"></div>
           </div>
         )}
@@ -59,7 +59,7 @@ export default function LatestNews({ home, lang, limit, seaFreight }: any) {
           <div className="flex justify-center pt-10">
             <Link
               href={`/news-activity`}
-              className="text-sm sm:text-base  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
+              className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
             >
               {t("more")}
             </Link>

@@ -92,21 +92,29 @@ const AsiaBranches = ({ lng }: any) => {
           TEL : 66-3-818-5051 / FAX : 66-3-818-5149
         </div>
 
-        <div className="branchesTitle">Asia Headquarters</div>
+        {/* <div className="branchesTitle">Asia Headquarters</div>
 
         <div className="branchesText">
           11th Fl, CTI Tower, 191/82 Ratchadapisek Rd, Klongtoey, Bangkok 10110,
           Thailand
           <br />
           TEL : 66-2261-5077 / FAX : 66-2261-5076
-        </div>
+        </div> */}
       </section>
 
       <section>
         {/* @ts-ignore */}
         <div className="pageTitle1"> {content[lng]["sg"]}</div>
 
-        <div className="branchesTitle">NISSIN TRANSPORT (S) PTE. LTD.</div>
+        <div className="branchesTitle">
+          NISSIN TRANSPORT (S) PTE. LTD.
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.nissin.sg/about-us/"
+          ></a>
+        </div>
 
         <div className="branchesText">
           No.50, Tuas Avenue 9, Singapore 639192
@@ -130,6 +138,12 @@ const AsiaBranches = ({ lng }: any) => {
 
         <div className="branchesTitle">
           NISSIN INTERNATIONAL LOGISTICS (M) SDN. BHD.
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nissin.com.my/"
+          ></a>
         </div>
 
         <div className="branchesText">
@@ -146,6 +160,12 @@ const AsiaBranches = ({ lng }: any) => {
 
         <div className="branchesTitle">
           NISSIN TRANSPORT PHILIPPINES CORPORATION
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nissin-transport.com.ph/"
+          ></a>
         </div>
 
         <div className="branchesText">
@@ -170,6 +190,12 @@ const AsiaBranches = ({ lng }: any) => {
 
         <div className="branchesTitle">
           NISSIN ABC LOGISTICS PRIVATE LIMITED
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.nall.co.in/"
+          ></a>
         </div>
 
         <div className="branchesText">
@@ -184,7 +210,15 @@ const AsiaBranches = ({ lng }: any) => {
         {/* @ts-ignore */}
         <div className="pageTitle1"> {content[lng]["indo"]}</div>
 
-        <div className="branchesTitle">PT.NISSIN JAYA INDONESIA</div>
+        <div className="branchesTitle">
+          PT.NISSIN JAYA INDONESIA
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nissinti.co.id/nisgrp/"
+          ></a>
+        </div>
 
         <div className="branchesText">
           Mugi Griya Building, 7th Floor, Jl. MT. Haryono Kav. 10, Jakarta 12810
@@ -193,7 +227,15 @@ const AsiaBranches = ({ lng }: any) => {
           TEL : 62-21-830-8446 / FAX : 62-21-830-8505
         </div>
 
-        <div className="branchesTitle">PT. NISSIN TRANSPORT INDONESIA</div>
+        <div className="branchesTitle">
+          PT. NISSIN TRANSPORT INDONESIA
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nissinti.co.id/nisgrp/"
+          ></a>
+        </div>
 
         <div className="branchesText">
           Mugi Griya Building, 7th Floor, Jl. MT. Haryono Kav. 10, Jakarta 12810
@@ -207,7 +249,15 @@ const AsiaBranches = ({ lng }: any) => {
         {/* @ts-ignore */}
         <div className="pageTitle1"> {content[lng]["vn"]}</div>
 
-        <div className="branchesTitle">NISSIN LOGISTICS (VN) CO., LTD.</div>
+        <div className="branchesTitle">
+          NISSIN LOGISTICS (VN) CO., LTD.
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nissinvn.com.vn/en/"
+          ></a>
+        </div>
 
         <div className="branchesText">
           Unit 101, Ocean Park Bldg. No.1 Dao Duy Anh Str. Dong Da Dist., Hanoi,
@@ -219,8 +269,7 @@ const AsiaBranches = ({ lng }: any) => {
         <div className="branchesTitle">NR GREENLINES LOGISTICS CO., LTD.</div>
 
         <div className="branchesText">
-          Unit 101, Ocean Park Bldg., No.1 Dao Duy Anh Str. Dong Da Dist.,
-          Hanoi, Vietnam
+          RATRACO building 95-97 Le Duan, Hoan Kiem, Hanoi, Vietnam
           <br />
           TEL : 84-24-3577-2751 / FAX : 84-24-3577-2752
         </div>
@@ -230,7 +279,15 @@ const AsiaBranches = ({ lng }: any) => {
         {/* @ts-ignore */}
         <div className="pageTitle1"> {content[lng]["la"]}</div>
 
-        <div className="branchesTitle">LAO NISSIN SMT CO., LTD.</div>
+        <div className="branchesTitle">
+          LAO NISSIN SMT CO., LTD.
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.laonissinsmt.com/"
+          ></a>
+        </div>
 
         <div className="branchesText">
           P.O.Box279, Road 9, Ban Oudomvilai, Kaisonehomvihan, Savannakhet, Lao
@@ -240,9 +297,9 @@ const AsiaBranches = ({ lng }: any) => {
         </div>
       </section>
 
-      <section>
+      {/* <section> */}
         {/* @ts-ignore */}
-        <div className="pageTitle1"> {content[lng]["my"]}</div>
+        {/* <div className="pageTitle1"> {content[lng]["my"]}</div>
 
         <div className="branchesTitle">YANGON REP. OFFICE</div>
 
@@ -251,8 +308,8 @@ const AsiaBranches = ({ lng }: any) => {
           Yangon, Myanmar
           <br />
           TEL : 95-1-201-052 / FAX : 95-1-200-745
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
     </>
   );
 };

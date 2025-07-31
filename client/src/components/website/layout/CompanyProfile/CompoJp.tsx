@@ -1,6 +1,6 @@
 export default function CompoJp() {
   return (
-    <div className="container  px-2 mx-auto 2xl:px-20  xl:px-6 pb-10 text-black">
+    <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black">
       <p className="branchesTopic no-padding-r">
         Siam Nistrans (タイ日新)
         は、株式会社日新のタイ現地法人として1987年に設立されました。陸・海・空の
@@ -14,7 +14,7 @@ export default function CompoJp() {
       </p>
       <div>
         <div className="flex justify-between items-center">
-          <div className="comInfoRow1 text-base">
+          <div className="comInfoRow1">
             <ul>
               <li>商号</li>
               <li>Siam Nistrans Co., Ltd.</li>
@@ -110,8 +110,9 @@ export default function CompoJp() {
               alt="Company Profile 1"
             />
             <img
-              src="/img/about/002.jpg"
+              src="/img/about/015.jpg"
               className="hidden md:block"
+              width={350}
               alt="Company Profile 2"
             />
           </div>
@@ -123,44 +124,45 @@ export default function CompoJp() {
           href="/file/SIAM_NISTRANS_Catalog_Landscape.pdf"
           className="homeLinkTrack"
         >
-          <span>会 社 案 内</span>
+          <span>会社案内ダウンロード （PDF)</span>
         </a>
-        <div className="py-2 sm:py-10">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7751.533690500027!2d100.560028!3d13.732561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf788e6b9b53e4b3e!2sSiam%20Nistrans%20Co.%2CLTD.!5e0!3m2!1sja!2sth!4v1570441489603!5m2!1sja!2sth"
-            width="100%"
-            height="300"
-            frameBorder="0"
-            style={{ border: 0 }}
-            allowFullScreen
-            title="Siam Nistrans Location"
-          ></iframe>
-        </div>
+
+        <div className="my-8" style={{ height: "80px" }}></div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7751.533690500027!2d100.560028!3d13.732561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf788e6b9b53e4b3e!2sSiam%20Nistrans%20Co.%2CLTD.!5e0!3m2!1sja!2sth!4v1570441489603!5m2!1sja!2sth"
+          width="100%"
+          height="480"
+          frameBorder="0"
+          style={{ border: 0 }}
+          allowFullScreen
+          title="Siam Nistrans Location"
+        ></iframe>
 
         <div className="container  px-2 mt-8">
           <div className="grid grid-cols-12 gap-4">
-            <div className="col-span-6 md:col-span-3">
+            <div className="col-span-12 md:col-span-3">
               <img
                 src="/img/about/003.jpg"
                 className="img-responsive"
                 alt="Company Profile 3"
               />
             </div>
-            <div className="col-span-6 md:col-span-3">
+            <div className="col-span-12 md:col-span-3">
               <img
                 src="/img/about/004.jpg"
                 className="img-responsive"
                 alt="Company Profile 4"
               />
             </div>
-            <div className="col-span-6 md:col-span-3">
+            <div className="col-span-12 md:col-span-3">
               <img
                 src="/img/about/005.jpg"
                 className="img-responsive"
                 alt="Company Profile 5"
               />
             </div>
-            <div className="col-span-6 md:col-span-3">
+            <div className="col-span-12 md:col-span-3">
               <img
                 src="/img/about/006.jpg"
                 className="img-responsive"

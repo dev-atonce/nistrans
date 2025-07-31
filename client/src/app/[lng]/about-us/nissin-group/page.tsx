@@ -12,7 +12,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   // read route params
 
-  const lng = params.lng?.toUpperCase();
+  const lng = "TH";
 
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
@@ -66,7 +66,7 @@ export default function AboutPage({ params: { lng } }: any) {
         image="/img/service/group_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container xl:px-6 px-2 mx-auto 2xl:px-20 pb-10 text-black mt-[-40px]">
+      <div className="container  px-2 mx-auto 2xl:px-20 pb-10 text-black mt-[-40px]">
         <div className="corBehBox">
           {/* @ts-ignore */}
           <div className="pageTitle1">{content[lng]["h"]}</div>
@@ -77,7 +77,7 @@ export default function AboutPage({ params: { lng } }: any) {
               className="branchesLink"
               target="_blank"
               rel="noopener noreferrer"
-              href="nissin-tw.com/english/"
+              href="https://www.nissin-tw.com/"
             ></a>
           </div>
           <div className="branchesText">

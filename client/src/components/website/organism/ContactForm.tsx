@@ -65,7 +65,7 @@ export default function Contactform() {
           <div className=""></div>
         </div>
 
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("contactName", { required: true, maxLength: 100 })}
             type="text"
@@ -81,7 +81,7 @@ export default function Contactform() {
             </p>
           )}
         </div>
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("companyName", { required: true, maxLength: 100 })}
             type="text"
@@ -97,7 +97,7 @@ export default function Contactform() {
             </p>
           )}
         </div>
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("department")}
             type="text"
@@ -113,7 +113,7 @@ export default function Contactform() {
             </p>
           )}
         </div>
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("email", { required: true, maxLength: 100 })}
             type="email"
@@ -129,7 +129,7 @@ export default function Contactform() {
             </p>
           )}
         </div>
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("reEmail", {
               required: true,
@@ -155,7 +155,7 @@ export default function Contactform() {
             </p>
           )}
         </div>
-        <div className="col-span-2 md:col-span-2">
+        <div className="col-span-2 md:col-span-1">
           <input
             {...register("telephone", { pattern: /[\d+]/g, required: true })}
             type="text"
@@ -318,7 +318,7 @@ export default function Contactform() {
 
           <button
             type="submit"
-            className="uppercase px-12 hover:text-white border py-2 bg-white text-orange-600 rounded-xl  border-orange-600 hover:bg-orange-600 transition-all w-full "
+            className="uppercase px-12 hover:text-white border py-2 bg-white text-orange-600 rounded-xl  border-orange-600 hover:bg-orange-600 transition-all "
           >
             {t("send")}
           </button>

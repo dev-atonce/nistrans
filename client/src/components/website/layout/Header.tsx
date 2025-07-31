@@ -62,8 +62,8 @@ export default function Header({ logo, lng }: any) {
   const toggleLanguage = () => setOpenLang(!openLang);
 
   return (
-    <div className="shadow-md bg-white sticky top-0 z-40 ">
-      <div className="header  container mx-auto 2xl:px-20 px-2  xl:px-6 ">
+    <div className="fixed top-0 left-0 w-full z-50 shadow-md bg-white ">
+      <div className="header container mx-auto 2xl:px-20 px-2 xl:px-0">
         <div className="xl:flex justify-between items-center mx-auto h-full px-2 lg:px-0">
           <div className="logo">
             <div className="py-4 flex justify-between items-center">
@@ -81,13 +81,6 @@ export default function Header({ logo, lng }: any) {
           <div className="flex justify-between h-full items-center gap-30 ">
             <div className="hidden xl:flex items-center gap-10 ">
               <NavBar />
-              {/* <Link
-                href={`/recruitment`}
-                className="border px-4 rounded-lg text-slate-700 items-center gap-2 flex py-1 "
-              >
-                <IoPersonSharp />
-                <span>{t("apply")}</span>
-              </Link> */}
             </div>
             <LanguageSwitcher
               position="bottom"

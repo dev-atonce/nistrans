@@ -6,13 +6,11 @@ import { BsFillBoxSeamFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { ThreeDots } from "react-loader-spinner";
 
 export default function News({ lang, home, limit }: any) {
   const t = useTranslations("blog-section");
   const [page, setPage] = useState(1);
   const [newsList, setNewsList] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [total, setTotal] = useState(0);
   const fetchNews = async (page: number, limit: number) => {
     const res = await fetch(
@@ -24,7 +22,6 @@ export default function News({ lang, home, limit }: any) {
     const data = await res.json();
     setNewsList(data?.rows);
     setTotal(data?.total);
-    setLoading(false);
   };
 
   const nextPage = () => {
@@ -45,41 +42,11 @@ export default function News({ lang, home, limit }: any) {
     <div className="  px-2 sm:px-4 lg:px-0  xl:px-20 2xl:px-40   z-20 container mx-auto hidden absolute lg:block md:top-[200px] top-[100px] xl:top-[280px] 2xl:top-[330px]">
       <div className="w-full gap-4  shadow-md rounded-lg py-4 px-4 lg:px-4 bg-slate-200/80 grid grid-cols-12 text-slate-700 ">
         <div className="rounded-md col-span-10 grid-cols-12 grid gap-2">
-          {loading ? (
-            <div className="col-span-9 rounded-md grid grid-cols-1 gap-1 ">
-              <div className="w-full h-[60px] bg-white rounded-md flex items-center justify-center">
-                <ThreeDots
-                  visible={true}
-                  height="50"
-                  width="50"
-                  color="#F1F5F9"
-                  radius="9"
-                  ariaLabel="three-dots-loading"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                />
-              </div>
-              <div className="w-full h-[60px] bg-white rounded-md flex items-center justify-center">
-                <ThreeDots
-                  visible={true}
-                  height="50"
-                  width="50"
-                  color="#F1F5F9"
-                  radius="9"
-                  ariaLabel="three-dots-loading"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                />
-              </div>
-            </div>
-          ) : (
-            <div className="col-span-9 rounded-md grid grid-cols-1 gap-1 ">
-              {newsList?.map((i: any, index: any) => (
-                <NewsCard lang={lang} item={i} key={index} />
-              ))}
-            </div>
-          )}
-
+          <div className="col-span-9 rounded-md grid grid-cols-1 gap-1 ">
+            {newsList?.map((i: any, index: any) => (
+              <NewsCard lang={lang} item={i} key={index} />
+            ))}
+          </div>
           <div className="col-span-1 rounded-md bg-white flex flex-col items-center justify-around">
             <button className="">
               <FaCaretUp

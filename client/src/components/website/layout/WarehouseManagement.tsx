@@ -8,14 +8,14 @@ export default function Warehouse({ lang }: any) {
       <div className="container  px-2 mx-auto 2xl:px-20">
         <section className="md:w-[80%] w-full md:mx-auto">
           <div className="flex items-center text-slate-700">
-            <div className="bg-slate-100 p-4 sm:p-10 rounded-lg">
+            <div className="bg-slate-100 p-10 rounded-lg">
               <div className="py-10 flex justify-center items-center flex-col text-blue-950 gap-3">
-                <h2 className="pageTitle1 text-xl ">{t("heading")}</h2>
+                <h2 className="text-2xl pageTitle1">{t("heading")}</h2>
               </div>
 
-              <div className="pb-4 text-sm sm:text-base">{t("p")}</div>
+              <div className="pb-4">{t("p")}</div>
 
-              <section className="bg-white ">
+              <section className="bg-white my-1">
                 <ul className="grid grid-cols-12 textNum">
                   <li className="col-span-2 flex flex-col items-center gap-1 bg-blue-950 text-white py-2 nNum">
                     <div className="nNumText">{t("point")}</div>
@@ -72,7 +72,7 @@ export default function Warehouse({ lang }: any) {
             <Link
               href={`/service/warehouse`}
               // href={`/${lang.toLowerCase()}/news-activity`}
-              className=" text-sm sm:text-base rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
+              className="  rounded-md border border-orange-400 px-4 py-2 flex items-center bg-white text-orange-400 hover:text-white hover:bg-orange-400 transition-all duration-500"
             >
               {t("see-more")}
               {/* {t("button.see-all")} */}

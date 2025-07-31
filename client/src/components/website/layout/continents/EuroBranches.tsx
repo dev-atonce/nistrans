@@ -84,8 +84,7 @@ const EuroBranches = ({ lng }: any) => {
           ></a>
         </div>
         <div className="branchesText">
-          Unit 5 Horton Industrial Park, Horton Road, West Drayton, Middlesex
-          UB7 8JD, United Kingdom
+          362 Stockley Close, West Drayton Middlesex, UB7 9BL
           <br />
           TEL：44-1895-439777 / FAX：44-1895-434505
         </div>
@@ -94,7 +93,7 @@ const EuroBranches = ({ lng }: any) => {
       <section>
         {/* @ts-ignore */}
         <div className="pageTitle1">{content[lng]["es"]}</div>
-        <div className="branchesTitle">NISSIN TRANSPORTES ESPANA S.A.</div>
+        <div className="branchesTitle">NISSIN TRANSPORT GmbH Spain Branch</div>
         <div className="branchesText">
           Avda. Diagonal, 309, 5-A. 08013, Barcelona, Spain
           <br />
@@ -105,22 +104,20 @@ const EuroBranches = ({ lng }: any) => {
       <section>
         {/* @ts-ignore */}
         <div className="pageTitle1">{content[lng]["fr"]}</div>
-        <div className="branchesTitle">NISSIN FRANCE S.A.S.</div>
+        <div className="branchesTitle">NISSIN TRANSPORT GmbH France Branch</div>
         <div className="branchesText">
-          C/O GEODIS WILSON FRANCE SAS 344, Rue de La Belle Etoile, Paris Nord
-          2, 95700 Roissy Charles de Gaulle Cedex France
+          ZAC du Moulin 1, Rue du Meunier 95700 Roissy en France, France
           <br />
-          TEL：33-1-4938-5907 / FAX：31-1-4938-5909
+          TEL: 33-1-4938-5900 / FAX: 31-1-4938-5909
         </div>
       </section>
 
       <section>
         {/* @ts-ignore */}
         <div className="pageTitle1">{content[lng]["be"]}</div>
-        <div className="branchesTitle">NISSIN BELGIUM N.V.</div>
+        <div className="branchesTitle">NISSIN TRANSPORT GmbH Belgium Branch</div>
         <div className="branchesText">
-          C/O SACO GROUPAIR NV Bedrijvenzone Machelen Cargo 738/B2.6 B-1830
-          Machelen Belgium
+          Bedrijvenzone Machelen Cargo 738/2 B-1830 Machelen, Belgium
           <br />
           TEL：32-2-751-4499 / FAX：32-2-751-5856
         </div>
@@ -129,7 +126,14 @@ const EuroBranches = ({ lng }: any) => {
       <section>
         {/* @ts-ignore */}
         <div className="pageTitle1">{content[lng]["po"]}</div>
-        <div className="branchesTitle">NISSIN LOGISTICS POLAND SP. Z O.O.</div>
+        <div className="branchesTitle">NISSIN LOGISTICS POLAND SP. Z O.O.
+          <a
+            className="branchesLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://nissin.pl/"
+          ></a>
+        </div>
         <div className="branchesText">
           Ostaszewo 57K, 87-148 Lysomice, Poland
           <br />
@@ -155,15 +159,13 @@ const EuroBranches = ({ lng }: any) => {
           LIMITED LIABILITY COMPANY &quot;NISSIN RUS&quot;
         </div>
         <div className="branchesText">
-          11/10 Block 6, 2nd Floor, Office 222, Letnikovskaya Str., Moscow
-          115114, Russia
+          Str.Zolotaya 11, Business Center &quot;Zoloto&quot;, 2F, 212, Moscow, 105094, Russia
           <br />
           TEL：7-495-792-3025 / FAX：7-495-792-3129
         </div>
         <div className="branchesTitle">MOSCOW REP. OFFICE</div>
         <div className="branchesText">
-          11/10 Block 6, 2nd Floor, Office 220, Letnikovskaya Str., Moscow
-          115114, Russia
+          Str.Zolotaya 11, Business Center &quot;Zoloto&quot;, 2F, 212, Moscow, 105094, Russia
           <br />
           TEL：7-495-792-302 / FAX：7-495-792-3129
         </div>
@@ -174,8 +176,7 @@ const EuroBranches = ({ lng }: any) => {
         <div className="pageTitle1">{content[lng]["ka"]}</div>
         <div className="branchesTitle">ALMATY REP. OFFICE</div>
         <div className="branchesText">
-          151/115 Abay Avenue Office 1003, 10th Floor, Business Center
-          “Alatau”050009, Almaty, Kazakhstan
+          Office 1103, Abay Prospect 151 BC “Alatau”, Almaty, Kazakhstan
           <br />
           TEL：7-727-250-1859 / FAX：7-727-250-1879
         </div>

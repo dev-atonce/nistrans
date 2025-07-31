@@ -8,7 +8,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const lng = params.lng?.toUpperCase();
+  const lng = "TH";
 
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
@@ -39,7 +39,7 @@ export default function AboutPage({ params: { lng } }: any) {
         >
           <div className="col-span-6">
             <div className="branchesPic">
-              <img src="/img/about/007.jpg" alt="Domestic Branches" />
+              <img src="/img/about/015.jpg" alt="Domestic Branches" />
             </div>
           </div>
           <div className="col-span-6">
@@ -64,7 +64,7 @@ export default function AboutPage({ params: { lng } }: any) {
                 className="branchesMap"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.google.com/maps/place/คลังสินค้าโชติธนวัฒน์+1/@13.6713977,100.6186394,20.19z/data=!4m9!1m2!2m1!1sChodthanawat++Warehouse!3m5!1s0x30e2a0082faa14bd:0xc39c2eaf6b3b73a9!8m2!3d13.6715341!4d100.6187112!15sChdDaG9kdGhhbmF3YXQgIFdhcmVob3VzZVoYIhZjaG9kdGhhbmF3YXQgd2FyZWhvdXNlkgEJd2FyZWhvdXNl4AEA"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+House+Moving+Dept./data=!4m2!3m1!1s0x0:0x18d42d69ded9da13?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
             <div className="branchesText">
@@ -138,7 +138,7 @@ export default function AboutPage({ params: { lng } }: any) {
           </div>
           <div className="col-span-6">
             <div className="branchesTitle">
-              คลังสินค้าบางปะกง
+              คลังสินค้าบางปะกง K41
               <a
                 className="branchesMap"
                 target="_blank"
@@ -181,6 +181,31 @@ export default function AboutPage({ params: { lng } }: any) {
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+          <div className="col-span-6">
+            <div className="branchesPic">
+              <img src="/img/about/016.png" alt="Domestic Branches" />
+            </div>
+          </div>
+          <div className="col-span-6">
+            <div className="branchesTitle">
+              คลังสินค้าอันตรายบางปะกง K39
+              <a
+                className="branchesMap"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+Bangpakong+K39+Dangerous+Goods+Warehouse/data=!4m2!3m1!1s0x0:0xed2022fee817dad5?sa=X&ved=1t:2428&hl=en&ictx=111"
+              ></a>
+            </div>
+            <div className="branchesText">
+              T-park บางนา WH DG 6/2, 70/2 หมู่ที่ 5 ตำบลบางสมัคร อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
+              <br />
+              โทรศัพท์: (+66)-38-538-140-3
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
           <div className="col-span-6">
             <div className="branchesPic">
@@ -218,15 +243,9 @@ export default function AboutPage({ params: { lng } }: any) {
             <div className="branchesTitle">
               คลังสินค้าปราจีนบุรี (โรจนะ)
               <a
-                className="branchesVideo fancybox-mp4"
-                data-type="iframe"
-                title=""
-                href="../top_video.mp4"
-              ></a>
-              <a
                 className="branchesMap"
                 target="_blank"
-                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+(Prachinburi+Branch)/@13.8418361,101.5166113,15z/data=!4m5!3m4!1s0x311cfbe140032eff:0xbf67690823fe6336!8m2!3d13.8399378!4d101.5227106?hl=jp&shorturl=1"
+                href="https://www.google.com/maps/place/SIAM+NISTRANS+Co.,Ltd.+Prachinburi+Branch/data=!4m2!3m1!1s0x0:0x5a3db401b89f97d1?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
 
@@ -299,7 +318,7 @@ export default function AboutPage({ params: { lng } }: any) {
         >
           <div className="col-span-6">
             <div className="branchesPic">
-              <img src="/img/about/007.jpg" alt="Domestic Branches" />
+              <img src="/img/about/015.jpg" alt="Domestic Branches" />
             </div>
           </div>
           <div className="col-span-6">
@@ -324,7 +343,7 @@ export default function AboutPage({ params: { lng } }: any) {
                 className="branchesMap"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.google.com/maps/place/คลังสินค้าโชติธนวัฒน์+1/@13.6713977,100.6186394,20.19z/data=!4m9!1m2!2m1!1sChodthanawat++Warehouse!3m5!1s0x30e2a0082faa14bd:0xc39c2eaf6b3b73a9!8m2!3d13.6715341!4d100.6187112!15sChdDaG9kdGhhbmF3YXQgIFdhcmVob3VzZVoYIhZjaG9kdGhhbmF3YXQgd2FyZWhvdXNlkgEJd2FyZWhvdXNl4AEA"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+House+Moving+Dept./data=!4m2!3m1!1s0x0:0x18d42d69ded9da13?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
             <div className="branchesText">
@@ -397,7 +416,7 @@ export default function AboutPage({ params: { lng } }: any) {
           </div>
           <div className="col-span-6">
             <div className="branchesTitle">
-              バンパコン倉庫
+              バンパコン K41 倉庫
               <a
                 className="branchesMap"
                 target="_blank"
@@ -440,6 +459,33 @@ export default function AboutPage({ params: { lng } }: any) {
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+          <div className="col-span-6">
+            <div className="branchesPic">
+              <img src="/img/about/016.png" alt="Domestic Branches" />
+            </div>
+          </div>
+          <div className="col-span-6">
+            <div className="branchesTitle">
+              バンパコン K39 危険品倉庫
+              <a
+                className="branchesMap"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+Bangpakong+K39+Dangerous+Goods+Warehouse/data=!4m2!3m1!1s0x0:0xed2022fee817dad5?sa=X&ved=1t:2428&hl=en&ictx=111"
+              ></a>
+            </div>
+            <div className="branchesText">
+              T-park Bangna WH DG 6/2, 70/2 Moo 5, T.Bangsamak, A.Bangpakong,
+              <br />
+              Chachoengsao 24180 THIAILAND
+              <br />
+              TEL: (+66)-38-538-140-3
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
           <div className="col-span-6">
             <div className="branchesPic">
@@ -477,15 +523,9 @@ export default function AboutPage({ params: { lng } }: any) {
             <div className="branchesTitle">
               プラチンブリ(ロジャナ)倉庫
               <a
-                className="branchesVideo fancybox-mp4"
-                data-type="iframe"
-                title=""
-                href="../top_video.mp4"
-              ></a>
-              <a
                 className="branchesMap"
                 target="_blank"
-                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+(Prachinburi+Branch)/@13.8418361,101.5166113,15z/data=!4m5!3m4!1s0x311cfbe140032eff:0xbf67690823fe6336!8m2!3d13.8399378!4d101.5227106?hl=jp&shorturl=1"
+                href="https://www.google.com/maps/place/SIAM+NISTRANS+Co.,Ltd.+Prachinburi+Branch/data=!4m2!3m1!1s0x0:0x5a3db401b89f97d1?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
 
@@ -558,7 +598,7 @@ export default function AboutPage({ params: { lng } }: any) {
         >
           <div className="col-span-6">
             <div className="branchesPic">
-              <img src="/img/about/007.jpg" alt="Domestic Branches" />
+              <img src="/img/about/015.jpg" alt="Domestic Branches" />
             </div>
           </div>
           <div className="col-span-6">
@@ -583,7 +623,7 @@ export default function AboutPage({ params: { lng } }: any) {
                 className="branchesMap"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.google.com/maps/place/คลังสินค้าโชติธนวัฒน์+1/@13.6713977,100.6186394,20.19z/data=!4m9!1m2!2m1!1sChodthanawat++Warehouse!3m5!1s0x30e2a0082faa14bd:0xc39c2eaf6b3b73a9!8m2!3d13.6715341!4d100.6187112!15sChdDaG9kdGhhbmF3YXQgIFdhcmVob3VzZVoYIhZjaG9kdGhhbmF3YXQgd2FyZWhvdXNlkgEJd2FyZWhvdXNl4AEA"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+House+Moving+Dept./data=!4m2!3m1!1s0x0:0x18d42d69ded9da13?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
             <div className="branchesText">
@@ -656,7 +696,7 @@ export default function AboutPage({ params: { lng } }: any) {
           </div>
           <div className="col-span-6">
             <div className="branchesTitle">
-              Bangpakong warehouse
+              Bangpakong  K41 warehouse
               <a
                 className="branchesMap"
                 target="_blank"
@@ -699,6 +739,33 @@ export default function AboutPage({ params: { lng } }: any) {
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+          <div className="col-span-6">
+            <div className="branchesPic">
+              <img src="/img/about/016.png" alt="Domestic Branches" />
+            </div>
+          </div>
+          <div className="col-span-6">
+            <div className="branchesTitle">
+              Bangpakong K39 Dangerous Goods warehouse
+              <a
+                className="branchesMap"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+Bangpakong+K39+Dangerous+Goods+Warehouse/data=!4m2!3m1!1s0x0:0xed2022fee817dad5?sa=X&ved=1t:2428&hl=en&ictx=111"
+              ></a>
+            </div>
+            <div className="branchesText">
+              T-park Bangna WH DG 6/2, 70/2 Moo 5, T.Bangsamak, A.Bangpakong,
+              <br />
+              Chachoengsao 24180 THIAILAND
+              <br />
+              TEL: (+66)-38-538-140-3
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
           <div className="col-span-6">
             <div className="branchesPic">
@@ -736,15 +803,9 @@ export default function AboutPage({ params: { lng } }: any) {
             <div className="branchesTitle">
               Prachinburi (Rojana) warehouse
               <a
-                className="branchesVideo fancybox-mp4"
-                data-type="iframe"
-                title=""
-                href="../top_video.mp4"
-              ></a>
-              <a
                 className="branchesMap"
                 target="_blank"
-                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+(Prachinburi+Branch)/@13.8418361,101.5166113,15z/data=!4m5!3m4!1s0x311cfbe140032eff:0xbf67690823fe6336!8m2!3d13.8399378!4d101.5227106?hl=jp&shorturl=1"
+                href="https://www.google.com/maps/place/SIAM+NISTRANS+Co.,Ltd.+Prachinburi+Branch/data=!4m2!3m1!1s0x0:0x5a3db401b89f97d1?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
 
@@ -817,7 +878,7 @@ export default function AboutPage({ params: { lng } }: any) {
         >
           <div className="col-span-6">
             <div className="branchesPic">
-              <img src="/img/about/007.jpg" alt="Domestic Branches" />
+              <img src="/img/about/015.jpg" alt="Domestic Branches" />
             </div>
           </div>
           <div className="col-span-6">
@@ -842,7 +903,7 @@ export default function AboutPage({ params: { lng } }: any) {
                 className="branchesMap"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.google.com/maps/place/คลังสินค้าโชติธนวัฒน์+1/@13.6713977,100.6186394,20.19z/data=!4m9!1m2!2m1!1sChodthanawat++Warehouse!3m5!1s0x30e2a0082faa14bd:0xc39c2eaf6b3b73a9!8m2!3d13.6715341!4d100.6187112!15sChdDaG9kdGhhbmF3YXQgIFdhcmVob3VzZVoYIhZjaG9kdGhhbmF3YXQgd2FyZWhvdXNlkgEJd2FyZWhvdXNl4AEA"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+House+Moving+Dept./data=!4m2!3m1!1s0x0:0x18d42d69ded9da13?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
             <div className="branchesText">
@@ -916,7 +977,7 @@ export default function AboutPage({ params: { lng } }: any) {
           </div>
           <div className="col-span-6">
             <div className="branchesTitle">
-              คลังสินค้าบางปะกง
+              คลังสินค้าบางปะกง K41
               <a
                 className="branchesMap"
                 target="_blank"
@@ -959,6 +1020,31 @@ export default function AboutPage({ params: { lng } }: any) {
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
+          <div className="col-span-6">
+            <div className="branchesPic">
+              <img src="/img/about/016.png" alt="Domestic Branches" />
+            </div>
+          </div>
+          <div className="col-span-6">
+            <div className="branchesTitle">
+              คลังสินค้าอันตรายบางปะกง K39
+              <a
+                className="branchesMap"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,Ltd.+Bangpakong+K39+Dangerous+Goods+Warehouse/data=!4m2!3m1!1s0x0:0xed2022fee817dad5?sa=X&ved=1t:2428&hl=en&ictx=111"
+              ></a>
+            </div>
+            <div className="branchesText">
+              T-park บางนา WH DG 6/2, 70/2 หมู่ที่ 5 ตำบลบางสมัคร อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180 ประเทศไทย
+              <br />
+              โทรศัพท์: (+66)-38-538-140-3
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-6 md:grid-cols-12 gap-4 branchesRow">
           <div className="col-span-6">
             <div className="branchesPic">
@@ -996,15 +1082,9 @@ export default function AboutPage({ params: { lng } }: any) {
             <div className="branchesTitle">
               คลังสินค้าปราจีนบุรี (โรจนะ)
               <a
-                className="branchesVideo fancybox-mp4"
-                data-type="iframe"
-                title=""
-                href="../top_video.mp4"
-              ></a>
-              <a
                 className="branchesMap"
                 target="_blank"
-                href="https://www.google.com/maps/place/Siam+Nistrans+Co.,+Ltd.+(Prachinburi+Branch)/@13.8418361,101.5166113,15z/data=!4m5!3m4!1s0x311cfbe140032eff:0xbf67690823fe6336!8m2!3d13.8399378!4d101.5227106?hl=jp&shorturl=1"
+                href="https://www.google.com/maps/place/SIAM+NISTRANS+Co.,Ltd.+Prachinburi+Branch/data=!4m2!3m1!1s0x0:0x5a3db401b89f97d1?sa=X&ved=1t:2428&hl=en&ictx=111"
               ></a>
             </div>
 
@@ -1078,7 +1158,7 @@ export default function AboutPage({ params: { lng } }: any) {
         image="/img/service/branch_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container mx-auto 2xl:px-20 xl:px-6 pb-10 text-black px-2">
+      <div className="container mx-auto 2xl:px-20 pb-10 text-black px-2">
         {content}
       </div>
     </>

@@ -13,9 +13,8 @@ export default function Moving() {
         engName="Service"
         prevPage={{ pageName: h("home"), url: "/" }}
         image="/img/service/house-moving/banner.jpg"
-        service={true}
       />
-      <div className="container 2xl:px-20 px-2  xl:px-6   mx-auto pb-10 text-black py-10">
+      <div className="container 2xl:px-20 px-2 xl:px-0  mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t("h1")}</h1>
         <div className="py-10">
           <div className="branchesTopic">
@@ -25,8 +24,9 @@ export default function Moving() {
               </div>
               <div className="col-span-12 md:col-span-4">
                 <img
-                  src="/img/service/house-moving/006.jpg"
+                  src="/img/service/house-moving/007.jpg"
                   className="w-full"
+                  // width={800}
                   alt={t("h1")}
                 />
               </div>
@@ -34,11 +34,7 @@ export default function Moving() {
           </div>
         </div>
         <h2 className="pageTitle1">{t("h2")}</h2>
-        <h3
-          className="pageTitle2 "
-          // @ts-ignore
-          style={{ fontSize: "25px", textAlign: "start !important" }}
-        >
+        <h3 className="pageTitle2" style={{ fontSize: "25px" }}>
           {t("h3")}
         </h3>
         <div className="flex justify-center">

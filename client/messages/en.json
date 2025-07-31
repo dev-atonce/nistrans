@@ -18,7 +18,7 @@
     "packing-loading": "Packing/Loading",
     "custom-clearance": "Custom Clearance",
     "scm-solutions": "SCM Solutions",
-    "apply": "Recruitment",
+    "apply": "Apply",
     "branch": "Domestic Branches",
     "group": "Nissin Group"
   },
@@ -32,8 +32,7 @@
   "cover": {
     "h1": "Reaching and Delivering to the World",
     "h2": "A pioneer in international multimodal logistics",
-    "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, ",
-    "p-2": "and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
+    "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
   },
   "service-section": {
     "heading": "Our services",
@@ -41,8 +40,7 @@
   },
   "about-section": {
     "heading": "Siam Nistrans was established in 1987 as the Thai subsidiary of Nissin Corporation",
-    "p-1": "Siam Nistrans was established in 1987 as the Thai subsidiary of Nissin Corporation, and since then we have provided safe and secure multimodal transport services to our customers across Nissin's global network. In Thailand, we have offices and warehouses in various locations such as Bangkok, Chiangmai, Ayutthaya, Prachinburi, Laem Chabang and Bangpakong, and we offer the best-suited and innovative logistics and packaging solutions by combining our hardware and software platforms in order to satisfy the customers' requirements.",
-    "p-2": "Siam Nistrans delivers not only commercial cargo but also personal cargo to help your unexpected relocation to Japan or other countries, or within Thailand. Our team, consisting of Thai and Japanese staff, put their heart into delivering each customer's household goods to the destination. For details, please contact us."
+    "p": "Since then we have provided safe and secure multimodal transport services to our customers across Nissin's global network. In Thailand, we have offices and warehouses in various locations such as Bangkok, Chiangmai, Ayutthaya, Prachinburi, Laem Chabang and Bangpakong, and we offer the best-suited and innovative logistics and packaging solutions by combining our hardware and software platforms in order to satisfy the customers' requirements."
   },
   "moving-section": {
     "heading": "Moving by Siam Nistrans",
@@ -256,7 +254,7 @@
           "addr": "177 Village No. 13, Makhuea Chae Subdistrict, Mueang District,\nLamphun Province 51000"
         },
         "7": {
-          "title": "คลังสินค้าอันตราย",
+          "title": "Dangerous goods warehouse",
           "addr": "T-park Bangna WH DG 6/2 70/2 Village No. 5, Bang Samak Subdistrict,\nBang Pakong District, Chachoengsao Province 24180"
         }
       }
@@ -345,7 +343,7 @@
       "2": "We also help you deal with and solve any problems related to customs clearance.",
       "3": {
         "export": {
-          "title": "",
+          "title": "Export",
           "1": "Automobiles",
           "2": "Auto parts",
           "3": "Machinery",
@@ -353,6 +351,7 @@
           "5": "Electronic parts",
           "6": "Chemicals",
           "7": "Textiles",
+          "other": "etc.",
           "p": "Our unique EDI system identifies a suitable code from the list of several tens of thousands of codes to ensure accurate and timely customs clearance."
         },
         "import": {
@@ -364,6 +363,7 @@
           "5": "Toy",
           "6": "Daily necessities",
           "7": "Wood materials",
+          "other": "etc.",
           "p": "Our certified customs brokers are familiar with the different duty privileges in order to provide you with high-quality service."
         }
       }
@@ -492,12 +492,7 @@
       "heading": "Updates to this Cookie Policy",
       "p": "The Company regularly reviews and, if appropriate, updates this Cookie Policy from time to time to ensure that your personal data is properly protected. Please refer to this page for the updated Cookie Policy."
     },
-    "date": "Last updated: 01/06/2022",
-    "popTitle": "Use of cookies of Siam Nistrans Co., Ltd. (the “Company”)",
-    "p-1": "The Company uses necessary cookies which are required for the operations of our website. We also would like to set optional cookies to help us improve our website. We will not set optional cookies unless you enable them. You can learn more about our use of cookies from our ",
-    "p-2": "By clicking “Accept All Cookies”, you consent us to store and use all the cookies on your device that you use to access our website to enhance site navigation and site usage analysis, including to assist in our marketing efforts.",
-    "link": "Cookie Policy.",
-    "button": "Accept All Cookies"
+    "date": "Last updated: 01/06/2022"
   },
   "modal": {
     "law": {

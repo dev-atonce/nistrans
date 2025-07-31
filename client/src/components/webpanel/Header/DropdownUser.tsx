@@ -1,23 +1,15 @@
-"use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import { useUsersStore } from "@/store/usersStore";
 import { FaUser } from "react-icons/fa";
-import { useRouter } from "next/navigation";
 
 const DropdownUser = () => {
-  const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { user, logout: onLogOut, role, id } = useUsersStore();
 
   const trigger = useRef<any>(null);
   const dropdown = useRef<any>(null);
-
-  const handleLogout = async () => {
-    onLogOut();
-    router.push("/webpanel/auth/signin");
-  };
 
   // close on click outside
   useEffect(() => {
@@ -84,9 +76,8 @@ const DropdownUser = () => {
         ref={dropdown}
         onFocus={() => setDropdownOpen(true)}
         onBlur={() => setDropdownOpen(false)}
-        className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark ${
-          dropdownOpen === true ? "block" : "hidden"
-        }`}
+        className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark ${dropdownOpen === true ? "block" : "hidden"
+          }`}
       >
         <ul className="flex flex-col gap-5 border-b border-stroke px-6 py-7.5 dark:border-strokedark">
           {/* <li>
@@ -163,7 +154,7 @@ const DropdownUser = () => {
         </ul>
         <button
           onClick={() => {
-            handleLogout();
+            onLogOut();
           }}
           className="flex items-center gap-3.5 px-6 py-4 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
         >

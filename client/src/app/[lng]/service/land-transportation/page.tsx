@@ -13,9 +13,8 @@ export default function LandTransport() {
         engName="Service"
         prevPage={{ pageName: h("home"), url: "/" }}
         image="/img/service/land-transportation/banner.jpg"
-        service={true}
       />
-      <div className="container 2xl:px-20 px-2  xl:px-6  mx-auto pb-10 text-black py-10">
+      <div className="container 2xl:px-20 px-2 xl:px-0 mx-auto pb-10 text-black py-10">
         <h1 className="text-blue-950 text-2xl">{t("h1")}</h1>
         <div className="py-10">
           <div>
@@ -73,7 +72,6 @@ export default function LandTransport() {
                       href="/img/service/land-transportation/002.jpg"
                       rel="groupimg"
                       title=""
-                      target="_blank"
                     >
                       <img
                         src="/img/service/land-transportation/002.jpg"
@@ -115,7 +113,6 @@ export default function LandTransport() {
                       href="/img/service/land-transportation/004.jpg"
                       rel="groupimg"
                       title=""
-                      target="_blank"
                     >
                       <img
                         src="/img/service/land-transportation/004.jpg"
@@ -128,7 +125,6 @@ export default function LandTransport() {
                       href="/img/service/land-transportation/005.jpg"
                       rel="groupimg"
                       title=""
-                      target="_blank"
                     >
                       <img
                         src="/img/service/land-transportation/005.jpg"
@@ -176,7 +172,6 @@ export default function LandTransport() {
                     href="/img/service/land-transportation/006.jpg"
                     rel="groupimg"
                     title=""
-                    target="_blank"
                   >
                     <img
                       src="/img/service/land-transportation/006.jpg"

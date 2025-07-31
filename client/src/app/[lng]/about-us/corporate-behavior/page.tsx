@@ -11,7 +11,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const lng = params.lng?.toUpperCase();
+  const lng = "TH";
 
   const seoRoute = `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/seo/page-name/${pageName}`;
 
@@ -51,7 +51,7 @@ export default function AboutPage({ params: { lng } }: any) {
         image="/img/service/behav_banner.jpg"
         prevPage={{ pageName: h("home"), url: "/" }}
       />
-      <div className="container   px-2 mx-auto 2xl:px-20 xl:px-6 pb-10 text-black mt-[-40px]">
+      <div className="container   px-2 mx-auto 2xl:px-20 pb-10 text-black mt-[-40px]">
         {content}
       </div>
     </>

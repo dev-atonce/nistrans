@@ -2,6 +2,7 @@ import Cover from "@/components/website/layout/Cover";
 import Image from "next/image";
 import { FaRegClock } from "react-icons/fa";
 import "react-quill/dist/quill.snow.css";
+import { FaRegFilePdf } from "react-icons/fa";
 
 const fetchBlog = async ({ id }: { id: string }) => {
   const res = await fetch(
@@ -62,6 +63,7 @@ export default async function ServicePage({
   const blogDetail = blog[0][blogDetailKey];
   const blogType = blog[0].type;
   const blogDate = new Date(blog[0].createdAt);
+  const blogAttachment = blog[0].attachment;
 
   return (
     <>
@@ -84,6 +86,16 @@ export default async function ServicePage({
                 }
               </span>
             )}
+            {blogAttachment && (
+              <a
+                href={`${process.env.NEXT_PUBLIC_BASE_URL}${blogAttachment}`}
+                className="col-span-1 "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaRegFilePdf size={25} />
+              </a>
+            )}
           </div>
           <div className="text-slate-500 text-md flex items-center gap-2">
             <FaRegClock />
@@ -95,8 +107,6 @@ export default async function ServicePage({
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_URL}${blogImage}`}
               alt={blogTitle}
-              width={500}
-              height={500}
               quality={80}
               loading="lazy"
               className="h-[500px] object-contain"

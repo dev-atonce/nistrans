@@ -6,7 +6,7 @@ export default function ProductCard({ item, lng }: any) {
     <Link
       href={`/service/${item?.url}`}
       //   href={`/${lang?.toLowerCase()}/service/${item?.id}`}
-      className="group   pb-4 transition-all duration-500 col-span-6 sm:col-span-6  md:col-span-3 rounded-lg overflow-hidden"
+      className="group   pb-4 transition-all duration-500 col-span-12 md:col-span-6  xl:col-span-3 rounded-lg overflow-hidden"
     >
       <Image
         src={item?.image}
@@ -22,7 +22,7 @@ export default function ProductCard({ item, lng }: any) {
         className="w-full object-cover aspect-[3/2] group-hover:brightness-105 transition-all rounded-lg"
         loading="lazy"
       />
-      <h3 className="px-4 group-hover:text-[#070B76] pt-2  text-xs sm:text-base transition-all text-center text-blue-950">
+      <h3 className="px-4 group-hover:text-[#070B76] pt-2  text-lg transition-all text-center text-blue-950">
         {item[`serviceName${lng}`] || item?.serviceNameTH}
         {/* Item Name */}
       </h3>
