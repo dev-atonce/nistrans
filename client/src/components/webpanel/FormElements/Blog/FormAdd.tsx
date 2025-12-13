@@ -4,6 +4,7 @@ import { BlogProps } from "@/types/blogType";
 import { useBlogStore } from "@/store/blogStore";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { notification } from "antd";
 import FormBlog from "./FormBlog";
 
 const FormAdd = () => {
@@ -31,9 +32,17 @@ const FormAdd = () => {
     // @ts-ignore
     const { name, value, files } = event.target;
     if (name === "blog_image" && files && files[0]) {
+      const file = files[0];
+      const maxSize = 2 * 1024 * 1024; // 2MB
+      if (file.size > maxSize) {
+        notification.error({
+          message: "File Size Error",
+          description: "Image size must not exceed 2MB",
+        });
+      }
       setBlogState((prevState) => ({
         ...prevState,
-        blog_image: files[0],
+        blog_image: file,
       }));
     } else {
       setBlogState((prevState) => ({
@@ -51,6 +60,24 @@ const FormAdd = () => {
   };
 
   const handleSubmit = async () => {
+    if (!blogState.slug || blogState.slug.trim() === "") {
+      notification.error({
+        message: "Validation Error",
+        description: "URL is required",
+      });
+      return;
+    }
+    if (blogState.blog_image && typeof blogState.blog_image === 'object' && 'size' in blogState.blog_image) {
+      const maxSize = 2 * 1024 * 1024; // 2MB
+      const file = blogState.blog_image as File;
+      if (file.size > maxSize) {
+        notification.error({
+          message: "File Size Error",
+          description: "Image size must not exceed 2MB",
+        });
+        return;
+      }
+    }
     await createItem(blogState, 'blog');
     router.push("/webpanel/blog");
   };
