@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BiEdit } from "react-icons/bi";
 import { RiDeleteBinLine } from "react-icons/ri";
+import { Popconfirm } from "antd";
 
 interface ActionBtnGroupProps {
   itemId: string;
@@ -33,12 +34,20 @@ const ActionBtnGroup = ({
         </a>
       )}
       {deleteItem && (
+        <Popconfirm
+          title="Delete item"
+          description="Are you sure you want to delete this item?"
+          onConfirm={() => deleteItem(itemId)}
+          okText="Yes"
+          cancelText="No"
+          okButtonProps={{ danger: true }}
+        >
         <button
-          onClick={() => deleteItem(itemId)}
           className="hover:text-white hover:bg-red text-red border-red border p-2 rounded-full"
         >
           <RiDeleteBinLine size={18} />
         </button>
+        </Popconfirm>
       )}
     </div>
   );

@@ -12,7 +12,7 @@ interface FormEditProps {
 
 const FormEdit = ({ id }: FormEditProps) => {
   const router = useRouter();
-  const { items, fetchItemById, updateItem } = useBlogStore();
+  const { items, fetchItemById, updateItem, isLoading } = useBlogStore();
   const [blogState, setBlogState] = useState<Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">>({
     blog_title_th: "",
     blog_title_en: "",
@@ -75,6 +75,7 @@ const FormEdit = ({ id }: FormEditProps) => {
       setItemState={handleChange}
       handleSubmit={handleSubmit}
       handleEditorChange={handleEditorChange}
+      isLoading={isLoading}
     />
   );
 };

@@ -8,7 +8,7 @@ import FormNews from "./FormNews";
 
 const FormAdd = () => {
   const router = useRouter();
-  const { createItem } = useBlogStore();
+  const { createItem, isLoading } = useBlogStore();
   const [blogState, setBlogState] = useState<Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">>({
     attachment: "",
     blog_title_th: "",
@@ -58,6 +58,7 @@ const FormAdd = () => {
       setItemState={handleChange}
       handleSubmit={handleSubmit}
       handleEditorChange={handleEditorChange}
+      isLoading={isLoading}
     />
   );
 };

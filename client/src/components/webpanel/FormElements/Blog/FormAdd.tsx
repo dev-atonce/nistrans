@@ -9,7 +9,7 @@ import FormBlog from "./FormBlog";
 
 const FormAdd = () => {
   const router = useRouter();
-  const { createItem } = useBlogStore();
+  const { createItem, isLoading } = useBlogStore();
   const [blogState, setBlogState] = useState<
     Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">
   >({
@@ -88,6 +88,7 @@ const FormAdd = () => {
       setItemState={handleChange}
       handleSubmit={handleSubmit}
       handleEditorChange={handleEditorChange}
+      isLoading={isLoading}
     />
   );
 };

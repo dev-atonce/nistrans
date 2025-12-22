@@ -4,7 +4,7 @@ import { BlogProps } from "@/types/blogType";
 import { useBlogStore } from "@/store/blogStore";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { notification } from "antd";
+import { notification, Spin } from "antd";
 import FormBlog from "./FormBlog";
 
 interface FormEditProps {
@@ -13,7 +13,8 @@ interface FormEditProps {
 
 const FormEdit = ({ id }: FormEditProps) => {
   const router = useRouter();
-  const { items, fetchItemById, updateItem } = useBlogStore();
+  const { items, fetchItemById, updateItem, isLoading } = useBlogStore();
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [blogState, setBlogState] = useState<
     Omit<BlogProps, "id" | "status" | "createdAt" | "updatedAt">
   >({
@@ -53,8 +54,15 @@ const FormEdit = ({ id }: FormEditProps) => {
         slug: items[0].slug,
         blog_image: items[0].blog_image,
       });
+      setIsDataLoaded(true);
     }
   }, [items]);
+
+  useEffect(() => {
+    if (!isLoading && items.length === 0) {
+      setIsDataLoaded(false);
+    }
+  }, [isLoading, items]);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -112,12 +120,22 @@ const FormEdit = ({ id }: FormEditProps) => {
     router.push("/webpanel/blog");
   };
 
+  // Show loading spinner until data is loaded
+  if (isLoading || !isDataLoaded) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <Spin size="large" tip="Loading..." />
+      </div>
+    );
+  }
+
   return (
     <FormBlog
       itemState={blogState}
       setItemState={handleChange}
       handleSubmit={handleSubmit}
       handleEditorChange={handleEditorChange}
+      isLoading={isLoading}
     />
   );
 };
