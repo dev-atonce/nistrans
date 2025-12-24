@@ -22,4 +22,5 @@ module.exports = {
   mailPass: process.env.MAIL_PASSWORD,
   mailDefault: process.env.MAIL_SENDER_DEFAULT,
   mailTo: process.env.MAIL_TO,
+  baseUrl: process.env.BASE_URL || "https://snc-portal.th.nissin-asia.com",
 };

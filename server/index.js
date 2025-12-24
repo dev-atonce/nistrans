@@ -21,6 +21,9 @@ require("./configs/databases");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Serve static files from public directory (before routes)
+app.use(express.static("public"));
+
 // Passport
 require("./configs/passport");
 
