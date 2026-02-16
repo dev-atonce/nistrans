@@ -45,58 +45,40 @@ const methods = {
 
   async sendEmail(req) {
     const topic = req.body.topic;
-    topic.map((item) => {
+    
+    // Store contact first (ไม่ต้องรอ sendMail)
+    const stored = await methods.storeContact(req.body);
+
+    // Send emails separately (fire-and-forget)
+    const mailList = {
+      การขนส่ง: "TRANSPORTATION@th.nissin-asia.com",
+      "Haco Lab": "TRANSPORTATION@th.nissin-asia.com",
+      คลังสินค้าและการจัดเก็บ: "STORAGE@th.nissin-asia.com",
+      ข่าวรับสมัครบุคคลากร: "ADMIN-GA@th.nissin-asia.com",
+      งานขนย้าย: "hikkoshi@th.nissin-asia.com",
+      อื่นๆ: "falove.falove01@gmail.com",
+    };
+
+    const mailPromises = topic.map((item) => {
       let response = {
         body: {
           intro: "You Have Inquiry From Website !",
           table: [
             {
-              // Optionally, add a title to each table.
               title: req.body.subject,
               data: [
-                {
-                  "#": "Name",
-                  detail: req.body.contactName,
-                },
-                {
-                  "#": "Company",
-                  detail: req.body.companyName,
-                },
-                {
-                  "#": "Department",
-                  detail: req.body.department,
-                },
-                {
-                  "#": "Email",
-                  detail: req.body.email,
-                },
-                {
-                  "#": "Telephone",
-                  detail: req.body.telephone,
-                },
-                {
-                  "#": "Company Address",
-                  detail: req.body.address,
-                },
-                {
-                  "#": "Topic",
-                  detail: item,
-                },
-                {
-                  "#": "Details",
-                  detail: req.body.detail,
-                },
+                { "#": "Name", detail: req.body.contactName },
+                { "#": "Company", detail: req.body.companyName },
+                { "#": "Department", detail: req.body.department },
+                { "#": "Email", detail: req.body.email },
+                { "#": "Telephone", detail: req.body.telephone },
+                { "#": "Company Address", detail: req.body.address },
+                { "#": "Topic", detail: item },
+                { "#": "Details", detail: req.body.detail },
               ],
               columns: {
-                // Optionally, customize the column widths
-                customWidth: {
-                  "#": "25%",
-                  detail: "75%",
-                },
-                // Optionally, change column text alignment
-                customAlignment: {
-                  detail: "left",
-                },
+                customWidth: { "#": "25%", detail: "75%" },
+                customAlignment: { detail: "left" },
               },
             },
           ],
@@ -104,40 +86,32 @@ const methods = {
       };
 
       let mail = MailGenerator.generate(response);
+      const mailTo = mailList[item];
+      let transporter = nodemailer.createTransport(configMail);
 
       return new Promise((resolve, reject) => {
-        // const mailList = {
-        //   การขนส่ง: "nachodsang@gmail.com",
-        //   "Haco Lab": "nachodsang@gmail.com",
-        //   คลังสินค้าและการจัดเก็บ: "nachodsang@gmail.com",
-        //   ข่าวรับสมัครบุคคลากร: "nachodsang@gmail.com",
-        //   งานขนย้าย: "nachodsang@gmail.com",
-        //   อื่นๆ: "nachodsang@gmail.com",
-        // };
-        const mailList = {
-          การขนส่ง: "TRANSPORTATION@th.nissin-asia.com",
-          "Haco Lab": "TRANSPORTATION@th.nissin-asia.com",
-          คลังสินค้าและการจัดเก็บ: "STORAGE@th.nissin-asia.com",
-          ข่าวรับสมัครบุคคลากร: "ADMIN-GA@th.nissin-asia.com",
-          งานขนย้าย: "hikkoshi@th.nissin-asia.com",
-          อื่นๆ: "ADMIN-GA@th.nissin-asia.com",
-        };
-        const mailTo = mailList[item];
-        let transporter = nodemailer.createTransport(configMail);
         transporter.sendMail(
           mailMessage(mailTo, "Inquiry Website", mail),
-          async (error, info) => {
+          (error, info) => {
             if (error) {
+              console.log(`❌ Send mail error to ${mailTo}:`, error.message);
               reject(ErrorBadRequest(error.message));
             } else {
-              req.body.topic = item;
-              await methods.storeContact(req.body);
+              console.log(`✅ Send mail success to ${mailTo}`);
               resolve(info.envelope);
             }
           }
         );
       });
     });
+
+    // Fire-and-forget emails (don't await)
+    Promise.allSettled(mailPromises).then((results) => {
+      console.log(`📧 Mail results: ${results.filter(r => r.status === 'fulfilled').length}/${results.length} sent`);
+    });
+
+    // Return success immediately after storing contact
+    return { success: true, data: stored };
   },
 
   async findAll(req) {

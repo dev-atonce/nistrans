@@ -4,8 +4,8 @@ const schema = new mongoose.Schema(
   {
     companyName: { type: String, required: true },
     contactName: { type: String, required: true },
-    department: { type: String, required: true },
-    address: { type: String, required: true },
+    department: { type: String },
+    address: { type: String },
     email: { type: String, required: true },
     telephone: { type: String, required: true },
     detail: { type: String, required: true },
