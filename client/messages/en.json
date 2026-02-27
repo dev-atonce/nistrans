@@ -121,7 +121,9 @@
       "email": "Please fill the correct Email",
       "number": "Number Only",
       "maxLenght": "Don't fill over {{maxLenght}} letters"
-    }
+    },
+    "submitSuccess": "Submitted successfully",
+    "submitError": "Something went wrong. Please try again."
   },
   "sea-freight": {
     "h1": "Sea Freight",

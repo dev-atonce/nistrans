@@ -122,7 +122,9 @@
       "email": "e-mailをご入力ください。",
       "number": "TELをご入力ください。",
       "maxLenght": "Don't fill over {{maxLenght}} letters"
-    }
+    },
+    "submitSuccess": "送信が完了しました",
+    "submitError": "エラーが発生しました。もう一度お試しください。"
   },
   "sea-freight": {
     "h1": "シー フレイト フォワーディング",

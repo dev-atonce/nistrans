@@ -16,33 +16,44 @@ export default function Contactform() {
   } = useForm();
 
   const onSubmit = async (data: any) => {
-    const contactData = { ...data };
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/formcontact`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contactData),
-      }
-    );
+    try {
+      const contactData = { ...data };
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACK_END_URL}/api/v1/formcontact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(contactData),
+        }
+      );
 
-    if (!response.ok) {
-      Swal.fire({
-        position: "top",
-        toast: true,
-        icon: "error",
-        title: "มีบางอย่างผิดพลาด กรุณาลองใหม่อีกครั้ง",
-        showConfirmButton: false,
-        timer: 2000,
-      });
-    } else {
+      console.log("Response status:", response.status, response.ok);
+      const result = await response.json();
+      console.log("Response result:", result);
+
+      if (!response.ok || result.error) {
+        const errMsg = result?.error?.message || result?.message || "Unknown error";
+        console.error("onSubmit error:", errMsg);
+        throw new Error(errMsg);
+      }
+
       Swal.fire({
         position: "top",
         toast: true,
         icon: "success",
-        title: "ส่งข้อมูลเรียบร้อย",
+        title: t("submitSuccess"),
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    } catch (error: any) {
+      console.error("onSubmit error:", error?.message || error);
+      Swal.fire({
+        position: "top",
+        toast: true,
+        icon: "error",
+        title: t("submitError"),
         showConfirmButton: false,
         timer: 2000,
       });
