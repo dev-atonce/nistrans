@@ -53,7 +53,7 @@ export default function AboutPage({ params: { lng } }: any) {
               ></a>
             </div>
             <div className="branchesText">
-              ชั้น 15 เลขที่ 191/66, 68-69 CTI TOWER ถนนรัชดาภิเษก
+              เลขที่ 191/22-25 CTI TOWER ชั้น 26 ถนนรัชดาภิเษก
               <br />
               เขตคลองเตย กรุงเทพมหานคร 10110 ประเทศไทย
             </div>
@@ -332,7 +332,7 @@ export default function AboutPage({ params: { lng } }: any) {
               ></a>
             </div>
             <div className="branchesText">
-              15th Fl., 191/66, 68-69 CTI TOWER, Ratchadapisek Rd.,
+              CTI TOWER 191/22-25, 26th Floor, Ratchadapisek Rd.,
               <br />
               Kwang Klongtoey, Khet Klongtoey, Bangkok 10110 THAILAND
             </div>
@@ -612,7 +612,7 @@ export default function AboutPage({ params: { lng } }: any) {
               ></a>
             </div>
             <div className="branchesText">
-              15th Fl., 191/66, 68-69 CTI TOWER, Ratchadapisek Rd.,
+              CTI TOWER 191/22-25, 26th Floor, Ratchadapisek Rd.,
               <br />
               Kwang Klongtoey, Khet Klongtoey, Bangkok 10110 THAILAND
             </div>
@@ -892,7 +892,7 @@ export default function AboutPage({ params: { lng } }: any) {
               ></a>
             </div>
             <div className="branchesText">
-              ชั้น 15 เลขที่ 191/66, 68-69 CTI TOWER ถนนรัชดาภิเษก
+              เลขที่ 191/22-25 CTI TOWER ชั้น 26 ถนนรัชดาภิเษก
               <br />
               เขตคลองเตย กรุงเทพมหานคร 10110 ประเทศไทย
             </div>

@@ -51,7 +51,7 @@ const AsiaBranches = ({ lng }: any) => {
         </div>
 
         <div className="branchesText">
-          15th Fl., 191/66, 68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey,
+          CTI TOWER 191/22-25, 26th Floor, Ratchadapisek Rd., Kwang Klongtoey,
           Khet Klongtoey, Bangkok 10110 THAILAND
           <br />
           TEL : 66-2-261-1080~5, 66-2-261-5343~6 / FAX : 66-2-261-1024,

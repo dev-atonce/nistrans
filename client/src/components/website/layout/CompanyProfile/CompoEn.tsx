@@ -24,7 +24,7 @@ export default function CompoEn() {
             <ul>
               <li>Address</li>
               <li>
-                15th Fl., 191/66, 68-69 CTI Tower, Ratchadapisek Rd.,
+                CTI TOWER 191/22-25, 26th Floor, Ratchadapisek Rd.,
                 <br />
                 Kwang Klongtoey, Khet Klongtoey, Bangkok 10110, Thailand
               </li>

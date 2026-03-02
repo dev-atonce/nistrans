@@ -118,9 +118,23 @@ export default function ServiceSection({ data, page, lang }: any) {
   const list = page ? mock2 : mocks;
   return (
     <div className="container  px-2 mx-auto 2xl:px-20 py-20">
-      <div className="pb-20 flex justify-center items-center flex-col text-blue-950 gap-3">
+      <div className="pb-5 flex justify-center items-center flex-col text-blue-950 gap-3">
         <h2 className="text-3xl font-[500]"> {t("heading")}</h2>
         <div className="h-1 w-20 bg-orange-400"></div>
+      </div>
+      <div className="flex justify-center mb-10">
+        <video
+          className="w-full max-w-xl rounded-lg shadow-lg"
+          controls
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src="/file/SIAM_NISSIN_3min_FINAL_fullhd.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className="grid grid-cols-12 gap-6 md:px-20 ">
         {list?.map((i: any, k: any) => (

@@ -22,7 +22,7 @@ export default function CompoJp() {
             <ul>
               <li>住所</li>
               <li>
-                15th Fl., 191/66, 68-69 CTI TOWER, Ratchadapisek Rd.,
+                CTI TOWER 191/22-25, 26th Floor, Ratchadapisek Rd.,
                 <br />
                 Kwang Klongtoey, Khet Klongtoey, Bangkok 10110, Thailand
               </li>
